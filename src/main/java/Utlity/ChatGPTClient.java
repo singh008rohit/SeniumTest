@@ -1,4 +1,4 @@
-package Utlity;
+package utlity;
 
 import java.io.IOException;
 

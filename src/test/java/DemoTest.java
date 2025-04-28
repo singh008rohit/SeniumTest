@@ -5,12 +5,11 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 
-import LoggerUtil.LoggerUtils;
-import driver.SeleniumListnere;
+import loggerUtil.LoggerUtils;
 import driver.DriverManager;
 import pages.LoginPage;
 import reportManager.ExtentReportManager;
-@Listeners({SeleniumListnere.class})
+//@Listeners({SeleniumListnere.class})
 public class DemoTest extends DriverManager {
 	
 private 	LoginPage loginPage;
