@@ -1,11 +1,10 @@
-package LoggerUtil;
+package loggerUtil;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.aventstack.extentreports.Status;
 
-import driver.SeleniumListnere;
 
 import com.aventstack.extentreports.ExtentTest;
 
