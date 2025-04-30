@@ -7,6 +7,9 @@ import java.nio.file.Files;
 import java.util.List;
 import java.util.Map;
 
+import com.jayway.jsonpath.DocumentContext;
+import com.jayway.jsonpath.JsonPath;
+
 public class JsonUtils {
    private static DocumentContext loadJson(String input) throws IOException {
       File file = new File(System.getProperty("user.dir") + input);
@@ -21,27 +24,27 @@ public class JsonUtils {
    }
 
    public static String getStringValueFromJson(String jsonFilePath, String path) throws IOException {
-      return (String)loadJson(jsonFilePath).read(path, String.class, new Predicate[0]);
+      return (String)loadJson(jsonFilePath).read(path);
    }
 
    public static int getIntegerValueFromJson(String jsonFilePath, String path) throws IOException {
-      return (Integer)loadJson(jsonFilePath).read(path, Integer.class, new Predicate[0]);
+      return (Integer)loadJson(jsonFilePath).read(path);
    }
 
    public static boolean getBooleanValueFromJson(String jsonFilePath, String path) throws IOException {
-      return (Boolean)loadJson(jsonFilePath).read(path, Boolean.class, new Predicate[0]);
+      return (Boolean)loadJson(jsonFilePath).read(path);
    }
 
    public static <T> List<T> getListvalueFromJson(String jsonFilePath, String path) throws IOException {
-      return (List)loadJson(jsonFilePath).read(path, new Predicate[0]);
+      return (List)loadJson(jsonFilePath).read(path);
    }
 
    public static <K, V> Map<K, V> getMapFromJson(String jsonFilePath, String path) throws IOException {
-      return (Map)loadJson(jsonFilePath).read(path, new Predicate[0]);
+      return (Map)loadJson(jsonFilePath).read(path);
    }
 
    public static String getJsonObjectAsString(String jsonFilePath, String path) throws IOException {
-      Object obj = loadJson(jsonFilePath).read(path, new Predicate[0]);
+      Object obj = loadJson(jsonFilePath).read(path);
       return obj.toString();
    }
 

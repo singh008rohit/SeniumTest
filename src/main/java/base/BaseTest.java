@@ -16,7 +16,7 @@ import pages.NewUserSignUpPage;
 import reportManager.ExtentReportManager;
 import test.data.MapTestData;
 
-public class BaseTest {
+public abstract class BaseTest {
    protected LoginPage loginPage;
    protected PageObjectManager pageManager = new PageObjectManager();
    protected NewUserSignUpPage newuserSingUpPage;

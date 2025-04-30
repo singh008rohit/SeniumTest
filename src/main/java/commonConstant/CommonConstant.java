@@ -28,7 +28,9 @@ public class CommonConstant {
    public static String USER_MOBILE = "mobile";
    public static String CARD_NUMBER = "";
    public static String CVB = "";
-   public static String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+   public static String CHARACTERS_LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
+   public static final String CHARACTERS_UPPERCASE= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   public static final String NUMBER = "0123456789";
 
    private CommonConstant() {
    }

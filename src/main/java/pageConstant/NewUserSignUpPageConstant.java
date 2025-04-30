@@ -1,9 +1,14 @@
  package pageConstant;
 
 public class NewUserSignUpPageConstant {
+	
+	
+	private NewUserSignUpPageConstant() {
+	   }
+	
    public static final String NEW_USER_SIGNUP_TEXT = "//div[@class='signup-form']/h2[text()='New User Signup!']";
-   public static final String USER_NAME = "//input[@placeholder='Name']";
-   public static final String EMAIL_ADDRESS = "//div[@class='signup-form']//input[@placeholder='Email Address']";
+   public static final String USER_NAME = "//input[@id='name']";
+   public static final String EMAIL_ADDRESS = "//input[@id='email']";
    public static final String SINGUP_BUTTON = "//div[@class='signup-form']//button[@type='submit']";
    public static final String MR_RADIO_BUTTON = "#uniform-id_gender1";
    public static final String MRS_RADIO_BUTTON = "#uniform-id_gender2";
@@ -27,6 +32,5 @@ public class NewUserSignUpPageConstant {
    public static final String ACCOUNT_CREATED_SUCCESS_MESSAGE = "//p[text()='Congratulations! Your new account has been successfully created!']";
    public static final String CONTINUE = "//a[text()='Continue']";
 
-   private NewUserSignUpPageConstant() {
-   }
+   
 }

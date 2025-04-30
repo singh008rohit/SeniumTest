@@ -25,43 +25,48 @@ public class DriverManager {
     public static void initializeDriver(String browser) throws IOException {
         WebDriver webDriver;
         boolean useGrid = Boolean.parseBoolean(BaseTest.getValueFromPropFile(CommonConstant.USER_GRID));
+        boolean isHeadless = Boolean.parseBoolean(BaseTest.getValueFromPropFile("headless")); // add this key in config
 
-        if (useGrid) {
-            try {
-                URL gridUrl = new URL(CommonConstant.GRIDURL);
-                switch (browser.toLowerCase()) {
-                    case "chrome":
-                        webDriver = new RemoteWebDriver(gridUrl, new ChromeOptions());
-                        break;
-                    case "firefox":
-                        webDriver = new RemoteWebDriver(gridUrl, new FirefoxOptions());
-                        break;
-                    case "edge":
-                        webDriver = new RemoteWebDriver(gridUrl, new EdgeOptions());
-                        break;
-                    default:
-                        throw new IllegalArgumentException("Invalid browser: " + browser);
-                }
-            } catch (MalformedURLException e) {
-                throw new RuntimeException("Invalid Selenium Grid URL", e);
-            }
-        } else {
+        try {
             switch (browser.toLowerCase()) {
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
-                    webDriver = new ChromeDriver();
+                    ChromeOptions chromeOptions = new ChromeOptions();
+                    if (isHeadless) {
+                        chromeOptions.addArguments("--headless", "--window-size=1920,1080");
+                    }
+
+                    webDriver = useGrid
+                            ? new RemoteWebDriver(new URL(CommonConstant.GRIDURL), chromeOptions)
+                            : createLocalChromeDriver(chromeOptions);
                     break;
+
                 case "firefox":
-                    WebDriverManager.firefoxdriver().setup();
-                    webDriver = new FirefoxDriver();
+                    FirefoxOptions firefoxOptions = new FirefoxOptions();
+                    if (isHeadless) {
+                        firefoxOptions.addArguments("-headless");;
+                    }
+
+                    webDriver = useGrid
+                            ? new RemoteWebDriver(new URL(CommonConstant.GRIDURL), firefoxOptions)
+                            : createLocalFirefoxDriver(firefoxOptions);
                     break;
+
                 case "edge":
-                    WebDriverManager.edgedriver().setup();
-                    webDriver = new EdgeDriver();
+                    EdgeOptions edgeOptions = new EdgeOptions();
+                    if (isHeadless) {
+                        edgeOptions.addArguments("--headless", "--window-size=1920,1080");
+                    }
+
+                    webDriver = useGrid
+                            ? new RemoteWebDriver(new URL(CommonConstant.GRIDURL), edgeOptions)
+                            : createLocalEdgeDriver(edgeOptions);
                     break;
+
                 default:
                     throw new IllegalArgumentException("Invalid browser: " + browser);
             }
+        } catch (MalformedURLException e) {
+            throw new RuntimeException("Invalid Selenium Grid URL", e);
         }
 
         webDriver.manage().window().maximize();
@@ -70,6 +75,21 @@ public class DriverManager {
         webDriver.manage().deleteAllCookies();
 
         driver.set(webDriver);
+    }
+
+    private static WebDriver createLocalChromeDriver(ChromeOptions options) {
+        WebDriverManager.chromedriver().setup();
+        return new ChromeDriver(options);
+    }
+
+    private static WebDriver createLocalFirefoxDriver(FirefoxOptions options) {
+        WebDriverManager.firefoxdriver().setup();
+        return new FirefoxDriver(options);
+    }
+
+    private static WebDriver createLocalEdgeDriver(EdgeOptions options) {
+        WebDriverManager.edgedriver().setup();
+        return new EdgeDriver(options);
     }
 
     public static WebDriver getDriver() {

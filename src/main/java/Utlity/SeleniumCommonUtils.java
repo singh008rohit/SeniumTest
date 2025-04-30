@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 import java.util.List;
-
+import java.security.SecureRandom;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -20,13 +20,17 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.aventstack.extentreports.Status;
 
+import commonConstant.CommonConstant;
 import driver.DriverManager;
 import loggerUtil.LoggerUtils;
 import reportManager.ExtentReportManager;
 
 public class SeleniumCommonUtils {
-
-    private SeleniumCommonUtils() {}
+	  private static final SecureRandom random	 = new SecureRandom();
+    private SeleniumCommonUtils(
+    		) {
+    	
+    }
 
     public static void clickElement(WebElement element) {
         try {
@@ -221,5 +225,15 @@ public class SeleniumCommonUtils {
             LoggerUtils.error("Failed to fetch innerText using JavaScript: " + e.getMessage());
             throw e;
         }
+    }
+ 
+  
+
+    public static String generateRandamString(int length) {
+        StringBuilder sb = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            sb.append(CommonConstant.CHARACTERS_LOWERCASE.charAt(random.nextInt(CommonConstant.CHARACTERS_LOWERCASE.length())));
+        }
+        return sb.toString();
     }
 }

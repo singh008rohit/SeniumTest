@@ -1,0 +1,57 @@
+2025-04-29 23:55:32 [main] INFO  LoggerUtils - Test Suite Started: Default test
+2025-04-29 23:55:32 [main] INFO  LoggerUtils - Browser passed from testng.xml or Hooks: chrome
+2025-04-29 23:56:06 [main] INFO  LoggerUtils - Navigated to application and LoginPage initialized
+2025-04-29 23:56:06 [main] INFO  LoggerUtils - Test Started: loginToApplication
+2025-04-29 23:56:16 [main] INFO  LoggerUtils - Clicked on element: [[ChromeDriver: chrome on mac (eabb4ba578184ce86611f6c9ec2c22cf)] -> xpath: //a[normalize-space()='Signup / Login']]
+2025-04-29 23:56:16 [main] INFO  LoggerUtils - Fetched text: New User Signup!
+2025-04-29 23:57:38 [main] INFO  LoggerUtils - Entered text: rohit
+2025-04-29 23:58:59 [main] INFO  LoggerUtils - Entered text: qrrxco@gmail.com
+2025-04-29 23:59:46 [main] INFO  LoggerUtils - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='signup-form']//button[@type='submit']'
+2025-04-30 00:00:26 [main] INFO  LoggerUtils - Fetched attribute [value] with value: rohit
+2025-04-30 00:00:26 [main] INFO  LoggerUtils - Fetched attribute [value] with value: qrrxco@gmail.com
+2025-04-30 00:00:28 [main] INFO  LoggerUtils - Clicked on element: [[ChromeDriver: chrome on mac (eabb4ba578184ce86611f6c9ec2c22cf)] -> css selector: #uniform-id_gender1]
+2025-04-30 00:00:28 [main] INFO  LoggerUtils - Entered text: Nov@1122!0091
+2025-04-30 00:00:30 [main] INFO  LoggerUtils - Selected value from dropdown by value: 5
+2025-04-30 00:00:30 [main] INFO  LoggerUtils - Selected value from dropdown by value: 4
+2025-04-30 00:00:31 [main] INFO  LoggerUtils - Selected value from dropdown by value: 2020
+2025-04-30 00:00:32 [main] INFO  LoggerUtils - Entered text: rohit
+2025-04-30 00:00:32 [main] INFO  LoggerUtils - Entered text: singh
+2025-04-30 00:00:32 [main] INFO  LoggerUtils - Entered text: Coforge
+2025-04-30 00:00:32 [main] INFO  LoggerUtils - Entered text: noida
+2025-04-30 00:00:32 [main] INFO  LoggerUtils - Selected value from dropdown by value: India
+2025-04-30 00:00:33 [main] INFO  LoggerUtils - Entered text: UP
+2025-04-30 00:00:33 [main] INFO  LoggerUtils - Entered text: noida
+2025-04-30 00:00:33 [main] INFO  LoggerUtils - Entered text: 541234
+2025-04-30 00:00:34 [main] INFO  LoggerUtils - Entered text: 7643551111
+2025-04-30 00:00:43 [main] INFO  LoggerUtils - Clicked element using JavaScript.
+2025-04-30 00:00:45 [main] INFO  LoggerUtils - Fetched text: ACCOUNT CREATED!
+2025-04-30 00:00:46 [main] INFO  LoggerUtils - Fetched text: Congratulations! Your new account has been successfully created!
+2025-04-30 00:01:01 [main] INFO  LoggerUtils - Clicked element using JavaScript.
+2025-04-30 00:01:02 [main] INFO  LoggerUtils - Fetched text: rohit
+2025-04-30 00:01:51 [main] INFO  LoggerUtils - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Delete Account']'
+2025-04-30 00:02:31 [main] INFO  LoggerUtils - Fetched text: ACCOUNT DELETED!
+2025-04-30 00:02:31 [main] INFO  LoggerUtils - Fetched text: Your account has been permanently deleted!
+2025-04-30 00:03:26 [main] INFO  LoggerUtils - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Continue']'
+2025-04-30 00:04:46 [main] INFO  LoggerUtils - Test Passed: loginToApplication
+2025-04-30 00:04:46 [main] INFO  LoggerUtils - Test Suite Finished: Default test
+2025-04-30 00:06:40 [main] INFO  LoggerUtils - Browser passed from testng.xml or Hooks: chrome
+2025-04-30 00:07:05 [main] INFO  LoggerUtils - Navigated to application and LoginPage initialized
+2025-04-30 00:07:15 [main] INFO  LoggerUtils - Clicked on element: [[ChromeDriver: chrome on mac (448a09f93497061e2ae107629a71523f)] -> xpath: //a[normalize-space()='Signup / Login']]
+2025-04-30 00:32:23 [main] INFO  LoggerUtils - Browser passed from testng.xml or Hooks: chrome
+2025-04-30 00:32:39 [main] INFO  LoggerUtils - Navigated to application and LoginPage initialized
+2025-04-30 00:32:49 [main] INFO  LoggerUtils - Clicked on element: [[ChromeDriver: chrome on mac (c6e1bf496470d93bbf18f3c77f092385)] -> xpath: //a[normalize-space()='Signup / Login']]
+2025-04-30 00:36:51 [main] INFO  LoggerUtils - Browser passed from testng.xml or Hooks: chrome
+2025-04-30 00:37:13 [main] INFO  LoggerUtils - Navigated to application and LoginPage initialized
+2025-04-30 00:37:28 [main] INFO  LoggerUtils - Clicked on element: [[ChromeDriver: chrome on mac (747bc67678bddce2f1de427e0eb3ea94)] -> xpath: //a[normalize-space()='Signup / Login']]
+2025-04-30 00:57:05 [main] INFO  LoggerUtils - Browser passed from testng.xml or Hooks: chrome
+2025-04-30 00:57:20 [main] INFO  LoggerUtils - Navigated to application and LoginPage initialized
+2025-04-30 00:57:33 [main] INFO  LoggerUtils - Clicked on element: [[ChromeDriver: chrome on mac (9f641e5e1ff2c5734eea0269062d810d)] -> xpath: //a[normalize-space()='Signup / Login']]
+2025-04-30 01:02:25 [main] INFO  LoggerUtils - Browser passed from testng.xml or Hooks: chrome
+2025-04-30 01:02:47 [main] INFO  LoggerUtils - Navigated to application and LoginPage initialized
+2025-04-30 01:02:58 [main] INFO  LoggerUtils - Clicked on element: [[ChromeDriver: chrome on mac (f41a8008935fffbf2296a167f7c06f17)] -> xpath: //a[normalize-space()='Signup / Login']]
+2025-04-30 01:13:40 [main] INFO  LoggerUtils - Browser passed from testng.xml or Hooks: chrome
+2025-04-30 01:13:56 [main] INFO  LoggerUtils - Navigated to application and LoginPage initialized
+2025-04-30 01:14:07 [main] INFO  LoggerUtils - Clicked on element: [[ChromeDriver: chrome on mac (83f275480c814e4a488094d61680a2fc)] -> xpath: //a[normalize-space()='Signup / Login']]
+2025-04-30 01:16:55 [main] INFO  LoggerUtils - Browser passed from testng.xml or Hooks: chrome
+2025-04-30 01:17:14 [main] INFO  LoggerUtils - Navigated to application and LoginPage initialized
+2025-04-30 01:17:22 [main] INFO  LoggerUtils - Clicked on element: [[ChromeDriver: chrome on mac (52196b4fb44f47ed0a4246a1a206b5e7)] -> xpath: //a[normalize-space()='Signup / Login']]

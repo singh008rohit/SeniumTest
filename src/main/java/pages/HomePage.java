@@ -1,88 +1,96 @@
- package pages;
+package pages;
 
 import com.aventstack.extentreports.Status;
 import driver.DriverManager;
+import pageConstant.HomePageConstant;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
+
 import reportManager.ExtentReportManager;
 import utlity.SeleniumCommonUtils;
 
 public class HomePage {
-   private WebDriver driver = DriverManager.getDriver();
-   private static final String homePageTitle = "Automation Exercise";
-   private static final String signupPageTitle = "Automation Exercise - Signup / Login";
-   private static final String deletemsg1 = "Account Deleted!";
-   private static final String deletemsg2 = "Your account has been permanently deleted!";
-   @FindBy(
-      xpath = "//a[normalize-space()='Signup / Login']"
-   )
-   WebElement signup;
-   @FindBy(
-      xpath = "//b['demo@gmail.com']"
-   )
-   WebElement loginUser;
-   @FindBy(
-      xpath = "//a[normalize-space()='Delete Account']"
-   )
-   WebElement deleteAccountLink;
-   @FindBy(
-      xpath = "//b[text()'Account Deleted!']"
-   )
-   WebElement deleteAccountMsg;
-   @FindBy(
-      xpath = "//p[text()='Your account has been permanently deleted!']"
-   )
-   WebElement deleteAccountMsg1;
-   @FindBy(
-      xpath = "//a[text()='Continue']"
-   )
-   WebElement continueBtn;
+	private WebDriver driver ;
+	private static final String homePageTitle = "Automation Exercise";
+	private static final String signupPageTitle = "Automation Exercise - Signup / Login";
+	private static final String deletemsg1 = "ACCOUNT DELETED!";
+	private static final String deletemsg2 = "Your account has been permanently deleted!";
+	private SoftAssert soft;
 
-   public HomePage() {
-      if (this.driver == null) {
-         throw new IllegalStateException("WebDriver is not initialized.");
-      } else {
-         PageFactory.initElements(this.driver, this);
-      }
-   }
+	@FindBy(xpath = HomePageConstant.SIGNUP)
+	WebElement signup;
 
-   public void validatenavigatedToHomePage() {
-      Assert.assertEquals(this.driver.getTitle(), "Automation Exercise", "Home page title is incorrect");
-   }
+	@FindBy(xpath = HomePageConstant.LOGIN_USER)
+	WebElement loginUser;
 
-   public void clickOnSignUpButton() {
-      SeleniumCommonUtils.waitForVisibility(this.signup, 10);
-      SeleniumCommonUtils.clickElement(this.signup);
-   }
+	@FindBy(xpath = HomePageConstant.DELETE_ACCOUNT)
+	WebElement deleteAccountLink;
 
-   public void validateNavigatedToSignupPage() {
-      Assert.assertEquals(this.driver.getTitle(), "Automation Exercise - Signup / Login", "signup page title is incorrect");
-   }
+	@FindBy(xpath = HomePageConstant.ACCOUNT_DELETE_MSG)
+	WebElement deleteAccountMsg;
 
-   public void loginWithUser(String email) {
-      SeleniumCommonUtils.waitForVisibility(this.loginUser, 10);
-      String userEmail = SeleniumCommonUtils.getText(this.loginUser);
-      Assert.assertEquals(userEmail, email);
-      Assert.assertTrue(SeleniumCommonUtils.isElementExist(this.driver, By.xpath("//a[normalize-space()='Delete Account']")));
-      ExtentReportManager.getTest().log(Status.INFO, "Login with :" + email);
-   }
+	@FindBy(xpath = HomePageConstant.ACCOUNT_DELETE_MSG_1)
+	WebElement deleteAccountMsg1;
 
-   public void deleteAccount() {
-      Assert.assertTrue(SeleniumCommonUtils.isElementExist(this.driver, By.xpath("//a[normalize-space()='Delete Account']")));
-      SeleniumCommonUtils.clickElement(this.deleteAccountLink);
-      String msg1 = SeleniumCommonUtils.getText(this.deleteAccountMsg);
-      String msg2 = SeleniumCommonUtils.getText(this.deleteAccountMsg1);
-      Assert.assertEquals(msg1, "Account Deleted!");
-      Assert.assertEquals(msg2, "Your account has been permanently deleted!");
-      SeleniumCommonUtils.clickElement(this.continueBtn);
-   }
+	@FindBy(xpath = HomePageConstant.CONTINUE)
+	WebElement continueBtn;
 
-   public void verifyAccountdeleted() {
-      Assert.assertTrue(SeleniumCommonUtils.isElementNotExist(this.driver, By.xpath("//a[normalize-space()='Delete Account']")));
-      ExtentReportManager.getTest().log(Status.PASS, "Account is deleted");
-   }
+
+	public HomePage() {
+		driver= DriverManager.getDriver();
+		if (this.driver == null) {
+			throw new IllegalStateException("WebDriver is not initialized.");
+		} else {
+			PageFactory.initElements(driver, this);
+			soft= new SoftAssert();
+		}
+	}
+
+	public void validatenavigatedToHomePage() {
+		soft.assertEquals(driver.getTitle(), homePageTitle, "Home page title is incorrect");
+	}
+
+	public void clickOnSignUpButton() {
+		SeleniumCommonUtils.waitForVisibility(signup, 10);
+		SeleniumCommonUtils.clickElement(signup);
+	}
+
+	public void validateNavigatedToSignupPage() {
+		soft.assertEquals(driver.getTitle(), signupPageTitle,"signup page title is incorrect");
+				
+	}
+
+	public void loginWithUser(String name) {
+		SeleniumCommonUtils.waitForVisibility(loginUser, 10);
+		String userName = SeleniumCommonUtils.getText(loginUser);
+		soft.assertEquals(userName, name);
+		soft.assertTrue(
+				SeleniumCommonUtils.isElementExist(driver, By.xpath(HomePageConstant.DELETE_ACCOUNT)));
+		ExtentReportManager.getTest().log(Status.INFO, "Login with :" + userName);
+	}
+
+	public void deleteAccount() {
+		soft.assertTrue(
+				SeleniumCommonUtils.isElementExist(driver, By.xpath(HomePageConstant.DELETE_ACCOUNT)));
+		SeleniumCommonUtils.clickElement(deleteAccountLink);
+		String msg1 = SeleniumCommonUtils.getText(deleteAccountMsg);
+		String msg2 = SeleniumCommonUtils.getText(deleteAccountMsg1);
+		Assert.assertEquals(msg1, deletemsg1);
+		Assert.assertEquals(msg2, deletemsg2);
+		SeleniumCommonUtils.clickElement(continueBtn);
+	}
+
+	public void verifyAccountdeleted() {
+		soft.assertTrue(SeleniumCommonUtils.isElementNotExist(driver,
+				By.xpath(HomePageConstant.DELETE_ACCOUNT)));
+		ExtentReportManager.getTest().log(Status.PASS, "Account is deleted");
+		soft.assertAll();
+	}
+	
 }
