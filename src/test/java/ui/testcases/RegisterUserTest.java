@@ -14,7 +14,7 @@ public class RegisterUserTest extends BaseTest {
    @Test(
       description = "Test Register a new user and at the end delete it"
    )
-   public void loginToApplication() {
+   public void registeruserTest() {
 	   final  String email = MapTestData.setUserData().get(CommonConstant.USER_EMAIL);
       homePage.validatenavigatedToHomePage();
       ExtentReportManager.getTest().log(Status.INFO, "Validated navigated to home page");

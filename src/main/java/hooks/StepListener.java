@@ -17,10 +17,10 @@ public class StepListener implements EventListener {
    private void handleStepStart(TestStepStarted event) {
       if (event.getTestStep() instanceof PickleStepTestStep) {
          PickleStepTestStep step = (PickleStepTestStep)event.getTestStep();
-         String stepText = step.getStep().getKeyword() + step.getStep().getText();
-         if (ExtentReportManager.getTest() != null) {
-            ExtentReportManager.getTest().log(Status.INFO,   stepText);
-         }
+       //  String stepText = step.getStep().getKeyword() + step.getStep().getText();
+        // if (ExtentReportManager.getTest() != null) {
+           // ExtentReportManager.getTest().log(Status.INFO,   stepText);
+        // }
       }
 
    }

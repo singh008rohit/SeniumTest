@@ -101,6 +101,20 @@ public class NewUserSignUpPage {
 
 	    @FindBy(xpath = NewUserSignUpPageConstant.CONTINUE)
 	    private WebElement continueButton;
+	    
+	    
+	    @FindBy(xpath= NewUserSignUpPageConstant.USER_EMAIL)
+	    private WebElement userEmail;
+	    
+	    @FindBy(xpath = NewUserSignUpPageConstant.USER_PASSWORD_1)
+	    private WebElement userPassword1;
+	    
+	    @FindBy(xpath = NewUserSignUpPageConstant.LOGIN_BUTTON)
+	    private WebElement loginButton;
+	    
+	    @FindBy(xpath = NewUserSignUpPageConstant.LOGOUT_BUTTON)
+	    
+	    private WebElement logoutButtton;
 
 	public NewUserSignUpPage() {
 		driver=DriverManager.getDriver();
@@ -160,5 +174,18 @@ public class NewUserSignUpPage {
 		SeleniumCommonUtils.selectDropdownByValue(dateDropdown, date);
 		SeleniumCommonUtils.selectDropdownByValue(monthDropdown, month);
 		SeleniumCommonUtils.selectDropdownByValue(yearDropdown, year);
+	}
+	
+	public void logout() {
+		SeleniumCommonUtils.waitForVisibility(logoutButtton, 10);
+		SeleniumCommonUtils.clickElement(logoutButtton);
+	}
+	
+	public void loginwithvalidUser(String email ,String password) {
+		
+		SeleniumCommonUtils.typeText(userEmail, email);
+		SeleniumCommonUtils.typeText(userPassword1, password);
+		SeleniumCommonUtils.clickElement(loginButton);
+		
 	}
 }
