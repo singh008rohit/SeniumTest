@@ -199,3 +199,36 @@ Session ID: c7e8a8c33fcd950aebb4ad94d3b5f9bd
 2025-05-02 00:16:51 [main] INFO  LoggerUtils - Entered text: rohit
 2025-05-02 00:18:12 [main] INFO  LoggerUtils - Entered text: dckuqi@gmail.com
 2025-05-02 00:18:23 [main] INFO  LoggerUtils - Clicked on element: [[ChromeDriver: chrome on mac (22f84bab096a5ad40979b565fe538286)] -> xpath: //div[@class='signup-form']//button[@type='submit']]
+2025-05-02 00:19:04 [main] INFO  LoggerUtils - Fetched attribute [value] with value: rohit
+2025-05-02 00:19:04 [main] INFO  LoggerUtils - Fetched attribute [value] with value: dckuqi@gmail.com
+2025-05-02 00:19:05 [main] INFO  LoggerUtils - Clicked on element: [[ChromeDriver: chrome on mac (22f84bab096a5ad40979b565fe538286)] -> css selector: #uniform-id_gender1]
+2025-05-02 00:19:06 [main] INFO  LoggerUtils - Entered text: Nov@1122!0091
+2025-05-02 00:19:07 [main] INFO  LoggerUtils - Selected value from dropdown by value: 5
+2025-05-02 00:19:08 [main] INFO  LoggerUtils - Selected value from dropdown by value: 4
+2025-05-02 00:19:08 [main] INFO  LoggerUtils - Selected value from dropdown by value: 2020
+2025-05-02 00:19:10 [main] INFO  LoggerUtils - Entered text: rohit
+2025-05-02 00:19:10 [main] INFO  LoggerUtils - Entered text: singh
+2025-05-02 00:19:10 [main] INFO  LoggerUtils - Entered text: Coforge
+2025-05-02 00:19:10 [main] INFO  LoggerUtils - Entered text: noida
+2025-05-02 00:19:11 [main] INFO  LoggerUtils - Selected value from dropdown by value: India
+2025-05-02 00:19:11 [main] INFO  LoggerUtils - Entered text: UP
+2025-05-02 00:19:11 [main] INFO  LoggerUtils - Entered text: noida
+2025-05-02 00:19:11 [main] INFO  LoggerUtils - Entered text: 541234
+2025-05-02 00:19:11 [main] INFO  LoggerUtils - Entered text: 7643551111
+2025-05-02 00:19:20 [main] INFO  LoggerUtils - Clicked element using JavaScript.
+2025-05-02 00:19:25 [main] INFO  LoggerUtils - Fetched text: ACCOUNT CREATED!
+2025-05-02 00:19:26 [main] INFO  LoggerUtils - Fetched text: Congratulations! Your new account has been successfully created!
+2025-05-02 00:19:41 [main] INFO  LoggerUtils - Clicked element using JavaScript.
+2025-05-02 00:19:41 [main] INFO  LoggerUtils - Fetched text: rohit
+2025-05-02 00:20:29 [main] INFO  LoggerUtils - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Logout']'
+2025-05-02 00:21:21 [main] INFO  LoggerUtils - Clicked on element: [[ChromeDriver: chrome on mac (22f84bab096a5ad40979b565fe538286)] -> xpath: //a[normalize-space()='Signup / Login']]
+2025-05-02 00:21:22 [main] INFO  LoggerUtils - Entered text: dckuqi@gmail.com
+2025-05-02 00:21:23 [main] INFO  LoggerUtils - Entered text: Nov@1122!0091
+2025-05-02 00:21:32 [main] INFO  LoggerUtils - Clicked on element: [[ChromeDriver: chrome on mac (22f84bab096a5ad40979b565fe538286)] -> xpath: //form[@action='/login']/button[text()='Login']]
+2025-05-02 00:22:12 [main] INFO  LoggerUtils - Fetched text: rohit
+2025-05-02 00:23:05 [main] INFO  LoggerUtils - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Delete Account']'
+2025-05-02 00:23:46 [main] INFO  LoggerUtils - Fetched text: ACCOUNT DELETED!
+2025-05-02 00:23:46 [main] INFO  LoggerUtils - Fetched text: Your account has been permanently deleted!
+2025-05-02 00:24:39 [main] INFO  LoggerUtils - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Continue']'
+2025-05-02 00:25:59 [main] INFO  LoggerUtils - Test Passed: loginWithvalidUserTest
+2025-05-02 00:26:00 [main] INFO  LoggerUtils - Test Suite Finished: Default test
