@@ -1,0 +1,66 @@
+{
+  "company": "TechCorp",
+  "location": {
+    "city": "Bangalore",
+    "country": "India"
+  },
+  "departments": [
+    {
+      "name": "Engineering",
+      "head": {
+        "name": "Rahul Sharma",
+        "employeeId": "ENG1001"
+      },
+      "employees": [
+        {
+          "name": "Anjali",
+          "employeeId": "ENG2001",
+          "skills": ["Java", "Spring", "Docker"],
+          "salary": 85000,
+          "active": true
+        },
+        {
+          "name": "Vikas",
+          "employeeId": "ENG2002",
+          "skills": ["Python", "ML", "AWS"],
+          "salary": 92000,
+          "active": false
+        }
+      ]
+    },
+    {
+      "name": "HR",
+      "head": {
+        "name": "Neha Mehta",
+        "employeeId": "HR1001"
+      },
+      "employees": [
+        {
+          "name": "Sonal",
+          "employeeId": "HR2001",
+          "skills": ["Recruitment", "Communication"],
+          "salary": 60000,
+          "active": true
+        }
+      ]
+    }
+  ],
+  "foundedYear": 2010,
+  "public": false,
+  "projects": [
+    {
+      "projectId": "P100",
+      "title": "AI Chatbot",
+      "budget": 150000,
+      "technologies": ["Python", "TensorFlow"],
+      "status": "Active"
+    },
+    {
+      "projectId": "P101",
+      "title": "Cloud Migration",
+      "budget": 200000,
+      "technologies": ["AWS", "Docker", "Kubernetes"],
+      "status": "Completed"
+    }
+  ]
+}
