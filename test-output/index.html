@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="apitest.ValidateResponse" class="method navigator-link" hash-for-method="getResponse">getResponse</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="apitest.ApiTest" class="method navigator-link" hash-for-method="getBookingId">getBookingId</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -122,14 +122,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">apitest.ValidateResponse</span>
+              <span class="class-name">apitest.ApiTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="getResponse">
-                  </a> <!-- getResponse -->
-                  <span class="method-name">getResponse</span>
+                  <a name="getBookingId">
+                  </a> <!-- getBookingId -->
+                  <span class="method-name">getBookingId</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/f3/7d9mby7j7yjd406_npqfc3bh0000gn/T/testng-eclipse--1348303195/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/f3/7d9mby7j7yjd406_npqfc3bh0000gn/T/testng-eclipse--1359329996/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,7 +146,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;apitest.ValidateResponse&quot;/&gt;
+      &lt;class name=&quot;apitest.ApiTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -188,14 +188,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'getResponse')
-data.setCell(0, 2, 'apitest.ValidateResponse')
-data.setCell(0, 3, 87);
+data.setCell(0, 1, 'getBookingId')
+data.setCell(0, 2, 'apitest.ApiTest')
+data.setCell(0, 3, 3598);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 87 ms</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -221,11 +221,19 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">apitest.ValidateResponse</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">getResponse</span>
+              <div class="chronological-class-name">apitest.ApiTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupAPI</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">getBookingId</span>
+                <span class="method-start">963 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-suite after">
+                <span class="method-name">tearDownReport</span>
+                <span class="method-start">4609 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -27,8 +27,8 @@ import reportManager.ExtentReportManager;
 
 public class SeleniumCommonUtils {
 	  private static final SecureRandom random	 = new SecureRandom();
-    private SeleniumCommonUtils(
-    		) {
+    private SeleniumCommonUtils() {
+    	
     	
     }
 
@@ -163,7 +163,7 @@ public class SeleniumCommonUtils {
     }
     public static String getAttributeValue(WebElement element, String attributeName) {
         try {
-            String attributeValue = element.getAttribute(attributeName);
+            String attributeValue = element.getDomAttribute(attributeName);
             LoggerUtils.info("Fetched attribute [" + attributeName + "] with value: " + attributeValue);
             ExtentReportManager.getTest().log(Status.INFO, "Fetched attribute [" + attributeName + "]: " + attributeValue);
             return attributeValue;

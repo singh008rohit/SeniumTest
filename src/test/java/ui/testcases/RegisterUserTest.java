@@ -11,9 +11,9 @@ import test.data.MapTestData;
 
 @Listeners({SeleniumListener.class})
 public class RegisterUserTest extends BaseTest {
-   @Test(
-      description = "Test Register a new user and at the end delete it"
-   )
+   @Test(enabled = true,description = "Test Register a new user and at the end delete it")
+      
+   
    public void registeruserTest() {
 	   final  String email = MapTestData.setUserData().get(CommonConstant.USER_EMAIL);
       homePage.validatenavigatedToHomePage();

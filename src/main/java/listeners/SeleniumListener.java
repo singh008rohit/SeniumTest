@@ -19,7 +19,7 @@ public class SeleniumListener implements ITestListener, ISuiteListener, IInvoked
    ExtentReports extent;
 
    public void onStart(ITestContext context) {
-      this.extent = ExtentReportManager.getSetup(context.getName());
+      extent = ExtentReportManager.getSetup(context.getName());
       LoggerUtils.info("Test Suite Started: " + context.getName());
    }
 

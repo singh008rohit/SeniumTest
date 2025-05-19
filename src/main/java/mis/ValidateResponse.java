@@ -1,10 +1,12 @@
-package apitest;
+package mis;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.testng.annotations.Test;
+
+import com.mongodb.util.JSON;
 
 import utlity.JsonUtils;
 
@@ -58,6 +60,9 @@ public class ValidateResponse {
 	
 	//Get all project IDs where status = ‘Active’
 	System.out.println(JsonUtils.getListvalueFromJson(path, "projects[?(@.status=='Active')].projectId"));
+	
+	
+	System.out.println(JsonUtils.getMapFromJson("/src/test/java/resource/test1.json",null));
 	                                                         
 	
 

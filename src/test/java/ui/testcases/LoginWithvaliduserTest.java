@@ -14,7 +14,7 @@ import test.data.MapTestData;
 public class LoginWithvaliduserTest extends BaseTest{
 	
 	
-	@Test
+	@Test(enabled =true)
 	
 	void loginWithvalidUserTest() {
 		

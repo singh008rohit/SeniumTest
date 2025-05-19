@@ -2,16 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-06T00:01:45 IST" name="Default suite" finished-at="2025-05-06T00:01:46 IST" duration-ms="136">
+  <suite started-at="2025-05-20T00:18:57 IST" name="Default suite" finished-at="2025-05-20T00:19:02 IST" duration-ms="4593">
     <groups>
     </groups>
-    <test started-at="2025-05-06T00:01:45 IST" name="Default test" finished-at="2025-05-06T00:01:46 IST" duration-ms="136">
-      <class name="apitest.ValidateResponse">
-        <test-method signature="getResponse()[pri:0, instance:apitest.ValidateResponse@342c38f8]" started-at="2025-05-06T00:01:45 IST" name="getResponse" finished-at="2025-05-06T00:01:46 IST" duration-ms="87" status="PASS">
+    <test started-at="2025-05-20T00:18:57 IST" name="Default test" finished-at="2025-05-20T00:19:02 IST" duration-ms="4593">
+      <class name="apitest.ApiTest">
+        <test-method is-config="true" signature="setupAPI()[pri:0, instance:apitest.ApiTest@272113c4]" started-at="2025-05-20T00:18:57 IST" name="setupAPI" finished-at="2025-05-20T00:18:58 IST" duration-ms="955" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getResponse -->
-      </class> <!-- apitest.ValidateResponse -->
+        </test-method> <!-- setupAPI -->
+        <test-method signature="getBookingId()[pri:0, instance:apitest.ApiTest@272113c4]" started-at="2025-05-20T00:18:58 IST" name="getBookingId" finished-at="2025-05-20T00:19:02 IST" duration-ms="3598" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBookingId -->
+        <test-method is-config="true" signature="tearDownReport()[pri:0, instance:apitest.ApiTest@272113c4]" started-at="2025-05-20T00:19:02 IST" name="tearDownReport" finished-at="2025-05-20T00:19:02 IST" duration-ms="443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownReport -->
+      </class> <!-- apitest.ApiTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

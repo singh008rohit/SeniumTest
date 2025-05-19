@@ -16,11 +16,11 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@test
+
 Feature: User registration
   I want to register a new user
 
-  @tag1
+  @test
   Scenario:  Register user
     
     Then Validate home page is visible
