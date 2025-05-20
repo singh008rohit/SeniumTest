@@ -28,5 +28,6 @@ public class RegisterUserTest extends BaseTest {
       homePage.loginWithUser(MapTestData.setUserData().get(CommonConstant.USER_NAME));
       homePage.deleteAccount();
       homePage.verifyAccountdeleted();
+      ExtentReportManager.getTest().log(Status.INFO, "Test execution completed");
    }
 }
