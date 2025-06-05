@@ -3,6 +3,7 @@
 public class CommonConstant {
    public static final String URL = "url";
    public static final String BROWSERTYPE = "browserType";
+   public static  String CUCUMBERBROWSERTYPE="cucubmerBrowserType";
    public static final String GRIDURL = "gridurl";
    public static final String FILE_PATH = "/src/test/java/resource/application.properties";
    public static final String USER_DIRECTORY = "user.dir";

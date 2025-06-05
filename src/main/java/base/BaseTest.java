@@ -6,8 +6,10 @@ import java.io.IOException;
 import java.util.Properties;
 import loggerUtil.LoggerUtils;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import commonConstant.CommonConstant;
 import pages.HomePage;
@@ -23,17 +25,23 @@ public abstract class BaseTest {
    protected HomePage homePage;
    protected MapTestData mapTestData;
 
-   @BeforeMethod(
-      alwaysRun = true
-   )
-   public void setup(@Optional("chrome") String browser) throws IOException {
-      if (browser != null && !browser.isEmpty()) {
-         LoggerUtils.info("Browser passed from testng.xml or Hooks: " + browser);
-      } else {
-         browser = getValueFromPropFile(CommonConstant.BROWSERTYPE);
-         LoggerUtils.info("Browser fetched from properties file: " + browser);
-      }
+   @BeforeMethod(alwaysRun = true)
+   @Parameters("browser")
+   public void setup(@Optional("") String xmlBrowser) throws IOException {
+       // Priority 1: CLI `-Dbrowser=...`
+       String cliBrowser = System.getProperty("browser");
 
+       String browser;
+       if (cliBrowser != null && !cliBrowser.isEmpty()) {
+           browser = cliBrowser;
+           LoggerUtils.info("Browser fetched from CLI: " + browser);
+       } else if (xmlBrowser != null && !xmlBrowser.isEmpty()) {
+           browser = xmlBrowser;
+           LoggerUtils.info("Browser fetched from testng.xml: " + browser);
+       } else {
+           browser = getValueFromPropFile(CommonConstant.BROWSERTYPE);
+           LoggerUtils.info("Browser fetched from properties file: " + browser);
+       }
       ExtentReportManager.getSetup("UI_TestSuite");
       DriverManager.initializeDriver(browser);
       DriverManager.getDriver().get(getValueFromPropFile(CommonConstant.URL));
@@ -59,6 +67,8 @@ public abstract class BaseTest {
 	    return value;
 	}
 
+   
+  
    @AfterMethod(
       alwaysRun = true
    )

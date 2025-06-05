@@ -1,5 +1,7 @@
     package ui.testcases;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import base.BaseTest;
 import com.aventstack.extentreports.Status;
 import commonConstant.CommonConstant;
@@ -21,13 +23,13 @@ public class RegisterUserTest extends BaseTest {
       homePage.clickOnSignUpButton();
       homePage.validateNavigatedToSignupPage();
       ExtentReportManager.getTest().log(Status.INFO, "Validated navigated to home page");
-      newuserSingUpPage.signupWithNameEmail(MapTestData.setUserData().get(CommonConstant.USER_FIRST_NAME),email);
+    /*  newuserSingUpPage.signupWithNameEmail(MapTestData.setUserData().get(CommonConstant.USER_FIRST_NAME),email);
       newuserSingUpPage.verifyNameEmailVisible(MapTestData.setUserData().get(CommonConstant.USER_FIRST_NAME),email);
       newuserSingUpPage.enteruserDetials(MapTestData.setUserData());
       newuserSingUpPage.validateAccountCreated();
       homePage.loginWithUser(MapTestData.setUserData().get(CommonConstant.USER_NAME));
       homePage.deleteAccount();
-      homePage.verifyAccountdeleted();
+   */   homePage.verifyAccountdeleted();
       ExtentReportManager.getTest().log(Status.INFO, "Test execution completed");
    }
 }

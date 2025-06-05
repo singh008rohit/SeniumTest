@@ -1,0 +1,22 @@
+<suite name="CrossBrowserSuite" parallel="tests" thread-count="3">
+    <test name="ChromeTests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="ui.testcases.LoginWithvaliduserTest"/>
+        </classes>
+    </test>
+
+    <test name="FirefoxTests">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="ui.testcases.RegisterUserTest"/>
+        </classes>
+    </test>
+
+    <test name="EdgeTests">
+        <parameter name="browser" value="MicrosoftEdge"/>
+        <classes>
+            <class name="ui.testcases.ValidateValidTest"/>
+        </classes>
+    </test>
+</suite>

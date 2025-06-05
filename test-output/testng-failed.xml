@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="apitest.ApiTest">
+      <class name="runner.Runner">
         <methods>
-          <include name="setupAPI"/>
-          <include name="getBookingId"/>
-          <include name="tearDownReport"/>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+          <include name="setBrowserParam"/>
         </methods>
-      </class> <!-- apitest.ApiTest -->
+      </class> <!-- runner.Runner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

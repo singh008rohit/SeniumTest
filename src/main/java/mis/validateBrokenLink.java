@@ -45,6 +45,7 @@ public class validateBrokenLink {
 	 static void getBrokenLink(String url) throws IOException {
 		 URL link= new URL(url);
 		 HttpURLConnection connect=	     (HttpURLConnection)link.openConnection();
+		 connect.getRequestMethod();
 		 
 	int n=	 connect.getResponseCode();
 	

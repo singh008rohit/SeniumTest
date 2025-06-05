@@ -151,6 +151,13 @@
         <plugin>
           <artifactId>maven-site-plugin</artifactId>
           <version>3.12.1</version>
+            <configuration>
+    <parallel>methods</parallel>
+    <threadCount>3</threadCount>
+    <systemPropertyVariables>
+      <browser>${browser}</browser>
+    </systemPropertyVariables>
+  </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>

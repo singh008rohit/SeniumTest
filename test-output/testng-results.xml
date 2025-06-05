@@ -2,24 +2,57 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-20T00:18:57 IST" name="Default suite" finished-at="2025-05-20T00:19:02 IST" duration-ms="4593">
+  <suite started-at="2025-05-30T01:39:26 IST" name="Default suite" finished-at="2025-05-30T01:39:49 IST" duration-ms="22897">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@5b1669c0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-05-20T00:18:57 IST" name="Default test" finished-at="2025-05-20T00:19:02 IST" duration-ms="4593">
-      <class name="apitest.ApiTest">
-        <test-method is-config="true" signature="setupAPI()[pri:0, instance:apitest.ApiTest@272113c4]" started-at="2025-05-20T00:18:57 IST" name="setupAPI" finished-at="2025-05-20T00:18:58 IST" duration-ms="955" status="PASS">
+    <test started-at="2025-05-30T01:39:26 IST" name="Default test" finished-at="2025-05-30T01:39:49 IST" duration-ms="22897">
+      <class name="runner.Runner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.Runner@5b1669c0]" started-at="2025-05-30T01:39:26 IST" name="setUpClass" finished-at="2025-05-30T01:39:27 IST" duration-ms="988" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3b2f4a93]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupAPI -->
-        <test-method signature="getBookingId()[pri:0, instance:apitest.ApiTest@272113c4]" started-at="2025-05-20T00:18:58 IST" name="getBookingId" finished-at="2025-05-20T00:19:02 IST" duration-ms="3598" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="setBrowserParam(java.lang.String)[pri:0, instance:runner.Runner@5b1669c0]" started-at="2025-05-30T01:39:27 IST" name="setBrowserParam" finished-at="2025-05-30T01:39:27 IST" duration-ms="416" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getBookingId -->
-        <test-method is-config="true" signature="tearDownReport()[pri:0, instance:apitest.ApiTest@272113c4]" started-at="2025-05-20T00:19:02 IST" name="tearDownReport" finished-at="2025-05-20T00:19:02 IST" duration-ms="443" status="PASS">
+        </test-method> <!-- setBrowserParam -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Runner@5b1669c0]" started-at="2025-05-30T01:39:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-30T01:39:49 IST" duration-ms="21357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Passing data with enum class"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["validate user is able to pass data in all posible way"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownReport -->
-      </class> <!-- apitest.ApiTest -->
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.Runner@5b1669c0]" started-at="2025-05-30T01:39:49 IST" name="tearDownClass" finished-at="2025-05-30T01:39:49 IST" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.Runner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
