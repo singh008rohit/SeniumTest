@@ -1,23 +1,45 @@
-// Jenkinsfile (Declarative Pipeline)
 pipeline {
-  agent any
-  stages {
-    stage('Checkout') {
-      steps {
-        git url: 'https://github.com/singh008rohit/SeniumTest.git', branch: 'main'
-      }
+    agent any
+
+    stages {
+        stage('Parallel Cross-Browser Testing') {
+            parallel {
+                stage('Test on Chrome') {
+                    agent {
+                        label 'chrome-node'
+                    }
+                    steps {
+                        echo 'Running tests on Chrome...'
+                        sh 'mvn test -Dbrowser=chrome'
+                    }
+                }
+
+                stage('Test on Firefox') {
+                    agent {
+                        label 'firefox-node'
+                    }
+                    steps {
+                        echo 'Running tests on Firefox...'
+                        sh 'mvn test -Dbrowser=firefox'
+                    }
+                }
+
+                stage('Test on Edge') {
+                    agent {
+                        label 'edge-node'
+                    }
+                    steps {
+                        echo 'Running tests on Edge...'
+                        sh 'mvn test -Dbrowser=edge'
+                    }
+                }
+            }
+        }
     }
-    stage('Build') {
-      steps {
-        echo 'Building the project…'
-        // sh 'mvn clean package'   // for example
-      }
+
+    post {
+        always {
+            echo 'Tests completed on all browsers.'
+        }
     }
-    stage('Test') {
-      steps {
-        echo 'Running tests…'
-        // sh 'mvn test'
-      }
-    }
-  }
 }
