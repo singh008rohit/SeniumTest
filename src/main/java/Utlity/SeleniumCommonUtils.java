@@ -173,7 +173,7 @@ public class SeleniumCommonUtils {
             throw e;
         }
     }
-    // 🔥🔥🔥 JavaScript Executor Methods Below 🔥🔥🔥
+    //  JavaScript Executor Methods Below 
 
     public static void clickUsingJS(WebElement element) {
         WebDriver driver = DriverManager.getDriver();
