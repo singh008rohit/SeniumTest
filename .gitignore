@@ -1,1 +1,45 @@
-/target/
+# === Maven build output ===
+target/
+*.log
+
+# === Java class files ===
+*.class
+
+
+# === Eclipse ===
+.project
+.classpath
+.settings/
+
+
+
+# === Logs, Screenshots, Reports ===
+logs/
+screenshots/
+test-output/
+reports/
+extent-reports/
+allure-results/
+allure-report/
+*.png
+*.jpg
+
+# === API testing config ===
+.env
+*.env
+*.properties.local
+
+# === Docker / Selenium Grid ===
+docker-compose.override.yml
+*.pid
+
+# Ignore test reports
+/reports/
+/test-output/
+/extent-report/
+/allure-results/
+
+# Ignore screenshots/images
+/screenshots/
+/images/
+/failed-tests-screenshots/

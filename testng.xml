@@ -7,14 +7,14 @@
     </test>
 
     <test name="FirefoxTests">
-        <parameter name="browser" value="firefox"/>
+        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="ui.testcases.RegisterUserTest"/>
         </classes>
     </test>
 
     <test name="EdgeTests">
-        <parameter name="browser" value="MicrosoftEdge"/>
+        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="ui.testcases.ValidateValidTest"/>
         </classes>

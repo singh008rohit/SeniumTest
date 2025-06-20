@@ -3835,3 +3835,55 @@ Session ID: 1188ab446ade94d5d31688f909ed5fd4
 2025-05-30 01:39:27 [TestNG-PoolService-0] INFO  LoggerUtils - Browser fetched from CLI: chrome
 2025-05-30 01:39:37 [TestNG-PoolService-0] INFO  LoggerUtils - Launching browser: chrome with grid: false headless: false
 2025-05-30 01:39:48 [TestNG-PoolService-0] INFO  LoggerUtils - Navigated to application and LoginPage initialized
+2025-06-19 01:37:29 [TestNG-tests-2] INFO  LoggerUtils - Test Suite Started: FirefoxTests
+2025-06-19 01:37:29 [TestNG-tests-1] INFO  LoggerUtils - Test Suite Started: ChromeTests
+2025-06-19 01:37:29 [TestNG-tests-3] INFO  LoggerUtils - Test Suite Started: EdgeTests
+2025-06-19 01:37:29 [TestNG-tests-1] INFO  LoggerUtils - Browser fetched from testng.xml: chrome
+2025-06-19 01:37:29 [TestNG-tests-3] INFO  LoggerUtils - Browser fetched from testng.xml: MicrosoftEdge
+2025-06-19 01:37:29 [TestNG-tests-2] INFO  LoggerUtils - Browser fetched from testng.xml: firefox
+2025-06-19 01:37:29 [TestNG-tests-3] INFO  LoggerUtils - Test Started: validateValidUserTest
+2025-06-19 01:37:29 [TestNG-tests-3] INFO  LoggerUtils - Test Skipped: validateValidUserTest
+2025-06-19 01:37:30 [TestNG-tests-3] INFO  LoggerUtils - Test Suite Finished: EdgeTests
+2025-06-19 01:37:37 [TestNG-tests-1] INFO  LoggerUtils - Launching browser: chrome with grid: true headless: true
+2025-06-19 01:37:41 [TestNG-tests-2] INFO  LoggerUtils - Launching browser: firefox with grid: true headless: true
+2025-06-19 01:37:48 [TestNG-tests-1] INFO  LoggerUtils - Navigated to application and LoginPage initialized
+2025-06-19 01:37:48 [TestNG-tests-1] INFO  LoggerUtils - Test Started: loginWithvalidUserTest
+2025-06-19 01:37:50 [TestNG-tests-2] INFO  LoggerUtils - Navigated to application and LoginPage initialized
+2025-06-19 01:37:50 [TestNG-tests-2] INFO  LoggerUtils - Test Started: registeruserTest
+2025-06-19 01:37:57 [TestNG-tests-1] INFO  LoggerUtils - Clicked on element: [[RemoteWebDriver: chrome-headless-shell on linux (3d3fc6405e9bef5b6561dd927740669b)] -> xpath: //a[normalize-space()='Signup / Login']]
+2025-06-19 01:37:59 [TestNG-tests-2] INFO  LoggerUtils - Clicked on element: [[RemoteWebDriver: firefox on linux (1b9d4c6a-71b0-4dd4-91c9-f6d81f84e1fb)] -> xpath: //a[normalize-space()='Signup / Login']]
+2025-06-19 01:38:00 [TestNG-tests-1] INFO  LoggerUtils - Fetched text: New User Signup!
+2025-06-19 01:38:20 [TestNG-tests-2] INFO  LoggerUtils - Test Passed: registeruserTest
+2025-06-19 01:38:25 [TestNG-tests-2] INFO  LoggerUtils - Test Suite Finished: FirefoxTests
+2025-06-19 01:38:42 [TestNG-tests-1] INFO  LoggerUtils - Entered text: rohit
+2025-06-19 01:39:23 [TestNG-tests-1] INFO  LoggerUtils - Entered text: catbpb@gmail.com
+2025-06-19 01:40:04 [TestNG-tests-2] INFO  LoggerUtils - Test Suite Started: FirefoxTests
+2025-06-19 01:40:04 [TestNG-tests-3] INFO  LoggerUtils - Test Suite Started: EdgeTests
+2025-06-19 01:40:04 [TestNG-tests-1] INFO  LoggerUtils - Test Suite Started: ChromeTests
+2025-06-19 01:40:05 [TestNG-tests-1] INFO  LoggerUtils - Browser fetched from testng.xml: chrome
+2025-06-19 01:40:05 [TestNG-tests-3] INFO  LoggerUtils - Browser fetched from testng.xml: chrome
+2025-06-19 01:40:05 [TestNG-tests-2] INFO  LoggerUtils - Browser fetched from testng.xml: chrome
+2025-06-19 01:43:06 [TestNG-tests-2] INFO  LoggerUtils - Test Started: registeruserTest
+2025-06-19 01:43:06 [TestNG-tests-3] INFO  LoggerUtils - Test Started: validateValidUserTest
+2025-06-19 01:43:06 [TestNG-tests-1] INFO  LoggerUtils - Test Started: loginWithvalidUserTest
+2025-06-19 01:43:06 [TestNG-tests-3] INFO  LoggerUtils - Test Skipped: validateValidUserTest
+2025-06-19 01:43:06 [TestNG-tests-2] INFO  LoggerUtils - Test Skipped: registeruserTest
+2025-06-19 01:43:06 [TestNG-tests-1] INFO  LoggerUtils - Test Skipped: loginWithvalidUserTest
+2025-06-19 01:43:08 [TestNG-tests-3] INFO  LoggerUtils - Test Suite Finished: EdgeTests
+2025-06-19 01:43:08 [TestNG-tests-1] INFO  LoggerUtils - Test Suite Finished: ChromeTests
+2025-06-19 01:43:08 [TestNG-tests-2] INFO  LoggerUtils - Test Suite Finished: FirefoxTests
+2025-06-19 01:43:34 [TestNG-tests-2] INFO  LoggerUtils - Test Suite Started: FirefoxTests
+2025-06-19 01:43:34 [TestNG-tests-3] INFO  LoggerUtils - Test Suite Started: EdgeTests
+2025-06-19 01:43:34 [TestNG-tests-1] INFO  LoggerUtils - Test Suite Started: ChromeTests
+2025-06-19 01:43:34 [TestNG-tests-2] INFO  LoggerUtils - Browser fetched from testng.xml: chrome
+2025-06-19 01:43:34 [TestNG-tests-3] INFO  LoggerUtils - Browser fetched from testng.xml: chrome
+2025-06-19 01:43:34 [TestNG-tests-1] INFO  LoggerUtils - Browser fetched from testng.xml: chrome
+2025-06-19 01:46:35 [TestNG-tests-3] INFO  LoggerUtils - Test Started: validateValidUserTest
+2025-06-19 01:46:35 [TestNG-tests-1] INFO  LoggerUtils - Test Started: loginWithvalidUserTest
+2025-06-19 01:46:35 [TestNG-tests-2] INFO  LoggerUtils - Test Started: registeruserTest
+2025-06-19 01:46:35 [TestNG-tests-3] INFO  LoggerUtils - Test Skipped: validateValidUserTest
+2025-06-19 01:46:35 [TestNG-tests-2] INFO  LoggerUtils - Test Skipped: registeruserTest
+2025-06-19 01:46:35 [TestNG-tests-1] INFO  LoggerUtils - Test Skipped: loginWithvalidUserTest
+2025-06-19 01:46:36 [TestNG-tests-3] INFO  LoggerUtils - Test Suite Finished: EdgeTests
+2025-06-19 01:46:36 [TestNG-tests-2] INFO  LoggerUtils - Test Suite Finished: FirefoxTests
+2025-06-19 01:46:36 [TestNG-tests-1] INFO  LoggerUtils - Test Suite Finished: ChromeTests
