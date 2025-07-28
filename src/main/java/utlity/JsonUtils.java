@@ -36,11 +36,11 @@ public class JsonUtils {
    }
 
    public static <T> List<T> getListvalueFromJson(String jsonFilePath, String path) throws IOException {
-      return (List)loadJson(jsonFilePath).read(path);
+      return (List<T>)loadJson(jsonFilePath).read(path);
    }
 
-   public static <K, V> Map<K, V> getMapFromJson(String jsonFilePath, String path) throws IOException {
-      return (Map)loadJson(jsonFilePath).read(path);
+   public static  Map<String, Object> getMapFromJson(String jsonFilePath, String path) throws IOException {
+      return (Map<String, Object>)loadJson(jsonFilePath);
    }
 
    public static String getJsonObjectAsString(String jsonFilePath, String path) throws IOException {
@@ -52,5 +52,8 @@ public class JsonUtils {
       File file = new File(System.getProperty("user.dir") + jsonFilePath);
       return new String(Files.readAllBytes(file.toPath()));
    }
+   
+ 
+   
 }
     

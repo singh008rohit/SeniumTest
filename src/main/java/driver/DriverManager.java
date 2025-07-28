@@ -17,6 +17,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import base.BaseTest;
 import commonConstant.CommonConstant;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import loggerUtil.LoggerUtils;
 
 public class DriverManager {
 
@@ -36,7 +37,7 @@ public class DriverManager {
                     }
 
                     webDriver = useGrid
-                            ? new RemoteWebDriver(new URL(CommonConstant.GRIDURL), chromeOptions)
+                            ? new RemoteWebDriver(new URL(BaseTest.getValueFromPropFile(CommonConstant.GRIDURL)), chromeOptions)
                             : createLocalChromeDriver(chromeOptions);
                     break;
 
@@ -47,7 +48,7 @@ public class DriverManager {
                     }
 
                     webDriver = useGrid
-                            ? new RemoteWebDriver(new URL(CommonConstant.GRIDURL), firefoxOptions)
+                            ? new RemoteWebDriver(new URL(BaseTest.getValueFromPropFile(CommonConstant.GRIDURL)), firefoxOptions)
                             : createLocalFirefoxDriver(firefoxOptions);
                     break;
 
@@ -58,7 +59,7 @@ public class DriverManager {
                     }
 
                     webDriver = useGrid
-                            ? new RemoteWebDriver(new URL(CommonConstant.GRIDURL), edgeOptions)
+                            ? new RemoteWebDriver(new URL(BaseTest.getValueFromPropFile(CommonConstant.GRIDURL)), edgeOptions)
                             : createLocalEdgeDriver(edgeOptions);
                     break;
 
@@ -70,10 +71,10 @@ public class DriverManager {
         }
 
         webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
-        webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         webDriver.manage().deleteAllCookies();
-
+        LoggerUtils.info("Launching browser: " + browser + " with grid: " + useGrid + " headless: " + isHeadless);
         driver.set(webDriver);
     }
 

@@ -1,0 +1,1387 @@
+From 004c300b9011cf11b0f0b6194da31c3ef452a79a Mon Sep 17 00:00:00 2001
+From: Rohit Singh <rohit.0008singh@gmail.com>
+Date: Wed, 7 May 2025 23:41:06 +0530
+Subject: [PATCH] adding stable code to git on 7 may
+
+---
+ reports/API_TestSuite_Report_20250505_234047.html  | 273 +++++++++++++++++++++
+ reports/API_TestSuite_Report_20250505_235114.html  | 273 +++++++++++++++++++++
+ reports/API_TestSuite_Report_20250505_235207.html  | 273 +++++++++++++++++++++
+ src/main/java/utlity/JsonUtils.java                |   4 +-
+ .../apitest/ValidateAbletoSearchProductsTest.java  |   2 +
+ src/test/java/apitest/ValidateResponse.java        |  72 ++++++
+ src/test/java/resource/test.json                   |  66 +++++
+ test-output/Default suite/Default test.html        |  10 +-
+ test-output/Default suite/Default test.xml         |   4 +-
+ test-output/Default suite/testng-failed.xml        |   8 +-
+ test-output/emailable-report.html                  |   6 +-
+ test-output/index.html                             |  36 ++-
+ ...ST-apitest.ValidateAbletoSearchProductsTest.xml |   4 +-
+ .../junitreports/TEST-apitest.ValidateResponse.xml |   6 +
+ test-output/old/Default suite/classes.html         |   8 +-
+ .../old/Default suite/methods-alphabetical.html    |   8 +-
+ test-output/old/Default suite/methods.html         |   8 +-
+ test-output/old/Default suite/testng.xml.html      |   2 +-
+ test-output/testng-failed.xml                      |   8 +-
+ test-output/testng-results.xml                     |  20 +-
+ 20 files changed, 1012 insertions(+), 79 deletions(-)
+ create mode 100644 reports/API_TestSuite_Report_20250505_234047.html
+ create mode 100644 reports/API_TestSuite_Report_20250505_235114.html
+ create mode 100644 reports/API_TestSuite_Report_20250505_235207.html
+ create mode 100644 src/test/java/apitest/ValidateResponse.java
+ create mode 100644 src/test/java/resource/test.json
+ create mode 100644 test-output/junitreports/TEST-apitest.ValidateResponse.xml
+
+diff --git a/reports/API_TestSuite_Report_20250505_234047.html b/reports/API_TestSuite_Report_20250505_234047.html
+new file mode 100644
+index 0000000..bc7a62e
+--- /dev/null
++++ b/reports/API_TestSuite_Report_20250505_234047.html
+@@ -0,0 +1,273 @@
++
++
++<!DOCTYPE html>
++<html>
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
++<title>Test Execution Report</title>
++<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
++<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
++<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
++<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
++<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
++<style type="text/css"></style></head><body class="spa -report dark">
++  <div class="app">
++    <div class="layout">
++<div class="header navbar">
++<div class="vheader">
++<div class="nav-logo">
++<a href="#">
++<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
++</a>
++</div>
++<ul class="nav-left">
++<li class="search-box">
++<a class="search-toggle" href="#">
++<i class="search-icon fa fa-search"></i>
++<i class="search-icon-close fa fa-close"></i>
++</a>
++</li>
++<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
++</ul>
++<ul class="nav-right">
++<li class="m-r-10">
++<a href="#"><span class="badge badge-primary">Automation Test Report</span></a>
++</li>
++<li class="m-r-10">
++<a href="#"><span class="badge badge-primary">2025-05-05 23:40:47</span></a>
++</li>
++</ul>
++</div>
++</div><div class="side-nav">
++<div class="side-nav-inner">
++<ul class="side-nav-menu">
++<li class="nav-item dropdown" onclick="toggleView('test-view')">
++<a id="nav-test" class="dropdown-toggle" href="#">
++<span class="ico"><i class="fa fa-list"></i></span>
++</a>
++</li>
++<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
++<a id="nav-dashboard" class="dropdown-toggle" href="#">
++<span class="ico"><i class="fa fa-bar-chart"></i></span>
++</a>
++</li>
++</ul>
++</div>
++</div>      <div class="vcontainer">
++        <div class="main-content">
++<div class="test-wrapper row view test-view">
++  <div class="test-list">
++    <div class="test-list-tools">
++<ul class="tools pull-left">
++<li><a href="#"><span class="font-size-14">Tests</span></a></li>
++</ul>
++<ul class="tools text-right">
++<li class="dropdown">
++<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
++<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
++<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
++<div class="dropdown-divider"></div>
++<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
++</ul>
++</li>
++</ul>
++</div>    <div class="test-list-wrapper scrollable">
++      <ul class="test-list-item">
++        <li class="test-item"  status="pass" test-id="1"
++          author=""
++          tag=""
++          device="">
++          <div class="test-detail">
++            <p class="name">Get all product list from get api request</p>
++            <p class="text-sm">
++              <span>11:40:48 pm</span> / <span>00:00:04:425</span>
++              <span class="badge pass-bg log float-right">Pass</span>
++            </p>
++          </div>
++          <div class="test-contents d-none">
++<div class="detail-head">
++<div class="p-v-10">
++<div class="info">
++<h5 class="test-status text-pass">Get all product list from get api request</h5>
++<span class='badge badge-success'>05.05.2025 11:40:48 pm</span>
++<span class='badge badge-danger'>05.05.2025 11:40:53 pm</span>
++<span class='badge badge-default'>00:00:04:425</span>
++&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
++<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
++<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
++<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
++</div>
++</div>
++</div><div class="detail-body mt-4">
++<table class="table table-sm">
++  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
++  <tbody>
++      <tr class="event-row">
++        <td><span class="badge log info-bg">Info</span></td>
++        <td>11:40:48 pm</td>
++        <td>
++          ------Execution started -----
++        </td>
++      </tr>
++      <tr class="event-row">
++        <td><span class="badge log info-bg">Info</span></td>
++        <td>11:40:53 pm</td>
++        <td>
++          response<html>
++  <body>{"responseCode": 200, "products": [{"id": 33, "name": "Soft Stretch Jeans", "price": "Rs. 799", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 35, "name": "Regular Fit Straight Jeans", "price": "Rs. 1200", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 37, "name": "Grunt Blue Slim Fit Jeans", "price": "Rs. 1400", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}]}</body>
++</html>
++        </td>
++      </tr>
++  </tbody>
++</table>
++</div>
++          </div>
++        </li>
++      </ul>
++    </div>
++  </div>
++<div class="test-content scrollable">
++<div class="test-content-tools">
++<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
++</div>
++<div class="test-content-detail"><div class="detail-body"></div></div>
++</div></div>
++<div class="container-fluid p-4 view dashboard-view">
++<div class="row">
++<div class="col-md-3">
++<div class="card"><div class="card-body">
++<p class="m-b-0">Started</p>
++<h3>2025-05-05 23:40:47</h3>
++</div></div>
++</div>
++<div class="col-md-3">
++<div class="card"><div class="card-body">
++<p class="m-b-0">Ended</p>
++<h3>2025-05-05 23:40:53</h3>
++</div></div>
++</div>
++<div class="col-md-3">
++<div class="card"><div class="card-body">
++<p class="m-b-0 text-pass">Tests Passed</p>
++<h3>1</h3>
++</div></div>
++</div>
++<div class="col-md-3">
++<div class="card"><div class="card-body">
++<p class="m-b-0 text-fail">Tests Failed</p>
++<h3>0</h3>
++</div></div>
++</div>
++</div>
++<div class="row">
++<div class="col-md-6">
++<div class="card">
++<div class="card-header">
++<h6 class="card-title">Tests</h6>
++</div>
++<div class="card-body">
++<div class="">
++<canvas id='parent-analysis' width='115' height='90'></canvas>
++</div>
++</div>
++<div class="card-footer">
++<div><small data-tooltip='100%'>
++<b>1</b> tests passed
++</small>
++</div>
++<div>
++<small data-tooltip='0%'><b>0</b> tests failed,
++<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
++</small>
++</div>
++</div>
++</div>
++</div>
++<div class="col-md-6">
++<div class="card">
++<div class="card-header">
++<h6 class="card-title">Log events</h6>
++</div>
++<div class="card-body">
++<div class="">
++<canvas id='events-analysis' width='115' height='90'></canvas>
++</div>
++</div>
++<div class="card-footer">
++<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
++<div>
++<small data-tooltip='0%'><b>0</b> events failed,
++<b data-tooltip='%'>2</b> others
++</small>
++</div>
++</div>
++</div>
++</div>
++</div>
++<div class="row"><div class="col-md-12">
++<div class="card"><div class="card-header"><p>Timeline</p></div>
++<div class="card-body pt-0"><div>
++<canvas id="timeline" height="120"></canvas>
++</div></div>
++</div>
++</div></div>
++<script>
++var timeline = {
++"Get all product list from get api request":4.425
++};
++</script>
++<div class="row">
++<div class="col-lg-6 col-md-12 sysenv-container">
++<div class="card">
++<div class="card-header"><p>System/Environment</p></div>
++<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
++<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
++<tbody>
++<tr>
++<td>Tester</td>
++<td>Rohit Singh</td>
++</tr>
++<tr>
++<td>Environment</td>
++<td>QA</td>
++</tr>
++</tbody>
++</table></div>
++</div>
++</div>
++</div>
++</div>
++<script>
++var statusGroup = {
++parentCount: 5,
++passParent: 1,
++failParent: 0,
++warningParent: 0,
++skipParent: 0,
++childCount: 5,
++passChild: 0,
++failChild: 0,
++warningChild: 0,
++skipChild: 0,
++infoChild: 0,
++grandChildCount: 5,
++passGrandChild: 0,
++failGrandChild: 0,
++warningGrandChild: 0,
++skipGrandChild: 0,
++infoGrandChild: 0,
++eventsCount: 5,
++passEvents: 0,
++failEvents: 0,
++warningEvents: 0,
++skipEvents: 0,
++infoEvents: 2
++};
++</script>        </div>
++      </div>
++    </div>
++  </div>
++<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
++<script type="text/javascript">document.addEventListener('DOMContentLoaded', function() { document.body.style.backgroundColor = '#20232a'; document.querySelector('.report-name').style.color = 'yellow'; document.title = 'Customized Selenium Report'; alert('Welcome to Custom Extent Report!'); });document.addEventListener("DOMContentLoaded", function() { document.querySelectorAll(".fail").forEach(e => { e.style.backgroundColor = "#ff0000"; e.style.color = "#ffffff"; }); });document.addEventListener("DOMContentLoaded", function() { let btn = document.createElement("button"); btn.innerText = "🔄 Refresh Report"; btn.style = "position: fixed; bottom: 20px; right: 20px; padding: 10px; background: cyan; border: none; cursor: pointer; font-weight: bold;"; btn.onclick = () => location.reload(); document.body.appendChild(btn); });document.addEventListener("DOMContentLoaded", function() { document.querySelectorAll(".node-name").forEach(node => node.click()); });document.addEventListener("DOMContentLoaded", function() { alert("Welcome to the Custom Extent Report!"); });document.addEventListener("DOMContentLoaded", function() { let footer = document.createElement("div"); footer.innerHTML = "<p style='text-align:center; color:white;'>Execution completed at: " + new Date().toLocaleString() + "</p>"; footer.style = "position: fixed; bottom: 0; width: 100%; background: black; padding: 5px;"; document.body.appendChild(footer); });</script></body>
++</html>
+\ No newline at end of file
+diff --git a/reports/API_TestSuite_Report_20250505_235114.html b/reports/API_TestSuite_Report_20250505_235114.html
+new file mode 100644
+index 0000000..8b863db
+--- /dev/null
++++ b/reports/API_TestSuite_Report_20250505_235114.html
+@@ -0,0 +1,273 @@
++
++
++<!DOCTYPE html>
++<html>
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
++<title>Test Execution Report</title>
++<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
++<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
++<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
++<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
++<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
++<style type="text/css"></style></head><body class="spa -report dark">
++  <div class="app">
++    <div class="layout">
++<div class="header navbar">
++<div class="vheader">
++<div class="nav-logo">
++<a href="#">
++<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
++</a>
++</div>
++<ul class="nav-left">
++<li class="search-box">
++<a class="search-toggle" href="#">
++<i class="search-icon fa fa-search"></i>
++<i class="search-icon-close fa fa-close"></i>
++</a>
++</li>
++<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
++</ul>
++<ul class="nav-right">
++<li class="m-r-10">
++<a href="#"><span class="badge badge-primary">Automation Test Report</span></a>
++</li>
++<li class="m-r-10">
++<a href="#"><span class="badge badge-primary">2025-05-05 23:51:14</span></a>
++</li>
++</ul>
++</div>
++</div><div class="side-nav">
++<div class="side-nav-inner">
++<ul class="side-nav-menu">
++<li class="nav-item dropdown" onclick="toggleView('test-view')">
++<a id="nav-test" class="dropdown-toggle" href="#">
++<span class="ico"><i class="fa fa-list"></i></span>
++</a>
++</li>
++<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
++<a id="nav-dashboard" class="dropdown-toggle" href="#">
++<span class="ico"><i class="fa fa-bar-chart"></i></span>
++</a>
++</li>
++</ul>
++</div>
++</div>      <div class="vcontainer">
++        <div class="main-content">
++<div class="test-wrapper row view test-view">
++  <div class="test-list">
++    <div class="test-list-tools">
++<ul class="tools pull-left">
++<li><a href="#"><span class="font-size-14">Tests</span></a></li>
++</ul>
++<ul class="tools text-right">
++<li class="dropdown">
++<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
++<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
++<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
++<div class="dropdown-divider"></div>
++<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
++</ul>
++</li>
++</ul>
++</div>    <div class="test-list-wrapper scrollable">
++      <ul class="test-list-item">
++        <li class="test-item"  status="pass" test-id="1"
++          author=""
++          tag=""
++          device="">
++          <div class="test-detail">
++            <p class="name">Get all product list from get api request</p>
++            <p class="text-sm">
++              <span>11:51:15 pm</span> / <span>00:00:04:711</span>
++              <span class="badge pass-bg log float-right">Pass</span>
++            </p>
++          </div>
++          <div class="test-contents d-none">
++<div class="detail-head">
++<div class="p-v-10">
++<div class="info">
++<h5 class="test-status text-pass">Get all product list from get api request</h5>
++<span class='badge badge-success'>05.05.2025 11:51:15 pm</span>
++<span class='badge badge-danger'>05.05.2025 11:51:19 pm</span>
++<span class='badge badge-default'>00:00:04:711</span>
++&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
++<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
++<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
++<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
++</div>
++</div>
++</div><div class="detail-body mt-4">
++<table class="table table-sm">
++  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
++  <tbody>
++      <tr class="event-row">
++        <td><span class="badge log info-bg">Info</span></td>
++        <td>11:51:15 pm</td>
++        <td>
++          ------Execution started -----
++        </td>
++      </tr>
++      <tr class="event-row">
++        <td><span class="badge log info-bg">Info</span></td>
++        <td>11:51:19 pm</td>
++        <td>
++          response<html>
++  <body>{"responseCode": 200, "products": [{"id": 33, "name": "Soft Stretch Jeans", "price": "Rs. 799", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 35, "name": "Regular Fit Straight Jeans", "price": "Rs. 1200", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 37, "name": "Grunt Blue Slim Fit Jeans", "price": "Rs. 1400", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}]}</body>
++</html>
++        </td>
++      </tr>
++  </tbody>
++</table>
++</div>
++          </div>
++        </li>
++      </ul>
++    </div>
++  </div>
++<div class="test-content scrollable">
++<div class="test-content-tools">
++<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
++</div>
++<div class="test-content-detail"><div class="detail-body"></div></div>
++</div></div>
++<div class="container-fluid p-4 view dashboard-view">
++<div class="row">
++<div class="col-md-3">
++<div class="card"><div class="card-body">
++<p class="m-b-0">Started</p>
++<h3>2025-05-05 23:51:14</h3>
++</div></div>
++</div>
++<div class="col-md-3">
++<div class="card"><div class="card-body">
++<p class="m-b-0">Ended</p>
++<h3>2025-05-05 23:51:20</h3>
++</div></div>
++</div>
++<div class="col-md-3">
++<div class="card"><div class="card-body">
++<p class="m-b-0 text-pass">Tests Passed</p>
++<h3>1</h3>
++</div></div>
++</div>
++<div class="col-md-3">
++<div class="card"><div class="card-body">
++<p class="m-b-0 text-fail">Tests Failed</p>
++<h3>0</h3>
++</div></div>
++</div>
++</div>
++<div class="row">
++<div class="col-md-6">
++<div class="card">
++<div class="card-header">
++<h6 class="card-title">Tests</h6>
++</div>
++<div class="card-body">
++<div class="">
++<canvas id='parent-analysis' width='115' height='90'></canvas>
++</div>
++</div>
++<div class="card-footer">
++<div><small data-tooltip='100%'>
++<b>1</b> tests passed
++</small>
++</div>
++<div>
++<small data-tooltip='0%'><b>0</b> tests failed,
++<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
++</small>
++</div>
++</div>
++</div>
++</div>
++<div class="col-md-6">
++<div class="card">
++<div class="card-header">
++<h6 class="card-title">Log events</h6>
++</div>
++<div class="card-body">
++<div class="">
++<canvas id='events-analysis' width='115' height='90'></canvas>
++</div>
++</div>
++<div class="card-footer">
++<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
++<div>
++<small data-tooltip='0%'><b>0</b> events failed,
++<b data-tooltip='%'>2</b> others
++</small>
++</div>
++</div>
++</div>
++</div>
++</div>
++<div class="row"><div class="col-md-12">
++<div class="card"><div class="card-header"><p>Timeline</p></div>
++<div class="card-body pt-0"><div>
++<canvas id="timeline" height="120"></canvas>
++</div></div>
++</div>
++</div></div>
++<script>
++var timeline = {
++"Get all product list from get api request":4.711
++};
++</script>
++<div class="row">
++<div class="col-lg-6 col-md-12 sysenv-container">
++<div class="card">
++<div class="card-header"><p>System/Environment</p></div>
++<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
++<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
++<tbody>
++<tr>
++<td>Tester</td>
++<td>Rohit Singh</td>
++</tr>
++<tr>
++<td>Environment</td>
++<td>QA</td>
++</tr>
++</tbody>
++</table></div>
++</div>
++</div>
++</div>
++</div>
++<script>
++var statusGroup = {
++parentCount: 5,
++passParent: 1,
++failParent: 0,
++warningParent: 0,
++skipParent: 0,
++childCount: 5,
++passChild: 0,
++failChild: 0,
++warningChild: 0,
++skipChild: 0,
++infoChild: 0,
++grandChildCount: 5,
++passGrandChild: 0,
++failGrandChild: 0,
++warningGrandChild: 0,
++skipGrandChild: 0,
++infoGrandChild: 0,
++eventsCount: 5,
++passEvents: 0,
++failEvents: 0,
++warningEvents: 0,
++skipEvents: 0,
++infoEvents: 2
++};
++</script>        </div>
++      </div>
++    </div>
++  </div>
++<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
++<script type="text/javascript">document.addEventListener('DOMContentLoaded', function() { document.body.style.backgroundColor = '#20232a'; document.querySelector('.report-name').style.color = 'yellow'; document.title = 'Customized Selenium Report'; alert('Welcome to Custom Extent Report!'); });document.addEventListener("DOMContentLoaded", function() { document.querySelectorAll(".fail").forEach(e => { e.style.backgroundColor = "#ff0000"; e.style.color = "#ffffff"; }); });document.addEventListener("DOMContentLoaded", function() { let btn = document.createElement("button"); btn.innerText = "🔄 Refresh Report"; btn.style = "position: fixed; bottom: 20px; right: 20px; padding: 10px; background: cyan; border: none; cursor: pointer; font-weight: bold;"; btn.onclick = () => location.reload(); document.body.appendChild(btn); });document.addEventListener("DOMContentLoaded", function() { document.querySelectorAll(".node-name").forEach(node => node.click()); });document.addEventListener("DOMContentLoaded", function() { alert("Welcome to the Custom Extent Report!"); });document.addEventListener("DOMContentLoaded", function() { let footer = document.createElement("div"); footer.innerHTML = "<p style='text-align:center; color:white;'>Execution completed at: " + new Date().toLocaleString() + "</p>"; footer.style = "position: fixed; bottom: 0; width: 100%; background: black; padding: 5px;"; document.body.appendChild(footer); });</script></body>
++</html>
+\ No newline at end of file
+diff --git a/reports/API_TestSuite_Report_20250505_235207.html b/reports/API_TestSuite_Report_20250505_235207.html
+new file mode 100644
+index 0000000..b68f269
+--- /dev/null
++++ b/reports/API_TestSuite_Report_20250505_235207.html
+@@ -0,0 +1,273 @@
++
++
++<!DOCTYPE html>
++<html>
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
++<title>Test Execution Report</title>
++<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
++<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
++<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
++<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
++<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
++<style type="text/css"></style></head><body class="spa -report dark">
++  <div class="app">
++    <div class="layout">
++<div class="header navbar">
++<div class="vheader">
++<div class="nav-logo">
++<a href="#">
++<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
++</a>
++</div>
++<ul class="nav-left">
++<li class="search-box">
++<a class="search-toggle" href="#">
++<i class="search-icon fa fa-search"></i>
++<i class="search-icon-close fa fa-close"></i>
++</a>
++</li>
++<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
++</ul>
++<ul class="nav-right">
++<li class="m-r-10">
++<a href="#"><span class="badge badge-primary">Automation Test Report</span></a>
++</li>
++<li class="m-r-10">
++<a href="#"><span class="badge badge-primary">2025-05-05 23:52:07</span></a>
++</li>
++</ul>
++</div>
++</div><div class="side-nav">
++<div class="side-nav-inner">
++<ul class="side-nav-menu">
++<li class="nav-item dropdown" onclick="toggleView('test-view')">
++<a id="nav-test" class="dropdown-toggle" href="#">
++<span class="ico"><i class="fa fa-list"></i></span>
++</a>
++</li>
++<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
++<a id="nav-dashboard" class="dropdown-toggle" href="#">
++<span class="ico"><i class="fa fa-bar-chart"></i></span>
++</a>
++</li>
++</ul>
++</div>
++</div>      <div class="vcontainer">
++        <div class="main-content">
++<div class="test-wrapper row view test-view">
++  <div class="test-list">
++    <div class="test-list-tools">
++<ul class="tools pull-left">
++<li><a href="#"><span class="font-size-14">Tests</span></a></li>
++</ul>
++<ul class="tools text-right">
++<li class="dropdown">
++<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
++<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
++<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
++<div class="dropdown-divider"></div>
++<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
++</ul>
++</li>
++</ul>
++</div>    <div class="test-list-wrapper scrollable">
++      <ul class="test-list-item">
++        <li class="test-item"  status="pass" test-id="1"
++          author=""
++          tag=""
++          device="">
++          <div class="test-detail">
++            <p class="name">Get all product list from get api request</p>
++            <p class="text-sm">
++              <span>11:52:08 pm</span> / <span>00:00:04:153</span>
++              <span class="badge pass-bg log float-right">Pass</span>
++            </p>
++          </div>
++          <div class="test-contents d-none">
++<div class="detail-head">
++<div class="p-v-10">
++<div class="info">
++<h5 class="test-status text-pass">Get all product list from get api request</h5>
++<span class='badge badge-success'>05.05.2025 11:52:08 pm</span>
++<span class='badge badge-danger'>05.05.2025 11:52:12 pm</span>
++<span class='badge badge-default'>00:00:04:153</span>
++&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
++<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
++<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
++<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
++</div>
++</div>
++</div><div class="detail-body mt-4">
++<table class="table table-sm">
++  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
++  <tbody>
++      <tr class="event-row">
++        <td><span class="badge log info-bg">Info</span></td>
++        <td>11:52:08 pm</td>
++        <td>
++          ------Execution started -----
++        </td>
++      </tr>
++      <tr class="event-row">
++        <td><span class="badge log info-bg">Info</span></td>
++        <td>11:52:12 pm</td>
++        <td>
++          response<html>
++  <body>{"responseCode": 200, "products": [{"id": 33, "name": "Soft Stretch Jeans", "price": "Rs. 799", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 35, "name": "Regular Fit Straight Jeans", "price": "Rs. 1200", "brand": "H&amp;M", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}, {"id": 37, "name": "Grunt Blue Slim Fit Jeans", "price": "Rs. 1400", "brand": "Polo", "category": {"usertype": {"usertype": "Men"}, "category": "Jeans"}}]}</body>
++</html>
++        </td>
++      </tr>
++  </tbody>
++</table>
++</div>
++          </div>
++        </li>
++      </ul>
++    </div>
++  </div>
++<div class="test-content scrollable">
++<div class="test-content-tools">
++<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
++</div>
++<div class="test-content-detail"><div class="detail-body"></div></div>
++</div></div>
++<div class="container-fluid p-4 view dashboard-view">
++<div class="row">
++<div class="col-md-3">
++<div class="card"><div class="card-body">
++<p class="m-b-0">Started</p>
++<h3>2025-05-05 23:52:07</h3>
++</div></div>
++</div>
++<div class="col-md-3">
++<div class="card"><div class="card-body">
++<p class="m-b-0">Ended</p>
++<h3>2025-05-05 23:52:13</h3>
++</div></div>
++</div>
++<div class="col-md-3">
++<div class="card"><div class="card-body">
++<p class="m-b-0 text-pass">Tests Passed</p>
++<h3>1</h3>
++</div></div>
++</div>
++<div class="col-md-3">
++<div class="card"><div class="card-body">
++<p class="m-b-0 text-fail">Tests Failed</p>
++<h3>0</h3>
++</div></div>
++</div>
++</div>
++<div class="row">
++<div class="col-md-6">
++<div class="card">
++<div class="card-header">
++<h6 class="card-title">Tests</h6>
++</div>
++<div class="card-body">
++<div class="">
++<canvas id='parent-analysis' width='115' height='90'></canvas>
++</div>
++</div>
++<div class="card-footer">
++<div><small data-tooltip='100%'>
++<b>1</b> tests passed
++</small>
++</div>
++<div>
++<small data-tooltip='0%'><b>0</b> tests failed,
++<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
++</small>
++</div>
++</div>
++</div>
++</div>
++<div class="col-md-6">
++<div class="card">
++<div class="card-header">
++<h6 class="card-title">Log events</h6>
++</div>
++<div class="card-body">
++<div class="">
++<canvas id='events-analysis' width='115' height='90'></canvas>
++</div>
++</div>
++<div class="card-footer">
++<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
++<div>
++<small data-tooltip='0%'><b>0</b> events failed,
++<b data-tooltip='%'>2</b> others
++</small>
++</div>
++</div>
++</div>
++</div>
++</div>
++<div class="row"><div class="col-md-12">
++<div class="card"><div class="card-header"><p>Timeline</p></div>
++<div class="card-body pt-0"><div>
++<canvas id="timeline" height="120"></canvas>
++</div></div>
++</div>
++</div></div>
++<script>
++var timeline = {
++"Get all product list from get api request":4.153
++};
++</script>
++<div class="row">
++<div class="col-lg-6 col-md-12 sysenv-container">
++<div class="card">
++<div class="card-header"><p>System/Environment</p></div>
++<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
++<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
++<tbody>
++<tr>
++<td>Tester</td>
++<td>Rohit Singh</td>
++</tr>
++<tr>
++<td>Environment</td>
++<td>QA</td>
++</tr>
++</tbody>
++</table></div>
++</div>
++</div>
++</div>
++</div>
++<script>
++var statusGroup = {
++parentCount: 5,
++passParent: 1,
++failParent: 0,
++warningParent: 0,
++skipParent: 0,
++childCount: 5,
++passChild: 0,
++failChild: 0,
++warningChild: 0,
++skipChild: 0,
++infoChild: 0,
++grandChildCount: 5,
++passGrandChild: 0,
++failGrandChild: 0,
++warningGrandChild: 0,
++skipGrandChild: 0,
++infoGrandChild: 0,
++eventsCount: 5,
++passEvents: 0,
++failEvents: 0,
++warningEvents: 0,
++skipEvents: 0,
++infoEvents: 2
++};
++</script>        </div>
++      </div>
++    </div>
++  </div>
++<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
++<script type="text/javascript">document.addEventListener('DOMContentLoaded', function() { document.body.style.backgroundColor = '#20232a'; document.querySelector('.report-name').style.color = 'yellow'; document.title = 'Customized Selenium Report'; alert('Welcome to Custom Extent Report!'); });document.addEventListener("DOMContentLoaded", function() { document.querySelectorAll(".fail").forEach(e => { e.style.backgroundColor = "#ff0000"; e.style.color = "#ffffff"; }); });document.addEventListener("DOMContentLoaded", function() { let btn = document.createElement("button"); btn.innerText = "🔄 Refresh Report"; btn.style = "position: fixed; bottom: 20px; right: 20px; padding: 10px; background: cyan; border: none; cursor: pointer; font-weight: bold;"; btn.onclick = () => location.reload(); document.body.appendChild(btn); });document.addEventListener("DOMContentLoaded", function() { document.querySelectorAll(".node-name").forEach(node => node.click()); });document.addEventListener("DOMContentLoaded", function() { alert("Welcome to the Custom Extent Report!"); });document.addEventListener("DOMContentLoaded", function() { let footer = document.createElement("div"); footer.innerHTML = "<p style='text-align:center; color:white;'>Execution completed at: " + new Date().toLocaleString() + "</p>"; footer.style = "position: fixed; bottom: 0; width: 100%; background: black; padding: 5px;"; document.body.appendChild(footer); });</script></body>
++</html>
+\ No newline at end of file
+diff --git a/src/main/java/utlity/JsonUtils.java b/src/main/java/utlity/JsonUtils.java
+index f168f1f..05fa062 100644
+--- a/src/main/java/utlity/JsonUtils.java
++++ b/src/main/java/utlity/JsonUtils.java
+@@ -36,11 +36,11 @@ public class JsonUtils {
+    }
+ 
+    public static <T> List<T> getListvalueFromJson(String jsonFilePath, String path) throws IOException {
+-      return (List)loadJson(jsonFilePath).read(path);
++      return (List<T>)loadJson(jsonFilePath).read(path);
+    }
+ 
+    public static <K, V> Map<K, V> getMapFromJson(String jsonFilePath, String path) throws IOException {
+-      return (Map)loadJson(jsonFilePath).read(path);
++      return (Map<K, V>)loadJson(jsonFilePath).read(path);
+    }
+ 
+    public static String getJsonObjectAsString(String jsonFilePath, String path) throws IOException {
+diff --git a/src/test/java/apitest/ValidateAbletoSearchProductsTest.java b/src/test/java/apitest/ValidateAbletoSearchProductsTest.java
+index cc96086..57e97b5 100644
+--- a/src/test/java/apitest/ValidateAbletoSearchProductsTest.java
++++ b/src/test/java/apitest/ValidateAbletoSearchProductsTest.java
+@@ -29,6 +29,8 @@ public class ValidateAbletoSearchProductsTest extends APITestBase{
+ 	.post("api/searchProduct").then().spec(ResponseSpecBuilderFactory.getSearchProductResponse()).log().all().extract().response();
+ 	
+ 	ExtentReportManager.getTest().log(Status.INFO, "response"+re.asPrettyString());
++	
++	System.out.println(re.body().asPrettyString());
+ 	}
+ 	
+ 	
+diff --git a/src/test/java/apitest/ValidateResponse.java b/src/test/java/apitest/ValidateResponse.java
+new file mode 100644
+index 0000000..532f144
+--- /dev/null
++++ b/src/test/java/apitest/ValidateResponse.java
+@@ -0,0 +1,72 @@
++package apitest;
++
++import java.io.IOException;
++import java.util.ArrayList;
++import java.util.List;
++
++import org.testng.annotations.Test;
++
++import utlity.JsonUtils;
++
++public class ValidateResponse {
++	
++	
++	
++	
++	
++	static void getResponse() throws IOException {
++		String path ="/src/test/java/resource/test.json";
++		//Get company name
++	String st=	JsonUtils.getJsonObjectAsString(path, "company");
++	//System.out.println(st);
++	//System.out.println(JsonUtils.getListvalueFromJson(path, "departments[*].name"));// get all department name
++	
++	//System.out.println(JsonUtils.getJsonObjectAsString(path, "departments[0].name"));// from specific index
++	
++	//System.out.println(JsonUtils.getJsonObjectAsString(path, "departments[1].name"));// from specific index
++	
++	//Get name employee name from all department
++	//System.out.println(JsonUtils.getListvalueFromJson(path, "departments[*].employees[*].name"));
++	
++	//Get skills of Engineering department employees
++	//System.out.println(JsonUtils.getListvalueFromJson(path, "departments[0].employees[*].skills[*]"));
++	
++	//Get salary of employee with employeeId == ‘ENG2002’
++	//[?()] Filter expression  used to filter array elements.
++   //@  Represents the current element in the iteration.
++	
++	//System.out.println(JsonUtils.getListvalueFromJson(path, "departments[*].employees[?(@.employeeId == 'ENG2002')].salary"));
++	
++	//Get all active employees’ names
++	List<Object> li=JsonUtils.getListvalueFromJson(path, "departments[*].employees[?(@.active == true)].name");
++	
++	for(Object s: li) {
++		
++		System.out.println(s);	
++	}
++	
++	//Get project titles with budget > 150000
++	
++	System.out.println(JsonUtils.getListvalueFromJson(path,"projects[?(@.budget>150000)].title").get(0));
++	
++	//Get names of department heads
++	System.out.println(JsonUtils.getListvalueFromJson(path, "departments[*].head.name"));
++	
++	//Get the list of all unique skills used in the company
++	
++	System.out.println(JsonUtils.getListvalueFromJson(path, "departments[*].employees[*].skills[*]"));
++	
++	//Get all project IDs where status = ‘Active’
++	System.out.println(JsonUtils.getListvalueFromJson(path, "projects[?(@.status=='Active')].projectId"));
++	                                                         
++	
++
++	
++	
++	}
++	
++	public static void main(String ar[]) throws IOException {
++		getResponse();
++	}
++
++}
+diff --git a/src/test/java/resource/test.json b/src/test/java/resource/test.json
+new file mode 100644
+index 0000000..4797ea6
+--- /dev/null
++++ b/src/test/java/resource/test.json
+@@ -0,0 +1,66 @@
++{
++  "company": "TechCorp",
++  "location": {
++    "city": "Bangalore",
++    "country": "India"
++  },
++  "departments": [
++    {
++      "name": "Engineering",
++      "head": {
++        "name": "Rahul Sharma",
++        "employeeId": "ENG1001"
++      },
++      "employees": [
++        {
++          "name": "Anjali",
++          "employeeId": "ENG2001",
++          "skills": ["Java", "Spring", "Docker"],
++          "salary": 85000,
++          "active": true
++        },
++        {
++          "name": "Vikas",
++          "employeeId": "ENG2002",
++          "skills": ["Python", "ML", "AWS"],
++          "salary": 92000,
++          "active": false
++        }
++      ]
++    },
++    {
++      "name": "HR",
++      "head": {
++        "name": "Neha Mehta",
++        "employeeId": "HR1001"
++      },
++      "employees": [
++        {
++          "name": "Sonal",
++          "employeeId": "HR2001",
++          "skills": ["Recruitment", "Communication"],
++          "salary": 60000,
++          "active": true
++        }
++      ]
++    }
++  ],
++  "foundedYear": 2010,
++  "public": false,
++  "projects": [
++    {
++      "projectId": "P100",
++      "title": "AI Chatbot",
++      "budget": 150000,
++      "technologies": ["Python", "TensorFlow"],
++      "status": "Active"
++    },
++    {
++      "projectId": "P101",
++      "title": "Cloud Migration",
++      "budget": 200000,
++      "technologies": ["AWS", "Docker", "Kubernetes"],
++      "status": "Completed"
++    }
++  ]
++}
+\ No newline at end of file
+diff --git a/test-output/Default suite/Default test.html b/test-output/Default suite/Default test.html
+index f7282f1..869815b 100644
+--- a/test-output/Default suite/Default test.html	
++++ b/test-output/Default suite/Default test.html	
+@@ -57,9 +57,9 @@ function toggleAllBoxes() {
+ <tr>
+ <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+ </tr><tr>
+-<td>Started on:</td><td>Sat May 03 13:35:50 IST 2025</td>
++<td>Started on:</td><td>Tue May 06 00:01:45 IST 2025</td>
+ </tr>
+-<tr><td>Total time:</td><td>5 seconds (5072 ms)</td>
++<tr><td>Total time:</td><td>0 seconds (136 ms)</td>
+ </tr><tr>
+ <td>Included groups:</td><td></td>
+ </tr><tr>
+@@ -75,10 +75,10 @@ function toggleAllBoxes() {
+ <td><b>Instance</b></td>
+ </tr>
+ <tr>
+-<td title='apitest.ValidateAbletoSearchProductsTest.ValidateAbletoSearchProducts()'><b>ValidateAbletoSearchProducts</b><br>Test class: apitest.ValidateAbletoSearchProductsTest</td>
++<td title='apitest.ValidateResponse.getResponse()'><b>getResponse</b><br>Test class: apitest.ValidateResponse</td>
+ <td></td>
+-<td>4</td>
+-<td>apitest.ValidateAbletoSearchProductsTest@272113c4</td></tr>
++<td>0</td>
++<td>apitest.ValidateResponse@342c38f8</td></tr>
+ </table><p>
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/test-output/Default suite/Default test.xml b/test-output/Default suite/Default test.xml
+index 9c98430..0ac192c 100644
+--- a/test-output/Default suite/Default test.xml	
++++ b/test-output/Default suite/Default test.xml	
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Generated by org.testng.reporters.JUnitXMLReporter -->
+-<testsuite ignored="0" hostname="192.168.1.10" failures="0" tests="1" name="Default test" time="5.072" errors="0" timestamp="2025-05-03T13:35:55 IST">
+-  <testcase classname="apitest.ValidateAbletoSearchProductsTest" name="ValidateAbletoSearchProducts" time="4.09"/>
++<testsuite ignored="0" hostname="192.168.1.10" failures="0" tests="1" name="Default test" time="0.136" errors="0" timestamp="2025-05-06T00:01:46 IST">
++  <testcase classname="apitest.ValidateResponse" name="getResponse" time="0.087"/>
+ </testsuite> <!-- Default test -->
+diff --git a/test-output/Default suite/testng-failed.xml b/test-output/Default suite/testng-failed.xml
+index c1a8f57..dacc4c3 100644
+--- a/test-output/Default suite/testng-failed.xml	
++++ b/test-output/Default suite/testng-failed.xml	
+@@ -3,13 +3,11 @@
+ <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+   <test thread-count="5" name="Default test(failed)">
+     <classes>
+-      <class name="apitest.ValidateAbletoSearchProductsTest">
++      <class name="apitest.ValidateResponse">
+         <methods>
+-          <include name="setupAPI"/>
+-          <include name="ValidateAbletoSearchProducts"/>
+-          <include name="tearDownReport"/>
++          <include name="getResponse"/>
+         </methods>
+-      </class> <!-- apitest.ValidateAbletoSearchProductsTest -->
++      </class> <!-- apitest.ValidateResponse -->
+     </classes>
+   </test> <!-- Default test(failed) -->
+ </suite> <!-- Failed suite [Default suite] -->
+diff --git a/test-output/emailable-report.html b/test-output/emailable-report.html
+index 29ac5a3..89b80cd 100644
+--- a/test-output/emailable-report.html
++++ b/test-output/emailable-report.html
+@@ -9,10 +9,10 @@
+ <table>
+ <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+ <tr><th colspan="8">Default suite</th></tr>
+-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5,072</td><td></td><td></td></tr>
++<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">136</td><td></td><td></td></tr>
+ </table>
+-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">apitest.ValidateAbletoSearchProductsTest</td><td><a href="#m0">ValidateAbletoSearchProducts</a></td><td rowspan="1">1746259550959</td><td rowspan="1">4090</td></tr></tbody>
++<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">apitest.ValidateResponse</td><td><a href="#m0">getResponse</a></td><td rowspan="1">1746469905982</td><td rowspan="1">87</td></tr></tbody>
+ </table>
+-<h2>Default test</h2><h3 id="m0">apitest.ValidateAbletoSearchProductsTest#ValidateAbletoSearchProducts</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
++<h2>Default test</h2><h3 id="m0">apitest.ValidateResponse#getResponse</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+ </body>
+ </html>
+diff --git a/test-output/index.html b/test-output/index.html
+index c1d14bc..21b29e0 100644
+--- a/test-output/index.html
++++ b/test-output/index.html
+@@ -104,7 +104,7 @@
+                     <div class="method-list-content passed suite-Default_suite">
+                       <span>
+                         <img src="passed.png" width="3%"/>
+-                        <a href="#" panel-name="suite-Default_suite" title="apitest.ValidateAbletoSearchProductsTest" class="method navigator-link" hash-for-method="ValidateAbletoSearchProducts">ValidateAbletoSearchProducts</a> <!-- method navigator-link -->
++                        <a href="#" panel-name="suite-Default_suite" title="apitest.ValidateResponse" class="method navigator-link" hash-for-method="getResponse">getResponse</a> <!-- method navigator-link -->
+                       </span>
+                       <br/>
+                     </div> <!-- method-list-content passed suite-Default_suite -->
+@@ -122,14 +122,14 @@
+           <div class="suite-Default_suite-class-passed">
+             <div class="main-panel-header rounded-window-top">
+               <img src="passed.png"/>
+-              <span class="class-name">apitest.ValidateAbletoSearchProductsTest</span>
++              <span class="class-name">apitest.ValidateResponse</span>
+             </div> <!-- main-panel-header rounded-window-top -->
+             <div class="main-panel-content rounded-window-bottom">
+               <div class="method">
+                 <div class="method-content">
+-                  <a name="ValidateAbletoSearchProducts">
+-                  </a> <!-- ValidateAbletoSearchProducts -->
+-                  <span class="method-name">ValidateAbletoSearchProducts</span>
++                  <a name="getResponse">
++                  </a> <!-- getResponse -->
++                  <span class="method-name">getResponse</span>
+                 </div> <!-- method-content -->
+               </div> <!-- method -->
+             </div> <!-- main-panel-content rounded-window-bottom -->
+@@ -137,7 +137,7 @@
+         </div> <!-- panel Default_suite -->
+         <div panel-name="test-xml-Default_suite" class="panel">
+           <div class="main-panel-header rounded-window-top">
+-            <span class="header-content">/private/var/folders/f3/7d9mby7j7yjd406_npqfc3bh0000gn/T/testng-eclipse--1729041970/testng-customsuite.xml</span>
++            <span class="header-content">/private/var/folders/f3/7d9mby7j7yjd406_npqfc3bh0000gn/T/testng-eclipse--1348303195/testng-customsuite.xml</span>
+           </div> <!-- main-panel-header rounded-window-top -->
+           <div class="main-panel-content rounded-window-bottom">
+             <pre>
+@@ -146,7 +146,7 @@
+ &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+     &lt;classes&gt;
+-      &lt;class name=&quot;apitest.ValidateAbletoSearchProductsTest&quot;/&gt;
++      &lt;class name=&quot;apitest.ValidateResponse&quot;/&gt;
+     &lt;/classes&gt;
+   &lt;/test&gt; &lt;!-- Default test --&gt;
+ &lt;/suite&gt; &lt;!-- Default suite --&gt;
+@@ -188,14 +188,14 @@ data.addColumn('string', 'Class');
+ data.addColumn('number', 'Time (ms)');
+ data.addRows(1);
+ data.setCell(0, 0, 0)
+-data.setCell(0, 1, 'ValidateAbletoSearchProducts')
+-data.setCell(0, 2, 'apitest.ValidateAbletoSearchProductsTest')
+-data.setCell(0, 3, 4090);
++data.setCell(0, 1, 'getResponse')
++data.setCell(0, 2, 'apitest.ValidateResponse')
++data.setCell(0, 3, 87);
+ window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+ return data;
+ }
+               </script>
+-              <span class="suite-total-time">Total running time: 4 seconds</span>
++              <span class="suite-total-time">Total running time: 87 ms</span>
+               <div id="times-div-Default_suite">
+               </div> <!-- times-div-Default_suite -->
+             </div> <!-- times-div -->
+@@ -221,19 +221,11 @@ return data;
+           </div> <!-- main-panel-header rounded-window-top -->
+           <div class="main-panel-content rounded-window-bottom">
+             <div class="chronological-class">
+-              <div class="chronological-class-name">apitest.ValidateAbletoSearchProductsTest</div> <!-- chronological-class-name -->
+-              <div class="configuration-class before">
+-                <span class="method-name">setupAPI</span>
+-                <span class="method-start">0 ms</span>
+-              </div> <!-- configuration-class before -->
++              <div class="chronological-class-name">apitest.ValidateResponse</div> <!-- chronological-class-name -->
+               <div class="test-method">
+-                <span class="method-name">ValidateAbletoSearchProducts</span>
+-                <span class="method-start">939 ms</span>
++                <span class="method-name">getResponse</span>
++                <span class="method-start">0 ms</span>
+               </div> <!-- test-method -->
+-              <div class="configuration-suite after">
+-                <span class="method-name">tearDownReport</span>
+-                <span class="method-start">5091 ms</span>
+-              </div> <!-- configuration-suite after -->
+           </div> <!-- main-panel-content rounded-window-bottom -->
+         </div> <!-- panel -->
+       </div> <!-- main-panel-root -->
+diff --git a/test-output/junitreports/TEST-apitest.ValidateAbletoSearchProductsTest.xml b/test-output/junitreports/TEST-apitest.ValidateAbletoSearchProductsTest.xml
+index c0e5df9..457dcb7 100644
+--- a/test-output/junitreports/TEST-apitest.ValidateAbletoSearchProductsTest.xml
++++ b/test-output/junitreports/TEST-apitest.ValidateAbletoSearchProductsTest.xml
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Generated by org.testng.reporters.JUnitReportReporter -->
+-<testsuite hostname="192.168.1.10" failures="0" tests="1" name="apitest.ValidateAbletoSearchProductsTest" time="4.090" errors="0" timestamp="2025-05-03T13:35:55 IST" skipped="0">
+-  <testcase classname="apitest.ValidateAbletoSearchProductsTest" name="ValidateAbletoSearchProducts" time="4.090"/>
++<testsuite hostname="192.168.1.10" failures="0" tests="1" name="apitest.ValidateAbletoSearchProductsTest" time="4.170" errors="0" timestamp="2025-05-05T23:52:13 IST" skipped="0">
++  <testcase classname="apitest.ValidateAbletoSearchProductsTest" name="ValidateAbletoSearchProducts" time="4.170"/>
+   <system-out/>
+ </testsuite> <!-- apitest.ValidateAbletoSearchProductsTest -->
+diff --git a/test-output/junitreports/TEST-apitest.ValidateResponse.xml b/test-output/junitreports/TEST-apitest.ValidateResponse.xml
+new file mode 100644
+index 0000000..9cd0394
+--- /dev/null
++++ b/test-output/junitreports/TEST-apitest.ValidateResponse.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!-- Generated by org.testng.reporters.JUnitReportReporter -->
++<testsuite hostname="192.168.1.10" failures="0" tests="1" name="apitest.ValidateResponse" time="0.087" errors="0" timestamp="2025-05-06T00:01:46 IST" skipped="0">
++  <testcase classname="apitest.ValidateResponse" name="getResponse" time="0.087"/>
++  <system-out/>
++</testsuite> <!-- apitest.ValidateResponse -->
+diff --git a/test-output/old/Default suite/classes.html b/test-output/old/Default suite/classes.html
+index fe0e364..c0e58c4 100644
+--- a/test-output/old/Default suite/classes.html	
++++ b/test-output/old/Default suite/classes.html	
+@@ -4,23 +4,19 @@
+ <th>Method name</th>
+ <th>Groups</th>
+ </tr><tr>
+-<td>apitest.ValidateAbletoSearchProductsTest</td>
++<td>apitest.ValidateResponse</td>
+ <td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr>
+ <td align='center' colspan='3'>@Test</td>
+ </tr>
+ <tr>
+ <td>&nbsp;</td>
+-<td>ValidateAbletoSearchProducts</td>
++<td>getResponse</td>
+ <td>&nbsp;</td></tr>
+ <tr>
+ <td align='center' colspan='3'>@BeforeClass</td>
+ </tr>
+ <tr>
+-<td>&nbsp;</td>
+-<td>setupAPI</td>
+-<td>&nbsp;</td></tr>
+-<tr>
+ <td align='center' colspan='3'>@BeforeMethod</td>
+ </tr>
+ <tr>
+diff --git a/test-output/old/Default suite/methods-alphabetical.html b/test-output/old/Default suite/methods-alphabetical.html
+index 17340dc..48c792b 100644
+--- a/test-output/old/Default suite/methods-alphabetical.html	
++++ b/test-output/old/Default suite/methods-alphabetical.html	
+@@ -1,10 +1,6 @@
+ <h2>Methods run, sorted chronologically</h2><h3>&gt;&gt; means before, &lt;&lt; means after</h3><p/><br/><em>Default suite</em><p/><small><i>(Hover the method name to see the test class name)</i></small><p/>
+ <table border="1">
+ <tr><th>Time</th><th>Delta (ms)</th><th>Suite<br>configuration</th><th>Test<br>configuration</th><th>Class<br>configuration</th><th>Groups<br>configuration</th><th>Method<br>configuration</th><th>Test<br>method</th><th>Thread</th><th>Instances</th></tr>
+-<tr bgcolor="ffe6dc">  <td>25/05/03 13:35:50</td>   <td>0</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="ValidateAbletoSearchProductsTest.ValidateAbletoSearchProducts()[pri:0, instance:apitest.ValidateAbletoSearchProductsTest@272113c4]">ValidateAbletoSearchProducts</td> 
+-  <td>main@391183339</td>   <td></td> </tr>
+-<tr bgcolor="6cf3ea">  <td>25/05/03 13:35:50</td>   <td>-934</td> <td>&nbsp;</td><td>&nbsp;</td><td title="&gt;&gt;APITestBase.setupAPI()[pri:0, instance:apitest.ValidateAbletoSearchProductsTest@272113c4]">&gt;&gt;setupAPI</td> 
+-<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@391183339</td>   <td></td> </tr>
+-<tr bgcolor="6cf3ea">  <td>25/05/03 13:35:55</td>   <td>4155</td> <td title="&lt;&lt;APITestBase.tearDownReport()[pri:0, instance:apitest.ValidateAbletoSearchProductsTest@272113c4]">&lt;&lt;tearDownReport</td> 
+-<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@391183339</td>   <td></td> </tr>
++<tr bgcolor="ffe6dc">  <td>25/05/06 00:01:45</td>   <td>0</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="ValidateResponse.getResponse()[pri:0, instance:apitest.ValidateResponse@342c38f8]">getResponse</td> 
++  <td>main@1058609221</td>   <td></td> </tr>
+ </table>
+diff --git a/test-output/old/Default suite/methods.html b/test-output/old/Default suite/methods.html
+index 131da0e..48c792b 100644
+--- a/test-output/old/Default suite/methods.html	
++++ b/test-output/old/Default suite/methods.html	
+@@ -1,10 +1,6 @@
+ <h2>Methods run, sorted chronologically</h2><h3>&gt;&gt; means before, &lt;&lt; means after</h3><p/><br/><em>Default suite</em><p/><small><i>(Hover the method name to see the test class name)</i></small><p/>
+ <table border="1">
+ <tr><th>Time</th><th>Delta (ms)</th><th>Suite<br>configuration</th><th>Test<br>configuration</th><th>Class<br>configuration</th><th>Groups<br>configuration</th><th>Method<br>configuration</th><th>Test<br>method</th><th>Thread</th><th>Instances</th></tr>
+-<tr bgcolor="6cf3ea">  <td>25/05/03 13:35:50</td>   <td>0</td> <td>&nbsp;</td><td>&nbsp;</td><td title="&gt;&gt;APITestBase.setupAPI()[pri:0, instance:apitest.ValidateAbletoSearchProductsTest@272113c4]">&gt;&gt;setupAPI</td> 
+-<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@391183339</td>   <td></td> </tr>
+-<tr bgcolor="ffe6dc">  <td>25/05/03 13:35:50</td>   <td>934</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="ValidateAbletoSearchProductsTest.ValidateAbletoSearchProducts()[pri:0, instance:apitest.ValidateAbletoSearchProductsTest@272113c4]">ValidateAbletoSearchProducts</td> 
+-  <td>main@391183339</td>   <td></td> </tr>
+-<tr bgcolor="6cf3ea">  <td>25/05/03 13:35:55</td>   <td>5089</td> <td title="&lt;&lt;APITestBase.tearDownReport()[pri:0, instance:apitest.ValidateAbletoSearchProductsTest@272113c4]">&lt;&lt;tearDownReport</td> 
+-<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@391183339</td>   <td></td> </tr>
++<tr bgcolor="ffe6dc">  <td>25/05/06 00:01:45</td>   <td>0</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="ValidateResponse.getResponse()[pri:0, instance:apitest.ValidateResponse@342c38f8]">getResponse</td> 
++  <td>main@1058609221</td>   <td></td> </tr>
+ </table>
+diff --git a/test-output/old/Default suite/testng.xml.html b/test-output/old/Default suite/testng.xml.html
+index 8dc27c4..e61b0b0 100644
+--- a/test-output/old/Default suite/testng.xml.html	
++++ b/test-output/old/Default suite/testng.xml.html	
+@@ -1 +1 @@
+-<html><head><title>testng.xml for Default suite</title></head><body><tt>&lt;?xml&nbsp;version="1.0"&nbsp;encoding="UTF-8"?&gt;<br/>&lt;!DOCTYPE&nbsp;suite&nbsp;SYSTEM&nbsp;"https://testng.org/testng-1.0.dtd"&gt;<br/>&lt;suite&nbsp;name="Default&nbsp;suite"&nbsp;guice-stage="DEVELOPMENT"&gt;<br/>&nbsp;&nbsp;&lt;test&nbsp;thread-count="5"&nbsp;name="Default&nbsp;test"&nbsp;verbose="2"&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;classes&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;class&nbsp;name="apitest.ValidateAbletoSearchProductsTest"/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/classes&gt;<br/>&nbsp;&nbsp;&lt;/test&gt;&nbsp;&lt;!--&nbsp;Default&nbsp;test&nbsp;--&gt;<br/>&lt;/suite&gt;&nbsp;&lt;!--&nbsp;Default&nbsp;suite&nbsp;--&gt;<br/></tt></body></html>
+\ No newline at end of file
++<html><head><title>testng.xml for Default suite</title></head><body><tt>&lt;?xml&nbsp;version="1.0"&nbsp;encoding="UTF-8"?&gt;<br/>&lt;!DOCTYPE&nbsp;suite&nbsp;SYSTEM&nbsp;"https://testng.org/testng-1.0.dtd"&gt;<br/>&lt;suite&nbsp;name="Default&nbsp;suite"&nbsp;guice-stage="DEVELOPMENT"&gt;<br/>&nbsp;&nbsp;&lt;test&nbsp;thread-count="5"&nbsp;name="Default&nbsp;test"&nbsp;verbose="2"&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;classes&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;class&nbsp;name="apitest.ValidateResponse"/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/classes&gt;<br/>&nbsp;&nbsp;&lt;/test&gt;&nbsp;&lt;!--&nbsp;Default&nbsp;test&nbsp;--&gt;<br/>&lt;/suite&gt;&nbsp;&lt;!--&nbsp;Default&nbsp;suite&nbsp;--&gt;<br/></tt></body></html>
+\ No newline at end of file
+diff --git a/test-output/testng-failed.xml b/test-output/testng-failed.xml
+index c1a8f57..dacc4c3 100644
+--- a/test-output/testng-failed.xml
++++ b/test-output/testng-failed.xml
+@@ -3,13 +3,11 @@
+ <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+   <test thread-count="5" name="Default test(failed)">
+     <classes>
+-      <class name="apitest.ValidateAbletoSearchProductsTest">
++      <class name="apitest.ValidateResponse">
+         <methods>
+-          <include name="setupAPI"/>
+-          <include name="ValidateAbletoSearchProducts"/>
+-          <include name="tearDownReport"/>
++          <include name="getResponse"/>
+         </methods>
+-      </class> <!-- apitest.ValidateAbletoSearchProductsTest -->
++      </class> <!-- apitest.ValidateResponse -->
+     </classes>
+   </test> <!-- Default test(failed) -->
+ </suite> <!-- Failed suite [Default suite] -->
+diff --git a/test-output/testng-results.xml b/test-output/testng-results.xml
+index 0f5c260..a263109 100644
+--- a/test-output/testng-results.xml
++++ b/test-output/testng-results.xml
+@@ -2,24 +2,16 @@
+ <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+   <reporter-output>
+   </reporter-output>
+-  <suite started-at="2025-05-03T13:35:50 IST" name="Default suite" finished-at="2025-05-03T13:35:55 IST" duration-ms="5072">
++  <suite started-at="2025-05-06T00:01:45 IST" name="Default suite" finished-at="2025-05-06T00:01:46 IST" duration-ms="136">
+     <groups>
+     </groups>
+-    <test started-at="2025-05-03T13:35:50 IST" name="Default test" finished-at="2025-05-03T13:35:55 IST" duration-ms="5072">
+-      <class name="apitest.ValidateAbletoSearchProductsTest">
+-        <test-method is-config="true" signature="setupAPI()[pri:0, instance:apitest.ValidateAbletoSearchProductsTest@272113c4]" started-at="2025-05-03T13:35:50 IST" name="setupAPI" finished-at="2025-05-03T13:35:50 IST" duration-ms="932" status="PASS">
++    <test started-at="2025-05-06T00:01:45 IST" name="Default test" finished-at="2025-05-06T00:01:46 IST" duration-ms="136">
++      <class name="apitest.ValidateResponse">
++        <test-method signature="getResponse()[pri:0, instance:apitest.ValidateResponse@342c38f8]" started-at="2025-05-06T00:01:45 IST" name="getResponse" finished-at="2025-05-06T00:01:46 IST" duration-ms="87" status="PASS">
+           <reporter-output>
+           </reporter-output>
+-        </test-method> <!-- setupAPI -->
+-        <test-method signature="ValidateAbletoSearchProducts()[pri:0, instance:apitest.ValidateAbletoSearchProductsTest@272113c4]" started-at="2025-05-03T13:35:50 IST" name="ValidateAbletoSearchProducts" finished-at="2025-05-03T13:35:55 IST" duration-ms="4090" status="PASS">
+-          <reporter-output>
+-          </reporter-output>
+-        </test-method> <!-- ValidateAbletoSearchProducts -->
+-        <test-method is-config="true" signature="tearDownReport()[pri:0, instance:apitest.ValidateAbletoSearchProductsTest@272113c4]" started-at="2025-05-03T13:35:55 IST" name="tearDownReport" finished-at="2025-05-03T13:35:55 IST" duration-ms="436" status="PASS">
+-          <reporter-output>
+-          </reporter-output>
+-        </test-method> <!-- tearDownReport -->
+-      </class> <!-- apitest.ValidateAbletoSearchProductsTest -->
++        </test-method> <!-- getResponse -->
++      </class> <!-- apitest.ValidateResponse -->
+     </test> <!-- Default test -->
+   </suite> <!-- Default suite -->
+ </testng-results>
+-- 
+2.15.0
+

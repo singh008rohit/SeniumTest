@@ -57,7 +57,7 @@ public class ExtentReportManager {
         customJs.append("document.addEventListener(\"DOMContentLoaded\", function() { ")
                 .append("let btn = document.createElement(\"button\"); ")
                 .append("btn.innerText = \"🔄 Refresh Report\"; ")
-                .append("btn.style = \"position: fixed; bottom: 20px; right: 20px; padding: 10px; background: cyan; border: none; cursor: pointer; font-weight: bold;\"; ")
+                .append("btn.style = \"position: fixed; bottom: 50px; right: 70px; padding: 10px; background: cyan; border: none; cursor: pointer; font-weight: bold;\"; ")
                 .append("btn.onclick = () => location.reload(); ")
                 .append("document.body.appendChild(btn); ")
                 .append("});");
@@ -66,9 +66,6 @@ public class ExtentReportManager {
                 .append("document.querySelectorAll(\".node-name\").forEach(node => node.click()); ")
                 .append("});");
 
-        customJs.append("document.addEventListener(\"DOMContentLoaded\", function() { ")
-                .append("alert(\"Welcome to the Custom Extent Report!\"); ")
-                .append("});");
 
         customJs.append("document.addEventListener(\"DOMContentLoaded\", function() { ")
                 .append("let footer = document.createElement(\"div\"); ")

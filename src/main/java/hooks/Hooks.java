@@ -2,14 +2,21 @@ package hooks;
 
 import base.BaseTest;
 import base.PageObjectManager;
+import commonConstant.CommonConstant;
+
 import com.aventstack.extentreports.MediaEntityBuilder;
 import driver.DriverManager;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import loggerUtil.LoggerUtils;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+
 import reportManager.ExtentReportManager;
 
 import java.io.IOException;
@@ -17,8 +24,23 @@ import java.io.IOException;
 public class Hooks extends BaseTest {
 
     @Before(order = 0)
+    
     public void setupBrowser() throws IOException {
-        this.setup(BaseTest.getValueFromPropFile("browserType"));
+    	  // Priority 1: CLI `-Dbrowser=...`
+    	String cliBrowser = System.getProperty("browser");
+    	String xmlBrowser   = CommonConstant.CUCUMBERBROWSERTYPE;
+    	String browser;
+
+    	if (cliBrowser != null && !cliBrowser.isEmpty()) {
+    	    browser = cliBrowser;
+    	    LoggerUtils.info("Browser resolved from system property 'browser': " + browser);
+    	} else {
+    	    browser = getValueFromPropFile(CommonConstant.BROWSERTYPE);
+    	    LoggerUtils.info("Browser resolved from properties file: " + browser);
+    	}
+
+    	   
+        this.setup(browser);
         this.pageManager = new PageObjectManager();
     }
 

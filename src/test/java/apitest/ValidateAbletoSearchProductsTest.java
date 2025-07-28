@@ -29,6 +29,9 @@ public class ValidateAbletoSearchProductsTest extends APITestBase{
 	.post("api/searchProduct").then().spec(ResponseSpecBuilderFactory.getSearchProductResponse()).log().all().extract().response();
 	
 	ExtentReportManager.getTest().log(Status.INFO, "response"+re.asPrettyString());
+	
+	System.out.println(re.body().asPrettyString());
+	System.out.println("================  Headers==================="+re.getHeaders());
 	}
 	
 	
