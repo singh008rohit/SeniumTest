@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="ui.testcases.LoginWithvaliduserTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="loginWithvalidUserTest"/>
+        </methods>
+      </class> <!-- ui.testcases.LoginWithvaliduserTest -->
+      <class name="ui.testcases.ValidateValidTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="validateValidUserTest"/>
+        </methods>
+      </class> <!-- ui.testcases.ValidateValidTest -->
+      <class name="ui.testcases.RegisterUserTest">
+        <methods>
+          <include name="registeruserTest"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- ui.testcases.RegisterUserTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
