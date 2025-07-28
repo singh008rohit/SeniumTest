@@ -15,7 +15,7 @@ import driver.DriverManager;
 import pageConstant.NewUserSignUpPageConstant;
 import utlity.SeleniumCommonUtils;
 
-public class NewUserSignUpPage {
+public class NewUserSignUpPage extends BasePage{
 	private static String NewUserSignUp_Text = "New User Signup!";
 	private static String success = "ACCOUNT CREATED!";
 	private static String success1 = "Congratulations! Your new account has been successfully created!";
@@ -116,14 +116,12 @@ public class NewUserSignUpPage {
 	    
 	    private WebElement logoutButtton;
 
-	public NewUserSignUpPage() {
-		driver=DriverManager.getDriver();
-		if (this.driver == null) {
-			throw new IllegalStateException("driver is not initialized");
-		} else {
-			PageFactory.initElements(driver, this);
+	public NewUserSignUpPage(WebDriver driver) {
+		super(driver);
+		
+		
 			soft =new SoftAssert();
-		}
+		
 	}
 
 	public void signupWithNameEmail(String name, String email) {

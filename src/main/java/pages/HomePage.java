@@ -12,11 +12,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
+import reportManager.ExtentManager;
 import reportManager.ExtentReportManager;
 import utlity.SeleniumCommonUtils;
 
-public class HomePage {
-	private WebDriver driver ;
+public class HomePage extends BasePage {
 	private static final String homePageTitle = "Automation Exercise";
 	private static final String signupPageTitle = "Automation Exercise - Signup / Login";
 	private static final String deletemsg1 = "ACCOUNT DELETED!";
@@ -42,14 +42,12 @@ public class HomePage {
 	WebElement continueBtn;
 
 
-	public HomePage() {
-		driver= DriverManager.getDriver();
-		if (this.driver == null) {
-			throw new IllegalStateException("WebDriver is not initialized.");
-		} else {
-			PageFactory.initElements(driver, this);
+	public HomePage(WebDriver driver) {
+		
+		super(driver);
+			
 			soft= new SoftAssert();
-		}
+		
 	}
 
 	public void validatenavigatedToHomePage() {
@@ -72,7 +70,7 @@ public class HomePage {
 		soft.assertEquals(userName, name);
 		soft.assertTrue(
 				SeleniumCommonUtils.isElementExist(driver, By.xpath(HomePageConstant.DELETE_ACCOUNT)));
-		ExtentReportManager.getTest().log(Status.INFO, "Login with :" + userName);
+		 ExtentManager.getExtentTest().log(Status.INFO, "Login with :" + userName);
 	}
 
 	public void deleteAccount() {
@@ -89,7 +87,7 @@ public class HomePage {
 	public void verifyAccountdeleted() {
 		soft.assertTrue(SeleniumCommonUtils.isElementNotExist(driver,
 				By.xpath(HomePageConstant.DELETE_ACCOUNT)));
-		ExtentReportManager.getTest().log(Status.PASS, "Account is deleted");
+		 ExtentManager.getExtentTest().log(Status.PASS, "Account is deleted");
 		soft.assertAll();
 	}
 	

@@ -1,27 +1,27 @@
 package ui.testcases;
-
 import org.testng.annotations.Test;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
-
 import com.aventstack.extentreports.Status;
-
+import annotation.FrameworkAnnotation;
 import base.BaseTest;
-import commonConstant.CommonConstant;
-import listeners.SeleniumListener;
-import reportManager.ExtentReportManager;
-import test.data.MapTestData;
-@Listeners({SeleniumListener.class})
+import enums.AuthorType;
+import enums.CategoryType;
+import pages.HomePage;
+import reportManager.ExtentManager;
 
 public class ValidateValidTest extends BaseTest {
-	@Test(enabled =true, description= "Validate able to login with valid user only")
+	@FrameworkAnnotation(author = { AuthorType.ROHIT, AuthorType.ROHIT}, 
+			category = { CategoryType.SANITY,CategoryType.SMOKE,CategoryType.REGRESSION })
+	
+	
+	@Test(enabled =true, description= "Validate able to login with valid user only",groups = {"SANITY","SMOKE","REGRESSION"})
 	
 	void validateValidUserTest() {
-		
-		ExtentReportManager.getTest().log(Status.INFO, "--- Stating test login with valid user ---");
-		 final  String email = MapTestData.setUserData().get(CommonConstant.USER_EMAIL);
+		//LoginPage login= new LoginPage(getDriver());
+		//login.load1();
+		HomePage homePage= new HomePage(getDriver());
+		 ExtentManager.getExtentTest().log(Status.INFO, "--- Stating test login with valid user ---");
 		homePage.validatenavigatedToHomePage();
-	      ExtentReportManager.getTest().log(Status.INFO, "Test execution completed");
+		 ExtentManager.getExtentTest().log(Status.INFO, "Test execution completed");
 
 
 }}

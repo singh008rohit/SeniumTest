@@ -5,7 +5,7 @@ public class CommonConstant {
    public static final String BROWSERTYPE = "browserType";
    public static  String CUCUMBERBROWSERTYPE="cucubmerBrowserType";
    public static final String GRIDURL = "gridurl";
-   public static final String FILE_PATH = "/src/test/java/resource/application.properties";
+   public static final String FILE_PATH = "/src/test/java/resources/application.properties";
    public static final String USER_DIRECTORY = "user.dir";
    public static final String USER_GRID = "useGrid";
    public static final String JSON_PATH = "/src/test/java/resource/Sample.json";

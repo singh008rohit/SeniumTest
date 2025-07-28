@@ -1,8 +1,5 @@
     package pages;
 
-import utlity.SeleniumCommonUtils;
-import driver.DriverManager;
-import pageConstant.LoginPageConstant;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,8 +7,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class LoginPage {
-   private WebDriver driver;
+import commonConstant.ExtentReportConstant;
+import pageConstant.LoginPageConstant;
+import reportManager.ExtentManager;
+import utlity.ConfigLoader;
+import utlity.SeleniumCommonUtils;
+
+public class LoginPage extends BasePage {
+   
    private static String message = "Invalid username or password.";
    @FindBy(xpath = LoginPageConstant.LOGIN_LINK)
    WebElement loginLink;
@@ -28,11 +31,13 @@ public class LoginPage {
    @FindBy(xpath = LoginPageConstant.ERROR_MESSAGE)
    WebElement errorMessage;
 
-   public LoginPage() {
-	driver=   DriverManager.getDriver();
-      PageFactory.initElements(driver, this);
-   }
+   public LoginPage(WebDriver driver) {
+	
+		super(driver);
 
+   }
+  
+   
    public void loginToApplication(String userName, String password) {
       SeleniumCommonUtils.clickElement(loginLink);
       SeleniumCommonUtils.typeText(username, userName);
@@ -40,4 +45,5 @@ public class LoginPage {
       SeleniumCommonUtils.clickElement(signIN);
       Assert.assertEquals(SeleniumCommonUtils.getText(errorMessage), message, "able to login");
    }
+  
 }

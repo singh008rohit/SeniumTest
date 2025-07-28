@@ -1,79 +1,95 @@
    package base;
 
-import driver.DriverManager;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-import loggerUtil.LoggerUtils;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import commonConstant.CommonConstant;
+import driver.DriverManager;
+import driver.DriverManagerFactory;
+import enums.DriverType;
+import listeners.AnnotationTransformer;
+import listeners.MethodInterceptor;
+import listeners.SeleniumListener;
+import loggerUtil.LoggerUtils;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.NewUserSignUpPage;
 import reportManager.ExtentReportManager;
 import test.data.MapTestData;
+import utlity.SeleniumCommonUtils;
 
-public abstract class BaseTest {
-   protected LoginPage loginPage;
-   protected PageObjectManager pageManager = new PageObjectManager();
-   protected NewUserSignUpPage newuserSingUpPage;
-   protected HomePage homePage;
-   protected MapTestData mapTestData;
+@Listeners({
+	AnnotationTransformer.class,
+	SeleniumListener.class,
+	MethodInterceptor.class
+})
+
+public class BaseTest {
+
+	protected WebDriver getDriver() {
+		return DriverManager.getDriver();
+	}
+	
+	protected void setDriver(WebDriver driver) {
+		DriverManager.setDriver(driver);
+		
+	}
 
    @BeforeMethod(alwaysRun = true)
    @Parameters("browser")
-   public void setup(@Optional("") String xmlBrowser) throws IOException {
-       // Priority 1: CLI `-Dbrowser=...`
-       String cliBrowser = System.getProperty("browser");
-
-       String browser;
-       if (cliBrowser != null && !cliBrowser.isEmpty()) {
-           browser = cliBrowser;
-           LoggerUtils.info("Browser fetched from CLI: " + browser);
-       } else if (xmlBrowser != null && !xmlBrowser.isEmpty()) {
-           browser = xmlBrowser;
-           LoggerUtils.info("Browser fetched from testng.xml: " + browser);
-       } else {
-           browser = getValueFromPropFile(CommonConstant.BROWSERTYPE);
-           LoggerUtils.info("Browser fetched from properties file: " + browser);
-       }
-      ExtentReportManager.getSetup("UI_TestSuite");
-      DriverManager.initializeDriver(browser);
-      DriverManager.getDriver().get(getValueFromPropFile(CommonConstant.URL));
-      LoggerUtils.info("Navigated to application and LoginPage initialized");
-      this.loginPage = new LoginPage();
-      this.homePage = new HomePage();
-      this.mapTestData = new MapTestData();
-      this.newuserSingUpPage = new NewUserSignUpPage();
+   public  synchronized void  startDriver(@Optional String browser) throws IOException {   
+ browser=setBrowserValue(browser).toUpperCase();
+ setDriver(DriverManagerFactory.getManager(DriverType.valueOf(browser)).createDriver());
+ LoggerUtils.info("Current Thread info = " + Thread.currentThread().getId() + ", Driver = " + getDriver());
+ 
    }
 
-   public static String getValueFromPropFile(String key) {
-	    Properties prop = new Properties();
-	    String value = null;
-	    
-	    try (FileInputStream file = new FileInputStream(System.getProperty(CommonConstant.USER_DIRECTORY) + CommonConstant.FILE_PATH)) {
-	        prop.load(file);
-	        value = prop.getProperty(key);
-	    } catch (IOException e) {
-	        LoggerUtils.error("Error loading properties file: " + e.getMessage());
-	        throw new RuntimeException("Could not load properties file", e);
+  
+   public static String setBrowserValue(String browser) {
+	    // Fetch system property first (highest priority)
+	    String systemProp = System.getProperty("browser");
+
+	    if (systemProp != null) {
+	        LoggerUtils.info("Browser specified via system property: " + systemProp.toUpperCase());
+	        return systemProp;
 	    }
-	    
-	    return value;
+
+	    if (browser != null) {
+	        LoggerUtils.info("Browser passed via code or TestNG.xml: " + browser.toUpperCase());
+	        return browser;
+	    }
+
+	    LoggerUtils.info("No browser provided, defaulting to CHROME");
+	    return "CHROME";
 	}
 
-   
-  
-   @AfterMethod(
-      alwaysRun = true
-   )
-   public void tearDown() {
-      DriverManager.unload();
+   private void takeScreenShotOfTestFailure(String browser,ITestResult result ) {
+	 browser=   setBrowserValue(browser);
+	 LoggerUtils.error("Current Thread info = " + Thread.currentThread().getId() + ", Driver = "+getDriver());
+	 if(result.getStatus()==ITestResult.FAILURE) {
+		 File destFile = new File("Screenshots" + File.separator + browser + File.separator
+					+ result.getTestClass().getRealClass().getSimpleName() + "_" + result.getMethod().getMethodName()
+					+ ".png");
+		 SeleniumCommonUtils.screenshot(destFile);
+	 }
+   	
+   }
+   @Parameters("browser")
+   @AfterMethod(alwaysRun = true )
+   public  void tearDown(@Optional String browser,ITestResult result) {
+	   takeScreenShotOfTestFailure(browser,result);
+	   getDriver().quit();
+      
    }
 }
     
