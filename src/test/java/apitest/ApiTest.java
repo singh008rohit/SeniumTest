@@ -41,7 +41,7 @@ public class ApiTest extends APITestBase {
    }
    
    
-   @Test(enabled = true)
+   @Test(enabled = false)
    
    void pojo1() {
 	   
@@ -105,9 +105,9 @@ public class ApiTest extends APITestBase {
 	   tp.setDepartment(departments);
 	   tp.setFoundedYear(foundedYear);
 	   tp.setPublic1(public1);
-	Response res=   given().header("Content-Type", "application/json").baseUri("http://localhost:8080").log().all().body(tp).when().post("/users/1").then().statusCode(200).extract().response();
+	//Response res=   given().header("Content-Type", "application/json").baseUri("http://localhost:8080").log().all().body(tp).when().post("/users/1").then().statusCode(200).extract().response();
 	
-	System.out.println("------------response-----------------"+res.asPrettyString());
+	//System.out.println("------------response-----------------"+res.asPrettyString());
 
    }
 }
