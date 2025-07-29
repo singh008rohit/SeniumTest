@@ -9982,3 +9982,349 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreensh
 2025-07-29 23:10:13 [main] INFO  LoggerUtils - Test Started: validatePutResponse
 2025-07-29 23:10:13 [main] INFO  LoggerUtils - Test Passed: validatePutResponse
 2025-07-29 23:10:13 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 23:40:33 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:40:33 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:40:36 [main] INFO  LoggerUtils - Launching browser:  with grid: false headless: true
+2025-07-29 23:40:36 [main] INFO  LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (f4805e7a0f7527cec3cfc4d026a14f0c)
+2025-07-29 23:40:36 [main] INFO  LoggerUtils - Test Started: loginWithvalidUserTest
+2025-07-29 23:40:42 [main] INFO  LoggerUtils - Test Passed: loginWithvalidUserTest
+2025-07-29 23:40:42 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:40:42 [main] ERROR LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (f4805e7a0f7527cec3cfc4d026a14f0c)
+2025-07-29 23:40:42 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:40:43 [main] INFO  LoggerUtils - Launching browser:  with grid: false headless: true
+2025-07-29 23:40:43 [main] INFO  LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (1de6d169b6e7744b982b7a69518369b6)
+2025-07-29 23:40:43 [main] INFO  LoggerUtils - Test Started: registeruserTest
+2025-07-29 23:40:46 [main] INFO  LoggerUtils - Test Passed: registeruserTest
+2025-07-29 23:40:46 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:40:46 [main] ERROR LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (1de6d169b6e7744b982b7a69518369b6)
+2025-07-29 23:40:46 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:40:47 [main] INFO  LoggerUtils - Launching browser:  with grid: false headless: true
+2025-07-29 23:40:47 [main] INFO  LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (3d7315137a44b24d9fa5720df00e90f3)
+2025-07-29 23:40:47 [main] INFO  LoggerUtils - Test Started: validateValidUserTest
+2025-07-29 23:40:50 [main] INFO  LoggerUtils - Test Passed: validateValidUserTest
+2025-07-29 23:40:50 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:40:50 [main] ERROR LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (3d7315137a44b24d9fa5720df00e90f3)
+2025-07-29 23:40:50 [main] INFO  LoggerUtils - Test Started: ValidateAbletoSearchProducts
+2025-07-29 23:40:55 [main] INFO  LoggerUtils - Test Passed: ValidateAbletoSearchProducts
+2025-07-29 23:40:55 [main] INFO  LoggerUtils - Test Started: getBookingId
+2025-07-29 23:40:57 [main] INFO  LoggerUtils - Test Passed: getBookingId
+2025-07-29 23:40:57 [main] INFO  LoggerUtils - Test Started: testGetRequest
+2025-07-29 23:40:57 [main] INFO  LoggerUtils - Test Passed: testGetRequest
+2025-07-29 23:40:57 [main] INFO  LoggerUtils - Test Started: validatePostResponse
+2025-07-29 23:40:57 [main] INFO  LoggerUtils - Test Passed: validatePostResponse
+2025-07-29 23:40:57 [main] INFO  LoggerUtils - Test Started: validatePutResponse
+2025-07-29 23:40:57 [main] INFO  LoggerUtils - Test Passed: validatePutResponse
+2025-07-29 23:40:57 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 23:42:45 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:42:45 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:42:48 [main] INFO  LoggerUtils - Launching browser:  with grid: false headless: false
+2025-07-29 23:42:48 [main] INFO  LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (2881b1c6d4e86492abfa1bd8bca6a46f)
+2025-07-29 23:42:48 [main] INFO  LoggerUtils - Test Started: loginWithvalidUserTest
+2025-07-29 23:43:22 [main] ERROR LoggerUtils - Test Failed: loginWithvalidUserTest
+2025-07-29 23:43:22 [main] ERROR LoggerUtils - Exception: 
+org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 29.049
+  (Session info: chrome=138.0.7204.169)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2881b1c6d4e86492abfa1bd8bca6a46f, get {url=https://automationexercise.com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.169, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: /var/folders/f3/7d9mby7j7yj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58567}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58567/devtoo..., se:cdpVersion: 138.0.7204.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2881b1c6d4e86492abfa1bd8bca6a46f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313) ~[selenium-remote-driver-4.29.0.jar:?]
+	at pages.BasePage.load(BasePage.java:28) ~[classes/:?]
+	at pages.BasePage.<init>(BasePage.java:23) ~[classes/:?]
+	at pages.NewUserSignUpPage.<init>(NewUserSignUpPage.java:120) ~[classes/:?]
+	at ui.testcases.LoginWithvaliduserTest.loginWithvalidUserTest(LoginWithvaliduserTest.java:30) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155) [surefire-testng-3.3.0.jar:3.3.0]
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169) [surefire-testng-3.3.0.jar:3.3.0]
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88) [surefire-testng-3.3.0.jar:3.3.0]
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137) [surefire-testng-3.3.0.jar:3.3.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.3.0.jar:3.3.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.3.0.jar:3.3.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.3.0.jar:3.3.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.3.0.jar:3.3.0]
+2025-07-29 23:43:22 [main] INFO  LoggerUtils - Screenshot saved at: ./screenshots/loginWithvalidUserTest_20250729_234322.png
+2025-07-29 23:43:22 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:43:22 [main] ERROR LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (2881b1c6d4e86492abfa1bd8bca6a46f)
+2025-07-29 23:43:23 [main] INFO  LoggerUtils - Screenshot saved at: Screenshots/CHROME/LoginWithvaliduserTest_loginWithvalidUserTest.png
+2025-07-29 23:43:23 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:43:25 [main] INFO  LoggerUtils - Launching browser:  with grid: false headless: false
+2025-07-29 23:43:25 [main] INFO  LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (a294ef4f9b504b2ae2416c7ac7c04093)
+2025-07-29 23:43:25 [main] INFO  LoggerUtils - Test Started: registeruserTest
+2025-07-29 23:43:31 [main] INFO  LoggerUtils - Test Passed: registeruserTest
+2025-07-29 23:43:31 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:43:31 [main] ERROR LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (a294ef4f9b504b2ae2416c7ac7c04093)
+2025-07-29 23:43:31 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:43:32 [main] INFO  LoggerUtils - Launching browser:  with grid: false headless: false
+2025-07-29 23:43:32 [main] INFO  LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (1cac77831de74f6f5fa6be85c6e224b3)
+2025-07-29 23:43:32 [main] INFO  LoggerUtils - Test Started: validateValidUserTest
+2025-07-29 23:43:35 [main] INFO  LoggerUtils - Test Passed: validateValidUserTest
+2025-07-29 23:43:35 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:43:35 [main] ERROR LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (1cac77831de74f6f5fa6be85c6e224b3)
+2025-07-29 23:43:36 [main] INFO  LoggerUtils - Test Started: ValidateAbletoSearchProducts
+2025-07-29 23:43:38 [main] INFO  LoggerUtils - Test Passed: ValidateAbletoSearchProducts
+2025-07-29 23:43:38 [main] INFO  LoggerUtils - Test Started: getBookingId
+2025-07-29 23:43:39 [main] INFO  LoggerUtils - Test Passed: getBookingId
+2025-07-29 23:43:39 [main] INFO  LoggerUtils - Test Started: testGetRequest
+2025-07-29 23:43:39 [main] INFO  LoggerUtils - Test Passed: testGetRequest
+2025-07-29 23:43:39 [main] INFO  LoggerUtils - Test Started: validatePostResponse
+2025-07-29 23:43:39 [main] INFO  LoggerUtils - Test Passed: validatePostResponse
+2025-07-29 23:43:39 [main] INFO  LoggerUtils - Test Started: validatePutResponse
+2025-07-29 23:43:39 [main] INFO  LoggerUtils - Test Passed: validatePutResponse
+2025-07-29 23:43:40 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 23:46:12 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:46:12 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:46:12 [TestNG-test-Surefire test-1] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:46:12 [TestNG-test-Surefire test-1] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:46:15 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Launching browser:  with grid: false headless: false
+2025-07-29 23:46:15 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Current Thread info = 18, Driver = ChromeDriver: chrome on mac (39cdf48255fa0452148552bcc054459f)
+2025-07-29 23:46:15 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Started: registeruserTest
+2025-07-29 23:46:16 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Launching browser:  with grid: false headless: false
+2025-07-29 23:46:16 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Current Thread info = 18, Driver = ChromeDriver: chrome on mac (f2419e1665151636a63319a00118ff7c)
+2025-07-29 23:46:16 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Started: loginWithvalidUserTest
+2025-07-29 23:46:45 [TestNG-test-Surefire test-1] ERROR LoggerUtils - Test Failed: registeruserTest
+2025-07-29 23:46:45 [TestNG-test-Surefire test-1] ERROR LoggerUtils - Exception: 
+org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 28.548
+  (Session info: chrome=138.0.7204.169)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [39cdf48255fa0452148552bcc054459f, get {url=https://automationexercise.com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.169, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: /var/folders/f3/7d9mby7j7yj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58734}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58734/devtoo..., se:cdpVersion: 138.0.7204.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 39cdf48255fa0452148552bcc054459f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313) ~[selenium-remote-driver-4.29.0.jar:?]
+	at pages.BasePage.load(BasePage.java:28) ~[classes/:?]
+	at pages.BasePage.<init>(BasePage.java:23) ~[classes/:?]
+	at pages.HomePage.<init>(HomePage.java:47) ~[classes/:?]
+	at ui.testcases.RegisterUserTest.registeruserTest(RegisterUserTest.java:26) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) [testng-7.10.2.jar:7.10.2]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) [testng-7.10.2.jar:7.10.2]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+2025-07-29 23:46:46 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Screenshot saved at: ./screenshots/registeruserTest_20250729_234645.png
+2025-07-29 23:46:46 [TestNG-test-Surefire test-1] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:46:46 [TestNG-test-Surefire test-1] ERROR LoggerUtils - Current Thread info = 18, Driver = ChromeDriver: chrome on mac (39cdf48255fa0452148552bcc054459f)
+2025-07-29 23:46:46 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Screenshot saved at: Screenshots/CHROME/RegisterUserTest_registeruserTest.png
+2025-07-29 23:46:47 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 23:46:47 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:46:47 [TestNG-test-Surefire test-1] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:46:48 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Launching browser:  with grid: false headless: false
+2025-07-29 23:46:48 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Current Thread info = 39, Driver = ChromeDriver: chrome on mac (4b1f714f5fe5e970292699e6bd2e86be)
+2025-07-29 23:46:48 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Started: validateValidUserTest
+2025-07-29 23:46:50 [TestNG-test-Surefire test-1] ERROR LoggerUtils - Test Failed: loginWithvalidUserTest
+2025-07-29 23:46:50 [TestNG-test-Surefire test-1] ERROR LoggerUtils - Exception: 
+org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 29.090
+  (Session info: chrome=138.0.7204.169)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f2419e1665151636a63319a00118ff7c, get {url=https://automationexercise.com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.169, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: /var/folders/f3/7d9mby7j7yj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58735}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58735/devtoo..., se:cdpVersion: 138.0.7204.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f2419e1665151636a63319a00118ff7c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313) ~[selenium-remote-driver-4.29.0.jar:?]
+	at pages.BasePage.load(BasePage.java:28) ~[classes/:?]
+	at pages.BasePage.<init>(BasePage.java:23) ~[classes/:?]
+	at pages.NewUserSignUpPage.<init>(NewUserSignUpPage.java:120) ~[classes/:?]
+	at ui.testcases.LoginWithvaliduserTest.loginWithvalidUserTest(LoginWithvaliduserTest.java:30) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) [testng-7.10.2.jar:7.10.2]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) [testng-7.10.2.jar:7.10.2]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+2025-07-29 23:46:51 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Screenshot saved at: ./screenshots/loginWithvalidUserTest_20250729_234650.png
+2025-07-29 23:46:51 [TestNG-test-Surefire test-1] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:46:51 [TestNG-test-Surefire test-1] ERROR LoggerUtils - Current Thread info = 18, Driver = ChromeDriver: chrome on mac (f2419e1665151636a63319a00118ff7c)
+2025-07-29 23:46:51 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Screenshot saved at: Screenshots/CHROME/LoginWithvaliduserTest_loginWithvalidUserTest.png
+2025-07-29 23:46:51 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 23:46:52 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:46:52 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Passed: validateValidUserTest
+2025-07-29 23:46:52 [TestNG-test-Surefire test-1] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:46:52 [TestNG-test-Surefire test-1] ERROR LoggerUtils - Current Thread info = 39, Driver = ChromeDriver: chrome on mac (4b1f714f5fe5e970292699e6bd2e86be)
+2025-07-29 23:46:52 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 23:46:53 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:46:53 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Started: ValidateAbletoSearchProducts
+2025-07-29 23:46:54 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Started: getBookingId
+2025-07-29 23:46:54 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Skipped: getBookingId
+2025-07-29 23:46:54 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 23:46:54 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:46:54 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Started: testGetRequest
+2025-07-29 23:46:54 [TestNG-test-Surefire test-2] INFO  LoggerUtils - Test Started: validatePostResponse
+2025-07-29 23:46:54 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Skipped: testGetRequest
+2025-07-29 23:46:54 [TestNG-test-Surefire test-2] INFO  LoggerUtils - Test Skipped: validatePostResponse
+2025-07-29 23:46:54 [TestNG-test-Surefire test-3] INFO  LoggerUtils - Test Started: validatePutResponse
+2025-07-29 23:46:54 [TestNG-test-Surefire test-3] INFO  LoggerUtils - Test Skipped: validatePutResponse
+2025-07-29 23:46:54 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 23:46:59 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Passed: ValidateAbletoSearchProducts
+2025-07-29 23:46:59 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 23:55:53 [main] INFO  LoggerUtils - Test Suite Started: Default test
+2025-07-29 23:55:54 [main] INFO  LoggerUtils - Test Started: testGetRequest
+2025-07-29 23:55:56 [main] INFO  LoggerUtils - Test Passed: testGetRequest
+2025-07-29 23:55:56 [main] INFO  LoggerUtils - Test Started: validatePostResponse
+2025-07-29 23:55:56 [main] INFO  LoggerUtils - Test Passed: validatePostResponse
+2025-07-29 23:55:56 [main] INFO  LoggerUtils - Test Started: validatePutResponse
+2025-07-29 23:55:56 [main] INFO  LoggerUtils - Test Passed: validatePutResponse
+2025-07-29 23:55:56 [main] INFO  LoggerUtils - Test Suite Finished: Default test
+2025-07-29 23:56:19 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:56:19 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:56:19 [TestNG-test-Surefire test-1] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:56:19 [TestNG-test-Surefire test-1] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:56:23 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Launching browser:  with grid: false headless: false
+2025-07-29 23:56:23 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Launching browser:  with grid: false headless: false
+2025-07-29 23:56:23 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Current Thread info = 18, Driver = ChromeDriver: chrome on mac (b017dfc7c774e155bf9a4eb5ebfd9110)
+2025-07-29 23:56:23 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Current Thread info = 18, Driver = ChromeDriver: chrome on mac (920ccaca07959802d0d7b7485be6d799)
+2025-07-29 23:56:23 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Started: loginWithvalidUserTest
+2025-07-29 23:56:23 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Started: registeruserTest
+2025-07-29 23:56:27 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Passed: registeruserTest
+2025-07-29 23:56:27 [TestNG-test-Surefire test-1] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:56:27 [TestNG-test-Surefire test-1] ERROR LoggerUtils - Current Thread info = 18, Driver = ChromeDriver: chrome on mac (920ccaca07959802d0d7b7485be6d799)
+2025-07-29 23:56:27 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 23:56:27 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:56:27 [TestNG-test-Surefire test-1] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:56:29 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Launching browser:  with grid: false headless: false
+2025-07-29 23:56:29 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Current Thread info = 41, Driver = ChromeDriver: chrome on mac (6f242f09c7b9fa36ccf08c0f6e92295f)
+2025-07-29 23:56:29 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Started: validateValidUserTest
+2025-07-29 23:56:29 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Passed: loginWithvalidUserTest
+2025-07-29 23:56:29 [TestNG-test-Surefire test-1] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:56:29 [TestNG-test-Surefire test-1] ERROR LoggerUtils - Current Thread info = 18, Driver = ChromeDriver: chrome on mac (b017dfc7c774e155bf9a4eb5ebfd9110)
+2025-07-29 23:56:30 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 23:56:30 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:56:30 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Started: ValidateAbletoSearchProducts
+2025-07-29 23:56:33 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Passed: ValidateAbletoSearchProducts
+2025-07-29 23:56:33 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 23:56:33 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:56:33 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Started: getBookingId
+2025-07-29 23:56:33 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Passed: validateValidUserTest
+2025-07-29 23:56:33 [TestNG-test-Surefire test-1] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:56:33 [TestNG-test-Surefire test-1] ERROR LoggerUtils - Current Thread info = 41, Driver = ChromeDriver: chrome on mac (6f242f09c7b9fa36ccf08c0f6e92295f)
+2025-07-29 23:56:34 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 23:56:34 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:56:34 [TestNG-test-Surefire test-3] INFO  LoggerUtils - Test Started: validatePutResponse
+2025-07-29 23:56:34 [TestNG-test-Surefire test-2] INFO  LoggerUtils - Test Started: validatePostResponse
+2025-07-29 23:56:34 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Started: testGetRequest
+2025-07-29 23:56:34 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Passed: getBookingId
+2025-07-29 23:56:35 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 23:56:35 [TestNG-test-Surefire test-3] INFO  LoggerUtils - Test Passed: validatePutResponse
+2025-07-29 23:56:35 [TestNG-test-Surefire test-2] INFO  LoggerUtils - Test Passed: validatePostResponse
+2025-07-29 23:56:35 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Passed: testGetRequest
+2025-07-29 23:56:35 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-30 00:04:39 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-30 00:04:39 [TestNG-test-Surefire test-2] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-30 00:04:39 [TestNG-test-Surefire test-1] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-30 00:04:39 [TestNG-test-Surefire test-3] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-30 00:04:39 [TestNG-test-Surefire test-4] INFO  LoggerUtils - Test Started: ValidateAbletoSearchProducts
+2025-07-30 00:04:42 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Launching browser:  with grid: false headless: true
+2025-07-30 00:04:42 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Current Thread info = 24, Driver = ChromeDriver: chrome on mac (bd5710f60da2b92724d303ce97c606d2)
+2025-07-30 00:04:42 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Started: loginWithvalidUserTest
+2025-07-30 00:04:42 [TestNG-test-Surefire test-3] INFO  LoggerUtils - Launching browser:  with grid: false headless: true
+2025-07-30 00:04:42 [TestNG-test-Surefire test-3] INFO  LoggerUtils - Current Thread info = 26, Driver = ChromeDriver: chrome on mac (b1c80b28ef4942f367c7e4d2ea882f83)
+2025-07-30 00:04:42 [TestNG-test-Surefire test-3] INFO  LoggerUtils - Test Started: validateValidUserTest
+2025-07-30 00:04:42 [TestNG-test-Surefire test-2] INFO  LoggerUtils - Launching browser:  with grid: false headless: true
+2025-07-30 00:04:42 [TestNG-test-Surefire test-2] INFO  LoggerUtils - Current Thread info = 25, Driver = ChromeDriver: chrome on mac (11edf2929f6413fc49cbf357226b835f)
+2025-07-30 00:04:42 [TestNG-test-Surefire test-2] INFO  LoggerUtils - Test Started: registeruserTest
+2025-07-30 00:04:42 [TestNG-test-Surefire test-4] INFO  LoggerUtils - Test Passed: ValidateAbletoSearchProducts
+2025-07-30 00:04:42 [TestNG-test-Surefire test-4] INFO  LoggerUtils - Test Started: getBookingId
+2025-07-30 00:04:44 [TestNG-test-Surefire test-4] INFO  LoggerUtils - Test Passed: getBookingId
+2025-07-30 00:04:44 [TestNG-test-Surefire test-4] INFO  LoggerUtils - Test Started: testGetRequest
+2025-07-30 00:04:45 [TestNG-test-Surefire test-4] INFO  LoggerUtils - Test Passed: testGetRequest
+2025-07-30 00:04:45 [TestNG-test-Surefire test-4] INFO  LoggerUtils - Test Started: validatePostResponse
+2025-07-30 00:04:45 [TestNG-test-Surefire test-4] INFO  LoggerUtils - Test Passed: validatePostResponse
+2025-07-30 00:04:45 [TestNG-test-Surefire test-4] INFO  LoggerUtils - Test Started: validatePutResponse
+2025-07-30 00:04:45 [TestNG-test-Surefire test-4] INFO  LoggerUtils - Test Passed: validatePutResponse
+2025-07-30 00:04:45 [TestNG-test-Surefire test-2] INFO  LoggerUtils - Test Passed: registeruserTest
+2025-07-30 00:04:45 [TestNG-test-Surefire test-2] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-30 00:04:45 [TestNG-test-Surefire test-2] ERROR LoggerUtils - Current Thread info = 25, Driver = ChromeDriver: chrome on mac (11edf2929f6413fc49cbf357226b835f)
+2025-07-30 00:04:45 [TestNG-test-Surefire test-3] INFO  LoggerUtils - Test Passed: validateValidUserTest
+2025-07-30 00:04:45 [TestNG-test-Surefire test-3] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-30 00:04:45 [TestNG-test-Surefire test-3] ERROR LoggerUtils - Current Thread info = 26, Driver = ChromeDriver: chrome on mac (b1c80b28ef4942f367c7e4d2ea882f83)
+2025-07-30 00:04:47 [TestNG-test-Surefire test-1] INFO  LoggerUtils - Test Passed: loginWithvalidUserTest
+2025-07-30 00:04:47 [TestNG-test-Surefire test-1] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-30 00:04:47 [TestNG-test-Surefire test-1] ERROR LoggerUtils - Current Thread info = 24, Driver = ChromeDriver: chrome on mac (bd5710f60da2b92724d303ce97c606d2)
+2025-07-30 00:04:48 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
