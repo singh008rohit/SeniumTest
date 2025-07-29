@@ -116,10 +116,10 @@ public class ApiTest extends APITestBase {
 	   tp.setFoundedYear(foundedYear);
 	   tp.setPublic1(public1);
 	   RestAssured.baseURI="http://localhost:8081";
-		ExtentManager.getExtentTest().log(Status.INFO, "Validate json schema with mock response");
-		Response res=	given().log().all().header("Authorization","Bearer valid_token").header("Content-Type", "application/json").when().post("/api/user/1").then().statusCode(200).extract().response();
+	//	ExtentManager.getExtentTest().log(Status.INFO, "Validate json schema with mock response");
+		//Response res=	given().log().all().header("Authorization","Bearer valid_token").header("Content-Type", "application/json").when().post("/api/user/1").then().statusCode(200).extract().response();
 	
-	System.out.println("------------response-----------------"+res.asPrettyString());
+	//System.out.println("------------response-----------------"+res.asPrettyString());
 
    }
 }

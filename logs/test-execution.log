@@ -9910,3 +9910,75 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreensh
 2025-07-29 18:13:28 [main] INFO  LoggerUtils - Test Started: validatePutResponse
 2025-07-29 18:13:28 [main] INFO  LoggerUtils - Test Passed: validatePutResponse
 2025-07-29 18:13:28 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 18:37:09 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 18:37:09 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 18:37:12 [main] INFO  LoggerUtils - Launching browser:  with grid: false headless: true
+2025-07-29 18:37:12 [main] INFO  LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (1113c95206433b40ed205ebb485e060b)
+2025-07-29 18:37:12 [main] INFO  LoggerUtils - Test Started: loginWithvalidUserTest
+2025-07-29 18:37:36 [main] INFO  LoggerUtils - Test Passed: loginWithvalidUserTest
+2025-07-29 18:37:36 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 18:37:36 [main] ERROR LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (1113c95206433b40ed205ebb485e060b)
+2025-07-29 18:37:36 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 18:37:37 [main] INFO  LoggerUtils - Launching browser:  with grid: false headless: true
+2025-07-29 18:37:37 [main] INFO  LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (2b31483b3699a706b1049d3912f98975)
+2025-07-29 18:37:37 [main] INFO  LoggerUtils - Test Started: registeruserTest
+2025-07-29 18:37:41 [main] INFO  LoggerUtils - Test Passed: registeruserTest
+2025-07-29 18:37:41 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 18:37:41 [main] ERROR LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (2b31483b3699a706b1049d3912f98975)
+2025-07-29 18:37:41 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 18:37:42 [main] INFO  LoggerUtils - Launching browser:  with grid: false headless: true
+2025-07-29 18:37:42 [main] INFO  LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (8baf84d100f17453579b91ca3a109aea)
+2025-07-29 18:37:42 [main] INFO  LoggerUtils - Test Started: validateValidUserTest
+2025-07-29 18:37:46 [main] INFO  LoggerUtils - Test Passed: validateValidUserTest
+2025-07-29 18:37:46 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 18:37:46 [main] ERROR LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (8baf84d100f17453579b91ca3a109aea)
+2025-07-29 18:37:46 [main] INFO  LoggerUtils - Test Started: ValidateAbletoSearchProducts
+2025-07-29 18:37:49 [main] INFO  LoggerUtils - Test Passed: ValidateAbletoSearchProducts
+2025-07-29 18:37:49 [main] INFO  LoggerUtils - Test Started: getBookingId
+2025-07-29 18:37:51 [main] INFO  LoggerUtils - Test Passed: getBookingId
+2025-07-29 18:37:51 [main] INFO  LoggerUtils - Test Started: testGetRequest
+2025-07-29 18:37:51 [main] INFO  LoggerUtils - Test Passed: testGetRequest
+2025-07-29 18:37:51 [main] INFO  LoggerUtils - Test Started: validatePutResponse
+2025-07-29 18:37:51 [main] INFO  LoggerUtils - Test Passed: validatePutResponse
+2025-07-29 18:37:51 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test
+2025-07-29 18:41:06 [main] INFO  LoggerUtils - Test Suite Started: Default test
+2025-07-29 18:41:07 [main] INFO  LoggerUtils - Test Started: testGetRequest
+2025-07-29 18:41:09 [main] INFO  LoggerUtils - Test Passed: testGetRequest
+2025-07-29 18:41:09 [main] INFO  LoggerUtils - Test Started: validatePostResponse
+2025-07-29 18:41:09 [main] INFO  LoggerUtils - Test Passed: validatePostResponse
+2025-07-29 18:41:09 [main] INFO  LoggerUtils - Test Started: validatePutResponse
+2025-07-29 18:41:09 [main] INFO  LoggerUtils - Test Passed: validatePutResponse
+2025-07-29 18:41:10 [main] INFO  LoggerUtils - Test Suite Finished: Default test
+2025-07-29 23:09:29 [main] INFO  LoggerUtils - Test Suite Started: Surefire test
+2025-07-29 23:09:29 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:09:32 [main] INFO  LoggerUtils - Launching browser:  with grid: false headless: true
+2025-07-29 23:09:32 [main] INFO  LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (dcc654095380824064684dd147d783fb)
+2025-07-29 23:09:32 [main] INFO  LoggerUtils - Test Started: loginWithvalidUserTest
+2025-07-29 23:09:54 [main] INFO  LoggerUtils - Test Passed: loginWithvalidUserTest
+2025-07-29 23:09:54 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:09:54 [main] ERROR LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (dcc654095380824064684dd147d783fb)
+2025-07-29 23:09:54 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:09:55 [main] INFO  LoggerUtils - Launching browser:  with grid: false headless: true
+2025-07-29 23:09:55 [main] INFO  LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (bf2f2b2c149c85d2655052449ea6c1ad)
+2025-07-29 23:09:55 [main] INFO  LoggerUtils - Test Started: registeruserTest
+2025-07-29 23:10:00 [main] INFO  LoggerUtils - Test Passed: registeruserTest
+2025-07-29 23:10:00 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:10:00 [main] ERROR LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (bf2f2b2c149c85d2655052449ea6c1ad)
+2025-07-29 23:10:00 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:10:01 [main] INFO  LoggerUtils - Launching browser:  with grid: false headless: true
+2025-07-29 23:10:01 [main] INFO  LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (c602086e89e7dae625f706774c49faf7)
+2025-07-29 23:10:01 [main] INFO  LoggerUtils - Test Started: validateValidUserTest
+2025-07-29 23:10:05 [main] INFO  LoggerUtils - Test Passed: validateValidUserTest
+2025-07-29 23:10:05 [main] INFO  LoggerUtils - No browser provided, defaulting to CHROME
+2025-07-29 23:10:05 [main] ERROR LoggerUtils - Current Thread info = 1, Driver = ChromeDriver: chrome on mac (c602086e89e7dae625f706774c49faf7)
+2025-07-29 23:10:05 [main] INFO  LoggerUtils - Test Started: ValidateAbletoSearchProducts
+2025-07-29 23:10:11 [main] INFO  LoggerUtils - Test Passed: ValidateAbletoSearchProducts
+2025-07-29 23:10:11 [main] INFO  LoggerUtils - Test Started: getBookingId
+2025-07-29 23:10:13 [main] INFO  LoggerUtils - Test Passed: getBookingId
+2025-07-29 23:10:13 [main] INFO  LoggerUtils - Test Started: testGetRequest
+2025-07-29 23:10:13 [main] INFO  LoggerUtils - Test Passed: testGetRequest
+2025-07-29 23:10:13 [main] INFO  LoggerUtils - Test Started: validatePostResponse
+2025-07-29 23:10:13 [main] INFO  LoggerUtils - Test Passed: validatePostResponse
+2025-07-29 23:10:13 [main] INFO  LoggerUtils - Test Started: validatePutResponse
+2025-07-29 23:10:13 [main] INFO  LoggerUtils - Test Passed: validatePutResponse
+2025-07-29 23:10:13 [main] INFO  LoggerUtils - Test Suite Finished: Surefire test

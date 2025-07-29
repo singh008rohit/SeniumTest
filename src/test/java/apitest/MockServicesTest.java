@@ -42,7 +42,7 @@ System.out.println(res.asPrettyString());
 
 @FrameworkAnnotation(author = { AuthorType.ROHIT, AuthorType.ROHIT},category = { CategoryType.SANITY,CategoryType.SMOKE,CategoryType.REGRESSION })
 
-@Test(enabled =false, description= "Validate json schema with mock response",groups = {"SANITY","SMOKE","REGRESSION"})
+@Test(enabled =true, description= "Validate json schema with mock response",groups = {"SANITY","SMOKE","REGRESSION"})
 void validatePostResponse() {
 	RestAssured.baseURI="http://localhost:8081";
 

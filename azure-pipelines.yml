@@ -41,6 +41,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'test-output/ExtentReports'
+    PathtoPublish: 'ExtentReports'
     ArtifactName: 'ExtentReport'
     publishLocation: 'Container'
