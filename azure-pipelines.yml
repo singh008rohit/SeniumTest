@@ -22,11 +22,12 @@ steps:
     
 
 - task: Cache@2
+  continueOnError: true
   inputs:
     key: 'maven | "$(Agent.OS)" | **/pom.xml'
     restoreKeys: |
       maven | "$(Agent.OS)"
-    path: ~/.m2/repository
+    path: $(HOME)/.m2/repository
 
 - script: |
     mvn clean test --batch-mode -e -X
