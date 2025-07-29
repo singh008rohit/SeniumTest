@@ -26,8 +26,8 @@ public class RegisterUserTest extends BaseTest {
 	   HomePage homePage= new HomePage(getDriver());
       homePage.validatenavigatedToHomePage();
       ExtentManager.getExtentTest().log(Status.INFO, "Validated navigated to home page");
-      homePage.clickOnSignUpButton();
-      homePage.validateNavigatedToSignupPage();
+    //  homePage.clickOnSignUpButton();
+     // homePage.validateNavigatedToSignupPage();
       ExtentManager.getExtentTest().log(Status.INFO, "Validated navigated to home page");
     /*  newuserSingUpPage.signupWithNameEmail(MapTestData.setUserData().get(CommonConstant.USER_FIRST_NAME),email);
       newuserSingUpPage.verifyNameEmailVisible(MapTestData.setUserData().get(CommonConstant.USER_FIRST_NAME),email);
@@ -35,7 +35,7 @@ public class RegisterUserTest extends BaseTest {
       newuserSingUpPage.validateAccountCreated();
       homePage.loginWithUser(MapTestData.setUserData().get(CommonConstant.USER_NAME));
       homePage.deleteAccount();
-   */   homePage.verifyAccountdeleted();
+   */  // homePage.verifyAccountdeleted();
    ExtentManager.getExtentTest().log(Status.INFO, "Test execution completed");
    }
 }

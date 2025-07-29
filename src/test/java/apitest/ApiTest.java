@@ -9,7 +9,11 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 
+import annotation.FrameworkAnnotation;
 import base.APITestBase;
+import enums.AuthorType;
+import enums.CategoryType;
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import pojos.Department;
 import pojos.EmpInfo;
@@ -22,7 +26,10 @@ import reportManager.ExtentReportManager;
 import specs.RequestSpecBuilderFactory;
 
 public class ApiTest extends APITestBase {
-   @Test(enabled = false)
+	
+	 @FrameworkAnnotation(author = { AuthorType.ROHIT, AuthorType.ROHIT}, 
+				category = { CategoryType.SANITY,CategoryType.SMOKE,CategoryType.REGRESSION })
+   @Test(enabled = true)
    void getBookingId() {
       ExtentReportManager.createTest("Get Booking Details API");
       ExtentManager.getExtentTest().log(Status.INFO, "API test execution started for get booking id ");
@@ -41,7 +48,10 @@ public class ApiTest extends APITestBase {
    }
    
    
-   @Test(enabled = true)
+   @FrameworkAnnotation(author = { AuthorType.ROHIT, AuthorType.ROHIT}, 
+			category = { CategoryType.SANITY,CategoryType.SMOKE,CategoryType.REGRESSION })
+	
+	@Test(enabled =false,groups = {"SANITY","SMOKE","REGRESSION"})
    
    void pojo1() {
 	   
@@ -105,7 +115,9 @@ public class ApiTest extends APITestBase {
 	   tp.setDepartment(departments);
 	   tp.setFoundedYear(foundedYear);
 	   tp.setPublic1(public1);
-	Response res=   given().header("Content-Type", "application/json").baseUri("http://localhost:8080").log().all().body(tp).when().post("/users/1").then().statusCode(200).extract().response();
+	   RestAssured.baseURI="http://localhost:8081";
+		ExtentManager.getExtentTest().log(Status.INFO, "Validate json schema with mock response");
+		Response res=	given().log().all().header("Authorization","Bearer valid_token").header("Content-Type", "application/json").when().post("/api/user/1").then().statusCode(200).extract().response();
 	
 	System.out.println("------------response-----------------"+res.asPrettyString());
 

@@ -52,11 +52,11 @@ System.out.println("     response     "+res.asPrettyString());
 }
 
 @FrameworkAnnotation(author = { AuthorType.ROHIT, AuthorType.ROHIT},category = { CategoryType.SANITY,CategoryType.SMOKE,CategoryType.REGRESSION })
-@Test(enabled =false, description= "Validate json schema with mock response",groups = {"SANITY","SMOKE","REGRESSION"})
+@Test(enabled =true, description= "Validate json schema with mock response",groups = {"SANITY","SMOKE","REGRESSION"})
 void validatePutResponse() {
 	RestAssured.baseURI="http://localhost:8081";
 	
-Response res=	given().log().all().header("Authorization","Bearer valid_token").header("Content-Type", "application/json").when().put("/api/user/1").then().statusCode(200).log().all().extract().response();
+Response res=	given().log().all().header("Authorization","Bearer valid_token").header("Content-Type", "application/json").body("{\"name\":\"Rohit\"}").when().put("/api/user/1").then().statusCode(200).log().all().extract().response();
 
 System.out.println(res.asPrettyString());
 

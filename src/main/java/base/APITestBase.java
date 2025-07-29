@@ -4,18 +4,19 @@ import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options
 
 import java.io.IOException;
 
-import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
+
 import com.github.tomakehurst.wiremock.WireMockServer;
+
 import io.restassured.RestAssured;
 import listeners.AnnotationTransformer;
 import listeners.MethodInterceptor;
 import listeners.SeleniumListener;
 import reportManager.ExtentManager;
-import reportManager.ExtentReportManager;
 import utlity.ConfigLoader;
 
 @Listeners({
@@ -31,16 +32,27 @@ public class APITestBase {
    @BeforeMethod( alwaysRun = true )
    public void setupAPI() throws IOException {
       RestAssured.baseURI = ConfigLoader.getInstance().getBaseUrl();
-      wireMockServer = new WireMockServer(options().port(8081)); // Default: 8080
-      wireMockServer.start();
-      MockServices.setupStubs(wireMockServer);
-      MockServices.stubGetWithBasicAuth(wireMockServer);
-      MockServices.stubGetWithBearerToken(wireMockServer);
-      MockServices.stubOAuth2TokenEndpoint(wireMockServer);
-      MockServices.stubProtectedResourceWithOAuthToken(wireMockServer);
+ 
      
       
       
+   }
+
+   @BeforeClass
+   public void setupMockServer() {
+       // Use dynamic port to avoid "port in use" issues
+       wireMockServer = new WireMockServer(options().port(8081));
+       wireMockServer.start();
+
+       // Optional: print or use this port in your baseURI
+       System.out.println("WireMock running at: " + wireMockServer.baseUrl());
+
+       // Set up your stubs here
+       MockServices.setupStubs(wireMockServer);
+       MockServices.stubGetWithBasicAuth(wireMockServer);
+       MockServices.stubGetWithBearerToken(wireMockServer);
+       MockServices.stubOAuth2TokenEndpoint(wireMockServer);
+       MockServices.stubProtectedResourceWithOAuthToken(wireMockServer);
    }
    
   
@@ -49,9 +61,19 @@ public class APITestBase {
       alwaysRun = true
    )
    public void tearDownReport() {
-       wireMockServer.stop();
+      
 
       ExtentManager.unload();;
       
    }
+   
+   
+   @AfterClass
+   public void stopMockServer() {
+       if (wireMockServer != null && wireMockServer.isRunning()) {
+           wireMockServer.stop();
+           System.out.println("WireMock stopped.");
+       }
+   }
+   
 }

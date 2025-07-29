@@ -40,6 +40,7 @@ public class ValidateAbletoSearchProductsTest extends APITestBase{
 	ExtentManager.getExtentTest().log(Status.INFO, "response"+re.asPrettyString());
 	
 	System.out.println(re.body().asPrettyString());
+
 	System.out.println("================  Headers==================="+re.getHeaders());
 	}
 	
