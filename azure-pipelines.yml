@@ -17,7 +17,7 @@ steps:
 # Step 2: Set up JDK
 - task: JavaToolInstaller@0
   inputs:
-    versionSpec: '11'                       # or whatever version you need
+    versionSpec: '17'                       # or whatever version you need
     jdkArchitectureOption: 'x64'            # REQUIRED input
     jdkSourceOption: 'PreInstalled'  
 
