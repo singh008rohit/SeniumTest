@@ -17,7 +17,7 @@ public class ValidateResponse {
 	
 	
 	static void getResponse() throws IOException {
-		String path ="/src/test/java/resource/test.json";
+		String path ="/src/test/java/resources/test.json";
 		//Get company name
 	String st=	JsonUtils.getJsonObjectAsString(path, "company");
 	//System.out.println(st);
@@ -49,20 +49,20 @@ public class ValidateResponse {
 	
 	//Get project titles with budget > 150000
 	
-	System.out.println(JsonUtils.getListvalueFromJson(path,"projects[?(@.budget>150000)].title").get(0));
+	System.out.println("Get project titles with budget > 150000 => "+JsonUtils.getListvalueFromJson(path,"projects[?(@.budget>150000)].title").get(0));
 	
 	//Get names of department heads
-	System.out.println(JsonUtils.getListvalueFromJson(path, "departments[*].head.name"));
+	System.out.println("Get names of department heads => "+JsonUtils.getListvalueFromJson(path, "departments[*].head.name"));
 	
 	//Get the list of all unique skills used in the company
 	
-	System.out.println(JsonUtils.getListvalueFromJson(path, "departments[*].employees[*].skills[*]"));
+	System.out.println("Get the list of all unique skills used in the company => "+JsonUtils.getListvalueFromJson(path, "departments[*].employees[*].skills[*]"));
 	
 	//Get all project IDs where status = ‘Active’
-	System.out.println(JsonUtils.getListvalueFromJson(path, "projects[?(@.status=='Active')].projectId"));
+	System.out.println("Get all project IDs where status = ‘Active’ => "+JsonUtils.getListvalueFromJson(path, "projects[?(@.status=='Active')].projectId"));
 	
 	
-	System.out.println(JsonUtils.getMapFromJson("/src/test/java/resource/test1.json",null));
+	System.out.println(JsonUtils.getListvalueFromJson(path,"departments[?(@.name=='HR')].employees"));
 	                                                         
 	
 

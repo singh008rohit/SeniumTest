@@ -1,11 +1,20 @@
   package stepDefination;
 
-import base.BaseTest;
+
+import org.openqa.selenium.WebDriver;
+
+import base.PageObjectManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import pages.BasePage;
 
-public class RegisterUser extends BaseTest {
-   @Given("Launch browser")
+public class RegisterUser extends BasePage {
+   public RegisterUser(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+@Given("Launch browser")
    public void launch_browser() {
    }
 
@@ -15,16 +24,16 @@ public class RegisterUser extends BaseTest {
 
    @Then("Validate home page is visible")
    public void validate_home_page_is_visible() {
-      this.pageManager.getHomePage().validatenavigatedToHomePage();
+	   pageManager.getHomePage().validatenavigatedToHomePage();
    }
 
    @Then("Click on signup login button")
    public void click_on_signup_login_button() {
-      this.pageManager.getHomePage().clickOnSignUpButton();
+      pageManager.getHomePage().clickOnSignUpButton();
    }
 
    @Then("Validate new user signup page is visible")
    public void validate_new_user_signup_page_is_visible() {
-      this.pageManager.getHomePage().validateNavigatedToSignupPage();
+      pageManager.getHomePage().validateNavigatedToSignupPage();
    }
 }

@@ -23,6 +23,7 @@ import com.aventstack.extentreports.Status;
 import commonConstant.CommonConstant;
 import driver.DriverManager;
 import loggerUtil.LoggerUtils;
+import reportManager.ExtentManager;
 import reportManager.ExtentReportManager;
 
 public class SeleniumCommonUtils {
@@ -36,10 +37,10 @@ public class SeleniumCommonUtils {
         try {
             element.click();
             LoggerUtils.info("Clicked on element: " + element);
-            ExtentReportManager.getTest().log(Status.INFO, "Clicked on element: " + element);
+            ExtentManager.getExtentTest().log(Status.INFO, "Clicked on element: " + element);
         } catch (Exception e) {
             LoggerUtils.error("Failed to click element: " + e.getMessage());
-            ExtentReportManager.getTest().log(Status.FAIL, "Failed to click element: " + element);
+            ExtentManager.getExtentTest().log(Status.FAIL, "Failed to click element: " + element);
             throw e;
         }
     }
@@ -49,10 +50,10 @@ public class SeleniumCommonUtils {
             element.clear();
             element.sendKeys(text);
             LoggerUtils.info("Entered text: " + text);
-            ExtentReportManager.getTest().log(Status.INFO, "Entered text: " + text);
+            ExtentManager.getExtentTest().log(Status.INFO, "Entered text: " + text);
         } catch (Exception e) {
             LoggerUtils.error("Failed to type text: " + e.getMessage());
-            ExtentReportManager.getTest().log(Status.FAIL, "Failed to type text into element.");
+            ExtentManager.getExtentTest().log(Status.FAIL, "Failed to type text into element.");
             throw e;
         }
     }
@@ -61,7 +62,7 @@ public class SeleniumCommonUtils {
         try {
             String text = element.getText();
             LoggerUtils.info("Fetched text: " + text);
-            ExtentReportManager.getTest().log(Status.INFO, "Fetched text: " + text);
+            ExtentManager.getExtentTest().log(Status.INFO, "Fetched text: " + text);
             return text;
         } catch (Exception e) {
             LoggerUtils.error("Failed to get text: " + e.getMessage());
@@ -96,33 +97,32 @@ public class SeleniumCommonUtils {
         }
     }
 
-    public static String captureScreenshot(String testName) {
+    public static void screenshot(File destFile) {
         WebDriver driver = DriverManager.getDriver();
-        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String screenshotPath = "./screenshots/" + testName + "_" + timestamp + ".png";
+      
 
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File destFile = new File(screenshotPath);
+     
 
         try {
             FileUtils.copyFile(srcFile, destFile);
-            LoggerUtils.info("Screenshot saved at: " + screenshotPath);
-            ExtentReportManager.getTest().log(Status.INFO, "Screenshot captured");
+            LoggerUtils.info("Screenshot saved at: " + destFile);
+            ExtentManager.getExtentTest().log(Status.INFO, "Screenshot captured");
         } catch (IOException e) {
             LoggerUtils.error("Failed to save screenshot: " + e.getMessage());
-            ExtentReportManager.getTest().log(Status.FAIL, "Failed to save screenshot");
+            ExtentManager.getExtentTest().log(Status.FAIL, "Failed to save screenshot");
         }
-        return screenshotPath;
+        
     }
     public static void selectDropdownByVisibleText(WebElement element, String visibleText) {
         try {
             Select dropdown = new Select(element);
             dropdown.selectByVisibleText(visibleText);
             LoggerUtils.info("Selected value from dropdown by visible text: " + visibleText);
-            ExtentReportManager.getTest().log(Status.INFO, "Selected value: " + visibleText);
+            ExtentManager.getExtentTest().log(Status.INFO, "Selected value: " + visibleText);
         } catch (Exception e) {
             LoggerUtils.error("Failed to select from dropdown: " + e.getMessage());
-            ExtentReportManager.getTest().log(Status.FAIL, "Failed to select value from dropdown");
+            ExtentManager.getExtentTest().log(Status.FAIL, "Failed to select value from dropdown");
             throw e;
         }
     }
@@ -132,7 +132,7 @@ public class SeleniumCommonUtils {
             Select dropdown = new Select(element);
             dropdown.selectByValue(value);
             LoggerUtils.info("Selected value from dropdown by value: " + value);
-            ExtentReportManager.getTest().log(Status.INFO, "Selected value by value: " + value);
+            ExtentManager.getExtentTest().log(Status.INFO, "Selected value by value: " + value);
         } catch (Exception e) {
             LoggerUtils.error("Failed to select from dropdown by value: " + e.getMessage());
             throw e;
@@ -144,7 +144,7 @@ public class SeleniumCommonUtils {
             Select dropdown = new Select(element);
             dropdown.selectByIndex(index);
             LoggerUtils.info("Selected value from dropdown by index: " + index);
-            ExtentReportManager.getTest().log(Status.INFO, "Selected value by index: " + index);
+            ExtentManager.getExtentTest().log(Status.INFO, "Selected value by index: " + index);
         } catch (Exception e) {
             LoggerUtils.error("Failed to select from dropdown by index: " + e.getMessage());
             throw e;
@@ -165,11 +165,11 @@ public class SeleniumCommonUtils {
         try {
             String attributeValue = element.getDomAttribute(attributeName);
             LoggerUtils.info("Fetched attribute [" + attributeName + "] with value: " + attributeValue);
-            ExtentReportManager.getTest().log(Status.INFO, "Fetched attribute [" + attributeName + "]: " + attributeValue);
+            ExtentManager.getExtentTest().log(Status.INFO, "Fetched attribute [" + attributeName + "]: " + attributeValue);
             return attributeValue;
         } catch (Exception e) {
             LoggerUtils.error("Failed to fetch attribute [" + attributeName + "]: " + e.getMessage());
-            ExtentReportManager.getTest().log(Status.FAIL, "Failed to fetch attribute [" + attributeName + "]");
+            ExtentManager.getExtentTest().log(Status.FAIL, "Failed to fetch attribute [" + attributeName + "]");
             throw e;
         }
     }
@@ -181,7 +181,7 @@ public class SeleniumCommonUtils {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].click();", element);
             LoggerUtils.info("Clicked element using JavaScript.");
-            ExtentReportManager.getTest().log(Status.INFO, "Clicked element using JavaScript.");
+            ExtentManager.getExtentTest().log(Status.INFO, "Clicked element using JavaScript.");
         } catch (Exception e) {
             LoggerUtils.error("Failed to click element using JavaScript: " + e.getMessage());
             throw e;
@@ -194,7 +194,7 @@ public class SeleniumCommonUtils {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].value='" + text + "';", element);
             LoggerUtils.info("Entered text using JavaScript: " + text);
-            ExtentReportManager.getTest().log(Status.INFO, "Entered text using JavaScript.");
+            ExtentManager.getExtentTest().log(Status.INFO, "Entered text using JavaScript.");
         } catch (Exception e) {
             LoggerUtils.error("Failed to enter text using JavaScript: " + e.getMessage());
             throw e;
@@ -207,7 +207,7 @@ public class SeleniumCommonUtils {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].scrollIntoView(true);", element);
             LoggerUtils.info("Scrolled element into view.");
-            ExtentReportManager.getTest().log(Status.INFO, "Scrolled element into view.");
+            ExtentManager.getExtentTest().log(Status.INFO, "Scrolled element into view.");
         } catch (Exception e) {
             LoggerUtils.error("Failed to scroll into view: " + e.getMessage());
             throw e;
@@ -227,7 +227,24 @@ public class SeleniumCommonUtils {
         }
     }
  
-  
+    public static String captureScreenshot(String testName) {
+        WebDriver driver = DriverManager.getDriver();
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String screenshotPath = "./screenshots/" + testName + "_" + timestamp + ".png";
+
+        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File destFile = new File(screenshotPath);
+
+        try {
+            FileUtils.copyFile(srcFile, destFile);
+            LoggerUtils.info("Screenshot saved at: " + screenshotPath);
+            ExtentManager.getExtentTest().log(Status.INFO, "Screenshot captured");
+        } catch (IOException e) {
+            LoggerUtils.error("Failed to save screenshot: " + e.getMessage());
+            ExtentManager.getExtentTest().log(Status.FAIL, "Failed to save screenshot");
+        }
+        return screenshotPath;
+    }
 
     public static String generateRandamString(int length) {
         StringBuilder sb = new StringBuilder(length);

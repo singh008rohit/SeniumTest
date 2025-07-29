@@ -1,28 +1,34 @@
     package ui.testcases;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import base.BaseTest;
+
 import com.aventstack.extentreports.Status;
+
+import annotation.FrameworkAnnotation;
+import base.BaseTest;
 import commonConstant.CommonConstant;
-import listeners.SeleniumListener;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
-import reportManager.ExtentReportManager;
+import enums.AuthorType;
+import enums.CategoryType;
+import pages.HomePage;
+import reportManager.ExtentManager;
 import test.data.MapTestData;
 
-@Listeners({SeleniumListener.class})
+
 public class RegisterUserTest extends BaseTest {
-   @Test(enabled = true,description = "Test Register a new user and at the end delete it")
+	
+	@FrameworkAnnotation(author = { AuthorType.ROHIT, AuthorType.ROHIT}, 
+			category = { CategoryType.SANITY,CategoryType.SMOKE,CategoryType.REGRESSION })
+   @Test(enabled = true,description = "Test Register a new user and at the end delete it",groups = {"SANITY","SMOKE","REGRESSION"})
       
    
    public void registeruserTest() {
 	   final  String email = MapTestData.setUserData().get(CommonConstant.USER_EMAIL);
+	   HomePage homePage= new HomePage(getDriver());
       homePage.validatenavigatedToHomePage();
-      ExtentReportManager.getTest().log(Status.INFO, "Validated navigated to home page");
+      ExtentManager.getExtentTest().log(Status.INFO, "Validated navigated to home page");
       homePage.clickOnSignUpButton();
       homePage.validateNavigatedToSignupPage();
-      ExtentReportManager.getTest().log(Status.INFO, "Validated navigated to home page");
+      ExtentManager.getExtentTest().log(Status.INFO, "Validated navigated to home page");
     /*  newuserSingUpPage.signupWithNameEmail(MapTestData.setUserData().get(CommonConstant.USER_FIRST_NAME),email);
       newuserSingUpPage.verifyNameEmailVisible(MapTestData.setUserData().get(CommonConstant.USER_FIRST_NAME),email);
       newuserSingUpPage.enteruserDetials(MapTestData.setUserData());
@@ -30,6 +36,6 @@ public class RegisterUserTest extends BaseTest {
       homePage.loginWithUser(MapTestData.setUserData().get(CommonConstant.USER_NAME));
       homePage.deleteAccount();
    */   homePage.verifyAccountdeleted();
-      ExtentReportManager.getTest().log(Status.INFO, "Test execution completed");
+   ExtentManager.getExtentTest().log(Status.INFO, "Test execution completed");
    }
 }

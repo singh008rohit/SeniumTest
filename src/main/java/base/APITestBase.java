@@ -1,44 +1,49 @@
    package base;
 
+import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options;
+
 import java.io.IOException;
 
+import org.testng.ITestResult;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import com.github.tomakehurst.wiremock.WireMockServer;
-import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options;
-import static com.github.tomakehurst.wiremock.client.WireMock.*;
-
-
-
-import commonConstant.CommonConstant;
 import io.restassured.RestAssured;
+import listeners.AnnotationTransformer;
+import listeners.MethodInterceptor;
+import listeners.SeleniumListener;
+import reportManager.ExtentManager;
 import reportManager.ExtentReportManager;
+import utlity.ConfigLoader;
+
+@Listeners({
+	AnnotationTransformer.class,
+	SeleniumListener.class,
+	MethodInterceptor.class
+})
 
 public class APITestBase {
 	
     protected static WireMockServer wireMockServer;
 
-   @BeforeClass(
-      alwaysRun = true
-   )
+   @BeforeMethod( alwaysRun = true )
    public void setupAPI() throws IOException {
-      ExtentReportManager.getSetup("API_TestSuite");
-      RestAssured.baseURI = BaseTest.getValueFromPropFile(CommonConstant.BASE_URI);
-      wireMockServer = new WireMockServer(options().port(8080)); // Default: 8080
+      RestAssured.baseURI = ConfigLoader.getInstance().getBaseUrl();
+      wireMockServer = new WireMockServer(options().port(8081)); // Default: 8080
       wireMockServer.start();
-      setupStub();
+      MockServices.setupStubs(wireMockServer);
+      MockServices.stubGetWithBasicAuth(wireMockServer);
+      MockServices.stubGetWithBearerToken(wireMockServer);
+      MockServices.stubOAuth2TokenEndpoint(wireMockServer);
+      MockServices.stubProtectedResourceWithOAuthToken(wireMockServer);
+     
+      
+      
    }
    
-   public void setupStub() {
-	    configureFor("localhost", 8080);
-
-	    stubFor(post(urlEqualTo("/users/1"))
-	    		.willReturn(aResponse()
-	    		        .withStatus(200)
-	    		        .withHeader("Content-Type", "application/json")
-	    		        .withBody("{ \"message\": \"User created successfully\" }")));
-	}
+  
 
    @AfterSuite(
       alwaysRun = true
@@ -46,7 +51,7 @@ public class APITestBase {
    public void tearDownReport() {
        wireMockServer.stop();
 
-      ExtentReportManager.flush();
+      ExtentManager.unload();;
       
    }
 }
