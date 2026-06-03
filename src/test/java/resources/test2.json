@@ -1,0 +1,126 @@
+{
+  "organization": {
+    "id": "org-9087",
+    "name": "TechFusion Solutions",
+    "founded": "2003-05-16",
+    "isActive": true,
+    "headquarters": {
+      "address": {
+        "street": "221B Baker Street",
+        "city": "London",
+        "country": "UK",
+        "geo": {
+          "lat": 51.523767,
+          "lng": -0.1585557
+        }
+      },
+      "contact": {
+        "phone": "+44-20-7946-0958",
+        "email": "contact@techfusion.co.uk"
+      }
+    },
+    "departments": [
+      {
+        "id": "dept-eng",
+        "name": "Engineering",
+        "teams": [
+          {
+            "name": "Backend",
+            "lead": {
+              "id": "emp-001",
+              "name": "Alice Smith",
+              "role": "Technical Lead",
+              "skills": ["Java", "Docker", "Kubernetes", "CI/CD"]
+            },
+            "members": [
+              {
+                "id": "emp-002",
+                "name": "Bob Johnson",
+                "age": 31,
+                "isRemote": false,
+                "projects": [
+                  {
+                    "name": "Billing API",
+                    "status": "active",
+                    "milestones": [
+                      { "id": "m1", "title": "Design", "dueDate": "2025-06-30" },
+                      { "id": "m2", "title": "Implementation", "dueDate": "2025-08-15" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "emp-003",
+                "name": "Carol Lee",
+                "age": 28,
+                "isRemote": true,
+                "projects": []
+              }
+            ]
+          },
+          {
+            "name": "Frontend",
+            "lead": null,
+            "members": []
+          }
+        ]
+      },
+      {
+        "id": "dept-hr",
+        "name": "Human Resources",
+        "teams": [
+          {
+            "name": "Recruitment",
+            "lead": {
+              "id": "emp-010",
+              "name": "David Wright",
+              "role": "HR Manager",
+              "skills": ["Interviewing", "Onboarding"]
+            },
+            "members": [
+              {
+                "id": "emp-011",
+                "name": "Eva Green",
+                "isRemote": false,
+                "projects": [
+                  {
+                    "name": "Campus Hiring",
+                    "status": "planned",
+                    "milestones": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "policies": {
+      "remoteWork": {
+        "enabled": true,
+        "regionsAllowed": ["UK", "Germany", "India"]
+      },
+      "vacationPolicy": {
+        "annualLeaves": 25,
+        "carryForwardAllowed": false
+      }
+    },
+    "technologies": [
+      {
+        "name": "Java",
+        "version": "17",
+        "usedIn": ["Backend", "DevOps"]
+      },
+      {
+        "name": "React",
+        "version": "18.2.0",
+        "usedIn": ["Frontend"]
+      },
+      {
+        "name": "Kibana",
+        "version": null,
+        "usedIn": []
+      }
+    ]
+  }
+}

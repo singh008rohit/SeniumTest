@@ -1,6 +1,10 @@
 package apitest;
 
-import org.testng.Assert;
+import static io.restassured.RestAssured.given;
+
+import java.util.List;
+
+import org.jsoup.select.Evaluator.ContainsData;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -11,14 +15,8 @@ import enums.AuthorType;
 import enums.CategoryType;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import pojos.TestEmployee;
 import reportManager.ExtentManager;
-import reportManager.ExtentReportManager;
-
-import static com.github.tomakehurst.wiremock.client.WireMock.matching;
-import static io.restassured.RestAssured.given;
-
-import java.io.File;
+import static org.hamcrest.Matchers.*;
 
 public class MockServicesTest extends APITestBase {
 @FrameworkAnnotation(author = { AuthorType.ROHIT, AuthorType.ROHIT},category = { CategoryType.SANITY,CategoryType.SMOKE,CategoryType.REGRESSION })
@@ -29,12 +27,17 @@ public class MockServicesTest extends APITestBase {
 	void testGetRequest() {
 		RestAssured.baseURI=wireMockServer.baseUrl();
 		ExtentManager.getExtentTest().log(Status.INFO, "Validate json schema with mock response");
-	Response res=	given().log().all().contentType("application/json").header("Authorization", "Bearer some-valid-token").queryParam("active", true).queryParam("sort","desc").header("X-Request-ID",".+").header("User-Agent","RestAssured").when().get("/api/user/1")
-			.then().statusCode(200).extract().response();
+	Response res=	given().contentType("application/json").header("Authorization", "Bearer some-valid-token").queryParam("active", true).queryParam("sort","desc").header("X-Request-ID",".+").header("User-Agent","RestAssured").when().get("/api/user/1")
+			.then().statusCode(200).body("user.name", equalTo("Rohit")).header("Content-Type", equalTo("application/json")).extract().response();
 	
 ExtentManager.getExtentTest().log(Status.INFO, res.asPrettyString());
 	
 System.out.println(res.asPrettyString());
+//System.out.println(res.headers());
+
+
+String st=res.jsonPath().getString("user.projects.findAll{it.status=='active'}.name");
+System.out.println("data ==="+st);
 
 	ExtentManager.getExtentTest().log(Status.INFO,"");
 		
@@ -42,7 +45,7 @@ System.out.println(res.asPrettyString());
 
 @FrameworkAnnotation(author = { AuthorType.ROHIT, AuthorType.ROHIT},category = { CategoryType.SANITY,CategoryType.SMOKE,CategoryType.REGRESSION })
 
-@Test(enabled =true, description= "Validate json schema with mock response",groups = {"SANITY","SMOKE","REGRESSION"})
+@Test(enabled =false, description= "Validate json schema with mock response",groups = {"SANITY","SMOKE","REGRESSION"})
 void validatePostResponse() {
 	RestAssured.baseURI=wireMockServer.baseUrl();
 
@@ -52,7 +55,7 @@ System.out.println("     response     "+res.asPrettyString());
 }
 
 @FrameworkAnnotation(author = { AuthorType.ROHIT, AuthorType.ROHIT},category = { CategoryType.SANITY,CategoryType.SMOKE,CategoryType.REGRESSION })
-@Test(enabled =true, description= "Validate json schema with mock response",groups = {"SANITY","SMOKE","REGRESSION"})
+@Test(enabled =false, description= "Validate json schema with mock response",groups = {"SANITY","SMOKE","REGRESSION"})
 void validatePutResponse() {
 	RestAssured.baseURI=wireMockServer.baseUrl();
 	

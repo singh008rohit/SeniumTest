@@ -1,2 +1,78 @@
-{ "name": "Rahul Sharma",
-        "employeeId": "ENG1001"}
+{
+  "status": "success",
+  "timestamp": "2025-07-31T05:00:00Z",
+  "requestId": "abc123-xyz789",
+  "data": {
+    "id": 12345,
+    "name": "John Doe",
+    "email": "john@example.com",
+    "isActive": true,
+    "profile": {
+      "age": 30,
+      "gender": "male",
+      "address": {
+        "street": "221B Baker Street",
+        "city": "London",
+        "zip": "NW1 6XE",
+        "country": "UK"
+      },
+      "preferences": {
+        "language": "English",
+        "timezone": "GMT",
+        "notifications": {
+          "email": true,
+          "sms": false,
+          "push": true
+        }
+      }
+    },
+    "roles": [
+      "admin",
+      "editor"
+    ],
+    "permissions": [
+      {
+        "resource": "dashboard",
+        "actions": ["read", "write"]
+      },
+      {
+        "resource": "reports",
+        "actions": ["read"]
+      }
+    ],
+    "lastLogin": {
+      "time": "2025-07-30T21:30:00Z",
+      "ip": "192.168.1.15",
+      "device": {
+        "type": "laptop",
+        "os": "Windows 11",
+        "browser": "Chrome"
+      }
+    },
+    "projects": [
+      {
+        "projectId": 101,
+        "name": "Automation Framework",
+        "status": "active",
+        "team": [
+          { "id": 201, "name": "Alice", "role": "QA" },
+          { "id": 202, "name": "Bob", "role": "Developer" }
+        ]
+      },
+      {
+        "projectId": 102,
+        "name": "API Gateway",
+        "status": "on-hold",
+        "team": [
+          { "id": 203, "name": "Charlie", "role": "DevOps" }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "page": 1,
+    "pageSize": 10,
+    "totalRecords": 150
+  },
+  "message": "Data fetched successfully"
+}

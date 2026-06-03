@@ -1,55 +1,51 @@
-   package base;
+package base;
 
 import org.openqa.selenium.WebDriver;
-
 import driver.DriverManager;
-import pages.BasePage;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.NewUserSignUpPage;
 import test.data.MapTestData;
 
-public class PageObjectManager extends BasePage {
-   public PageObjectManager(WebDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
-	}
+// removed extends BasePage — PageObjectManager is a factory, not a page
+public class PageObjectManager {
 
-   private HomePage homePage;
-   private LoginPage loginPage;
-   private NewUserSignUpPage newUserSignUpPage;
-   private MapTestData mapTestData;
+    private final WebDriver driver;
+    private HomePage homePage;
+    private LoginPage loginPage;
+    private NewUserSignUpPage newUserSignUpPage;
+    private MapTestData mapTestData;
 
-   public HomePage getHomePage() {
-      if (this.homePage == null) {
-         this.homePage = new HomePage(DriverManager.getDriver());
-      }
+    public PageObjectManager(WebDriver driver) {
+        this.driver = driver;
+        // no super(driver) — no navigation, no PageFactory
+    }
 
-      return this.homePage;
-   }
+    public HomePage getHomePage() {
+        if (this.homePage == null) {
+            this.homePage = new HomePage(DriverManager.getDriver());
+        }
+        return this.homePage;
+    }
 
-   public LoginPage getLoginPage() {
-      if (this.loginPage == null) {
-         this.loginPage = new LoginPage(DriverManager.getDriver());
-      }
+    public LoginPage getLoginPage() {
+        if (this.loginPage == null) {
+            this.loginPage = new LoginPage(DriverManager.getDriver());
+        }
+        return this.loginPage;
+    }
 
-      return this.loginPage;
-   }
+    public NewUserSignUpPage getNewUserSignUpPage() {
+        if (this.newUserSignUpPage == null) {
+            this.newUserSignUpPage = new NewUserSignUpPage(DriverManager.getDriver());
+        }
+        return this.newUserSignUpPage;
+    }
 
-   public NewUserSignUpPage getNewUserSignUpPage() {
-      if (this.newUserSignUpPage == null) {
-         this.newUserSignUpPage = new NewUserSignUpPage(DriverManager.getDriver());
-      }
-
-      return this.newUserSignUpPage;
-   }
-
-   public MapTestData getMapTestData() {
-      if (this.mapTestData == null) {
-         this.mapTestData = new MapTestData();
-      }
-
-      return this.mapTestData;
-   }
+    public MapTestData getMapTestData() {
+        if (this.mapTestData == null) {
+            this.mapTestData = new MapTestData();
+        }
+        return this.mapTestData;
+    }
 }
-    

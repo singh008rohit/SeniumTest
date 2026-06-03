@@ -62,6 +62,13 @@
     <artifactId>okhttp</artifactId>
     <version>4.12.0</version>
 </dependency>
+
+<dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest</artifactId>
+    <version>2.2</version>
+   
+</dependency>
 <!-- https://mvnrepository.com/artifact/org.json/json -->
 <dependency>
     <groupId>org.json</groupId>
@@ -71,7 +78,7 @@
 <dependency>
     <groupId>io.rest-assured</groupId>
     <artifactId>rest-assured</artifactId>
-    <version>5.3.0</version> <!-- Use 5.3.0, as 5.5.1 has instability issues -->
+    <version>5.4.0</version> <!-- Use 5.3.0, as 5.5.1 has instability issues -->
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 <dependency>
@@ -125,6 +132,13 @@
     <artifactId>extentreports</artifactId>
     <version>5.1.1</version>
 </dependency>
+
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>json-schema-validator</artifactId>
+    <version>5.4.0</version>
+</dependency>
+
     </dependencies>
   
 
@@ -190,5 +204,11 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <testResources>
+        <testResource>
+            <directory>src/test/resources</directory>
+            <filtering>false</filtering>
+        </testResource>
+    </testResources>
   </build>
 </project>

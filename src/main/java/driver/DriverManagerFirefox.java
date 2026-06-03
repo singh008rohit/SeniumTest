@@ -1,29 +1,39 @@
-/**
- * @author Rajat Verma
- * https://www.linkedin.com/in/rajat-v-3b0685128/
- * https://github.com/rajatt95
- * https://rajatt95.github.io/
- *
- * Course: Selenium Java Test Framework & Best Practices - Masterclass (https://www.udemy.com/course/selenium-java-test-framework/)
- * Tutor: Omprakash Chavan (https://www.udemy.com/user/omprakash-chavan/)
- */
-
-/***************************************************/
-
 package driver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import loggerUtil.LoggerUtils;
+import utlity.ConfigLoader;
 
 public class DriverManagerFirefox implements DriverManager_OC {
 
-	@Override
-	public WebDriver createDriver() {
-		WebDriverManager.firefoxdriver().setup();
-		WebDriver driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		return driver;
-	}
+    private final boolean isHeadless =
+        Boolean.parseBoolean(ConfigLoader.getInstance().getIsheadless());
 
+    @Override
+    public WebDriver createDriver() {
+        FirefoxOptions options = new FirefoxOptions();
+
+        if (isHeadless) {
+            options.addArguments("--headless");
+            LoggerUtils.info("Firefox running in headless mode");
+        }
+
+        // isGridEnabled() and createRemoteDriver() inherited from interface
+        WebDriver driver = isGridEnabled()
+            ? createRemoteDriver(options)
+            : createLocalDriver(options);
+
+        // configureDriver() inherited from interface — waits, timeouts, cookies
+        return configureDriver(driver);
+    }
+
+    private WebDriver createLocalDriver(FirefoxOptions options) {
+        WebDriverManager.firefoxdriver().setup();
+        LoggerUtils.info("Firefox local driver created");
+        return new FirefoxDriver(options);
+    }
 }

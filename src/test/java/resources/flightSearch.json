@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "requestId": "REQ-98345234",
+    "timestamp": "2026-03-27T22:45:12Z",
+    "version": "v2.7.1",
+    "pagination": {
+      "page": 2,
+      "size": 5,
+      "totalPages": 20,
+      "totalRecords": 98
+    }
+  },
+  "user": {
+    "id": 102938,
+    "username": "rohit_singh",
+    "roles": ["ADMIN", "TESTER"],
+    "profile": {
+      "firstName": "Rohit",
+      "lastName": "Singh",
+      "email": "rohit.singh@testmail.com",
+      "phones": [
+        {
+          "type": "mobile",
+          "number": "+91-9876543210",
+          "verified": true
+        },
+        {
+          "type": "work",
+          "number": "+91-1122334455",
+          "verified": false
+        }
+      ],
+      "addresses": [
+        {
+          "type": "home",
+          "city": "Delhi",
+          "geo": {
+            "lat": 28.6139,
+            "lng": 77.2090
+          }
+        },
+        {
+          "type": "office",
+          "city": "Gurgaon",
+          "geo": {
+            "lat": 28.4595,
+            "lng": 77.0266
+          }
+        }
+      ]
+    }
+  },
+  "projects": [
+    {
+      "projectId": "PRJ-1001",
+      "name": "Automation Framework",
+      "status": "ACTIVE",
+      "tags": ["selenium", "rest-assured", "cucumber"],
+      "team": [
+        {
+          "empId": 501,
+          "name": "Amit",
+          "skills": ["Java", "Selenium"],
+          "availability": {
+            "status": "AVAILABLE",
+            "hoursPerWeek": 40
+          }
+        },
+        {
+          "empId": 502,
+          "name": "Neha",
+          "skills": ["API", "Postman", "RestAssured"],
+          "availability": {
+            "status": "BUSY",
+            "hoursPerWeek": 20
+          }
+        }
+      ],
+      "releases": [
+        {
+          "releaseId": "REL-1.0",
+          "date": "2025-12-01",
+          "features": [
+            {
+              "featureId": "FT-101",
+              "description": "Login Automation",
+              "testCases": [
+                {
+                  "tcId": "TC-1",
+                  "status": "PASSED",
+                  "executionTime": 3.45
+                },
+                {
+                  "tcId": "TC-2",
+                  "status": "FAILED",
+                  "executionTime": 2.11,
+                  "error": {
+                    "code": "ELEMENT_NOT_FOUND",
+                    "message": "Login button not visible"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "txnId": "TXN-78901",
+      "type": "PAYMENT",
+      "amount": 1500.75,
+      "currency": "INR",
+      "status": "SUCCESS",
+      "paymentMethod": {
+        "type": "CARD",
+        "card": {
+          "last4": "1234",
+          "network": "VISA"
+        }
+      },
+      "auditTrail": [
+        {
+          "action": "INITIATED",
+          "timestamp": "2026-03-27T10:00:00Z"
+        },
+        {
+          "action": "COMPLETED",
+          "timestamp": "2026-03-27T10:00:05Z"
+        }
+      ]
+    },
+    {
+      "txnId": "TXN-78902",
+      "type": "REFUND",
+      "amount": 500,
+      "currency": "INR",
+      "status": "PENDING",
+      "paymentMethod": {
+        "type": "UPI",
+        "upiId": "rohit@upi"
+      },
+      "auditTrail": []
+    }
+  ],
+  "featureFlags": {
+    "enableNewDashboard": true,
+    "betaUser": false,
+    "limits": {
+      "apiRateLimitPerMin": 100,
+      "maxProjects": 10
+    }
+  },
+  "logs": [
+    {
+      "level": "INFO",
+      "message": "User login successful",
+      "context": {
+        "ip": "192.168.1.1",
+        "device": "Chrome"
+      }
+    },
+    {
+      "level": "ERROR",
+      "message": "API timeout",
+      "context": {
+        "endpoint": "/api/v2/projects",
+        "retry": 3
+      }
+    }
+  ]
+}

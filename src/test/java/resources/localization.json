@@ -1,0 +1,26 @@
+
+ [ {
+    "language": "en",
+    "validations": {
+      "flightStatus.onds[0].flights[0].flightStatus": "Awaiting update",
+      "flightStatus.onds[0].originCity": "Abu Dhabi",
+      "flightStatus.onds[0].destinationCity": "London"
+    }
+  },
+  {
+    "language": "ar",
+    "validations": {
+      "flightStatus.onds[0].flights[0].flightStatus": "بانتظار التحديث",
+      "flightStatus.onds[0].originCity": "أبوظبي",
+      "flightStatus.onds[0].destinationCity": "لندن"
+    }
+  },
+  {
+    "language": "hi",
+    "validations": {
+      "flightStatus.onds[0].flights[0].flightStatus": "अपडेट की प्रतीक्षा में",
+      "flightStatus.onds[0].originCity": "अबू धाबी",
+      "flightStatus.onds[0].destinationCity": "लंदन"
+    }
+  }
+]

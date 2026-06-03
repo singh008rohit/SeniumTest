@@ -21,14 +21,14 @@ public class ValidateResponse {
 		//Get company name
 	String st=	JsonUtils.getJsonObjectAsString(path, "company");
 	//System.out.println(st);
-	//System.out.println(JsonUtils.getListvalueFromJson(path, "departments[*].name"));// get all department name
+	System.out.println(JsonUtils.getListvalueFromJson(path, "departments[*].name"));// get all department name
 	
 	//System.out.println(JsonUtils.getJsonObjectAsString(path, "departments[0].name"));// from specific index
 	
 	//System.out.println(JsonUtils.getJsonObjectAsString(path, "departments[1].name"));// from specific index
 	
-	//Get name employee name from all department
-	//System.out.println(JsonUtils.getListvalueFromJson(path, "departments[*].employees[*].name"));
+	//Get  employee name from all department
+//	System.out.println(JsonUtils.getListvalueFromJson(path, "departments[*].employees[*].name"));
 	
 	//Get skills of Engineering department employees
 	//System.out.println(JsonUtils.getListvalueFromJson(path, "departments[0].employees[*].skills[*]"));
@@ -37,7 +37,7 @@ public class ValidateResponse {
 	//[?()] Filter expression  used to filter array elements.
    //@  Represents the current element in the iteration.
 	
-	//System.out.println(JsonUtils.getListvalueFromJson(path, "departments[*].employees[?(@.employeeId == 'ENG2002')].salary"));
+	System.out.println(JsonUtils.getListvalueFromJson(path, "$..[?(@.employeeId == 'ENG2002')].salary"));
 	
 	//Get all active employees’ names
 	List<Object> li=JsonUtils.getListvalueFromJson(path, "departments[*].employees[?(@.active == true)].name");
