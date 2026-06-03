@@ -1,19 +1,9 @@
-   package base;
+package base;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
-
-import commonConstant.CommonConstant;
+import org.testng.annotations.*;
 import driver.DriverManager;
 import driver.DriverManagerFactory;
 import enums.DriverType;
@@ -21,75 +11,75 @@ import listeners.AnnotationTransformer;
 import listeners.MethodInterceptor;
 import listeners.SeleniumListener;
 import loggerUtil.LoggerUtils;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.NewUserSignUpPage;
-import reportManager.ExtentReportManager;
-import test.data.MapTestData;
+import utlity.ConfigLoader;
 import utlity.SeleniumCommonUtils;
+import java.io.File;
 
 @Listeners({
-	AnnotationTransformer.class,
-	SeleniumListener.class,
-	MethodInterceptor.class
+    AnnotationTransformer.class,
+    SeleniumListener.class,
+    MethodInterceptor.class
 })
-
 public class BaseTest {
 
-	protected WebDriver getDriver() {
-		return DriverManager.getDriver();
-	}
-	
-	protected void setDriver(WebDriver driver) {
-		DriverManager.setDriver(driver);
-		
-	}
+    protected WebDriver getDriver() {
+        return DriverManager.getDriver();
+    }
 
-   @BeforeMethod(alwaysRun = true)
-   @Parameters("browser")
-   public  synchronized void  startDriver(@Optional String browser) throws IOException {   
- browser=setBrowserValue(browser).toUpperCase();
- setDriver(DriverManagerFactory.getManager(DriverType.valueOf(browser)).createDriver());
- LoggerUtils.info("Current Thread info = " + Thread.currentThread().getId() + ", Driver = " + getDriver());
- 
-   }
+    protected void setDriver(WebDriver driver) {
+        DriverManager.setDriver(driver);
+    }
 
-  
-   public static String setBrowserValue(String browser) {
-	    // Fetch system property first (highest priority)
-	    String systemProp = System.getProperty("browser");
+    @BeforeMethod(alwaysRun = true)
+    @Parameters("browser")
+    public synchronized void startDriver(@Optional String browser) throws IOException {
+        browser = setBrowserValue(browser).toUpperCase();
+        WebDriver driver = DriverManagerFactory
+            .getManager(DriverType.valueOf(browser))
+            .createDriver();
+        setDriver(driver);
 
-	    if (systemProp != null) {
-	        LoggerUtils.info("Browser specified via system property: " + systemProp.toUpperCase());
-	        return systemProp;
-	    }
+        // navigate once here — not in BasePage constructor
+        driver.get(ConfigLoader.getInstance().getBaseUrl());
 
-	    if (browser != null) {
-	        LoggerUtils.info("Browser passed via code or TestNG.xml: " + browser.toUpperCase());
-	        return browser;
-	    }
+        LoggerUtils.info("Thread: " + Thread.currentThread().getId()
+            + ", Driver: " + getDriver());
+    }
 
-	    LoggerUtils.info("No browser provided, defaulting to CHROME");
-	    return "CHROME";
-	}
+    public static String setBrowserValue(String browser) {
+        String systemProp = System.getProperty("browser");
+        if (systemProp != null) {
+            LoggerUtils.info("Browser from system property: " + systemProp.toUpperCase());
+            return systemProp;
+        }
+        if (browser != null) {
+            LoggerUtils.info("Browser from TestNG xml: " + browser.toUpperCase());
+            return browser;
+        }
+        LoggerUtils.info("No browser provided, defaulting to CHROME");
+        return "CHROME";
+    }
 
-   private void takeScreenShotOfTestFailure(String browser,ITestResult result ) {
-	 browser=   setBrowserValue(browser);
-	 LoggerUtils.error("Current Thread info = " + Thread.currentThread().getId() + ", Driver = "+getDriver());
-	 if(result.getStatus()==ITestResult.FAILURE) {
-		 File destFile = new File("Screenshots" + File.separator + browser + File.separator
-					+ result.getTestClass().getRealClass().getSimpleName() + "_" + result.getMethod().getMethodName()
-					+ ".png");
-		 SeleniumCommonUtils.screenshot(destFile);
-	 }
-   	
-   }
-   @Parameters("browser")
-   @AfterMethod(alwaysRun = true )
-   public  void tearDown(@Optional String browser,ITestResult result) {
-	   takeScreenShotOfTestFailure(browser,result);
-	   getDriver().quit();
-      
-   }
+    @Parameters("browser")
+    @AfterMethod(alwaysRun = true)
+    public void tearDown(@Optional String browser, ITestResult result) {
+        takeScreenshotOnFailure(browser, result);
+        if (getDriver() != null) {
+            getDriver().quit();
+        }
+        DriverManager.unload(); // fix — was missing, causes ThreadLocal memory leak
+    }
+
+    private void takeScreenshotOnFailure(String browser, ITestResult result) {
+        browser = setBrowserValue(browser);
+        LoggerUtils.error("Thread: " + Thread.currentThread().getId()
+            + ", Driver: " + getDriver());
+        if (result.getStatus() == ITestResult.FAILURE && getDriver() != null) {
+            File destFile = new File("Screenshots" + File.separator + browser
+                + File.separator
+                + result.getTestClass().getRealClass().getSimpleName()
+                + "_" + result.getMethod().getMethodName() + ".png");
+            SeleniumCommonUtils.screenshot(destFile);
+        }
+    }
 }
-    

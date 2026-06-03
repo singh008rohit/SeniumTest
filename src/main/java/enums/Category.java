@@ -1,4 +1,4 @@
-package test.data;
+package enums;
 
 public enum Category {
 	

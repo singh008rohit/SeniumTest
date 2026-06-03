@@ -28,9 +28,10 @@ public class ConfigLoader {
 	private static final String PASSWORD = "password";
 	private static final String USERNAME = "username";
 	private static final String BASE_URL = "baseUrl";
-	private static final String ISHEADLESS= "-Dheadless";
-	private static final String GRIDURL= "-DgridUrl";
-	private static final String USEGRID= "-Dgrid";
+	private static final String API_BASE_URL= "apibaseurl";
+	private static final String ISHEADLESS= "Dheadless";
+	private static final String GRIDURL= "DgridUrl";
+	private static final String USEGRID= "Dgrid";
 
 	private static final String REQUEST_DETAILS_IN_REPORTS = "request_details_in_reports";
 
@@ -106,6 +107,11 @@ public class ConfigLoader {
 	public String getBaseUrl() {
 		return getPropertyValue(BASE_URL);
 	}
+	
+	public String getAPIBaseUrl() {
+		return getPropertyValue(API_BASE_URL);
+	}
+	
 	public String getIsheadless() {
 		return getPropertyValue(ISHEADLESS);
 	}

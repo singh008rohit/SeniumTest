@@ -32,21 +32,21 @@ public class LoginWithvaliduserTest extends BaseTest{
 		homePage.validatenavigatedToHomePage();
 	      homePage.validatenavigatedToHomePage();
 	      ExtentManager.getExtentTest().log(Status.INFO, "Validated navigated to home page");
-	      homePage.clickOnSignUpButton();
-	      homePage.validateNavigatedToSignupPage();
+	     homePage.clickOnSignUpButton();
+	     homePage.validateNavigatedToSignupPage();
 	      ExtentManager.getExtentTest().log(Status.INFO, "Validated navigated to home page");
-	      newuserSingUpPage.signupWithNameEmail(MapTestData.setUserData().get(CommonConstant.USER_FIRST_NAME),email);
+	     newuserSingUpPage.signupWithNameEmail(MapTestData.setUserData().get(CommonConstant.USER_FIRST_NAME),email);
 	      newuserSingUpPage.verifyNameEmailVisible(MapTestData.setUserData().get(CommonConstant.USER_FIRST_NAME),email);
-	   //   newuserSingUpPage.enteruserDetials(MapTestData.setUserData());
-	   //   newuserSingUpPage.validateAccountCreated();
+	      newuserSingUpPage.enteruserDetials(MapTestData.setUserData());
+	     newuserSingUpPage.validateAccountCreated();
 	     
-	    //  homePage.loginWithUser(MapTestData.setUserData().get(CommonConstant.USER_NAME));
-	    ///  newuserSingUpPage.logout();
-		//homePage.clickOnSignUpButton();
-	//	newuserSingUpPage.loginwithvalidUser(email, MapTestData.setUserData().get(CommonConstant.USER_PASSWORD));
-		// homePage.loginWithUser(MapTestData.setUserData().get(CommonConstant.USER_NAME));
-		//  homePage.deleteAccount();
-	   //   homePage.verifyAccountdeleted();
+	      homePage.loginWithUser(MapTestData.setUserData().get(CommonConstant.USER_NAME));
+	      newuserSingUpPage.logout();
+		homePage.clickOnSignUpButton();
+		newuserSingUpPage.loginwithvalidUser(email, MapTestData.setUserData().get(CommonConstant.USER_PASSWORD));
+		homePage.loginWithUser(MapTestData.setUserData().get(CommonConstant.USER_NAME));
+		 homePage.deleteAccount();
+	     homePage.verifyAccountdeleted();
 	      ExtentManager.getExtentTest().log(Status.INFO, "--- Completed test login with valid user ---");
 	}
 	

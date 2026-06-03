@@ -1,0 +1,227 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["flightStatus"],
+  "properties": {
+    "flightStatus": {
+      "type": "object",
+      "required": [
+        "searchOrigin",
+        "searchDestination",
+        "searchDate",
+        "onds"
+      ],
+      "properties": {
+        "searchOrigin": {
+          "type": "string"
+        },
+        "searchDestination": {
+          "type": "string"
+        },
+        "searchDate": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "searchOriginCity": {
+          "type": "string"
+        },
+        "searchDestinationCity": {
+          "type": "string"
+        },
+        "onds": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "origin",
+              "destination",
+              "flights"
+            ],
+            "properties": {
+              "origin": {
+                "type": "string"
+              },
+              "destination": {
+                "type": "string"
+              },
+              "originCity": {
+                "type": "string"
+              },
+              "destinationCity": {
+                "type": "string"
+              },
+              "flights": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "carrier",
+                    "flightNumber",
+                    "flightStatus",
+                    "flightStatusCode",
+                    "equipment",
+                    "departure",
+                    "arrival",
+                    "engFlightStatus",
+                    "statusType",
+                    "duration",
+                    "isExpanded"
+                  ],
+                  "properties": {
+                    "carrier": {
+                      "type": "string"
+                    },
+                    "flightNumber": {
+                      "type": "string"
+                    },
+                    "flightStatus": {
+                      "type": "string"
+                    },
+                    "flightStatusCode": {
+                      "type": "string"
+                    },
+                    "equipment": {
+                      "type": "string"
+                    },
+                    "engFlightStatus": {
+                      "type": "string"
+                    },
+                    "statusType": {
+                      "type": "string",
+                      "enum": ["success", "warning", "error"]
+                    },
+                    "duration": {
+                      "type": "string",
+                      "pattern": "^\\d{2}:\\d{2}$"
+                    },
+                    "isExpanded": {
+                      "type": "boolean"
+                    },
+                    "departure": {
+                      "type": "object",
+                      "required": [
+                        "locationCode",
+                        "scheduledDate",
+                        "scheduledTime",
+                        "airportName",
+                        "cityName"
+                      ],
+                      "properties": {
+                        "locationCode": {
+                          "type": "string"
+                        },
+                        "scheduledDate": {
+                          "type": "string",
+                          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                        },
+                        "scheduledTime": {
+                          "type": "string"
+                        },
+                        "terminal": {
+                          "type": "string"
+                        },
+                        "timeDifference": {
+                          "type": "integer"
+                        },
+                        "timeZone": {
+                          "type": "string"
+                        },
+                        "airportName": {
+                          "type": "string"
+                        },
+                        "cityName": {
+                          "type": "string"
+                        },
+                        "scheduledDisplayFlag": {
+                          "type": "boolean"
+                        },
+                        "strikeoutFlag": {
+                          "type": "boolean"
+                        },
+                        "updatedTimestampFlag": {
+                          "type": ["boolean", "null"]
+                        },
+                        "updatedTimestampColor": {
+                          "type": ["string", "null"]
+                        },
+                        "updatedDatestamp": {
+                          "type": ["string", "null"]
+                        },
+                        "updatedTimestamp": {
+                          "type": ["string", "null"]
+                        },
+                        "strikeoutDateFlag": {
+                          "type": "boolean"
+                        }
+                      }
+                    },
+                    "arrival": {
+                      "type": "object",
+                      "required": [
+                        "locationCode",
+                        "scheduledDate",
+                        "scheduledTime",
+                        "airportName",
+                        "cityName"
+                      ],
+                      "properties": {
+                        "locationCode": {
+                          "type": "string"
+                        },
+                        "scheduledDate": {
+                          "type": "string",
+                          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                        },
+                        "scheduledTime": {
+                          "type": "string"
+                        },
+                        "terminal": {
+                          "type": "string"
+                        },
+                        "timeDifference": {
+                          "type": "integer"
+                        },
+                        "timeZone": {
+                          "type": "string"
+                        },
+                        "airportName": {
+                          "type": "string"
+                        },
+                        "cityName": {
+                          "type": "string"
+                        },
+                        "scheduledDisplayFlag": {
+                          "type": "boolean"
+                        },
+                        "strikeoutFlag": {
+                          "type": "boolean"
+                        },
+                        "updatedTimestampFlag": {
+                          "type": ["boolean", "null"]
+                        },
+                        "updatedTimestampColor": {
+                          "type": ["string", "null"]
+                        },
+                        "updatedDatestamp": {
+                          "type": ["string", "null"]
+                        },
+                        "updatedTimestamp": {
+                          "type": ["string", "null"]
+                        },
+                        "strikeoutDateFlag": {
+                          "type": "boolean"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,14 +1,76 @@
 trigger:
   branches:
     include:
-      - main  # or your desired branch
+      - main
+      - pagefactory
+
+pr:
+  branches:
+    include:
+      - main
+      - pagefactory
 
 pool:
-  vmImage: 'ubuntu-latest'  # Use 'windows-latest' if required
+  vmImage: 'ubuntu-latest'
 
 variables:
   MAVEN_OPTS: "-Xmx1024m"
+  JAVA_HOME: $(JAVA_HOME_17_X64)
+  MAVEN_CACHE_FOLDER: $(HOME)/.m2/repository
 
+stages:
+- stage: BuildAndTest
+  displayName: 'Build & Test Stage'
+  jobs:
+    - job: Chrome
+      displayName: 'Run Tests on Chrome'
+      pool:
+        vmImage: 'ubuntu-latest'
+      variables:
+        BROWSER: 'chrome'
+      steps:
+        - checkout: self
+          clean: true
+          fetchDepth: 0
+
+        - task: Cache@2
+          displayName: 'Restore Maven Cache'
+          continueOnError: true
+          inputs:
+            key: 'maven | "$(Agent.OS)" | **/pom.xml'
+            restoreKeys: |
+              maven | "$(Agent.OS)"
+            path: $(MAVEN_CACHE_FOLDER)
+
+        - task: JavaToolInstaller@0
+          displayName: 'Set up Java 17'
+          inputs:
+            versionSpec: '17'
+            jdkArchitectureOption: 'x64'
+            jdkSourceOption: 'PreInstalled'
+
+        - script: |
+            echo "Running Chrome tests..."
+            mvn clean test -Dbrowser=chrome --batch-mode -e -X
+          displayName: 'Run Tests on Chrome'
+
+        - task: PublishTestResults@2
+          displayName: 'Publish JUnit Test Results - Chrome'
+          condition: succeededOrFailed()
+          inputs:
+            testResultsFormat: 'JUnit'
+            testResultsFiles: '**/surefire-reports/*.xml'
+            failTaskOnFailedTests: true
+            testRunTitle: 'Chrome TestNG Results'
+
+        - task: PublishBuildArtifacts@1
+          displayName: 'Publish Extent Reports - Chrome'
+          inputs:
+            PathtoPublish: 'ExtentReports'
+            ArtifactName: 'ChromeExtentReport'
+            publishLocation: 'Container'
+
+<<<<<<< HEAD
 steps:
 
 # Step 1: Checkout your code
@@ -48,3 +110,6 @@ steps:
     PathtoPublish: 'test-output/ExtentReports'  # Adjust path if needed
     ArtifactName: 'ExtentReport'
     publishLocation: 'Container'
+=======
+    
+>>>>>>> pagefactory

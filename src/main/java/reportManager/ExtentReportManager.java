@@ -1,8 +1,5 @@
 package reportManager;
 
-import java.awt.Desktop;
-import java.io.File;
-import java.io.IOException;
 import java.util.Objects;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -14,97 +11,117 @@ import commonConstant.ExtentReportConstant;
 import driver.DriverManager;
 import enums.AuthorType;
 import enums.CategoryType;
+import enums.TestType;
 import utlity.BrowserInfoUtils;
 import utlity.DateUtils;
 import utlity.IconUtils;
 
-public class ExtentReportManager  {
+public class ExtentReportManager {
 
-   
+	// ─── SINGLETON ─────────────────────────────────────────────
 
-	private static volatile ExtentReports extent;    
-    // 🔥 Method to Setup Extent Report
-    public static ExtentReports getSetup() {
-        if (extent == null) { // Prevent multiple initializations
-            ExtentSparkReporter reporter = new ExtentSparkReporter(ExtentReportConstant.getExtentReportFilePath()+DateUtils.getCurrentDate());
-            configureReporter(reporter);  // Move customization to a separate method
-            extent = new ExtentReports();
-            extent.attachReporter(reporter);
-            extent.setSystemInfo("Tester", "Rohit Singh");
-            extent.setSystemInfo("Environment", "QA");
-         			extent.setSystemInfo("Organization", "QATest");
-         			extent.setSystemInfo("Employee",
-         					"<b> Rohit Singh </b>" + " " + ExtentReportConstant.ICON_SOCIAL_LINKEDIN + " " + ExtentReportConstant.ICON_SOCIAL_GITHUB);
-         			extent.setSystemInfo("Domain", "Engineering (IT - Software)"+"  "+ExtentReportConstant.ICON_LAPTOP);
-         			extent.setSystemInfo("Skill", "Test Automation Engineer");
-        }
-        return extent;
-    }
-    private static void configureReporter(ExtentSparkReporter reporter) {
-        reporter.config().setReportName("Automation Test Report");
-      //  reporter.config().setDocumentTitle("Test Execution Report");
-        reporter.config().setTheme(Theme.STANDARD);
-        reporter.config().setTimeStampFormat("yyyy-MM-dd HH:mm:ss");
-        reporter.config().setEncoding("UTF-8");
-        reporter.config().setProtocol(Protocol.HTTPS);
-        reporter.config().setDocumentTitle(ExtentReportConstant.getProjectName() + " - ALL");
-        reporter.config().setReportName(ExtentReportConstant.getProjectName() + " - ALL");
+	private static final ExtentReports extent;
 
-   
-    }
+	static {
+		ExtentSparkReporter reporter = new ExtentSparkReporter(
+				ExtentReportConstant.getExtentReportFilePath() + DateUtils.getCurrentDate());
+		configureReporter(reporter);
 
-    //  Create a Test Case in Extent Report
-    public static synchronized void createTest(String testName) {
-        String browserIcon;
-        try {
-            browserIcon = IconUtils.getBrowserIcon();
-        } catch (Exception e) {
-            browserIcon = "🧪"; // Generic test tube or any API icon
-        }
-        ExtentManager.setExtentTest(extent.createTest(browserIcon + " : " + testName));
-    }
+		extent = new ExtentReports();
+		extent.attachReporter(reporter);
+		extent.setSystemInfo("Tester", "Rohit Singh");
+		extent.setSystemInfo("Environment", "QA");
+		extent.setSystemInfo("Organization", "QATest");
+		extent.setSystemInfo("Employee", "<b>Rohit Singh</b> " + ExtentReportConstant.ICON_SOCIAL_LINKEDIN + " "
+				+ ExtentReportConstant.ICON_SOCIAL_GITHUB);
+		extent.setSystemInfo("Domain", "Engineering (IT - Software)  " + ExtentReportConstant.ICON_LAPTOP);
+		extent.setSystemInfo("Skill", "Test Automation Engineer");
+	}
 
-    
-	synchronized public static void addAuthors(AuthorType[] authors) {
+	private ExtentReportManager() {
+	}
+
+	// ─── REPORTER CONFIG ───────────────────────────────────────
+
+	private static void configureReporter(ExtentSparkReporter reporter) {
+		reporter.config().setTheme(Theme.STANDARD);
+		reporter.config().setTimeStampFormat("yyyy-MM-dd HH:mm:ss");
+		reporter.config().setEncoding("UTF-8");
+		reporter.config().setProtocol(Protocol.HTTPS);
+		reporter.config().setDocumentTitle(ExtentReportConstant.getProjectName() + " - ALL");
+		reporter.config().setReportName(ExtentReportConstant.getProjectName() + " - ALL");
+	}
+
+	// ─── CREATE TEST ───────────────────────────────────────────
+
+	// original signature preserved — existing callers need no changes
+	// defaults to UI since original behaviour assumed a browser was running
+	public static synchronized void createTest(String testName) {
+		createTest(testName, TestType.UI);
+	}
+
+	// overload used by APITestBase, Hooks, SeleniumListener
+	// no try-catch — each TestType has a deterministic icon, no exception possible
+	public static synchronized void createTest(String testName, TestType testType) {
+		String icon = resolveIcon(testType);
+		ExtentManager.setExtentTest(extent.createTest(icon + " " + testName));
+	}
+
+	// icon resolution is pure logic — no driver access, no exception risk
+	private static String resolveIcon(TestType testType) {
+		switch (testType) {
+		case API:
+			return "<i class='fa fa-plug' style='color:#e67e22'></i> ";
+
+		case BDD:
+			return "<i class='fa fa-leaf' style='color:#27ae60'></i> ";
+
+		case UI:
+			// only UI tests have a live driver — safe to call getBrowserIcon()
+			// if driver is null here it is a genuine bug, not expected flow
+			return IconUtils.getBrowserIcon() + " ";
+
+		default:
+			throw new IllegalArgumentException("Unknown TestType: " + testType + " — add a case to resolveIcon()");
+		}
+	}
+
+	// ─── TEST METADATA ─────────────────────────────────────────
+
+	public static synchronized void addAuthors(AuthorType[] authors) {
 		for (AuthorType author : authors) {
 			ExtentManager.getExtentTest().assignAuthor(author.toString());
 		}
 	}
 
-	// public static void addCategories(String[] categories) {
-	synchronized public static void addCategories(CategoryType[] categories) {
-		// for (String category : categories) {
+	public static synchronized void addCategories(CategoryType[] categories) {
 		for (CategoryType category : categories) {
 			ExtentManager.getExtentTest().assignCategory(category.toString());
-			
-			
 		}
 	}
 
 	public static synchronized void addDevices() {
-	    try {
-	        if (DriverManager.getDriver() != null) {
-	            ExtentManager.getExtentTest().assignDevice(BrowserInfoUtils.getBrowserInfo());
-	        } else {
-	            ExtentManager.getExtentTest().assignDevice("API Test - No Browser");
-	        }
-	    } catch (Exception e) {
-	        ExtentManager.getExtentTest().assignDevice("Unknown Device");
-	    }
+		try {
+			if (DriverManager.getDriver() != null) {
+				ExtentManager.getExtentTest().assignDevice(BrowserInfoUtils.getBrowserInfo());
+			} else {
+				ExtentManager.getExtentTest().assignDevice("API Test - No Browser");
+			}
+		} catch (Exception e) {
+			ExtentManager.getExtentTest().assignDevice("Unknown Device");
+		}
 	}
-	
-    //  Flush Extent Report After Execution
-    public static void flushReports() {
+
+	// ─── REPORT LIFECYCLE ──────────────────────────────────────
+
+	public static ExtentReports getSetup() {
+		return extent;
+	}
+
+	public static void flushReports() {
 		if (Objects.nonNull(extent)) {
 			extent.flush();
 		}
 		ExtentManager.unload();
-	//	try {
-			//Desktop.getDesktop().browse(new File(ExtentReportConstant.getExtentReportFilePath()).toURI());
-	//	} catch (IOException e) {
-		//	e.printStackTrace();
-		//}
 	}
-
-   
 }
