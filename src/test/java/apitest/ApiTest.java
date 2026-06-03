@@ -48,10 +48,14 @@ public class ApiTest extends APITestBase {
    }
    
    
+<<<<<<< HEAD
+   @Test(enabled = false)
+=======
    @FrameworkAnnotation(author = { AuthorType.ROHIT, AuthorType.ROHIT}, 
 			category = { CategoryType.SANITY,CategoryType.SMOKE,CategoryType.REGRESSION })
 	
 	@Test(enabled =false,groups = {"SANITY","SMOKE","REGRESSION"})
+>>>>>>> pagefactory
    
    void pojo1() {
 	   
@@ -115,9 +119,13 @@ public class ApiTest extends APITestBase {
 	   tp.setDepartment(departments);
 	   tp.setFoundedYear(foundedYear);
 	   tp.setPublic1(public1);
+<<<<<<< HEAD
+	//Response res=   given().header("Content-Type", "application/json").baseUri("http://localhost:8080").log().all().body(tp).when().post("/users/1").then().statusCode(200).extract().response();
+=======
 	   RestAssured.baseURI="http://localhost:8081";
 	//	ExtentManager.getExtentTest().log(Status.INFO, "Validate json schema with mock response");
 		//Response res=	given().log().all().header("Authorization","Bearer valid_token").header("Content-Type", "application/json").when().post("/api/user/1").then().statusCode(200).extract().response();
+>>>>>>> pagefactory
 	
 	//System.out.println("------------response-----------------"+res.asPrettyString());
 
