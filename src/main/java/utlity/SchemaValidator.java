@@ -1,6 +1,9 @@
 package utlity;
 
 import io.restassured.response.Response;
+import loggerUtils.LogUtils;
+import reportManager.ExtentManager;
+
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,12 +29,12 @@ public class SchemaValidator {
 			response.then().assertThat()
 					.body(matchesJsonSchemaInClasspath(schemaPath));
 
-			LOGGER.log(Level.INFO, "✅ Schema validation passed for: {0}", schemaPath);
-			// ExtentManager.getTest().pass("Schema validation passed: " + schemaPath);
+			LogUtils.info("Schema validation passed for: " + schemaPath);
+			 ExtentManager.getExtentTest().pass("Schema validation passed: " + schemaPath);
 
 		} catch (AssertionError e) {
-			LOGGER.log(Level.SEVERE, "❌ Schema validation failed for: {0} - {1}", new Object[]{schemaPath, e.getMessage()});
-			// ExtentManager.getTest().fail("Schema validation failed: " + e.getMessage());
+			LogUtils.error("Schema validation failed for: " + schemaPath);
+			 ExtentManager.getExtentTest().fail("Schema validation failed: " + e.getMessage());
 			throw e;
 		} catch (Exception e) {
 			LOGGER.log(Level.SEVERE, "Error during schema validation for: {0} - {1}", new Object[]{schemaPath, e.getMessage()});

@@ -7,6 +7,7 @@ import commonConstant.ApiCommonContant;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+import utlity.ConfigLoader;
 
 public class RequestSpecBuilderFactory {
 	
@@ -26,20 +27,20 @@ public class RequestSpecBuilderFactory {
    
    public static RequestSpecification getSecretToken() {
 	   
-	   return new RequestSpecBuilder().addHeader("was-secret", "3rXypRXEsRDSUe7i2hWs").setContentType("application/json; charset=utf-8").addQueryParam("languageCode", "en").build();
+	   return new RequestSpecBuilder().addHeader("was-secret",ConfigLoader.getInstance().getApiSecretToken()).setContentType("application/json; charset=utf-8").addQueryParam("languageCode", "en").build();
    }
    
 public static RequestSpecification getSecretTokenEng() {
 	   
-	   return new RequestSpecBuilder().addHeader("was-secret", "3rXypRXEsRDSUe7i2hWs").setContentType("application/json; charset=utf-8").addQueryParam("languageCode", "en").build();
+	   return new RequestSpecBuilder().addHeader("was-secret", ConfigLoader.getInstance().getApiSecretToken()).setContentType("application/json; charset=utf-8").addQueryParam("languageCode", "en").build();
    }
 
 public static RequestSpecification getSecretTokenAr() {
 	   
-	   return new RequestSpecBuilder().addHeader("was-secret", "3rXypRXEsRDSUe7i2hWs").setContentType("application/json; charset=utf-8").addQueryParam("languageCode", "ar").build();
+	   return new RequestSpecBuilder().addHeader("was-secret", ConfigLoader.getInstance().getApiSecretToken()).setContentType("application/json; charset=utf-8").addQueryParam("languageCode", "ar").build();
 }
 public static RequestSpecification getSecretTokenHi() {
 	   
-	   return new RequestSpecBuilder().addHeader("was-secret", "3rXypRXEsRDSUe7i2hWs").setContentType("application/json; charset=utf-8").addQueryParam("languageCode", "hi").build();
+	   return new RequestSpecBuilder().addHeader("was-secret", ConfigLoader.getInstance().getApiSecretToken()).setContentType("application/json; charset=utf-8").addQueryParam("languageCode", "hi").build();
 }
 }

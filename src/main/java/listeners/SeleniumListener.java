@@ -22,7 +22,7 @@ import annotation.FrameworkAnnotation;
 import commonConstant.ExtentReportConstant;
 import driver.DriverManager;
 import enums.TestType;
-import loggerUtil.LoggerUtils;
+import loggerUtils.LogUtils;
 import reportManager.ExtentManager;
 import reportManager.ExtentReportManager;
 import utlity.BrowserOSInfoUtils;
@@ -44,7 +44,7 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
 
     public void onStart(ITestContext context) {
         ExtentReportManager.getSetup();
-        LoggerUtils.info("Test Suite Started: " + context.getName());
+        LogUtils.info("Test Suite Started: " + context.getName());
     }
 
     // ─── TEST START ────────────────────────────────────────────
@@ -64,7 +64,7 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
             testType    // was: no TestType — caused getBrowserIcon() NPE for API tests
         );
 
-        LoggerUtils.info("Test Started: " + result.getName());
+        LogUtils.info("Test Started: " + result.getName());
 
         // ── 3. add annotation metadata safely ──────────────────
         // was: direct .getAnnotation() — NPE if @FrameworkAnnotation missing
@@ -78,7 +78,7 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
             ExtentReportManager.addAuthors(annotation.author());
             ExtentReportManager.addCategories(annotation.category());
         } else {
-            LoggerUtils.warn("@FrameworkAnnotation missing on: "
+        	LogUtils.warn("@FrameworkAnnotation missing on: "
                 + result.getMethod().getMethodName()
                 + " — author and category will not appear in report");
         }
@@ -119,7 +119,7 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
 
         Markup markup = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
         ExtentManager.getExtentTest().pass(markup);
-        LoggerUtils.info("Test Passed: " + result.getName());
+        LogUtils.info("Test Passed: " + result.getName());
     }
 
     // ─── TEST FAILURE ──────────────────────────────────────────
@@ -149,8 +149,8 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
             + "</details>\n";
         ExtentManager.getExtentTest().log(Status.FAIL, message);
 
-        LoggerUtils.error("Test Failed: " + result.getName());
-        LoggerUtils.errorThrowable(result.getThrowable());
+        LogUtils.error("Test Failed: " + result.getName());
+        LogUtils.errorThrowable(result.getThrowable());
 
         // ── screenshot only for UI tests ────────────────────────
         // was: always attempted — threw NPE for API tests with no driver
@@ -168,7 +168,7 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
                     Status.FAIL,
                     "Failed to attach screenshot: " + e.getMessage()
                 );
-                LoggerUtils.error(
+                LogUtils.error(
                     "Failed to attach screenshot: " + e.getMessage()
                 );
             }
@@ -192,17 +192,17 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
             "<b>" + result.getName() + " skipped.</b>  "
             + ExtentReportConstant.ICON_SMILEY_SKIP
         );
-        LoggerUtils.info("Test Skipped: " + result.getName());
+        LogUtils.info("Test Skipped: " + result.getName());
     }
 
     // ─── TEST FINISH ───────────────────────────────────────────
 
     public void onFinish(ITestContext context) {
         ExtentReportManager.flushReports();
-        LoggerUtils.info("Test Suite Finished: " + context.getName());
+        LogUtils.info("Test Suite Finished: " + context.getName());
 
         // summary log — counters are now accurate under parallel execution
-        LoggerUtils.info(
+        LogUtils.info(
             "Suite Summary — "
             + "Total: "   + count_totalTCs.get()
             + ", Passed: " + count_passedTCs.get()

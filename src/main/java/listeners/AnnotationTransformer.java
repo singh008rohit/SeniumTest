@@ -8,11 +8,15 @@ import org.testng.annotations.ITestAnnotation;
 
 public class AnnotationTransformer implements IAnnotationTransformer{
 	
-	 @Override
-	    public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
-	        if (testMethod.getName().equalsIgnoreCase("testToSkip")) {
-	            annotation.setEnabled(false);
-	        }
+	@Override
+	public void transform(ITestAnnotation annotation, Class testClass,
+	                      Constructor testConstructor, Method testMethod) {
+	    annotation.setRetryAnalyzer(RetryAnalyzer.class); // apply to every test
+	    if (testMethod.getName().equalsIgnoreCase("testToSkip")) {
+	        annotation.setEnabled(false);
 	    }
+	}
+	 
+	 
 
 }

@@ -10,7 +10,8 @@ import io.cucumber.java.AfterAll;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import loggerUtil.LoggerUtils;
+import loggerUtils.LogUtils;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import reportManager.ExtentManager;
@@ -37,7 +38,7 @@ public class Hooks {
 
         // navigate once here — not in page object constructors
         DriverManager.getDriver().get(ConfigLoader.getInstance().getBaseUrl());
-        LoggerUtils.info("BDD driver started: " + browser);
+        LogUtils.info("BDD driver started: " + browser);
     }
 
     @Before(order = 2)
@@ -63,7 +64,7 @@ public class Hooks {
     // order = 0 → runs LAST among @After hooks in Cucumber
     // driver is still alive here so AfterStep screenshot above works correctly
     public void tearDown(Scenario scenario) {
-        LoggerUtils.info("BDD scenario finished: " + scenario.getName()
+    	LogUtils.info("BDD scenario finished: " + scenario.getName()
             + " | Status: " + scenario.getStatus());
 
         if (DriverManager.getDriver() != null) {
@@ -85,4 +86,3 @@ public class Hooks {
         // this is where the HTML report file actually gets written
     }
 }
-

@@ -1,18 +1,13 @@
-package loggerUtil;
+package loggerUtils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.aventstack.extentreports.Status;
 
 
-import com.aventstack.extentreports.ExtentTest;
+public class LogUtils {
 
-import reportManager.ExtentReportManager;
-
-public class LoggerUtils {
-
-    private static final Logger log = LogManager.getLogger(LoggerUtils.class);
+    private static final Logger log = LogManager.getLogger(Logger.class);
 
     public static void info(String message) {
         log.info(message);

@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import loggerUtil.LoggerUtils;
+import loggerUtils.LogUtils;
 import utlity.ConfigLoader;
 
 public class DriverManagerChrome implements DriverManager_OC {
@@ -21,7 +21,7 @@ public class DriverManagerChrome implements DriverManager_OC {
             options.addArguments("--headless");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
-            LoggerUtils.info("Chrome running in headless mode");
+            LogUtils.info("Chrome running in headless mode");
         }
 
         // isGridEnabled() and createRemoteDriver() inherited from interface
@@ -35,7 +35,7 @@ public class DriverManagerChrome implements DriverManager_OC {
 
     private WebDriver createLocalDriver(ChromeOptions options) {
         WebDriverManager.chromedriver().setup();
-        LoggerUtils.info("Chrome local driver created");
+        LogUtils.info("Chrome local driver created");
         return new ChromeDriver(options);
     }
 }

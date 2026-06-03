@@ -10,7 +10,7 @@ import enums.DriverType;
 import listeners.AnnotationTransformer;
 import listeners.MethodInterceptor;
 import listeners.SeleniumListener;
-import loggerUtil.LoggerUtils;
+import loggerUtils.LogUtils;
 import utlity.ConfigLoader;
 import utlity.SeleniumCommonUtils;
 import java.io.File;
@@ -42,21 +42,21 @@ public class BaseTest {
         // navigate once here — not in BasePage constructor
         driver.get(ConfigLoader.getInstance().getBaseUrl());
 
-        LoggerUtils.info("Thread: " + Thread.currentThread().getId()
+        LogUtils.info("Thread: " + Thread.currentThread().getId()
             + ", Driver: " + getDriver());
     }
 
     public static String setBrowserValue(String browser) {
         String systemProp = System.getProperty("browser");
         if (systemProp != null) {
-            LoggerUtils.info("Browser from system property: " + systemProp.toUpperCase());
+        	LogUtils.info("Browser from system property: " + systemProp.toUpperCase());
             return systemProp;
         }
         if (browser != null) {
-            LoggerUtils.info("Browser from TestNG xml: " + browser.toUpperCase());
+        	LogUtils.info("Browser from TestNG xml: " + browser.toUpperCase());
             return browser;
         }
-        LoggerUtils.info("No browser provided, defaulting to CHROME");
+        LogUtils.info("No browser provided, defaulting to CHROME");
         return "CHROME";
     }
 
@@ -72,7 +72,7 @@ public class BaseTest {
 
     private void takeScreenshotOnFailure(String browser, ITestResult result) {
         browser = setBrowserValue(browser);
-        LoggerUtils.error("Thread: " + Thread.currentThread().getId()
+        LogUtils.error("Thread: " + Thread.currentThread().getId()
             + ", Driver: " + getDriver());
         if (result.getStatus() == ITestResult.FAILURE && getDriver() != null) {
             File destFile = new File("Screenshots" + File.separator + browser

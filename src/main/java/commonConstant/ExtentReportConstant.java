@@ -27,8 +27,8 @@ public class ExtentReportConstant {
 	public static final String ICON_LAPTOP = "<i class='fa fa-laptop' style='font-size:18px'></i>";
 	public static final String ICON_BUG = "<i class='fa fa-bug' ></i>";
 	/* style="text-align:center;" */
-	public static final String ICON_SOCIAL_LINKEDIN_URL = "https://www.linkedin.com/in/rajat-v-3b0685128/";
-	public static final String ICON_SOCIAL_GITHUB_URL = "https://github.com/rajatt95";
+	public static final String ICON_SOCIAL_LINKEDIN_URL = "https://www.linkedin.com/in/rohit-singh-7426b8114/";
+	public static final String ICON_SOCIAL_GITHUB_URL = "https://github.com/singh008rohit";
 	public static final String ICON_SOCIAL_LINKEDIN = "<a href='" + ICON_SOCIAL_LINKEDIN_URL
 			+ "'><i class='fa fa-linkedin-square' style='font-size:24px'></i></a>";
 	public static final String ICON_SOCIAL_GITHUB = "<a href='" + ICON_SOCIAL_GITHUB_URL

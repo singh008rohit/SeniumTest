@@ -1,14 +1,15 @@
 package driver;
 
 import enums.DriverType;
-import loggerUtil.LoggerUtils;
+import loggerUtils.LogUtils;
+
 
 public class DriverManagerFactory {
 
     private DriverManagerFactory() {}
 
     public static DriverManager_OC getManager(DriverType driverType) {
-        LoggerUtils.info("Creating driver manager for: " + driverType);
+    	LogUtils.info("Creating driver manager for: " + driverType);
 
         switch (driverType) {
             case CHROME:  return new DriverManagerChrome();

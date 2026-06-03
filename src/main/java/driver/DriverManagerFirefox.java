@@ -5,7 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import loggerUtil.LoggerUtils;
+import loggerUtils.LogUtils;
 import utlity.ConfigLoader;
 
 public class DriverManagerFirefox implements DriverManager_OC {
@@ -19,7 +19,7 @@ public class DriverManagerFirefox implements DriverManager_OC {
 
         if (isHeadless) {
             options.addArguments("--headless");
-            LoggerUtils.info("Firefox running in headless mode");
+            LogUtils.info("Firefox running in headless mode");
         }
 
         // isGridEnabled() and createRemoteDriver() inherited from interface
@@ -33,7 +33,7 @@ public class DriverManagerFirefox implements DriverManager_OC {
 
     private WebDriver createLocalDriver(FirefoxOptions options) {
         WebDriverManager.firefoxdriver().setup();
-        LoggerUtils.info("Firefox local driver created");
+        LogUtils.info("Firefox local driver created");
         return new FirefoxDriver(options);
     }
 }

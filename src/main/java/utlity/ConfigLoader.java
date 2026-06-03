@@ -1,14 +1,4 @@
-/**
- * @author Rajat Verma
- * https://www.linkedin.com/in/rajat-v-3b0685128/
- * https://github.com/rajatt95
- * https://rajatt95.github.io/
- *
- * Course: Selenium Java Test Framework & Best Practices - Masterclass (https://www.udemy.com/course/selenium-java-test-framework/)
- * Tutor: Omprakash Chavan (https://www.udemy.com/user/omprakash-chavan/)
- */
 
-/***************************************************/
 
 package utlity;
 
@@ -29,9 +19,12 @@ public class ConfigLoader {
 	private static final String USERNAME = "username";
 	private static final String BASE_URL = "baseUrl";
 	private static final String API_BASE_URL= "apibaseurl";
-	private static final String ISHEADLESS= "Dheadless";
-	private static final String GRIDURL= "DgridUrl";
-	private static final String USEGRID= "Dgrid";
+	private static final String ISHEADLESS= "headless";
+	private static final String GRIDURL= "gridUrl";
+	private static final String USEGRID= "grid";
+	private static final String API_SECRET_TOKEN = "apiSecretToken";
+	private static final String USE_MOCK = "useMock";
+
 
 	private static final String REQUEST_DETAILS_IN_REPORTS = "request_details_in_reports";
 
@@ -47,7 +40,7 @@ public class ConfigLoader {
 	private static final String RESOURCES_PATH = System.getProperty("user.dir") + "/src/test/java/resources/";
 	private Properties properties;
 	// private final Properties properties;
-	private static ConfigLoader configLoader;
+	//private static ConfigLoader configLoader;
 
 	private ConfigLoader() {
 
@@ -97,11 +90,11 @@ public class ConfigLoader {
 		}
 	}
 
+	private static final ConfigLoader CONFIG_LOADER;
+	static { CONFIG_LOADER = new ConfigLoader(); }
+
 	public static ConfigLoader getInstance() {
-		if (configLoader == null) {
-			configLoader = new ConfigLoader();
-		}
-		return configLoader;
+	    return CONFIG_LOADER;
 	}
 
 	public String getBaseUrl() {
@@ -157,6 +150,14 @@ public String getuseGrid() {
 
 	public String getRequestDetailsInReports() {
 		return getPropertyValue(REQUEST_DETAILS_IN_REPORTS);
+	}
+
+	public String getApiSecretToken() {
+		// TODO Auto-generated method stub
+		return getPropertyValue(API_SECRET_TOKEN);
+	}
+	public String getUseMock() {
+	    return getPropertyValue(USE_MOCK);
 	}
 
 }

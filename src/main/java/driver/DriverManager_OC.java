@@ -6,9 +6,11 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import loggerUtils.LogUtils;
+
 import org.openqa.selenium.remote.AbstractDriverOptions;
 
-import loggerUtil.LoggerUtils;
 import utlity.ConfigLoader;
 
 public interface DriverManager_OC {
@@ -23,7 +25,7 @@ public interface DriverManager_OC {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.manage().deleteAllCookies();
-        LoggerUtils.info("Driver configured — implicit wait: 30s, "
+        LogUtils.info("Driver configured — implicit wait: 30s, "
             + "page load timeout: 30s, cookies cleared");
         return driver;
     }
@@ -41,7 +43,7 @@ public interface DriverManager_OC {
     default WebDriver createRemoteDriver(AbstractDriverOptions<?> options) {
         try {
             WebDriver driver = new RemoteWebDriver(new URL(getGridUrl()), options);
-            LoggerUtils.info("RemoteWebDriver created at: " + getGridUrl());
+            LogUtils.info("RemoteWebDriver created at: " + getGridUrl());
             return driver;
         } catch (MalformedURLException e) {
             throw new RuntimeException(

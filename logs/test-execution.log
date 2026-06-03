@@ -18697,3 +18697,317 @@ Expected status code <200> but was <500>.
 2026-06-03 01:33:22 [main] ERROR LoggerUtils - Thread: 1, Driver: ChromeDriver: chrome on mac (e1ad1d3f3c0d100cbc73059fbb604d98)
 2026-06-03 01:33:22 [main] INFO  LoggerUtils - Test Suite Finished: Default test
 2026-06-03 01:33:22 [main] INFO  LoggerUtils - Suite Summary — Total: 1, Passed: 1, Failed: 0, Skipped: 0
+2026-06-03 15:37:29 [main] INFO  LoggerUtils - Test Suite Started: Default test
+2026-06-03 15:37:30 [main] INFO  LoggerUtils - Test Started: searchFlight
+2026-06-03 15:37:30 [main] ERROR LoggerUtils - Test Failed: searchFlight
+2026-06-03 15:37:30 [main] ERROR LoggerUtils - Exception: 
+java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source) ~[?:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy) ~[rest-assured-5.4.0.jar:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source) ~[?:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89) ~[rest-assured-5.4.0.jar:?]
+	at etihad.api.testcases.SearchFlightWithFlightNoTest.searchFlight(SearchFlightWithFlightNoTest.java:73) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2026-06-03 15:37:30 [main] INFO  LoggerUtils - Test Started: validateLocalization
+2026-06-03 15:37:30 [main] ERROR LoggerUtils - Test Failed: validateLocalization
+2026-06-03 15:37:30 [main] ERROR LoggerUtils - Exception: 
+java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source) ~[?:?]
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy) ~[rest-assured-5.4.0.jar:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source) ~[?:?]
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89) ~[rest-assured-5.4.0.jar:?]
+	at etihad.api.testcases.SearchFlightWithFlightNoTest.validateLocalization(SearchFlightWithFlightNoTest.java:166) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2026-06-03 15:37:30 [main] INFO  LoggerUtils - Test Started: validateLocalization
+2026-06-03 15:37:30 [main] ERROR LoggerUtils - Test Failed: validateLocalization
+2026-06-03 15:37:30 [main] ERROR LoggerUtils - Exception: 
+java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source) ~[?:?]
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy) ~[rest-assured-5.4.0.jar:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source) ~[?:?]
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89) ~[rest-assured-5.4.0.jar:?]
+	at etihad.api.testcases.SearchFlightWithFlightNoTest.validateLocalization(SearchFlightWithFlightNoTest.java:166) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2026-06-03 15:37:30 [main] INFO  LoggerUtils - Test Started: validateLocalization
+2026-06-03 15:37:30 [main] ERROR LoggerUtils - Test Failed: validateLocalization
+2026-06-03 15:37:30 [main] ERROR LoggerUtils - Exception: 
+java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source) ~[?:?]
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy) ~[rest-assured-5.4.0.jar:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source) ~[?:?]
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89) ~[rest-assured-5.4.0.jar:?]
+	at etihad.api.testcases.SearchFlightWithFlightNoTest.validateLocalization(SearchFlightWithFlightNoTest.java:166) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2026-06-03 15:37:31 [main] INFO  LoggerUtils - Test Suite Finished: Default test
+2026-06-03 15:37:31 [main] INFO  LoggerUtils - Suite Summary — Total: 4, Passed: 0, Failed: 4, Skipped: 0
+2026-06-03 17:39:30 [main] INFO  Logger - Test Suite Started: Default test
+2026-06-03 17:39:30 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-03 17:39:30 [main] INFO  Logger - Test Started: searchFlight
+2026-06-03 17:39:35 [main] INFO  Logger - Schema validation passed for: schema/flightSchema.json
+2026-06-03 17:39:35 [main] INFO  Logger - Test Passed: searchFlight
+2026-06-03 17:39:35 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-03 17:39:35 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-03 17:39:38 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-03 17:39:38 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-03 17:39:38 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-03 17:39:43 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-03 17:39:43 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-03 17:39:43 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-03 17:39:45 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-03 17:39:45 [main] INFO  Logger - Test Suite Finished: Default test
+2026-06-03 17:39:45 [main] INFO  Logger - Suite Summary — Total: 4, Passed: 4, Failed: 0, Skipped: 0
+2026-06-03 17:43:30 [main] INFO  Logger - Test Suite Started: Default test
+2026-06-03 17:43:30 [main] INFO  Logger - No browser provided, defaulting to CHROME
+2026-06-03 17:43:30 [main] INFO  Logger - Creating driver manager for: CHROME
+2026-06-03 17:43:30 [main] INFO  Logger - Chrome running in headless mode
+2026-06-03 17:43:38 [main] INFO  Logger - Chrome local driver created
+2026-06-03 17:43:41 [main] INFO  Logger - Driver configured — implicit wait: 30s, page load timeout: 30s, cookies cleared
+2026-06-03 17:43:44 [main] INFO  Logger - Thread: 1, Driver: ChromeDriver: chrome on mac (d5d9d3f2eb84c429fd694dfd40f82d74)
+2026-06-03 17:43:44 [main] INFO  Logger - Test Started: loginWithvalidUserTest
+2026-06-03 17:43:47 [main] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (d5d9d3f2eb84c429fd694dfd40f82d74)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-03 17:43:47 [main] INFO  Logger - Fetched text: New User Signup!
+2026-06-03 17:44:47 [main] INFO  Logger - Entered text: rohit
+2026-06-03 17:45:47 [main] INFO  Logger - Entered text: itlyfd@gmail.com
+2026-06-03 17:46:20 [main] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='signup-form']//button[@type='submit']'
+2026-06-03 17:46:50 [main] INFO  Logger - Fetched attribute [value] with value: rohit
+2026-06-03 17:46:50 [main] INFO  Logger - Fetched attribute [value] with value: itlyfd@gmail.com
+2026-06-03 17:46:50 [main] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (d5d9d3f2eb84c429fd694dfd40f82d74)] -> css selector: #uniform-id_gender1]
+2026-06-03 17:46:51 [main] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-03 17:46:51 [main] INFO  Logger - Selected value from dropdown by value: 5
+2026-06-03 17:46:51 [main] INFO  Logger - Selected value from dropdown by value: 4
+2026-06-03 17:46:51 [main] INFO  Logger - Selected value from dropdown by value: 2020
+2026-06-03 17:46:51 [main] INFO  Logger - Entered text: rohit
+2026-06-03 17:46:51 [main] INFO  Logger - Entered text: singh
+2026-06-03 17:46:51 [main] INFO  Logger - Entered text: Coforge
+2026-06-03 17:46:51 [main] INFO  Logger - Entered text: noida
+2026-06-03 17:46:51 [main] INFO  Logger - Selected value from dropdown by value: India
+2026-06-03 17:46:51 [main] INFO  Logger - Entered text: UP
+2026-06-03 17:46:51 [main] INFO  Logger - Entered text: noida
+2026-06-03 17:46:51 [main] INFO  Logger - Entered text: 541234
+2026-06-03 17:46:51 [main] INFO  Logger - Entered text: 7643551111
+2026-06-03 17:46:54 [main] INFO  Logger - Clicked element using JavaScript.
+2026-06-03 17:46:54 [main] INFO  Logger - Fetched text: ACCOUNT CREATED!
+2026-06-03 17:46:54 [main] INFO  Logger - Fetched text: Congratulations! Your new account has been successfully created!
+2026-06-03 17:46:57 [main] INFO  Logger - Clicked element using JavaScript.
+2026-06-03 17:46:57 [main] INFO  Logger - Fetched text: rohit
+2026-06-03 17:47:28 [main] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Logout']'
+2026-06-03 17:48:00 [main] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (d5d9d3f2eb84c429fd694dfd40f82d74)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-03 17:48:01 [main] INFO  Logger - Entered text: itlyfd@gmail.com
+2026-06-03 17:48:01 [main] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-03 17:48:34 [main] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //form[@action='/login']/button[text()='Login']'
+2026-06-03 17:49:04 [main] INFO  Logger - Fetched text: rohit
+2026-06-03 17:49:37 [main] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Delete Account']'
+2026-06-03 17:50:07 [main] INFO  Logger - Fetched text: ACCOUNT DELETED!
+2026-06-03 17:50:07 [main] INFO  Logger - Fetched text: Your account has been permanently deleted!
+2026-06-03 17:50:08 [main] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (d5d9d3f2eb84c429fd694dfd40f82d74)] -> xpath: //a[text()='Continue']]
+2026-06-03 17:50:38 [main] INFO  Logger - Test Passed: loginWithvalidUserTest
+2026-06-03 17:50:38 [main] INFO  Logger - No browser provided, defaulting to CHROME
+2026-06-03 17:50:38 [main] ERROR Logger - Thread: 1, Driver: ChromeDriver: chrome on mac (d5d9d3f2eb84c429fd694dfd40f82d74)
+2026-06-03 17:50:38 [main] INFO  Logger - Test Suite Finished: Default test
+2026-06-03 17:50:38 [main] INFO  Logger - Suite Summary — Total: 1, Passed: 1, Failed: 0, Skipped: 0

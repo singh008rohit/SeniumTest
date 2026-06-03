@@ -21,7 +21,7 @@ public class AirindiaFSRPage extends BasePage {
 		
 		super(driver);
 		
-		
+		final SoftAssert softassert = new SoftAssert();
 	}
 	
 	public void validateTitle() {

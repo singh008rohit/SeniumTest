@@ -5,7 +5,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import loggerUtil.LoggerUtils;
+import loggerUtils.LogUtils;
 import utlity.ConfigLoader;
 
 public class DriverManagerEdge implements DriverManager_OC {
@@ -21,7 +21,7 @@ public class DriverManagerEdge implements DriverManager_OC {
             options.addArguments("--headless");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
-            LoggerUtils.info("Edge running in headless mode");
+            LogUtils.info("Edge running in headless mode");
         }
 
         // isGridEnabled() and createRemoteDriver() inherited from interface
@@ -35,7 +35,7 @@ public class DriverManagerEdge implements DriverManager_OC {
 
     private WebDriver createLocalDriver(EdgeOptions options) {
         WebDriverManager.edgedriver().setup();
-        LoggerUtils.info("Edge local driver created");
+        LogUtils.info("Edge local driver created");
         return new EdgeDriver(options);
     }
 }
