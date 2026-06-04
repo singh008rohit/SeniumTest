@@ -46,7 +46,7 @@ public class ExtentReportConstant {
 
 	private static final String Project_Name = "Automation Test Suite Report - Master Selenium Framework";
 	public static final String EXTENT_REPORT_FOLDER_PATH = PROJECT_PATH + "/ExtentReports/";
-	public static final String EXTENT_REPORT_NAME = "AutomationReport.html";
+	public static final String EXTENT_REPORT_NAME = "AutomationReport";
 	private static String extentReportFilePath = "";
 
 	public static String getProjectName() {

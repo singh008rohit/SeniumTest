@@ -5,6 +5,7 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import driver.DriverManager;
 import driver.DriverManagerFactory;
 import enums.DriverType;
+import enums.TestType;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.AfterStep;
@@ -41,9 +42,19 @@ public class Hooks {
         LogUtils.info("BDD driver started: " + browser);
     }
 
+ // Hooks.java — FIXED
     @Before(order = 2)
     public void initializeExtentTest(Scenario scenario) {
-      //  ExtentReportManager.createTest(scenario.getName(), null);
+        // Create the Extent test node for this scenario
+        // BDD uses TestType.BDD — gets the green leaf icon
+        ExtentReportManager.createTest(scenario.getName(), TestType.BDD);
+        
+        // Add Cucumber tags as categories in the report
+        scenario.getSourceTagNames().forEach(tag ->
+            ExtentManager.getExtentTest().assignCategory(tag.replace("@", ""))
+        );
+        
+        LogUtils.info("BDD scenario started: " + scenario.getName());
     }
 
     @AfterStep
@@ -60,21 +71,39 @@ public class Hooks {
         }
     }
 
-    @After(order = 0)  
-    // order = 0 → runs LAST among @After hooks in Cucumber
-    // driver is still alive here so AfterStep screenshot above works correctly
+ // Hooks.java — FIXED tearDown
+    @After(order = 0)
     public void tearDown(Scenario scenario) {
-    	LogUtils.info("BDD scenario finished: " + scenario.getName()
+        LogUtils.info("BDD scenario finished: " + scenario.getName()
             + " | Status: " + scenario.getStatus());
 
-        if (DriverManager.getDriver() != null) {
-            DriverManager.getDriver().quit();   // 1. close browser
-            DriverManager.unload();             // 2. remove ThreadLocal
+        // Log final scenario status to Extent report
+        if (ExtentManager.getExtentTest() != null) {
+            switch (scenario.getStatus()) {
+                case PASSED:
+                    ExtentManager.getExtentTest().pass(
+                        "<b>" + scenario.getName() + " passed.</b> "
+                        + "<i class='fa fa-smile-o' style='font-size:20px'></i>");
+                    break;
+                case FAILED:
+                    ExtentManager.getExtentTest().fail(
+                        "<b>" + scenario.getName() + " failed.</b>");
+                    break;
+                case SKIPPED:
+                    ExtentManager.getExtentTest().skip(
+                        "<b>" + scenario.getName() + " skipped.</b>");
+                    break;
+                default:
+                    ExtentManager.getExtentTest().warning(
+                        scenario.getName() + " — status: " + scenario.getStatus());
+            }
         }
 
+        if (DriverManager.getDriver() != null) {
+            DriverManager.getDriver().quit();
+            DriverManager.unload();
+        }
         ExtentManager.unload();
-        // only unload the ExtentTest node for this scenario
-        // do NOT call flushReports() here — that would write the file after every scenario
     }
 
     // ─── AFTER ALL SCENARIOS ───────────────────────────────────

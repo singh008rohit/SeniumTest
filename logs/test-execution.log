@@ -21198,3 +21198,814 @@ java.net.SocketException: Connection reset
 2026-06-04 16:31:02 [TestNG-test-API Tests-1] INFO  Logger - Test Skipped: getAllProductList
 2026-06-04 16:31:02 [TestNG-test-API Tests-1] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 83
 2026-06-04 16:31:02 [TestNG-test-API Tests-1] INFO  Logger - Test Started: getAllProductList
+2026-06-04 17:15:03 [TestNG-tests-1] INFO  Logger - Test Suite Started: UI Tests - Chrome
+2026-06-04 17:15:03 [TestNG-tests-2] INFO  Logger - Test Suite Started: API Tests
+2026-06-04 17:15:03 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 17:15:03 [TestNG-tests-1] INFO  Logger - Attempting to start driver for browser: CHROME
+2026-06-04 17:15:03 [TestNG-tests-1] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 17:15:03 [TestNG-tests-1] INFO  Logger - Chrome running in headless mode
+2026-06-04 17:15:03 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 21
+2026-06-04 17:15:03 [TestNG-tests-2] INFO  Logger - Test Started: getAllProductList
+2026-06-04 17:15:07 [TestNG-tests-1] INFO  Logger - Chrome local driver created
+2026-06-04 17:15:10 [TestNG-tests-1] INFO  Logger - Driver configured — implicit wait: 30s, page load timeout: 30s, cookies cleared
+2026-06-04 17:15:13 [TestNG-tests-1] INFO  Logger - Driver started successfully — Thread: 20, Driver: ChromeDriver: chrome on mac (2a3bc0fe218e98a044effeb43c0077c3)
+2026-06-04 17:15:13 [TestNG-tests-1] INFO  Logger - Test Started: registeruserTest
+2026-06-04 17:15:15 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (2a3bc0fe218e98a044effeb43c0077c3)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 17:15:15 [TestNG-tests-1] INFO  Logger - Fetched text: New User Signup!
+2026-06-04 17:16:16 [TestNG-tests-1] INFO  Logger - Entered text: rohit
+2026-06-04 17:17:16 [TestNG-tests-1] INFO  Logger - Entered text: vweuyd@gmail.com
+2026-06-04 17:17:48 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='signup-form']//button[@type='submit']'
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Fetched attribute [value] with value: rohit
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Fetched attribute [value] with value: vweuyd@gmail.com
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (2a3bc0fe218e98a044effeb43c0077c3)] -> css selector: #uniform-id_gender1]
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 5
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 4
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 2020
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Entered text: rohit
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Entered text: singh
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Entered text: Coforge
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Entered text: noida
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: India
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Entered text: UP
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Entered text: noida
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Entered text: 541234
+2026-06-04 17:18:18 [TestNG-tests-1] INFO  Logger - Entered text: 7643551111
+2026-06-04 17:18:24 [TestNG-tests-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 17:18:24 [TestNG-tests-1] INFO  Logger - Fetched text: ACCOUNT CREATED!
+2026-06-04 17:18:24 [TestNG-tests-1] INFO  Logger - Fetched text: Congratulations! Your new account has been successfully created!
+2026-06-04 17:18:28 [TestNG-tests-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 17:18:28 [TestNG-tests-1] INFO  Logger - Fetched text: rohit
+2026-06-04 17:18:59 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Delete Account']'
+2026-06-04 17:19:29 [TestNG-tests-1] INFO  Logger - Fetched text: ACCOUNT DELETED!
+2026-06-04 17:19:29 [TestNG-tests-1] INFO  Logger - Fetched text: Your account has been permanently deleted!
+2026-06-04 17:20:03 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Continue']'
+2026-06-04 17:21:03 [TestNG-tests-1] INFO  Logger - Test Passed: registeruserTest
+2026-06-04 17:21:03 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 17:21:03 [TestNG-tests-1] ERROR Logger - Thread: 20, Driver: ChromeDriver: chrome on mac (2a3bc0fe218e98a044effeb43c0077c3)
+2026-06-04 17:21:03 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 17:21:03 [TestNG-tests-1] INFO  Logger - Attempting to start driver for browser: CHROME
+2026-06-04 17:21:03 [TestNG-tests-1] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 17:21:03 [TestNG-tests-1] INFO  Logger - Chrome running in headless mode
+2026-06-04 17:21:03 [TestNG-tests-1] INFO  Logger - Chrome local driver created
+2026-06-04 17:21:06 [TestNG-tests-1] INFO  Logger - Driver configured — implicit wait: 30s, page load timeout: 30s, cookies cleared
+2026-06-04 17:21:06 [TestNG-tests-1] ERROR Logger - CRITICAL: @BeforeMethod failed for browser [CHROME] on Thread: 20 — Reason: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=148.0.7778.216)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.4.1', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f72e4c1670f49ec82b0dd8c7a8274f1a, get {url=https://automationexercise.com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.216, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /var/folders/f3/7d9mby7j7yj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56129}, goog:processID: 12177, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56129/devtoo..., se:cdpVersion: 148.0.7778.216, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f72e4c1670f49ec82b0dd8c7a8274f1a
+2026-06-04 17:21:06 [TestNG-tests-1] INFO  Logger - Test Started: loginWithvalidUserTest
+2026-06-04 17:21:06 [TestNG-tests-1] INFO  Logger - Test Skipped: loginWithvalidUserTest
+2026-06-04 17:21:06 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 17:21:06 [TestNG-tests-1] ERROR Logger - Thread: 20, Driver: ChromeDriver: chrome on mac (f72e4c1670f49ec82b0dd8c7a8274f1a)
+2026-06-04 17:21:06 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 17:21:06 [TestNG-tests-1] INFO  Logger - Attempting to start driver for browser: CHROME
+2026-06-04 17:21:06 [TestNG-tests-1] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 17:21:06 [TestNG-tests-1] INFO  Logger - Chrome running in headless mode
+2026-06-04 17:21:06 [TestNG-tests-1] INFO  Logger - Chrome local driver created
+2026-06-04 17:21:10 [TestNG-tests-1] INFO  Logger - Driver configured — implicit wait: 30s, page load timeout: 30s, cookies cleared
+2026-06-04 17:21:55 [TestNG-tests-1] INFO  Logger - Driver started successfully — Thread: 20, Driver: ChromeDriver: chrome on mac (c49e5467ed1d52a60038225c50513233)
+2026-06-04 17:21:55 [TestNG-tests-1] INFO  Logger - Test Started: validateValidUserTest
+2026-06-04 17:21:55 [TestNG-tests-1] INFO  Logger - Test Passed: validateValidUserTest
+2026-06-04 17:21:55 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 17:21:55 [TestNG-tests-1] ERROR Logger - Thread: 20, Driver: ChromeDriver: chrome on mac (c49e5467ed1d52a60038225c50513233)
+2026-06-04 17:21:56 [TestNG-tests-1] INFO  Logger - Test Suite Finished: UI Tests - Chrome
+2026-06-04 17:41:57 [TestNG-tests-2] ERROR Logger - Test Failed: getAllProductList
+2026-06-04 17:41:57 [TestNG-tests-2] ERROR Logger - Exception: 
+org.testng.TestNGException: 
+Cannot instantiate class listeners.RetryAnalyzer
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:43) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:61) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.ITestObjectFactory.newInstance(ITestObjectFactory.java:10) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.SimpleObjectDispenser.dispense(SimpleObjectDispenser.java:61) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispenseObject(GuiceBasedObjectDispenser.java:41) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispense(GuiceBasedObjectDispenser.java:31) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.computeRetryAnalyzerInstanceToUse(BaseTestMethod.java:868) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.getRetryAnalyzerConsideringMethodParameters(BaseTestMethod.java:832) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.getRetryAnalyzer(BaseTestMethod.java:693) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.shouldRetryTestMethod(TestInvoker.java:573) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:750) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	... 26 more
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The declared package "" does not match the expected package "listeners"
+
+	at listeners.RetryAnalyzer.<init>(RetryAnalyzer.java:1) ~[classes/:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	... 26 more
+2026-06-04 17:41:57 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 22
+2026-06-04 17:41:57 [TestNG-tests-2] INFO  Logger - Test Started: testGetRequest
+2026-06-04 17:41:58 [TestNG-tests-2] ERROR Logger - Test Failed: testGetRequest
+2026-06-04 17:41:58 [TestNG-tests-2] ERROR Logger - Exception: 
+org.testng.TestNGException: 
+Cannot instantiate class listeners.RetryAnalyzer
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:43) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:61) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.ITestObjectFactory.newInstance(ITestObjectFactory.java:10) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.SimpleObjectDispenser.dispense(SimpleObjectDispenser.java:61) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispenseObject(GuiceBasedObjectDispenser.java:41) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispense(GuiceBasedObjectDispenser.java:31) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.computeRetryAnalyzerInstanceToUse(BaseTestMethod.java:868) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.getRetryAnalyzerConsideringMethodParameters(BaseTestMethod.java:832) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.getRetryAnalyzer(BaseTestMethod.java:693) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.shouldRetryTestMethod(TestInvoker.java:573) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:750) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	... 26 more
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The declared package "" does not match the expected package "listeners"
+
+	at listeners.RetryAnalyzer.<init>(RetryAnalyzer.java:1) ~[classes/:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	... 26 more
+2026-06-04 17:41:58 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 22
+2026-06-04 17:41:58 [TestNG-tests-2] INFO  Logger - Test Started: ValidateAbletoSearchProducts
+2026-06-04 17:53:15 [TestNG-tests-1] INFO  Logger - Test Suite Started: UI Tests - Chrome
+2026-06-04 17:53:15 [TestNG-tests-2] INFO  Logger - Test Suite Started: API Tests
+2026-06-04 17:53:15 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 17:53:15 [TestNG-tests-1] INFO  Logger - Attempting to start driver for browser: CHROME
+2026-06-04 17:53:15 [TestNG-tests-1] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 17:53:15 [TestNG-tests-1] INFO  Logger - Chrome running in headless mode
+2026-06-04 17:53:15 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 19
+2026-06-04 17:53:15 [TestNG-tests-2] INFO  Logger - Test Started: searchFlight
+2026-06-04 17:53:15 [TestNG-tests-1] INFO  Logger - Chrome local driver created
+2026-06-04 17:53:21 [TestNG-tests-2] INFO  Logger - Schema validation passed for: schema/flightSchema.json
+2026-06-04 17:53:21 [TestNG-tests-2] INFO  Logger - Test Passed: searchFlight
+2026-06-04 17:53:21 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 19
+2026-06-04 17:53:21 [TestNG-tests-2] INFO  Logger - Test Started: validateLocalization
+2026-06-04 17:53:23 [TestNG-tests-2] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 17:53:23 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 19
+2026-06-04 17:53:23 [TestNG-tests-2] INFO  Logger - Test Started: validateLocalization
+2026-06-04 17:53:24 [TestNG-tests-1] INFO  Logger - Driver configured — implicit wait: 10s, page load timeout: 90s, cookies cleared
+2026-06-04 17:53:25 [TestNG-tests-2] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 17:53:25 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 19
+2026-06-04 17:53:25 [TestNG-tests-2] INFO  Logger - Test Started: validateLocalization
+2026-06-04 17:53:27 [TestNG-tests-1] INFO  Logger - Driver started successfully — Thread: 18, Driver: ChromeDriver: chrome on mac (9b6c0752082895c01ebff4a862abb25f)
+2026-06-04 17:53:27 [TestNG-tests-1] INFO  Logger - Test Started: registeruserTest
+2026-06-04 17:53:28 [TestNG-tests-2] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 17:53:28 [TestNG-tests-2] INFO  Logger - Test Suite Finished: API Tests
+2026-06-04 17:53:29 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (9b6c0752082895c01ebff4a862abb25f)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 17:53:29 [TestNG-tests-1] INFO  Logger - Fetched text: New User Signup!
+2026-06-04 17:53:49 [TestNG-tests-1] INFO  Logger - Entered text: rohit
+2026-06-04 17:54:10 [TestNG-tests-1] INFO  Logger - Entered text: yynfpd@gmail.com
+2026-06-04 17:54:21 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='signup-form']//button[@type='submit']'
+2026-06-04 17:54:31 [TestNG-tests-1] INFO  Logger - Fetched attribute [value] with value: rohit
+2026-06-04 17:54:31 [TestNG-tests-1] INFO  Logger - Fetched attribute [value] with value: yynfpd@gmail.com
+2026-06-04 17:54:31 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (9b6c0752082895c01ebff4a862abb25f)] -> css selector: #uniform-id_gender1]
+2026-06-04 17:54:31 [TestNG-tests-1] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-04 17:54:31 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 5
+2026-06-04 17:54:31 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 4
+2026-06-04 17:54:32 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 2020
+2026-06-04 17:54:32 [TestNG-tests-1] INFO  Logger - Entered text: rohit
+2026-06-04 17:54:32 [TestNG-tests-1] INFO  Logger - Entered text: singh
+2026-06-04 17:54:32 [TestNG-tests-1] INFO  Logger - Entered text: Coforge
+2026-06-04 17:54:32 [TestNG-tests-1] INFO  Logger - Entered text: noida
+2026-06-04 17:54:32 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: India
+2026-06-04 17:54:32 [TestNG-tests-1] INFO  Logger - Entered text: UP
+2026-06-04 17:54:32 [TestNG-tests-1] INFO  Logger - Entered text: noida
+2026-06-04 17:54:32 [TestNG-tests-1] INFO  Logger - Entered text: 541234
+2026-06-04 17:54:32 [TestNG-tests-1] INFO  Logger - Entered text: 7643551111
+2026-06-04 17:54:38 [TestNG-tests-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 17:54:38 [TestNG-tests-1] INFO  Logger - Fetched text: ACCOUNT CREATED!
+2026-06-04 17:54:38 [TestNG-tests-1] INFO  Logger - Fetched text: Congratulations! Your new account has been successfully created!
+2026-06-04 17:54:41 [TestNG-tests-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 17:54:41 [TestNG-tests-1] INFO  Logger - Fetched text: rohit
+2026-06-04 17:54:53 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Delete Account']'
+2026-06-04 17:55:03 [TestNG-tests-1] INFO  Logger - Fetched text: ACCOUNT DELETED!
+2026-06-04 17:55:03 [TestNG-tests-1] INFO  Logger - Fetched text: Your account has been permanently deleted!
+2026-06-04 17:55:18 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Continue']'
+2026-06-04 17:55:38 [TestNG-tests-1] INFO  Logger - Test Passed: registeruserTest
+2026-06-04 17:55:38 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 17:55:38 [TestNG-tests-1] ERROR Logger - Thread: 18, Driver: ChromeDriver: chrome on mac (9b6c0752082895c01ebff4a862abb25f)
+2026-06-04 17:55:38 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 17:55:38 [TestNG-tests-1] INFO  Logger - Attempting to start driver for browser: CHROME
+2026-06-04 17:55:38 [TestNG-tests-1] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 17:55:38 [TestNG-tests-1] INFO  Logger - Chrome running in headless mode
+2026-06-04 17:55:38 [TestNG-tests-1] INFO  Logger - Chrome local driver created
+2026-06-04 17:55:41 [TestNG-tests-1] INFO  Logger - Driver configured — implicit wait: 10s, page load timeout: 90s, cookies cleared
+2026-06-04 17:55:45 [TestNG-tests-1] INFO  Logger - Driver started successfully — Thread: 18, Driver: ChromeDriver: chrome on mac (6343a3f6e73ce2df35d6f00bedf384c8)
+2026-06-04 17:55:45 [TestNG-tests-1] INFO  Logger - Test Started: loginWithvalidUserTest
+2026-06-04 17:55:47 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (6343a3f6e73ce2df35d6f00bedf384c8)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 17:55:47 [TestNG-tests-1] INFO  Logger - Fetched text: New User Signup!
+2026-06-04 17:56:07 [TestNG-tests-1] INFO  Logger - Entered text: rohit
+2026-06-04 17:56:27 [TestNG-tests-1] INFO  Logger - Entered text: hydkos@gmail.com
+2026-06-04 17:56:27 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (6343a3f6e73ce2df35d6f00bedf384c8)] -> xpath: //div[@class='signup-form']//button[@type='submit']]
+2026-06-04 17:56:38 [TestNG-tests-1] INFO  Logger - Fetched attribute [value] with value: rohit
+2026-06-04 17:56:38 [TestNG-tests-1] INFO  Logger - Fetched attribute [value] with value: hydkos@gmail.com
+2026-06-04 17:56:38 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (6343a3f6e73ce2df35d6f00bedf384c8)] -> css selector: #uniform-id_gender1]
+2026-06-04 17:56:38 [TestNG-tests-1] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-04 17:56:38 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 5
+2026-06-04 17:56:38 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 4
+2026-06-04 17:56:39 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 2020
+2026-06-04 17:56:39 [TestNG-tests-1] INFO  Logger - Entered text: rohit
+2026-06-04 17:56:39 [TestNG-tests-1] INFO  Logger - Entered text: singh
+2026-06-04 17:56:39 [TestNG-tests-1] INFO  Logger - Entered text: Coforge
+2026-06-04 17:56:39 [TestNG-tests-1] INFO  Logger - Entered text: noida
+2026-06-04 17:56:39 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: India
+2026-06-04 17:56:39 [TestNG-tests-1] INFO  Logger - Entered text: UP
+2026-06-04 17:56:39 [TestNG-tests-1] INFO  Logger - Entered text: noida
+2026-06-04 17:56:39 [TestNG-tests-1] INFO  Logger - Entered text: 541234
+2026-06-04 17:56:39 [TestNG-tests-1] INFO  Logger - Entered text: 7643551111
+2026-06-04 17:56:44 [TestNG-tests-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 17:56:44 [TestNG-tests-1] INFO  Logger - Fetched text: ACCOUNT CREATED!
+2026-06-04 17:56:44 [TestNG-tests-1] INFO  Logger - Fetched text: Congratulations! Your new account has been successfully created!
+2026-06-04 17:56:48 [TestNG-tests-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 17:56:48 [TestNG-tests-1] INFO  Logger - Fetched text: rohit
+2026-06-04 17:57:00 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Logout']'
+2026-06-04 17:57:12 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (6343a3f6e73ce2df35d6f00bedf384c8)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 17:57:12 [TestNG-tests-1] INFO  Logger - Entered text: hydkos@gmail.com
+2026-06-04 17:57:12 [TestNG-tests-1] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-04 17:57:12 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (6343a3f6e73ce2df35d6f00bedf384c8)] -> xpath: //form[@action='/login']/button[text()='Login']]
+2026-06-04 17:57:16 [TestNG-tests-1] INFO  Logger - Fetched text: rohit
+2026-06-04 17:57:28 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Delete Account']'
+2026-06-04 17:57:38 [TestNG-tests-1] INFO  Logger - Fetched text: ACCOUNT DELETED!
+2026-06-04 17:57:38 [TestNG-tests-1] INFO  Logger - Fetched text: Your account has been permanently deleted!
+2026-06-04 17:57:51 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Continue']'
+2026-06-04 17:58:11 [TestNG-tests-1] INFO  Logger - Test Passed: loginWithvalidUserTest
+2026-06-04 17:58:11 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 17:58:11 [TestNG-tests-1] ERROR Logger - Thread: 18, Driver: ChromeDriver: chrome on mac (6343a3f6e73ce2df35d6f00bedf384c8)
+2026-06-04 17:58:12 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 17:58:12 [TestNG-tests-1] INFO  Logger - Attempting to start driver for browser: CHROME
+2026-06-04 17:58:12 [TestNG-tests-1] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 17:58:12 [TestNG-tests-1] INFO  Logger - Chrome running in headless mode
+2026-06-04 17:58:12 [TestNG-tests-1] INFO  Logger - Chrome local driver created
+2026-06-04 17:58:14 [TestNG-tests-1] INFO  Logger - Driver configured — implicit wait: 10s, page load timeout: 90s, cookies cleared
+2026-06-04 17:58:19 [TestNG-tests-1] INFO  Logger - Driver started successfully — Thread: 18, Driver: ChromeDriver: chrome on mac (ae718338e59a1d8a5b15a2f8809abdba)
+2026-06-04 17:58:19 [TestNG-tests-1] INFO  Logger - Test Started: validateValidUserTest
+2026-06-04 17:58:19 [TestNG-tests-1] INFO  Logger - Test Passed: validateValidUserTest
+2026-06-04 17:58:19 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 17:58:19 [TestNG-tests-1] ERROR Logger - Thread: 18, Driver: ChromeDriver: chrome on mac (ae718338e59a1d8a5b15a2f8809abdba)
+2026-06-04 17:58:19 [TestNG-tests-1] INFO  Logger - Test Suite Finished: UI Tests - Chrome
+2026-06-04 18:01:58 [TestNG-tests-2] INFO  Logger - Test Suite Started: API Tests
+2026-06-04 18:01:58 [TestNG-tests-1] INFO  Logger - Test Suite Started: UI Tests - Chrome
+2026-06-04 18:01:58 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 18:01:58 [TestNG-tests-1] INFO  Logger - Attempting to start driver for browser: CHROME
+2026-06-04 18:01:58 [TestNG-tests-1] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 18:01:58 [TestNG-tests-1] INFO  Logger - Chrome running in headless mode
+2026-06-04 18:01:58 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 19
+2026-06-04 18:01:58 [TestNG-tests-2] INFO  Logger - Test Started: searchFlight
+2026-06-04 18:01:58 [TestNG-tests-1] INFO  Logger - Chrome local driver created
+2026-06-04 18:02:02 [TestNG-tests-1] INFO  Logger - Driver configured — implicit wait: 10s, page load timeout: 90s, cookies cleared
+2026-06-04 18:02:03 [TestNG-tests-2] INFO  Logger - Schema validation passed for: schema/flightSchema.json
+2026-06-04 18:02:03 [TestNG-tests-2] INFO  Logger - Test Passed: searchFlight
+2026-06-04 18:02:03 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 19
+2026-06-04 18:02:03 [TestNG-tests-2] INFO  Logger - Test Started: validateLocalization
+2026-06-04 18:02:06 [TestNG-tests-1] INFO  Logger - Driver started successfully — Thread: 18, Driver: ChromeDriver: chrome on mac (90982f5686f9bbddbfea0aaa8230fae2)
+2026-06-04 18:02:06 [TestNG-tests-1] INFO  Logger - Test Started: registeruserTest
+2026-06-04 18:02:07 [TestNG-tests-2] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 18:02:07 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 19
+2026-06-04 18:02:07 [TestNG-tests-2] INFO  Logger - Test Started: validateLocalization
+2026-06-04 18:02:08 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (90982f5686f9bbddbfea0aaa8230fae2)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 18:02:08 [TestNG-tests-1] INFO  Logger - Fetched text: New User Signup!
+2026-06-04 18:02:09 [TestNG-tests-2] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 18:02:09 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 19
+2026-06-04 18:02:09 [TestNG-tests-2] INFO  Logger - Test Started: validateLocalization
+2026-06-04 18:02:12 [TestNG-tests-2] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 18:02:12 [TestNG-tests-2] INFO  Logger - Test Suite Finished: API Tests
+2026-06-04 18:02:28 [TestNG-tests-1] INFO  Logger - Entered text: rohit
+2026-06-04 18:02:49 [TestNG-tests-1] INFO  Logger - Entered text: agklny@gmail.com
+2026-06-04 18:03:00 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='signup-form']//button[@type='submit']'
+2026-06-04 18:03:10 [TestNG-tests-1] INFO  Logger - Fetched attribute [value] with value: rohit
+2026-06-04 18:03:10 [TestNG-tests-1] INFO  Logger - Fetched attribute [value] with value: agklny@gmail.com
+2026-06-04 18:03:11 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (90982f5686f9bbddbfea0aaa8230fae2)] -> css selector: #uniform-id_gender1]
+2026-06-04 18:03:11 [TestNG-tests-1] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-04 18:03:11 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 5
+2026-06-04 18:03:11 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 4
+2026-06-04 18:03:11 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 2020
+2026-06-04 18:03:11 [TestNG-tests-1] INFO  Logger - Entered text: rohit
+2026-06-04 18:03:11 [TestNG-tests-1] INFO  Logger - Entered text: singh
+2026-06-04 18:03:11 [TestNG-tests-1] INFO  Logger - Entered text: Coforge
+2026-06-04 18:03:11 [TestNG-tests-1] INFO  Logger - Entered text: noida
+2026-06-04 18:03:11 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: India
+2026-06-04 18:03:11 [TestNG-tests-1] INFO  Logger - Entered text: UP
+2026-06-04 18:03:11 [TestNG-tests-1] INFO  Logger - Entered text: noida
+2026-06-04 18:03:11 [TestNG-tests-1] INFO  Logger - Entered text: 541234
+2026-06-04 18:03:11 [TestNG-tests-1] INFO  Logger - Entered text: 7643551111
+2026-06-04 18:03:16 [TestNG-tests-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 18:03:16 [TestNG-tests-1] INFO  Logger - Fetched text: ACCOUNT CREATED!
+2026-06-04 18:03:16 [TestNG-tests-1] INFO  Logger - Fetched text: Congratulations! Your new account has been successfully created!
+2026-06-04 18:03:20 [TestNG-tests-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 18:03:20 [TestNG-tests-1] INFO  Logger - Fetched text: rohit
+2026-06-04 18:03:32 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Delete Account']'
+2026-06-04 18:03:42 [TestNG-tests-1] INFO  Logger - Fetched text: ACCOUNT DELETED!
+2026-06-04 18:03:42 [TestNG-tests-1] INFO  Logger - Fetched text: Your account has been permanently deleted!
+2026-06-04 18:03:56 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Continue']'
+2026-06-04 18:04:16 [TestNG-tests-1] INFO  Logger - Test Passed: registeruserTest
+2026-06-04 18:04:16 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 18:04:16 [TestNG-tests-1] ERROR Logger - Thread: 18, Driver: ChromeDriver: chrome on mac (90982f5686f9bbddbfea0aaa8230fae2)
+2026-06-04 18:04:17 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 18:04:17 [TestNG-tests-1] INFO  Logger - Attempting to start driver for browser: CHROME
+2026-06-04 18:04:17 [TestNG-tests-1] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 18:04:17 [TestNG-tests-1] INFO  Logger - Chrome running in headless mode
+2026-06-04 18:04:17 [TestNG-tests-1] INFO  Logger - Chrome local driver created
+2026-06-04 18:04:19 [TestNG-tests-1] INFO  Logger - Driver configured — implicit wait: 10s, page load timeout: 90s, cookies cleared
+2026-06-04 18:04:22 [TestNG-tests-1] INFO  Logger - Driver started successfully — Thread: 18, Driver: ChromeDriver: chrome on mac (853e4a77be602aa7943c129d611b7561)
+2026-06-04 18:04:22 [TestNG-tests-1] INFO  Logger - Test Started: loginWithvalidUserTest
+2026-06-04 18:04:24 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (853e4a77be602aa7943c129d611b7561)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 18:04:24 [TestNG-tests-1] INFO  Logger - Fetched text: New User Signup!
+2026-06-04 18:04:44 [TestNG-tests-1] INFO  Logger - Entered text: rohit
+2026-06-04 18:05:04 [TestNG-tests-1] INFO  Logger - Entered text: mjwvmt@gmail.com
+2026-06-04 18:05:06 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (853e4a77be602aa7943c129d611b7561)] -> xpath: //div[@class='signup-form']//button[@type='submit']]
+2026-06-04 18:05:16 [TestNG-tests-1] INFO  Logger - Fetched attribute [value] with value: rohit
+2026-06-04 18:05:16 [TestNG-tests-1] INFO  Logger - Fetched attribute [value] with value: mjwvmt@gmail.com
+2026-06-04 18:05:16 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (853e4a77be602aa7943c129d611b7561)] -> css selector: #uniform-id_gender1]
+2026-06-04 18:05:16 [TestNG-tests-1] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-04 18:05:16 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 5
+2026-06-04 18:05:16 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 4
+2026-06-04 18:05:16 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 2020
+2026-06-04 18:05:16 [TestNG-tests-1] INFO  Logger - Entered text: rohit
+2026-06-04 18:05:16 [TestNG-tests-1] INFO  Logger - Entered text: singh
+2026-06-04 18:05:16 [TestNG-tests-1] INFO  Logger - Entered text: Coforge
+2026-06-04 18:05:16 [TestNG-tests-1] INFO  Logger - Entered text: noida
+2026-06-04 18:05:17 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: India
+2026-06-04 18:05:17 [TestNG-tests-1] INFO  Logger - Entered text: UP
+2026-06-04 18:05:17 [TestNG-tests-1] INFO  Logger - Entered text: noida
+2026-06-04 18:05:17 [TestNG-tests-1] INFO  Logger - Entered text: 541234
+2026-06-04 18:05:17 [TestNG-tests-1] INFO  Logger - Entered text: 7643551111
+2026-06-04 18:05:20 [TestNG-tests-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 18:05:20 [TestNG-tests-1] INFO  Logger - Fetched text: ACCOUNT CREATED!
+2026-06-04 18:05:20 [TestNG-tests-1] INFO  Logger - Fetched text: Congratulations! Your new account has been successfully created!
+2026-06-04 18:05:23 [TestNG-tests-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 18:05:23 [TestNG-tests-1] INFO  Logger - Fetched text: rohit
+2026-06-04 18:05:34 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Logout']'
+2026-06-04 18:05:46 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (853e4a77be602aa7943c129d611b7561)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 18:05:46 [TestNG-tests-1] INFO  Logger - Entered text: mjwvmt@gmail.com
+2026-06-04 18:05:46 [TestNG-tests-1] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-04 18:05:46 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (853e4a77be602aa7943c129d611b7561)] -> xpath: //form[@action='/login']/button[text()='Login']]
+2026-06-04 18:05:50 [TestNG-tests-1] INFO  Logger - Fetched text: rohit
+2026-06-04 18:06:01 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Delete Account']'
+2026-06-04 18:06:11 [TestNG-tests-1] INFO  Logger - Fetched text: ACCOUNT DELETED!
+2026-06-04 18:06:11 [TestNG-tests-1] INFO  Logger - Fetched text: Your account has been permanently deleted!
+2026-06-04 18:06:25 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Continue']'
+2026-06-04 18:06:45 [TestNG-tests-1] INFO  Logger - Test Passed: loginWithvalidUserTest
+2026-06-04 18:06:45 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 18:06:45 [TestNG-tests-1] ERROR Logger - Thread: 18, Driver: ChromeDriver: chrome on mac (853e4a77be602aa7943c129d611b7561)
+2026-06-04 18:06:45 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 18:06:45 [TestNG-tests-1] INFO  Logger - Attempting to start driver for browser: CHROME
+2026-06-04 18:06:45 [TestNG-tests-1] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 18:06:45 [TestNG-tests-1] INFO  Logger - Chrome running in headless mode
+2026-06-04 18:06:45 [TestNG-tests-1] INFO  Logger - Chrome local driver created
+2026-06-04 18:06:48 [TestNG-tests-1] INFO  Logger - Driver configured — implicit wait: 10s, page load timeout: 90s, cookies cleared
+2026-06-04 18:06:52 [TestNG-tests-1] INFO  Logger - Driver started successfully — Thread: 18, Driver: ChromeDriver: chrome on mac (b091e420348ce2c5a9896f4959600a91)
+2026-06-04 18:06:52 [TestNG-tests-1] INFO  Logger - Test Started: validateValidUserTest
+2026-06-04 18:06:52 [TestNG-tests-1] INFO  Logger - Test Passed: validateValidUserTest
+2026-06-04 18:06:52 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 18:06:52 [TestNG-tests-1] ERROR Logger - Thread: 18, Driver: ChromeDriver: chrome on mac (b091e420348ce2c5a9896f4959600a91)
+2026-06-04 18:06:52 [TestNG-tests-1] INFO  Logger - Test Suite Finished: UI Tests - Chrome
+2026-06-04 18:39:13 [TestNG-tests-2] ERROR Logger - Test Failed: ValidateAbletoSearchProducts
+2026-06-04 18:39:13 [TestNG-tests-2] ERROR Logger - Exception: 
+org.testng.TestNGException: 
+Cannot instantiate class listeners.RetryAnalyzer
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:43) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:61) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.ITestObjectFactory.newInstance(ITestObjectFactory.java:10) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.SimpleObjectDispenser.dispense(SimpleObjectDispenser.java:61) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispenseObject(GuiceBasedObjectDispenser.java:41) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispense(GuiceBasedObjectDispenser.java:31) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.computeRetryAnalyzerInstanceToUse(BaseTestMethod.java:868) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.getRetryAnalyzerConsideringMethodParameters(BaseTestMethod.java:832) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.getRetryAnalyzer(BaseTestMethod.java:693) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.shouldRetryTestMethod(TestInvoker.java:573) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:750) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	... 26 more
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The declared package "" does not match the expected package "listeners"
+
+	at listeners.RetryAnalyzer.<init>(RetryAnalyzer.java:1) ~[classes/:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	... 26 more
+2026-06-04 18:39:13 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 22
+2026-06-04 18:39:13 [TestNG-tests-2] INFO  Logger - Test Started: DataForLocalization
+2026-06-04 18:39:13 [TestNG-tests-2] ERROR Logger - Test Failed: DataForLocalization
+2026-06-04 18:39:13 [TestNG-tests-2] ERROR Logger - Exception: 
+org.testng.TestNGException: 
+Cannot instantiate class listeners.RetryAnalyzer
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:43) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:61) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.ITestObjectFactory.newInstance(ITestObjectFactory.java:10) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.SimpleObjectDispenser.dispense(SimpleObjectDispenser.java:61) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispenseObject(GuiceBasedObjectDispenser.java:41) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispense(GuiceBasedObjectDispenser.java:31) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.lambda$getRetryAnalyzerConsideringMethodParameters$2(BaseTestMethod.java:842) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[?:?]
+	at org.testng.internal.BaseTestMethod.getRetryAnalyzerConsideringMethodParameters(BaseTestMethod.java:837) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.getRetryAnalyzer(BaseTestMethod.java:693) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.shouldRetryTestMethod(TestInvoker.java:573) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:750) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	... 27 more
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The declared package "" does not match the expected package "listeners"
+
+	at listeners.RetryAnalyzer.<init>(RetryAnalyzer.java:1) ~[classes/:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	... 27 more
+2026-06-04 18:39:13 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 22
+2026-06-04 18:39:13 [TestNG-tests-2] INFO  Logger - Test Started: loginToApplication
+2026-06-04 18:39:13 [TestNG-tests-2] ERROR Logger - Test Failed: loginToApplication
+2026-06-04 18:39:13 [TestNG-tests-2] ERROR Logger - Exception: 
+org.testng.TestNGException: 
+Cannot instantiate class listeners.RetryAnalyzer
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:43) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:61) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.ITestObjectFactory.newInstance(ITestObjectFactory.java:10) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.SimpleObjectDispenser.dispense(SimpleObjectDispenser.java:61) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispenseObject(GuiceBasedObjectDispenser.java:41) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispense(GuiceBasedObjectDispenser.java:31) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.lambda$getRetryAnalyzerConsideringMethodParameters$2(BaseTestMethod.java:842) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[?:?]
+	at org.testng.internal.BaseTestMethod.getRetryAnalyzerConsideringMethodParameters(BaseTestMethod.java:837) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.getRetryAnalyzer(BaseTestMethod.java:693) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.shouldRetryTestMethod(TestInvoker.java:573) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:750) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	... 27 more
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The declared package "" does not match the expected package "listeners"
+
+	at listeners.RetryAnalyzer.<init>(RetryAnalyzer.java:1) ~[classes/:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	... 27 more
+2026-06-04 18:39:13 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 22
+2026-06-04 18:39:13 [TestNG-tests-2] INFO  Logger - Test Started: searchFlight
+2026-06-04 18:39:20 [TestNG-tests-2] INFO  Logger - Schema validation passed for: schema/flightSchema.json
+2026-06-04 18:39:20 [TestNG-tests-2] ERROR Logger - Test Failed: searchFlight
+2026-06-04 18:39:20 [TestNG-tests-2] ERROR Logger - Exception: 
+org.testng.TestNGException: 
+Cannot instantiate class listeners.RetryAnalyzer
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:43) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:61) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.ITestObjectFactory.newInstance(ITestObjectFactory.java:10) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.SimpleObjectDispenser.dispense(SimpleObjectDispenser.java:61) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispenseObject(GuiceBasedObjectDispenser.java:41) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispense(GuiceBasedObjectDispenser.java:31) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.computeRetryAnalyzerInstanceToUse(BaseTestMethod.java:868) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.getRetryAnalyzerConsideringMethodParameters(BaseTestMethod.java:832) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.getRetryAnalyzer(BaseTestMethod.java:693) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.shouldRetryTestMethod(TestInvoker.java:573) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:750) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	... 26 more
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The declared package "" does not match the expected package "listeners"
+
+	at listeners.RetryAnalyzer.<init>(RetryAnalyzer.java:1) ~[classes/:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	... 26 more
+2026-06-04 18:39:20 [TestNG-tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 22
+2026-06-04 18:39:20 [TestNG-tests-2] INFO  Logger - Test Started: validateLocalization
+2026-06-04 18:39:22 [TestNG-tests-2] ERROR Logger - Test Failed: validateLocalization
+2026-06-04 18:39:22 [TestNG-tests-2] ERROR Logger - Exception: 
+org.testng.TestNGException: 
+Cannot instantiate class listeners.RetryAnalyzer
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:43) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:61) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.ITestObjectFactory.newInstance(ITestObjectFactory.java:10) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.SimpleObjectDispenser.dispense(SimpleObjectDispenser.java:61) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispenseObject(GuiceBasedObjectDispenser.java:41) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispense(GuiceBasedObjectDispenser.java:31) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.lambda$getRetryAnalyzerConsideringMethodParameters$2(BaseTestMethod.java:842) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[?:?]
+	at org.testng.internal.BaseTestMethod.getRetryAnalyzerConsideringMethodParameters(BaseTestMethod.java:837) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.BaseTestMethod.getRetryAnalyzer(BaseTestMethod.java:693) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.shouldRetryTestMethod(TestInvoker.java:573) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:750) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	... 27 more
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The declared package "" does not match the expected package "listeners"
+
+	at listeners.RetryAnalyzer.<init>(RetryAnalyzer.java:1) ~[classes/:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	... 27 more
+2026-06-04 18:39:22 [TestNG-tests-2] INFO  Logger - Test Suite Finished: API Tests
+2026-06-04 20:15:03 [TestNG-test-API Tests-1] INFO  Logger - Retrying test: getAllProductList | Attempt: 2
+2026-06-04 20:15:03 [TestNG-test-API Tests-1] INFO  Logger - Test Skipped: getAllProductList
+2026-06-04 20:15:03 [TestNG-test-API Tests-1] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 83
+2026-06-04 20:15:03 [TestNG-test-API Tests-1] INFO  Logger - Test Started: getAllProductList
+2026-06-05 00:43:21 [TestNG-test-API Tests-1] ERROR Logger - Test Failed: getAllProductList
+2026-06-05 00:43:21 [TestNG-test-API Tests-1] ERROR Logger - Exception: 
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355) ~[?:?]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808) ~[?:?]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065) ~[?:?]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:207) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.13.jar:4.5.13]
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.http.HTTPBuilder$request$13.call(Unknown Source) ~[?:?]
+	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy) ~[rest-assured-5.4.0.jar:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy) ~[rest-assured-5.4.0.jar:?]
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy) ~[rest-assured-5.4.0.jar:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy) ~[rest-assured-5.4.0.jar:?]
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source) ~[?:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.filter.Filter$filter$1.call(Unknown Source) ~[?:?]
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.filter.Filter$filter$1.call(Unknown Source) ~[?:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source) ~[?:?]
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.filter.FilterContext$next.call(Unknown Source) ~[?:?]
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source) ~[?:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source) ~[?:?]
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.filter.FilterContext$next.call(Unknown Source) ~[?:?]
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy) ~[rest-assured-5.4.0.jar:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy) ~[rest-assured-5.4.0.jar:?]
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy) ~[rest-assured-5.4.0.jar:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1334) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1089) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008) ~[groovy-4.0.16.jar:4.0.16]
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:791) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy) ~[rest-assured-5.4.0.jar:?]
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy) ~[rest-assured-5.4.0.jar:?]
+	at apitest.GetAllProductsList.getAllProductList(GetAllProductsList.java:32) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+2026-06-05 00:43:21 [main] INFO  Logger - Test Suite Finished: API Tests

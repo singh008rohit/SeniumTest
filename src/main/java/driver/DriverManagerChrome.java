@@ -13,6 +13,7 @@ public class DriverManagerChrome implements DriverManager_OC {
     private final boolean isHeadless = 
         Boolean.parseBoolean(ConfigLoader.getInstance().getIsheadless());
 
+ // DriverManagerChrome.java
     @Override
     public WebDriver createDriver() {
         ChromeOptions options = new ChromeOptions();
@@ -21,19 +22,31 @@ public class DriverManagerChrome implements DriverManager_OC {
             options.addArguments("--headless=new");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--disable-gpu");          // add this
-            options.addArguments("--window-size=1920,1080"); 
-            options.setExperimentalOption("excludeSwitches", 
-            	    java.util.Arrays.asList("enable-automation"));// add this — prevents layout issues
+            options.addArguments("--disable-gpu");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--disable-extensions");
+            options.addArguments("--no-first-run");
+            options.addArguments("--disable-background-networking");
+            options.addArguments("--disable-default-apps");
+            options.addArguments("--disable-sync");
+            options.addArguments("--remote-debugging-port=0");
+            // ADD THIS — forces each ChromeDriver to use a fresh isolated user data dir
+            options.addArguments("--user-data-dir=/tmp/chrome-" 
+                + Thread.currentThread().getId() 
+                + "-" + System.currentTimeMillis());
             LogUtils.info("Chrome running in headless mode");
+        } else {
+            options.addArguments("--disable-extensions");
+            options.addArguments("--no-first-run");
+            options.addArguments("--user-data-dir=/tmp/chrome-" 
+                + Thread.currentThread().getId() 
+                + "-" + System.currentTimeMillis());
         }
 
-        // isGridEnabled() and createRemoteDriver() inherited from interface
         WebDriver driver = isGridEnabled()
             ? createRemoteDriver(options)
             : createLocalDriver(options);
 
-        // configureDriver() inherited from interface — waits, timeouts, cookies
         return configureDriver(driver);
     }
 

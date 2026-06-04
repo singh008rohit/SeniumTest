@@ -20,13 +20,14 @@ public interface DriverManager_OC {
     // ─── shared configuration applied to every browser ─────────
     // default method — all three managers inherit this automatically
     // no duplication, guaranteed consistency across Chrome/Firefox/Edge
+ // DriverManager_OC.java
     default WebDriver configureDriver(WebDriver driver) {
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(90)); // was 30s — too low for Chrome 148 ARM
+        driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
         driver.manage().deleteAllCookies();
-        LogUtils.info("Driver configured — implicit wait: 30s, "
-            + "page load timeout: 30s, cookies cleared");
+        LogUtils.info("Driver configured — implicit wait: 10s, page load timeout: 90s, cookies cleared");
         return driver;
     }
 
