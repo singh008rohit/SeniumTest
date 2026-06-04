@@ -11,9 +11,5 @@
     <classes><class name="ui.testcases.RegisterUserTest"/></classes>
   </test>
 
-  <test name="Edge">
-    <parameter name="browser" value="edge"/>
-    <classes><class name="ui.testcases.RegisterUserTest"/></classes>
-  </test>
 
 </suite>

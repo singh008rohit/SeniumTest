@@ -18,7 +18,7 @@ public class DriverManagerEdge implements DriverManager_OC {
         EdgeOptions options = new EdgeOptions();
 
         if (isHeadless) {
-            options.addArguments("--headless");
+            options.addArguments("--headless=new");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
             options.addArguments("--disable-gpu");          // add this
@@ -35,8 +35,18 @@ public class DriverManagerEdge implements DriverManager_OC {
         return configureDriver(driver);
     }
 
+ // DriverManagerEdge.java
     private WebDriver createLocalDriver(EdgeOptions options) {
+        // Verify Edge binary exists before WebDriverManager tries to match a driver
+        String edgePath = "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge";
+        if (!new java.io.File(edgePath).exists()) {
+            throw new RuntimeException(
+                "Microsoft Edge not found at: " + edgePath 
+                + " — install Edge or remove Edge from testng-crossbrowser.xml");
+        }
+       
         WebDriverManager.edgedriver().setup();
+        
         LogUtils.info("Edge local driver created");
         return new EdgeDriver(options);
     }

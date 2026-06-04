@@ -126,7 +126,7 @@ public class ExtentReportManager {
 		}
 	}
 
-	public static synchronized void addDevices() {
+	public static  void addDevices() {
 		try {
 			if (DriverManager.getDriver() != null) {
 				ExtentManager.getExtentTest().assignDevice(BrowserInfoUtils.getBrowserInfo());
@@ -148,6 +148,6 @@ public class ExtentReportManager {
 		if (Objects.nonNull(extent)) {
 			extent.flush();
 		}
-		ExtentManager.unload();
+		//ExtentManager.unload();
 	}
 }

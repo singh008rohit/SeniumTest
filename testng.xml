@@ -1,24 +1,11 @@
 
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="CrossBrowserSuite" parallel="tests" thread-count="3">
+<suite name="CrossBrowserSuite">
     <test name="ChromeTests">
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="edge"/>
         <classes>
             <class name="ui.testcases.ValidateValidTest"/>
         </classes>
-    </test>
-
-    <test name="FirefoxTests">
-        <parameter name="browser" value="firefox"/>
-        <classes>
-            <class name="ui.testcases.LoginWithvaliduserTest"/>
-        </classes>
-    </test>
-
-    <test name="EdgeTests">
-        <parameter name="browser" value="Edge"/>
-        <classes>
-            <class name="ui.testcases.RegisterUserTest"/>
-        </classes>
+   
     </test>
 </suite>

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.openqa.selenium.NoSuchSessionException;
 import org.testng.IInvokedMethod;
 import org.testng.IInvokedMethodListener;
 import org.testng.ISuiteListener;
@@ -107,6 +108,7 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
         Markup markup = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
         ExtentManager.getExtentTest().pass(markup);
         LogUtils.info("Test Passed: " + result.getName());
+        ExtentManager.unload(); 
     }
 
     // ─── TEST FAILURE ──────────────────────────────────────────
@@ -146,32 +148,26 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
 
         // ── screenshot only for UI tests ────────────────────────
         // was: always attempted — threw NPE for API tests with no driver
+     // SeleniumListener.java — onTestFailure — guard the screenshot
         if (DriverManager.getDriver() != null) {
             try {
-                String screenshotPath = SeleniumCommonUtils.captureScreenshot(
-                    result.getName()
-                );
-                File screenshotFile  = new File(screenshotPath);
-                String absolutePath  = screenshotFile.getCanonicalPath();
-                ExtentManager.getExtentTest()
-                    .addScreenCaptureFromPath(absolutePath);
+                // ADD: check session is alive before taking screenshot
+                DriverManager.getDriver().getWindowHandles(); // throws if session dead
+                
+                String screenshotPath = SeleniumCommonUtils.captureScreenshot(result.getName());
+                File screenshotFile = new File(screenshotPath);
+                String absolutePath = screenshotFile.getCanonicalPath();
+                ExtentManager.getExtentTest().addScreenCaptureFromPath(absolutePath);
+            } catch (NoSuchSessionException se) {
+                ExtentManager.getExtentTest().log(Status.FAIL,
+                    "<b>Browser session was lost — screenshot unavailable.</b>");
+                LogUtils.error("Browser session dead, cannot take screenshot: " + se.getMessage());
             } catch (IOException e) {
-                ExtentManager.getExtentTest().log(
-                    Status.FAIL,
-                    "Failed to attach screenshot: " + e.getMessage()
-                );
-                LogUtils.error(
-                    "Failed to attach screenshot: " + e.getMessage()
-                );
+                ExtentManager.getExtentTest().log(Status.FAIL,
+                    "Failed to attach screenshot: " + e.getMessage());
             }
-        } else {
-            // API test failure — log request/response details instead
-            ExtentManager.getExtentTest().log(
-                Status.FAIL,
-                "<b>API test failed — no screenshot available. "
-                + "Check request/response details above.</b>"
-            );
         }
+        ExtentManager.unload(); 
     }
 
     // ─── TEST SKIP ─────────────────────────────────────────────
@@ -185,23 +181,17 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
             + ExtentReportConstant.ICON_SMILEY_SKIP
         );
         LogUtils.info("Test Skipped: " + result.getName());
+        ExtentManager.unload(); 
     }
 
     // ─── TEST FINISH ───────────────────────────────────────────
 
     public void onFinish(ITestContext context) {
-        ExtentReportManager.flushReports();
-        LogUtils.info("Test Suite Finished: " + context.getName());
+      //  ExtentReportManager.flushReports();
+        LogUtils.info("Test Suite Finished: " + context.getName());}
 
         // summary log — counters are now accurate under parallel execution
-        LogUtils.info(
-            "Suite Summary — "
-            + "Total: "   + count_totalTCs.get()
-            + ", Passed: " + count_passedTCs.get()
-            + ", Failed: " + count_failedTCs.get()
-            + ", Skipped: " + count_skippedTCs.get()
-        );
-    }
+   
 
     // ─── OTHER EVENTS ──────────────────────────────────────────
 

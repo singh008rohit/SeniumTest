@@ -18,11 +18,13 @@ public class DriverManagerChrome implements DriverManager_OC {
         ChromeOptions options = new ChromeOptions();
 
         if (isHeadless) {
-            options.addArguments("--headless");
+            options.addArguments("--headless=new");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
             options.addArguments("--disable-gpu");          // add this
-            options.addArguments("--window-size=1920,1080"); // add this — prevents layout issues
+            options.addArguments("--window-size=1920,1080"); 
+            options.setExperimentalOption("excludeSwitches", 
+            	    java.util.Arrays.asList("enable-automation"));// add this — prevents layout issues
             LogUtils.info("Chrome running in headless mode");
         }
 

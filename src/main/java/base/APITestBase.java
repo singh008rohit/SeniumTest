@@ -14,6 +14,7 @@ import listeners.AnnotationTransformer;
 import listeners.MethodInterceptor;
 import listeners.SeleniumListener;
 import loggerUtils.LogUtils;
+import reportManager.ExtentManager;
 import reportManager.ExtentReportManager;
 import utlity.ConfigLoader;
 
@@ -64,6 +65,8 @@ public class APITestBase {
         }
     }
 
+    
+ // APITestBase.java — add stop timeout
     @AfterMethod(alwaysRun = true)
     public void tearDownAPI() {
         if (USE_MOCK) {
@@ -75,12 +78,10 @@ public class APITestBase {
             }
             wireMockServer.remove();
         }
+        ExtentManager.unload();
     }
 
-    @AfterSuite(alwaysRun = true)
-    public void tearDownReport() {
-        ExtentReportManager.flushReports();
-    }
+  
 
     // ── accessors for subclasses ───────────────────────────────
 

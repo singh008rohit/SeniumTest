@@ -1,4 +1,4 @@
-package listeners;
+// RetryAnalyzer.java — make retryCount ThreadLocal-safe
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
@@ -8,7 +8,11 @@ import utlity.ConfigLoader;
 
 public class RetryAnalyzer implements IRetryAnalyzer {
 
-    private int retryCount = 0;
+    // ThreadLocal because AnnotationTransformer creates one instance per method
+    // but under parallel="methods" the same instance CAN be called from different threads
+    private final ThreadLocal<Integer> retryCount = 
+        ThreadLocal.withInitial(() -> 0);
+    
     private static final int MAX_RETRY = 2;
 
     @Override
@@ -17,12 +21,14 @@ public class RetryAnalyzer implements IRetryAnalyzer {
                 .equalsIgnoreCase("yes")) {
             return false;
         }
-        if (retryCount < MAX_RETRY) {
-            retryCount++;
+        int count = retryCount.get();
+        if (count < MAX_RETRY) {
+            retryCount.set(count + 1);
             LogUtils.info("Retrying test: " + result.getName()
-                + " | Attempt: " + retryCount);
+                + " | Attempt: " + (count + 1));
             return true;
         }
+        retryCount.remove(); // clean up ThreadLocal after max retries
         return false;
     }
 }
