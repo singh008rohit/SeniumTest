@@ -19,6 +19,10 @@ public class DriverManagerFirefox implements DriverManager_OC {
 
         if (isHeadless) {
             options.addArguments("--headless");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--disable-gpu");          // add this
+            options.addArguments("--window-size=1920,1080"); // add this — prevents layout issues
             LogUtils.info("Firefox running in headless mode");
         }
 

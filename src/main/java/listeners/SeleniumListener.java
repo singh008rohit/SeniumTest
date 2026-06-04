@@ -50,24 +50,17 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
     // ─── TEST START ────────────────────────────────────────────
 
     public void onTestStart(ITestResult result) {
-        count_totalTCs.incrementAndGet();   // thread-safe — was count_totalTCs + 1
+        count_totalTCs.incrementAndGet();
 
-        // ── 1. determine test type from driver state ────────────
-        // no try-catch — driver presence is a known condition, not exceptional
         TestType testType = DriverManager.getDriver() != null
             ? TestType.UI
             : TestType.API;
 
-        // ── 2. create extent test node with correct icon ────────
-        ExtentReportManager.createTest(
-            result.getMethod().getMethodName(),
-            testType    // was: no TestType — caused getBrowserIcon() NPE for API tests
-        );
+        // USE THE NEW OVERLOAD — passes full result so class name is available
+        ExtentReportManager.createTest(result, testType);
 
         LogUtils.info("Test Started: " + result.getName());
 
-        // ── 3. add annotation metadata safely ──────────────────
-        // was: direct .getAnnotation() — NPE if @FrameworkAnnotation missing
         FrameworkAnnotation annotation = result
             .getMethod()
             .getConstructorOrMethod()
@@ -77,26 +70,15 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
         if (annotation != null) {
             ExtentReportManager.addAuthors(annotation.author());
             ExtentReportManager.addCategories(annotation.category());
-        } else {
-        	LogUtils.warn("@FrameworkAnnotation missing on: "
-                + result.getMethod().getMethodName()
-                + " — author and category will not appear in report");
         }
 
-        // ── 4. add device info once ─────────────────────────────
-        // was: addDevices() called twice — duplicate entry in report
         ExtentReportManager.addDevices();
 
-        // ── 5. log OS + browser info for UI, plain label for API
-        // no try-catch — testType already determined above, no exception possible
         if (testType == TestType.UI) {
             ExtentManager.getExtentTest().info(
-                "<b>"
-                + IconUtils.getOSIcon()
-                + "  &  "
-                + IconUtils.getBrowserIcon()
-                + " ——— "
-                + BrowserOSInfoUtils.getOS_Browser_BrowserVersionInfo()
+                "<b>" + IconUtils.getOSIcon()
+                + "  &  " + IconUtils.getBrowserIcon()
+                + " ——— " + BrowserOSInfoUtils.getOS_Browser_BrowserVersionInfo()
                 + "</b>"
             );
         } else {
@@ -106,11 +88,16 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
             );
         }
     }
-
     // ─── TEST SUCCESS ──────────────────────────────────────────
 
     public void onTestSuccess(ITestResult result) {
-        count_passedTCs.incrementAndGet();  // was: count_passedTCs + 1
+        count_passedTCs.incrementAndGet();
+
+        // calculate and log duration
+        long durationMs = result.getEndMillis() - result.getStartMillis();
+        ExtentManager.getExtentTest().info(
+            "<b>Duration:</b> " + durationMs + " ms"
+        );
 
         String logText = "<b>"
             + result.getMethod().getMethodName()
@@ -125,7 +112,12 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
     // ─── TEST FAILURE ──────────────────────────────────────────
 
     public void onTestFailure(ITestResult result) {
-        count_failedTCs.incrementAndGet();  // was: count_failedTCs + 1
+        count_failedTCs.incrementAndGet();  
+        
+        long durationMs = result.getEndMillis() - result.getStartMillis();
+        ExtentManager.getExtentTest().info(
+            "<b>Duration:</b> " + durationMs + " ms"
+        );// was: count_failedTCs + 1
 
         ExtentManager.getExtentTest().info(
             "Test Failed: " + result.getName()

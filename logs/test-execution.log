@@ -19011,3 +19011,662 @@ Expected status code <200> but was <404>.
 2026-06-03 17:50:38 [main] ERROR Logger - Thread: 1, Driver: ChromeDriver: chrome on mac (d5d9d3f2eb84c429fd694dfd40f82d74)
 2026-06-03 17:50:38 [main] INFO  Logger - Test Suite Finished: Default test
 2026-06-03 17:50:38 [main] INFO  Logger - Suite Summary — Total: 1, Passed: 1, Failed: 0, Skipped: 0
+2026-06-03 23:55:03 [main] INFO  Logger - Test Suite Started: UI Tests - Chrome
+2026-06-03 23:55:03 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-03 23:55:03 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-03 23:55:03 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-03 23:55:03 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Creating driver manager for: CHROME
+2026-06-03 23:55:03 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Creating driver manager for: CHROME
+2026-06-03 23:55:03 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Creating driver manager for: CHROME
+2026-06-03 23:55:03 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Chrome running in headless mode
+2026-06-03 23:55:03 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Chrome running in headless mode
+2026-06-03 23:55:03 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Chrome running in headless mode
+2026-06-03 23:55:07 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Chrome local driver created
+2026-06-03 23:55:07 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Chrome local driver created
+2026-06-03 23:55:07 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Chrome local driver created
+2026-06-03 23:55:10 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Driver configured — implicit wait: 30s, page load timeout: 30s, cookies cleared
+2026-06-03 23:55:11 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Driver configured — implicit wait: 30s, page load timeout: 30s, cookies cleared
+2026-06-03 23:55:11 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Driver configured — implicit wait: 30s, page load timeout: 30s, cookies cleared
+2026-06-03 23:55:14 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Thread: 23, Driver: ChromeDriver: chrome on mac (8da30b77b585d85ce3a1f92301003b79)
+2026-06-03 23:55:14 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Test Started: validateValidUserTest
+2026-06-03 23:55:14 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Test Passed: validateValidUserTest
+2026-06-03 23:55:14 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-03 23:55:14 [TestNG-test-UI Tests - Chrome-3] ERROR Logger - Thread: 23, Driver: ChromeDriver: chrome on mac (8da30b77b585d85ce3a1f92301003b79)
+2026-06-03 23:55:14 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Thread: 22, Driver: ChromeDriver: chrome on mac (64c0096e7e8e975987b40b3deff32615)
+2026-06-03 23:55:14 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Test Started: loginWithvalidUserTest
+2026-06-03 23:55:15 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Thread: 21, Driver: ChromeDriver: chrome on mac (19a36289be4223b9408e0591e70caefc)
+2026-06-03 23:55:15 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Test Started: registeruserTest
+2026-06-03 23:55:15 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (64c0096e7e8e975987b40b3deff32615)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-03 23:55:15 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: New User Signup!
+2026-06-03 23:55:16 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (19a36289be4223b9408e0591e70caefc)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-03 23:55:16 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched text: New User Signup!
+2026-06-03 23:56:16 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: rohit
+2026-06-03 23:56:16 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: rohit
+2026-06-03 23:57:16 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: ucqxts@gmail.com
+2026-06-03 23:57:16 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: advoqj@gmail.com
+2026-06-03 23:57:48 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='signup-form']//button[@type='submit']'
+2026-06-03 23:57:48 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='signup-form']//button[@type='submit']'
+2026-06-03 23:58:18 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched attribute [value] with value: rohit
+2026-06-03 23:58:18 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched attribute [value] with value: advoqj@gmail.com
+2026-06-03 23:58:18 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched attribute [value] with value: rohit
+2026-06-03 23:58:18 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched attribute [value] with value: ucqxts@gmail.com
+2026-06-03 23:58:18 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (64c0096e7e8e975987b40b3deff32615)] -> css selector: #uniform-id_gender1]
+2026-06-03 23:58:18 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (19a36289be4223b9408e0591e70caefc)] -> css selector: #uniform-id_gender1]
+2026-06-03 23:58:18 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-03 23:58:18 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-03 23:58:18 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Selected value from dropdown by value: 5
+2026-06-03 23:58:19 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Selected value from dropdown by value: 5
+2026-06-03 23:58:19 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Selected value from dropdown by value: 4
+2026-06-03 23:58:19 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Selected value from dropdown by value: 4
+2026-06-03 23:58:19 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Selected value from dropdown by value: 2020
+2026-06-03 23:58:19 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Selected value from dropdown by value: 2020
+2026-06-03 23:58:19 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: rohit
+2026-06-03 23:58:19 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: rohit
+2026-06-03 23:58:19 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: singh
+2026-06-03 23:58:19 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: singh
+2026-06-03 23:58:19 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: Coforge
+2026-06-03 23:58:19 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: Coforge
+2026-06-03 23:58:19 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: noida
+2026-06-03 23:58:19 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: noida
+2026-06-03 23:58:20 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Selected value from dropdown by value: India
+2026-06-03 23:58:20 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Selected value from dropdown by value: India
+2026-06-03 23:58:20 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: UP
+2026-06-03 23:58:20 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: UP
+2026-06-03 23:58:20 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: noida
+2026-06-03 23:58:20 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: noida
+2026-06-03 23:58:20 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: 541234
+2026-06-03 23:58:20 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: 541234
+2026-06-03 23:58:20 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: 7643551111
+2026-06-03 23:58:20 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: 7643551111
+2026-06-03 23:58:23 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-03 23:58:23 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked element using JavaScript.
+2026-06-03 23:58:23 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched text: ACCOUNT CREATED!
+2026-06-03 23:58:23 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: ACCOUNT CREATED!
+2026-06-03 23:58:23 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched text: Congratulations! Your new account has been successfully created!
+2026-06-03 23:58:23 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: Congratulations! Your new account has been successfully created!
+2026-06-03 23:58:25 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-03 23:58:25 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched text: rohit
+2026-06-03 23:58:26 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked element using JavaScript.
+2026-06-03 23:58:26 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: rohit
+2026-06-03 23:58:56 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Delete Account']'
+2026-06-03 23:58:57 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Logout']'
+2026-06-03 23:59:27 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched text: ACCOUNT DELETED!
+2026-06-03 23:59:27 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched text: Your account has been permanently deleted!
+2026-06-03 23:59:28 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (64c0096e7e8e975987b40b3deff32615)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-03 23:59:28 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: ucqxts@gmail.com
+2026-06-03 23:59:28 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-03 23:59:31 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (64c0096e7e8e975987b40b3deff32615)] -> xpath: //form[@action='/login']/button[text()='Login']]
+2026-06-04 00:00:00 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Continue']'
+2026-06-04 00:00:01 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: rohit
+2026-06-04 00:00:33 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Delete Account']'
+2026-06-04 00:01:00 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Test Passed: registeruserTest
+2026-06-04 00:01:00 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 00:01:00 [TestNG-test-UI Tests - Chrome-1] ERROR Logger - Thread: 21, Driver: ChromeDriver: chrome on mac (19a36289be4223b9408e0591e70caefc)
+2026-06-04 00:01:03 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: ACCOUNT DELETED!
+2026-06-04 00:01:03 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: Your account has been permanently deleted!
+2026-06-04 00:01:35 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Continue']'
+2026-06-04 00:02:33 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Retrying test: loginWithvalidUserTest | Attempt: 1
+2026-06-04 00:02:33 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Test Skipped: loginWithvalidUserTest
+2026-06-04 00:02:33 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 00:02:33 [TestNG-test-UI Tests - Chrome-2] ERROR Logger - Thread: 22, Driver: ChromeDriver: chrome on mac (64c0096e7e8e975987b40b3deff32615)
+2026-06-04 00:02:54 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 00:02:54 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 00:02:54 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Chrome running in headless mode
+2026-06-04 00:02:54 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Chrome local driver created
+2026-06-04 00:02:56 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Driver configured — implicit wait: 30s, page load timeout: 30s, cookies cleared
+2026-06-04 00:03:01 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Thread: 22, Driver: ChromeDriver: chrome on mac (22214bc647ff5e28bc43ffc29376f1f6)
+2026-06-04 00:03:01 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Test Started: loginWithvalidUserTest
+2026-06-04 00:03:02 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (22214bc647ff5e28bc43ffc29376f1f6)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 00:03:02 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: New User Signup!
+2026-06-04 00:04:02 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: rohit
+2026-06-04 00:05:02 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: dzihud@gmail.com
+2026-06-04 00:05:34 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='signup-form']//button[@type='submit']'
+2026-06-04 00:06:04 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched attribute [value] with value: rohit
+2026-06-04 00:06:04 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched attribute [value] with value: dzihud@gmail.com
+2026-06-04 00:06:04 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (22214bc647ff5e28bc43ffc29376f1f6)] -> css selector: #uniform-id_gender1]
+2026-06-04 00:06:04 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-04 00:06:04 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Selected value from dropdown by value: 5
+2026-06-04 00:06:04 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Selected value from dropdown by value: 4
+2026-06-04 00:06:05 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Selected value from dropdown by value: 2020
+2026-06-04 00:06:05 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: rohit
+2026-06-04 00:06:05 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: singh
+2026-06-04 00:06:05 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: Coforge
+2026-06-04 00:06:05 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: noida
+2026-06-04 00:06:05 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Selected value from dropdown by value: India
+2026-06-04 00:06:05 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: UP
+2026-06-04 00:06:05 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: noida
+2026-06-04 00:06:05 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: 541234
+2026-06-04 00:06:05 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: 7643551111
+2026-06-04 00:06:07 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 00:06:07 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: ACCOUNT CREATED!
+2026-06-04 00:06:07 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: Congratulations! Your new account has been successfully created!
+2026-06-04 00:06:09 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 00:06:09 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: rohit
+2026-06-04 00:06:40 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Logout']'
+2026-06-04 00:07:12 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (22214bc647ff5e28bc43ffc29376f1f6)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 00:07:12 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: dzihud@gmail.com
+2026-06-04 00:07:12 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-04 00:07:45 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //form[@action='/login']/button[text()='Login']'
+2026-06-04 00:08:15 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: rohit
+2026-06-04 00:08:47 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Delete Account']'
+2026-06-04 00:09:17 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: ACCOUNT DELETED!
+2026-06-04 00:09:17 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: Your account has been permanently deleted!
+2026-06-04 00:09:50 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Continue']'
+2026-06-04 00:10:50 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Test Passed: loginWithvalidUserTest
+2026-06-04 00:10:50 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 00:10:50 [TestNG-test-UI Tests - Chrome-2] ERROR Logger - Thread: 22, Driver: ChromeDriver: chrome on mac (22214bc647ff5e28bc43ffc29376f1f6)
+2026-06-04 00:10:50 [main] INFO  Logger - Test Suite Finished: UI Tests - Chrome
+2026-06-04 00:10:50 [main] INFO  Logger - Suite Summary — Total: 4, Passed: 3, Failed: 0, Skipped: 1
+2026-06-04 00:10:50 [main] INFO  Logger - Test Suite Started: API Tests
+2026-06-04 00:10:51 [TestNG-test-API Tests-3] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 102
+2026-06-04 00:10:51 [TestNG-test-API Tests-1] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 100
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 103
+2026-06-04 00:10:51 [TestNG-test-API Tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 101
+2026-06-04 00:10:51 [TestNG-test-API Tests-3] INFO  Logger - Test Started: ValidateAbletoSearchProducts
+2026-06-04 00:10:51 [TestNG-test-API Tests-2] INFO  Logger - Test Started: testGetRequest
+2026-06-04 00:10:51 [TestNG-test-API Tests-1] INFO  Logger - Test Started: getAllProductList
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Test Started: DataForLocalization
+2026-06-04 00:10:51 [TestNG-test-API Tests-2] INFO  Logger - Retrying test: testGetRequest | Attempt: 1
+2026-06-04 00:10:51 [TestNG-test-API Tests-2] INFO  Logger - Test Skipped: testGetRequest
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: DataForLocalization
+2026-06-04 00:10:51 [TestNG-test-API Tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 101
+2026-06-04 00:10:51 [TestNG-test-API Tests-2] INFO  Logger - Test Started: testGetRequest
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 103
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Test Started: DataForLocalization
+2026-06-04 00:10:51 [TestNG-test-API Tests-2] INFO  Logger - Retrying test: testGetRequest | Attempt: 2
+2026-06-04 00:10:51 [TestNG-test-API Tests-2] INFO  Logger - Test Skipped: testGetRequest
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: DataForLocalization
+2026-06-04 00:10:51 [TestNG-test-API Tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 101
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 103
+2026-06-04 00:10:51 [TestNG-test-API Tests-2] INFO  Logger - Test Started: testGetRequest
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Test Started: DataForLocalization
+2026-06-04 00:10:51 [TestNG-test-API Tests-2] ERROR Logger - Test Failed: testGetRequest
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: DataForLocalization
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 103
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Test Started: loginToApplication
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: loginToApplication
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 103
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Test Started: loginToApplication
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: loginToApplication
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 103
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Test Started: loginToApplication
+2026-06-04 00:10:51 [TestNG-test-API Tests-2] ERROR Logger - Exception: 
+java.lang.NullPointerException: Cannot invoke "com.github.tomakehurst.wiremock.WireMockServer.baseUrl()" because the return value of "apitest.MockServicesTest.getWireMockServer()" is null
+	at apitest.MockServicesTest.testGetRequest(MockServicesTest.java:28) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: loginToApplication
+2026-06-04 00:10:51 [TestNG-test-API Tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 101
+2026-06-04 00:10:51 [TestNG-test-API Tests-2] INFO  Logger - Test Started: searchFlight
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 103
+2026-06-04 00:10:51 [TestNG-test-API Tests-4] INFO  Logger - Test Started: validateLocalization
+2026-06-04 00:10:54 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 00:10:54 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 103
+2026-06-04 00:10:54 [TestNG-test-API Tests-4] INFO  Logger - Test Started: validateLocalization
+2026-06-04 00:10:54 [TestNG-test-API Tests-2] INFO  Logger - Schema validation passed for: schema/flightSchema.json
+2026-06-04 00:10:54 [TestNG-test-API Tests-2] INFO  Logger - Test Passed: searchFlight
+2026-06-04 00:10:57 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 00:10:57 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 103
+2026-06-04 00:10:57 [TestNG-test-API Tests-4] INFO  Logger - Test Started: validateLocalization
+2026-06-04 00:10:59 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 00:19:18 [TestNG-tests-1] INFO  Logger - Test Suite Started: Chrome
+2026-06-04 00:19:18 [TestNG-tests-3] INFO  Logger - Test Suite Started: Edge
+2026-06-04 00:19:18 [TestNG-tests-2] INFO  Logger - Test Suite Started: Firefox
+2026-06-04 00:19:18 [TestNG-tests-2] INFO  Logger - Browser from TestNG xml: FIREFOX
+2026-06-04 00:19:18 [TestNG-tests-3] INFO  Logger - Browser from TestNG xml: EDGE
+2026-06-04 00:19:18 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 00:19:18 [TestNG-tests-2] INFO  Logger - Creating driver manager for: FIREFOX
+2026-06-04 00:19:18 [TestNG-tests-1] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 00:19:18 [TestNG-tests-3] INFO  Logger - Creating driver manager for: EDGE
+2026-06-04 00:19:18 [TestNG-tests-3] INFO  Logger - Edge running in headless mode
+2026-06-04 00:19:18 [TestNG-tests-1] INFO  Logger - Chrome running in headless mode
+2026-06-04 00:19:18 [TestNG-tests-2] INFO  Logger - Firefox running in headless mode
+2026-06-04 00:19:19 [TestNG-tests-1] INFO  Logger - Chrome local driver created
+2026-06-04 00:19:22 [TestNG-tests-1] INFO  Logger - Driver configured — implicit wait: 30s, page load timeout: 30s, cookies cleared
+2026-06-04 00:19:25 [TestNG-tests-1] INFO  Logger - Thread: 15, Driver: ChromeDriver: chrome on mac (010ae91a2baa845639ae86c45ce3878a)
+2026-06-04 00:19:25 [TestNG-tests-1] INFO  Logger - Test Started: registeruserTest
+2026-06-04 00:19:25 [TestNG-tests-3] INFO  Logger - Test Started: registeruserTest
+2026-06-04 00:19:25 [TestNG-tests-3] INFO  Logger - Test Skipped: registeruserTest
+2026-06-04 00:19:25 [TestNG-tests-3] INFO  Logger - Browser from TestNG xml: EDGE
+2026-06-04 00:19:25 [TestNG-tests-3] ERROR Logger - Thread: 17, Driver: null
+2026-06-04 00:19:25 [TestNG-tests-3] INFO  Logger - Test Suite Finished: Edge
+2026-06-04 00:19:25 [TestNG-tests-3] INFO  Logger - Suite Summary — Total: 2, Passed: 0, Failed: 0, Skipped: 1
+2026-06-04 00:19:26 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (010ae91a2baa845639ae86c45ce3878a)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 00:19:26 [TestNG-tests-1] INFO  Logger - Fetched text: New User Signup!
+2026-06-04 00:19:26 [TestNG-tests-2] INFO  Logger - Firefox local driver created
+2026-06-04 00:19:30 [TestNG-tests-2] INFO  Logger - Driver configured — implicit wait: 30s, page load timeout: 30s, cookies cleared
+2026-06-04 00:19:35 [TestNG-tests-2] INFO  Logger - Thread: 16, Driver: FirefoxDriver: firefox on mac (d216e43d-c426-40bd-8e22-098a5b4c6e3c)
+2026-06-04 00:19:35 [TestNG-tests-2] INFO  Logger - Test Started: registeruserTest
+2026-06-04 00:19:38 [TestNG-tests-2] INFO  Logger - Clicked on element: [[FirefoxDriver: firefox on mac (d216e43d-c426-40bd-8e22-098a5b4c6e3c)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 00:19:38 [TestNG-tests-2] INFO  Logger - Fetched text: New User Signup!
+2026-06-04 00:20:26 [TestNG-tests-1] INFO  Logger - Entered text: rohit
+2026-06-04 00:20:38 [TestNG-tests-2] INFO  Logger - Entered text: rohit
+2026-06-04 00:21:26 [TestNG-tests-1] INFO  Logger - Entered text: eraaga@gmail.com
+2026-06-04 00:21:28 [TestNG-tests-1] ERROR Logger - Failed to click element: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=148.0.7778.216)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.4.1', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [010ae91a2baa845639ae86c45ce3878a, clickElement {id=f.61B029D149457AC2CD4AC005029B129E.d.291D98B8A138A246B3125431DDA202F4.e.84}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.216, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /var/folders/f3/7d9mby7j7yj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59198}, goog:processID: 54842, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59198/devtoo..., se:cdpVersion: 148.0.7778.216, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (010ae91a2baa845639ae86c45ce3878a)] -> xpath: //div[@class='signup-form']//button[@type='submit']]
+Session ID: 010ae91a2baa845639ae86c45ce3878a
+2026-06-04 00:21:28 [TestNG-tests-1] ERROR Logger - Test Failed: registeruserTest
+2026-06-04 00:21:28 [TestNG-tests-1] ERROR Logger - Exception: 
+org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.4.1', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [010ae91a2baa845639ae86c45ce3878a, findElement {using=xpath, value=//div[@class='signup-form']//button[@type='submit']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.216, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /var/folders/f3/7d9mby7j7yj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59198}, goog:processID: 54842, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59198/devtoo..., se:cdpVersion: 148.0.7778.216, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 010ae91a2baa845639ae86c45ce3878a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68) ~[selenium-support-4.29.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38) ~[selenium-support-4.29.0.jar:?]
+	at jdk.proxy2/jdk.proxy2.$Proxy35.toString(Unknown Source) ~[?:?]
+	at java.base/java.lang.String.valueOf(String.java:4222) ~[?:?]
+	at utlity.SeleniumCommonUtils.clickElement(SeleniumCommonUtils.java:43) ~[classes/:?]
+	at pages.NewUserSignUpPage.signupWithNameEmail(NewUserSignUpPage.java:133) ~[classes/:?]
+	at ui.testcases.RegisterUserTest.registeruserTest(RegisterUserTest.java:34) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+2026-06-04 00:21:28 [TestNG-tests-1] ERROR Logger - Test Failed: registeruserTest
+2026-06-04 00:21:28 [TestNG-tests-1] ERROR Logger - Exception: 
+org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.4.1', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [010ae91a2baa845639ae86c45ce3878a, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.216, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /var/folders/f3/7d9mby7j7yj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59198}, goog:processID: 54842, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59198/devtoo..., se:cdpVersion: 148.0.7778.216, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 010ae91a2baa845639ae86c45ce3878a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:334) ~[selenium-remote-driver-4.29.0.jar:?]
+	at utlity.SeleniumCommonUtils.captureScreenshot(SeleniumCommonUtils.java:235) ~[classes/:?]
+	at listeners.SeleniumListener.onTestFailure(SeleniumListener.java:159) ~[classes/:?]
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:115) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:285) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:777) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+2026-06-04 00:21:28 [TestNG-tests-1] INFO  Logger - Test Suite Finished: Chrome
+2026-06-04 00:21:28 [TestNG-tests-1] INFO  Logger - Suite Summary — Total: 3, Passed: 0, Failed: 2, Skipped: 1
+2026-06-04 00:22:12 [TestNG-tests-2] INFO  Logger - Entered text: wzwhri@gmail.com
+2026-06-04 00:22:12 [TestNG-tests-2] ERROR Logger - Failed to click element: Element <button class="btn btn-default" type="submit"> is not clickable at point (744,421) because another element <iframe id="aswift_2" name="aswift_2" src="https://googleads.g.doubleclick.net/pagead/html/r20260601/r20190131/zrt_lookup_fy2021.html#RS-0-&adk=1812271808&client=ca-pub-1677597403311019&fa=8&ifi=3&uci=a!3"> obscures it
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.4.1', java.version: '17.0.12'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [d216e43d-c426-40bd-8e22-098a5b4c6e3c, clickElement {id=c3abe649-6ad4-4d01-9d7a-92d9da7c8638}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0.1, moz:accessibilityChecks: false, moz:buildID: 20260427013024, moz:geckodriverVersion: 0.37.0, moz:headless: true, moz:platformVersion: 25.4.0, moz:processID: 54869, moz:profile: /var/folders/f3/7d9mby7j7yj..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Element: [[FirefoxDriver: firefox on mac (d216e43d-c426-40bd-8e22-098a5b4c6e3c)] -> xpath: //div[@class='signup-form']//button[@type='submit']]
+Session ID: d216e43d-c426-40bd-8e22-098a5b4c6e3c
+2026-06-04 00:22:12 [TestNG-tests-2] ERROR Logger - Test Failed: registeruserTest
+2026-06-04 00:22:12 [TestNG-tests-2] ERROR Logger - Exception: 
+org.openqa.selenium.ElementClickInterceptedException: Element <button class="btn btn-default" type="submit"> is not clickable at point (744,421) because another element <iframe id="aswift_2" name="aswift_2" src="https://googleads.g.doubleclick.net/pagead/html/r20260601/r20190131/zrt_lookup_fy2021.html#RS-0-&adk=1812271808&client=ca-pub-1677597403311019&fa=8&ifi=3&uci=a!3"> obscures it
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.4.1', java.version: '17.0.12'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [d216e43d-c426-40bd-8e22-098a5b4c6e3c, clickElement {id=c3abe649-6ad4-4d01-9d7a-92d9da7c8638}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0.1, moz:accessibilityChecks: false, moz:buildID: 20260427013024, moz:geckodriverVersion: 0.37.0, moz:headless: true, moz:platformVersion: 25.4.0, moz:processID: 54869, moz:profile: /var/folders/f3/7d9mby7j7yj..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Element: [[FirefoxDriver: firefox on mac (d216e43d-c426-40bd-8e22-098a5b4c6e3c)] -> xpath: //div[@class='signup-form']//button[@type='submit']]
+Session ID: d216e43d-c426-40bd-8e22-098a5b4c6e3c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76) ~[selenium-remote-driver-4.29.0.jar:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51) ~[selenium-support-4.29.0.jar:?]
+	at jdk.proxy2/jdk.proxy2.$Proxy35.click(Unknown Source) ~[?:?]
+	at utlity.SeleniumCommonUtils.clickElement(SeleniumCommonUtils.java:38) ~[classes/:?]
+	at pages.NewUserSignUpPage.signupWithNameEmail(NewUserSignUpPage.java:133) ~[classes/:?]
+	at ui.testcases.RegisterUserTest.registeruserTest(RegisterUserTest.java:34) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+2026-06-04 00:22:13 [TestNG-tests-2] INFO  Logger - Screenshot saved at: ./screenshots/registeruserTest_20260604_002212.png
+2026-06-04 00:22:13 [TestNG-tests-2] INFO  Logger - Browser from TestNG xml: FIREFOX
+2026-06-04 00:22:13 [TestNG-tests-2] ERROR Logger - Thread: 16, Driver: FirefoxDriver: firefox on mac (d216e43d-c426-40bd-8e22-098a5b4c6e3c)
+2026-06-04 00:22:13 [TestNG-tests-2] INFO  Logger - Screenshot saved at: Screenshots/firefox/RegisterUserTest_registeruserTest.png
+2026-06-04 00:22:13 [TestNG-tests-2] INFO  Logger - Test Suite Finished: Firefox
+2026-06-04 00:22:13 [TestNG-tests-2] INFO  Logger - Suite Summary — Total: 3, Passed: 0, Failed: 3, Skipped: 1
+2026-06-04 00:24:41 [main] INFO  Logger - Test Suite Started: UI Tests - Chrome
+2026-06-04 00:24:41 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 00:24:41 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 00:24:41 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 00:24:41 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 00:24:41 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 00:24:41 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 00:24:41 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Chrome running in headless mode
+2026-06-04 00:24:41 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Chrome running in headless mode
+2026-06-04 00:24:41 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Chrome running in headless mode
+2026-06-04 00:24:45 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Chrome local driver created
+2026-06-04 00:24:45 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Chrome local driver created
+2026-06-04 00:24:45 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Chrome local driver created
+2026-06-04 00:24:48 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Driver configured — implicit wait: 30s, page load timeout: 30s, cookies cleared
+2026-06-04 00:24:48 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Driver configured — implicit wait: 30s, page load timeout: 30s, cookies cleared
+2026-06-04 00:24:48 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Driver configured — implicit wait: 30s, page load timeout: 30s, cookies cleared
+2026-06-04 00:24:51 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Thread: 23, Driver: ChromeDriver: chrome on mac (623221f2d1a8535a69a9536beb300858)
+2026-06-04 00:24:51 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Test Started: registeruserTest
+2026-06-04 00:24:52 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Thread: 25, Driver: ChromeDriver: chrome on mac (e6374a71c9b4a75bb420988d9d245155)
+2026-06-04 00:24:52 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Test Started: validateValidUserTest
+2026-06-04 00:24:52 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Test Passed: validateValidUserTest
+2026-06-04 00:24:52 [TestNG-test-UI Tests - Chrome-3] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 00:24:52 [TestNG-test-UI Tests - Chrome-3] ERROR Logger - Thread: 25, Driver: ChromeDriver: chrome on mac (e6374a71c9b4a75bb420988d9d245155)
+2026-06-04 00:24:52 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Thread: 24, Driver: ChromeDriver: chrome on mac (50b095e89aa2dc77e6b00df8a0056dfa)
+2026-06-04 00:24:52 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Test Started: loginWithvalidUserTest
+2026-06-04 00:24:52 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (623221f2d1a8535a69a9536beb300858)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 00:24:53 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched text: New User Signup!
+2026-06-04 00:24:54 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (50b095e89aa2dc77e6b00df8a0056dfa)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 00:24:54 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: New User Signup!
+2026-06-04 00:25:53 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: rohit
+2026-06-04 00:25:54 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: rohit
+2026-06-04 00:26:53 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: mdbwmn@gmail.com
+2026-06-04 00:26:54 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: lggkdl@gmail.com
+2026-06-04 00:26:56 [TestNG-test-UI Tests - Chrome-2] ERROR Logger - Failed to click element: element click intercepted: Element <button type="submit" data-qa="signup-button" class="btn btn-default">...</button> is not clickable at point (461, 421). Other element would receive the click: <iframe id="aswift_3" name="aswift_3" style="min-height: auto !important; max-height: none !important; min-width: auto !important; max-width: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20260601/r20190131/zrt_lookup.html#RS-0-&amp;adk=1812271808&amp;client=ca-pub-1677597403311019&amp;fa=8&amp;ifi=4&amp;uci=a!4" data-google-container-id="a!4" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CO3-g7Tf65QDFTnJPAId1zEqEg" data-load-complete="true"></iframe>
+  (Session info: chrome=148.0.7778.216)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.4.1', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [50b095e89aa2dc77e6b00df8a0056dfa, clickElement {id=f.1EC51BC52E7C0E93789143B56F872B52.d.B1B99CA53CC9537F2E56B6A79423937E.e.60}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.216, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /var/folders/f3/7d9mby7j7yj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65192}, goog:processID: 55048, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65192/devtoo..., se:cdpVersion: 148.0.7778.216, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (50b095e89aa2dc77e6b00df8a0056dfa)] -> xpath: //div[@class='signup-form']//button[@type='submit']]
+Session ID: 50b095e89aa2dc77e6b00df8a0056dfa
+2026-06-04 00:26:56 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Retrying test: loginWithvalidUserTest | Attempt: 1
+2026-06-04 00:26:56 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Test Skipped: loginWithvalidUserTest
+2026-06-04 00:26:56 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 00:26:56 [TestNG-test-UI Tests - Chrome-2] ERROR Logger - Thread: 24, Driver: ChromeDriver: chrome on mac (50b095e89aa2dc77e6b00df8a0056dfa)
+2026-06-04 00:27:16 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 00:27:16 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Creating driver manager for: CHROME
+2026-06-04 00:27:16 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Chrome running in headless mode
+2026-06-04 00:27:16 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Chrome local driver created
+2026-06-04 00:27:18 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Driver configured — implicit wait: 30s, page load timeout: 30s, cookies cleared
+2026-06-04 00:27:20 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Thread: 24, Driver: ChromeDriver: chrome on mac (bbb50bda9923ea3ac3746e96f5b8b598)
+2026-06-04 00:27:20 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Test Started: loginWithvalidUserTest
+2026-06-04 00:27:21 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (bbb50bda9923ea3ac3746e96f5b8b598)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 00:27:21 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: New User Signup!
+2026-06-04 00:27:24 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='signup-form']//button[@type='submit']'
+2026-06-04 00:27:54 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched attribute [value] with value: rohit
+2026-06-04 00:27:54 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched attribute [value] with value: mdbwmn@gmail.com
+2026-06-04 00:27:54 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (623221f2d1a8535a69a9536beb300858)] -> css selector: #uniform-id_gender1]
+2026-06-04 00:27:54 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-04 00:27:54 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Selected value from dropdown by value: 5
+2026-06-04 00:27:54 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Selected value from dropdown by value: 4
+2026-06-04 00:27:54 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Selected value from dropdown by value: 2020
+2026-06-04 00:27:54 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: rohit
+2026-06-04 00:27:55 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: singh
+2026-06-04 00:27:55 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: Coforge
+2026-06-04 00:27:55 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: noida
+2026-06-04 00:27:55 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Selected value from dropdown by value: India
+2026-06-04 00:27:55 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: UP
+2026-06-04 00:27:55 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: noida
+2026-06-04 00:27:55 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: 541234
+2026-06-04 00:27:55 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Entered text: 7643551111
+2026-06-04 00:27:57 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 00:27:57 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched text: ACCOUNT CREATED!
+2026-06-04 00:27:57 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched text: Congratulations! Your new account has been successfully created!
+2026-06-04 00:27:59 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 00:27:59 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched text: rohit
+2026-06-04 00:28:21 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: rohit
+2026-06-04 00:28:30 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Delete Account']'
+2026-06-04 00:29:00 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched text: ACCOUNT DELETED!
+2026-06-04 00:29:00 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Fetched text: Your account has been permanently deleted!
+2026-06-04 00:29:21 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: eodyfy@gmail.com
+2026-06-04 00:29:33 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Continue']'
+2026-06-04 00:29:54 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='signup-form']//button[@type='submit']'
+2026-06-04 00:30:24 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched attribute [value] with value: rohit
+2026-06-04 00:30:24 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched attribute [value] with value: eodyfy@gmail.com
+2026-06-04 00:30:24 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (bbb50bda9923ea3ac3746e96f5b8b598)] -> css selector: #uniform-id_gender1]
+2026-06-04 00:30:24 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-04 00:30:24 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Selected value from dropdown by value: 5
+2026-06-04 00:30:24 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Selected value from dropdown by value: 4
+2026-06-04 00:30:24 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Selected value from dropdown by value: 2020
+2026-06-04 00:30:24 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: rohit
+2026-06-04 00:30:24 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: singh
+2026-06-04 00:30:24 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: Coforge
+2026-06-04 00:30:24 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: noida
+2026-06-04 00:30:24 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Selected value from dropdown by value: India
+2026-06-04 00:30:24 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: UP
+2026-06-04 00:30:25 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: noida
+2026-06-04 00:30:25 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: 541234
+2026-06-04 00:30:25 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: 7643551111
+2026-06-04 00:30:27 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 00:30:27 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: ACCOUNT CREATED!
+2026-06-04 00:30:27 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: Congratulations! Your new account has been successfully created!
+2026-06-04 00:30:29 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked element using JavaScript.
+2026-06-04 00:30:29 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: rohit
+2026-06-04 00:30:33 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Test Passed: registeruserTest
+2026-06-04 00:30:33 [TestNG-test-UI Tests - Chrome-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 00:30:33 [TestNG-test-UI Tests - Chrome-1] ERROR Logger - Thread: 23, Driver: ChromeDriver: chrome on mac (623221f2d1a8535a69a9536beb300858)
+2026-06-04 00:31:00 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Logout']'
+2026-06-04 00:31:32 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (bbb50bda9923ea3ac3746e96f5b8b598)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-04 00:31:32 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: eodyfy@gmail.com
+2026-06-04 00:31:32 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-04 00:32:05 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //form[@action='/login']/button[text()='Login']'
+2026-06-04 00:32:35 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: rohit
+2026-06-04 00:33:07 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Delete Account']'
+2026-06-04 00:33:37 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: ACCOUNT DELETED!
+2026-06-04 00:33:37 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Fetched text: Your account has been permanently deleted!
+2026-06-04 00:34:09 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Continue']'
+2026-06-04 00:35:09 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Test Passed: loginWithvalidUserTest
+2026-06-04 00:35:09 [TestNG-test-UI Tests - Chrome-2] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-04 00:35:09 [TestNG-test-UI Tests - Chrome-2] ERROR Logger - Thread: 24, Driver: ChromeDriver: chrome on mac (bbb50bda9923ea3ac3746e96f5b8b598)
+2026-06-04 00:35:10 [main] INFO  Logger - Test Suite Finished: UI Tests - Chrome
+2026-06-04 00:35:10 [main] INFO  Logger - Suite Summary — Total: 4, Passed: 3, Failed: 0, Skipped: 1
+2026-06-04 00:35:10 [main] INFO  Logger - Test Suite Started: API Tests
+2026-06-04 00:35:10 [TestNG-test-API Tests-3] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 106
+2026-06-04 00:35:10 [TestNG-test-API Tests-1] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 104
+2026-06-04 00:35:10 [TestNG-test-API Tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 105
+2026-06-04 00:35:10 [TestNG-test-API Tests-1] INFO  Logger - Test Started: getAllProductList
+2026-06-04 00:35:10 [TestNG-test-API Tests-3] INFO  Logger - Test Started: ValidateAbletoSearchProducts
+2026-06-04 00:35:10 [TestNG-test-API Tests-2] INFO  Logger - Test Started: testGetRequest
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 107
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Test Started: DataForLocalization
+2026-06-04 00:35:10 [TestNG-test-API Tests-2] INFO  Logger - Retrying test: testGetRequest | Attempt: 1
+2026-06-04 00:35:10 [TestNG-test-API Tests-2] INFO  Logger - Test Skipped: testGetRequest
+2026-06-04 00:35:10 [TestNG-test-API Tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 105
+2026-06-04 00:35:10 [TestNG-test-API Tests-2] INFO  Logger - Test Started: testGetRequest
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: DataForLocalization
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 107
+2026-06-04 00:35:10 [TestNG-test-API Tests-2] INFO  Logger - Retrying test: testGetRequest | Attempt: 2
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Test Started: DataForLocalization
+2026-06-04 00:35:10 [TestNG-test-API Tests-2] INFO  Logger - Test Skipped: testGetRequest
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: DataForLocalization
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 107
+2026-06-04 00:35:10 [TestNG-test-API Tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 105
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Test Started: DataForLocalization
+2026-06-04 00:35:10 [TestNG-test-API Tests-2] INFO  Logger - Test Started: testGetRequest
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: DataForLocalization
+2026-06-04 00:35:10 [TestNG-test-API Tests-2] ERROR Logger - Test Failed: testGetRequest
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 107
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Test Started: loginToApplication
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: loginToApplication
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 107
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Test Started: loginToApplication
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: loginToApplication
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 107
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Test Started: loginToApplication
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: loginToApplication
+2026-06-04 00:35:10 [TestNG-test-API Tests-2] ERROR Logger - Exception: 
+java.lang.NullPointerException: Cannot invoke "com.github.tomakehurst.wiremock.WireMockServer.baseUrl()" because the return value of "apitest.MockServicesTest.getWireMockServer()" is null
+	at apitest.MockServicesTest.testGetRequest(MockServicesTest.java:28) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 107
+2026-06-04 00:35:10 [TestNG-test-API Tests-4] INFO  Logger - Test Started: searchFlight
+2026-06-04 00:35:10 [TestNG-test-API Tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 105
+2026-06-04 00:35:10 [TestNG-test-API Tests-2] INFO  Logger - Test Started: validateLocalization
+2026-06-04 00:35:18 [TestNG-test-API Tests-2] INFO  Logger - Retrying test: validateLocalization | Attempt: 1
+2026-06-04 00:35:18 [TestNG-test-API Tests-2] INFO  Logger - Test Skipped: validateLocalization
+2026-06-04 00:35:18 [TestNG-test-API Tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 105
+2026-06-04 00:35:18 [TestNG-test-API Tests-2] INFO  Logger - Test Started: validateLocalization
+2026-06-04 00:35:19 [TestNG-test-API Tests-4] INFO  Logger - Retrying test: searchFlight | Attempt: 1
+2026-06-04 00:35:19 [TestNG-test-API Tests-4] INFO  Logger - Test Skipped: searchFlight
+2026-06-04 00:35:19 [TestNG-test-API Tests-4] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 107
+2026-06-04 00:35:19 [TestNG-test-API Tests-4] INFO  Logger - Test Started: searchFlight
+2026-06-04 00:35:21 [TestNG-test-API Tests-2] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 00:35:21 [TestNG-test-API Tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 105
+2026-06-04 00:35:21 [TestNG-test-API Tests-2] INFO  Logger - Test Started: validateLocalization
+2026-06-04 00:35:24 [TestNG-test-API Tests-4] INFO  Logger - Schema validation passed for: schema/flightSchema.json
+2026-06-04 00:35:24 [TestNG-test-API Tests-4] INFO  Logger - Test Passed: searchFlight
+2026-06-04 00:35:24 [TestNG-test-API Tests-2] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 00:35:24 [TestNG-test-API Tests-2] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 105
+2026-06-04 00:35:24 [TestNG-test-API Tests-2] INFO  Logger - Test Started: validateLocalization
+2026-06-04 00:35:26 [TestNG-test-API Tests-2] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 00:48:07 [main] INFO  Logger - Test Suite Started: Default test
+2026-06-04 00:48:07 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-04 00:48:07 [main] INFO  Logger - Test Started: searchFlight
+2026-06-04 00:48:13 [main] INFO  Logger - Schema validation passed for: schema/flightSchema.json
+2026-06-04 00:48:13 [main] INFO  Logger - Test Passed: searchFlight
+2026-06-04 00:48:13 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-04 00:48:13 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-04 00:48:15 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 00:48:15 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-04 00:48:15 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-04 00:48:20 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 00:48:20 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-04 00:48:20 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-04 00:48:22 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 00:48:23 [main] INFO  Logger - Test Suite Finished: Default test
+2026-06-04 00:48:23 [main] INFO  Logger - Suite Summary — Total: 4, Passed: 4, Failed: 0, Skipped: 0
+2026-06-04 00:49:23 [main] INFO  Logger - Test Suite Started: Default test
+2026-06-04 00:49:23 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-04 00:49:23 [main] INFO  Logger - Test Started: searchFlight
+2026-06-04 00:49:27 [main] INFO  Logger - Schema validation passed for: schema/flightSchema.json
+2026-06-04 00:49:27 [main] INFO  Logger - Test Passed: searchFlight
+2026-06-04 00:49:27 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-04 00:49:27 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-04 00:49:30 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 00:49:30 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-04 00:49:30 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-04 00:49:33 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 00:49:33 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-04 00:49:33 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-04 00:49:36 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-04 00:49:36 [main] INFO  Logger - Test Suite Finished: Default test
+2026-06-04 00:49:36 [main] INFO  Logger - Suite Summary — Total: 4, Passed: 4, Failed: 0, Skipped: 0

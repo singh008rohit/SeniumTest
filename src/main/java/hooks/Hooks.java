@@ -43,7 +43,7 @@ public class Hooks {
 
     @Before(order = 2)
     public void initializeExtentTest(Scenario scenario) {
-        ExtentReportManager.createTest(scenario.getName());
+      //  ExtentReportManager.createTest(scenario.getName(), null);
     }
 
     @AfterStep

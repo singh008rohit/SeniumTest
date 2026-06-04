@@ -2,7 +2,10 @@ package reportManager;
 
 import java.util.Objects;
 
+import org.testng.ITestResult;
+
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Protocol;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -13,6 +16,7 @@ import enums.AuthorType;
 import enums.CategoryType;
 import enums.TestType;
 import utlity.BrowserInfoUtils;
+import utlity.ConfigLoader;
 import utlity.DateUtils;
 import utlity.IconUtils;
 
@@ -32,6 +36,11 @@ public class ExtentReportManager {
 		extent.setSystemInfo("Tester", "Rohit Singh");
 		extent.setSystemInfo("Environment", "QA");
 		extent.setSystemInfo("Organization", "QATest");
+	    extent.setSystemInfo("Execution Time", new java.util.Date().toString());
+	    extent.setSystemInfo("Framework",      "Selenium + RestAssured + Cucumber + TestNG");
+	    extent.setSystemInfo("Base URL",       ConfigLoader.getInstance().getBaseUrl());
+	    extent.setSystemInfo("API Base URL",   ConfigLoader.getInstance().getAPIBaseUrl());
+	    extent.setSystemInfo("Mock Enabled",   ConfigLoader.getInstance().getUseMock());
 		extent.setSystemInfo("Employee", "<b>Rohit Singh</b> " + ExtentReportConstant.ICON_SOCIAL_LINKEDIN + " "
 				+ ExtentReportConstant.ICON_SOCIAL_GITHUB);
 		extent.setSystemInfo("Domain", "Engineering (IT - Software)  " + ExtentReportConstant.ICON_LAPTOP);
@@ -56,8 +65,25 @@ public class ExtentReportManager {
 
 	// original signature preserved — existing callers need no changes
 	// defaults to UI since original behaviour assumed a browser was running
-	public static synchronized void createTest(String testName) {
-		createTest(testName, TestType.UI);
+	// New overload — called from SeleniumListener with full result context
+	public static synchronized void createTest(ITestResult result, TestType testType) {
+	    String className  = result.getTestClass().getRealClass().getSimpleName();
+	    String methodName = result.getMethod().getMethodName();
+	    String description = result.getMethod().getDescription();
+
+	    String icon = resolveIcon(testType);
+
+	    // "ClassName > methodName" as the node title
+	    String title = icon + " <b>" + className + "</b> › " + methodName;
+
+	    ExtentTest test = extent.createTest(title);
+
+	    // add description as a note under the title if present
+	    if (description != null && !description.isEmpty()) {
+	        test.info("<i>" + description + "</i>");
+	    }
+
+	    ExtentManager.setExtentTest(test);
 	}
 
 	// overload used by APITestBase, Hooks, SeleniumListener

@@ -31,7 +31,7 @@ public class ApiTest extends APITestBase {
 				category = { CategoryType.SANITY,CategoryType.SMOKE,CategoryType.REGRESSION })
    @Test(enabled = true)
    void getBookingId() {
-      ExtentReportManager.createTest("Get Booking Details API");
+    //  ExtentReportManager.createTest("Get Booking Details API"testType);
       ExtentManager.getExtentTest().log(Status.INFO, "API test execution started for get booking id ");
       
      
