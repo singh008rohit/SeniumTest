@@ -44,7 +44,7 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
     // ─── SUITE ─────────────────────────────────────────────────
 
     public void onStart(ITestContext context) {
-        ExtentReportManager.getSetup();
+       // ExtentReportManager.getSetup();
         LogUtils.info("Test Suite Started: " + context.getName());
     }
 
@@ -90,84 +90,73 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
         }
     }
     // ─── TEST SUCCESS ──────────────────────────────────────────
-
+ // SeleniumListener.java — onTestSuccess — add duration badge
     public void onTestSuccess(ITestResult result) {
         count_passedTCs.incrementAndGet();
 
-        // calculate and log duration
         long durationMs = result.getEndMillis() - result.getStartMillis();
+        
+        // colour-coded duration badge
+        String durationColor = durationMs < 3000 ? "green" : durationMs < 8000 ? "orange" : "red";
         ExtentManager.getExtentTest().info(
-            "<b>Duration:</b> " + durationMs + " ms"
+            "<span style='background:" + durationColor + ";color:white;"
+            + "padding:2px 8px;border-radius:4px;font-size:12px'>"
+            + "⏱ Duration: " + durationMs + " ms</span>"
         );
 
-        String logText = "<b>"
-            + result.getMethod().getMethodName()
-            + " passed.</b>  "
-            + ExtentReportConstant.ICON_SMILEY_PASS;
-
-        Markup markup = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
-        ExtentManager.getExtentTest().pass(markup);
+        String logText = "<b>" + result.getMethod().getMethodName()
+            + " passed.</b>  " + ExtentReportConstant.ICON_SMILEY_PASS;
+        ExtentManager.getExtentTest().pass(
+            MarkupHelper.createLabel(logText, ExtentColor.GREEN));
         LogUtils.info("Test Passed: " + result.getName());
-        ExtentManager.unload(); 
+        ExtentManager.unload();
     }
 
-    // ─── TEST FAILURE ──────────────────────────────────────────
-
+    // SeleniumListener.java — onTestFailure — add collapsible stack trace
     public void onTestFailure(ITestResult result) {
-        count_failedTCs.incrementAndGet();  
-        
+        count_failedTCs.incrementAndGet();
+
         long durationMs = result.getEndMillis() - result.getStartMillis();
         ExtentManager.getExtentTest().info(
-            "<b>Duration:</b> " + durationMs + " ms"
-        );// was: count_failedTCs + 1
-
-        ExtentManager.getExtentTest().info(
-            "Test Failed: " + result.getName()
-        );
-        ExtentManager.getExtentTest().log(
-            Status.FAIL,
-            ExtentReportConstant.ICON_BUG
-            + "  <b><i>"
-            + result.getThrowable().toString()
-            + "</i></b>"
+            "<span style='background:red;color:white;"
+            + "padding:2px 8px;border-radius:4px;font-size:12px'>"
+            + "⏱ Duration: " + durationMs + " ms</span>"
         );
 
-        String exceptionMessage = Arrays.toString(
-            result.getThrowable().getStackTrace()
-        );
-        String message = "<details><summary><b><font color=red>"
-            + "Exception occurred, click to see details: "
-            + ExtentReportConstant.ICON_SMILEY_FAIL
-            + "</font></b></summary>"
-            + exceptionMessage.replaceAll(",", "<br>")
-            + "</details>\n";
-        ExtentManager.getExtentTest().log(Status.FAIL, message);
+        // Root cause — first line only, clean
+        String rootCause = result.getThrowable().getClass().getSimpleName()
+            + ": " + result.getThrowable().getMessage();
+        ExtentManager.getExtentTest().log(Status.FAIL,
+            ExtentReportConstant.ICON_BUG + " <b>" + rootCause + "</b>");
+
+        // Collapsible full stack trace
+        String stackTrace = Arrays.stream(result.getThrowable().getStackTrace())
+            .map(StackTraceElement::toString)
+            .collect(java.util.stream.Collectors.joining("<br>"));
+        ExtentManager.getExtentTest().log(Status.FAIL,
+            "<details><summary><b><font color='red'>Full stack trace (click to expand) "
+            + ExtentReportConstant.ICON_SMILEY_FAIL + "</font></b></summary>"
+            + "<pre style='font-size:11px'>" + stackTrace + "</pre></details>");
 
         LogUtils.error("Test Failed: " + result.getName());
         LogUtils.errorThrowable(result.getThrowable());
 
-        // ── screenshot only for UI tests ────────────────────────
-        // was: always attempted — threw NPE for API tests with no driver
-     // SeleniumListener.java — onTestFailure — guard the screenshot
+        // screenshot guard
         if (DriverManager.getDriver() != null) {
             try {
-                // ADD: check session is alive before taking screenshot
-                DriverManager.getDriver().getWindowHandles(); // throws if session dead
-                
+                DriverManager.getDriver().getWindowHandles();
                 String screenshotPath = SeleniumCommonUtils.captureScreenshot(result.getName());
-                File screenshotFile = new File(screenshotPath);
-                String absolutePath = screenshotFile.getCanonicalPath();
-                ExtentManager.getExtentTest().addScreenCaptureFromPath(absolutePath);
+                ExtentManager.getExtentTest()
+                    .addScreenCaptureFromPath(new File(screenshotPath).getCanonicalPath());
             } catch (NoSuchSessionException se) {
                 ExtentManager.getExtentTest().log(Status.FAIL,
                     "<b>Browser session was lost — screenshot unavailable.</b>");
-                LogUtils.error("Browser session dead, cannot take screenshot: " + se.getMessage());
             } catch (IOException e) {
                 ExtentManager.getExtentTest().log(Status.FAIL,
-                    "Failed to attach screenshot: " + e.getMessage());
+                    "Screenshot failed: " + e.getMessage());
             }
         }
-        ExtentManager.unload(); 
+        ExtentManager.unload();
     }
 
     // ─── TEST SKIP ─────────────────────────────────────────────
@@ -188,7 +177,18 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
 
     public void onFinish(ITestContext context) {
       //  ExtentReportManager.flushReports();
-        LogUtils.info("Test Suite Finished: " + context.getName());}
+        LogUtils.info(
+                "\n╔══════════════════════════════════════╗\n"
+                + "║         SUITE EXECUTION SUMMARY      ║\n"
+                + "╠══════════════════════════════════════╣\n"
+                + "║  Total  : " + count_totalTCs.get()   + "\n"
+                + "║  Passed : " + count_passedTCs.get()  + "\n"
+                + "║  Failed : " + count_failedTCs.get()  + "\n"
+                + "║  Skipped: " + count_skippedTCs.get() + "\n"
+                + "╚══════════════════════════════════════╝"
+            );
+        
+    }
 
         // summary log — counters are now accurate under parallel execution
    

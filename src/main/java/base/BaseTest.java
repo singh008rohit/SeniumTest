@@ -46,6 +46,8 @@ public class BaseTest {
             LogUtils.info("Driver started successfully — Thread: " 
                 + Thread.currentThread().getId()
                 + ", Driver: " + getDriver());
+            
+            
         } catch (Exception e) {
             LogUtils.error("CRITICAL: @BeforeMethod failed for browser [" + browser 
                 + "] on Thread: " + Thread.currentThread().getId() 

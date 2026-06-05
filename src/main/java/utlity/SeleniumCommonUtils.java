@@ -253,4 +253,11 @@ public class SeleniumCommonUtils {
         }
         return sb.toString();
     }
+    
+    public static String tableRow(String field, String value) {
+        return "<tr style='border-bottom:1px solid #ddd'>"
+            + "<td style='padding:6px 8px;font-weight:bold'>" + field + "</td>"
+            + "<td style='padding:6px 8px'>" + (value != null ? value : "N/A") + "</td>"
+            + "</tr>";
+    }
 }

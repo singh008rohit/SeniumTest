@@ -54,11 +54,7 @@ public class ExtentReportConstant {
 	}
 	
 	public static String getExtentReportFilePath() {
-
-		if (extentReportFilePath.isEmpty()) {
-			extentReportFilePath = ReportPathUtils.createExtentReportPath();
-		}
-		return extentReportFilePath;
+	    return EXTENT_REPORT_FOLDER_PATH; // just the folder — filename built in manager
 	}
 	
 

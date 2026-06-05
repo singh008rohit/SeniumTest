@@ -22009,3 +22009,483 @@ java.net.SocketException: Connection reset
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
 	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
 2026-06-05 00:43:21 [main] INFO  Logger - Test Suite Finished: API Tests
+2026-06-05 14:10:56 [main] INFO  Logger - Test Suite Started: Default test
+2026-06-05 14:10:57 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 14:10:57 [main] INFO  Logger - Test Started: searchFlight
+2026-06-05 14:11:02 [main] INFO  Logger - Schema validation passed for: schema/flightSchema.json
+2026-06-05 14:11:02 [main] INFO  Logger - Test Passed: searchFlight
+2026-06-05 14:11:02 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 14:11:02 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-05 14:11:04 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-05 14:11:04 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 14:11:04 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-05 14:11:05 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-05 14:11:05 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 14:11:05 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-05 14:11:06 [main] ERROR Logger - Test Failed: validateLocalization
+2026-06-05 14:11:06 [main] ERROR Logger - Exception: 
+java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <500>.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source) ~[?:?]
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy) ~[rest-assured-5.4.0.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor36.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62) ~[groovy-4.0.16.jar:4.0.16]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185) ~[groovy-4.0.16.jar:4.0.16]
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source) ~[?:?]
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143) ~[rest-assured-5.4.0.jar:?]
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89) ~[rest-assured-5.4.0.jar:?]
+	at etihad.api.testcases.SearchFlightWithFlightNoTest.validateLocalization(SearchFlightWithFlightNoTest.java:172) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2026-06-05 14:11:06 [main] INFO  Logger - 
+╔══════════════════════════════════════╗
+║         SUITE EXECUTION SUMMARY      ║
+╠══════════════════════════════════════╣
+║  Total  : 4
+║  Passed : 3
+║  Failed : 1
+║  Skipped: 0
+╚══════════════════════════════════════╝
+2026-06-05 14:12:14 [main] INFO  Logger - Test Suite Started: Default test
+2026-06-05 14:12:14 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 14:12:14 [main] INFO  Logger - Test Started: searchFlight
+2026-06-05 14:12:23 [main] INFO  Logger - Schema validation passed for: schema/flightSchema.json
+2026-06-05 14:12:23 [main] INFO  Logger - Test Passed: searchFlight
+2026-06-05 14:12:23 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 14:12:23 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-05 14:12:24 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-05 14:12:24 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 14:12:24 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-05 14:12:27 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-05 14:12:27 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 14:12:27 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-05 14:12:29 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-05 14:12:29 [main] INFO  Logger - 
+╔══════════════════════════════════════╗
+║         SUITE EXECUTION SUMMARY      ║
+╠══════════════════════════════════════╣
+║  Total  : 4
+║  Passed : 4
+║  Failed : 0
+║  Skipped: 0
+╚══════════════════════════════════════╝
+2026-06-05 15:04:44 [main] INFO  Logger - Test Suite Started: Default test
+2026-06-05 15:04:44 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 15:04:44 [main] INFO  Logger - Test Started: searchFlight
+2026-06-05 15:04:52 [main] INFO  Logger - Schema validation passed for: schema/flightSchema.json
+2026-06-05 15:04:53 [main] INFO  Logger - Test Passed: searchFlight
+2026-06-05 15:04:53 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 15:04:53 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-05 15:04:54 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-05 15:04:54 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 15:04:54 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-05 15:04:57 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-05 15:04:58 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 15:04:58 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-05 15:04:59 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-05 15:04:59 [main] INFO  Logger - 
+╔══════════════════════════════════════╗
+║         SUITE EXECUTION SUMMARY      ║
+╠══════════════════════════════════════╣
+║  Total  : 4
+║  Passed : 4
+║  Failed : 0
+║  Skipped: 0
+╚══════════════════════════════════════╝
+2026-06-05 15:16:18 [main] INFO  Logger - Test Suite Started: Default test
+2026-06-05 15:16:18 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 15:16:18 [main] INFO  Logger - Extent report created: /Users/rohitsingh/eclipse-workspace/SeleniumTest/ExtentReports/SearchFlightWithFlightNoTest_Jun_05_15_16_18_IST_2026.html
+2026-06-05 15:16:18 [main] INFO  Logger - Test Started: searchFlight
+2026-06-05 15:16:22 [main] INFO  Logger - Schema validation passed for: schema/flightSchema.json
+2026-06-05 15:16:22 [main] INFO  Logger - Test Passed: searchFlight
+2026-06-05 15:16:22 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 15:16:22 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-05 15:16:24 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-05 15:16:24 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 15:16:24 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-05 15:16:25 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-05 15:16:25 [main] INFO  Logger - Mock mode OFF — hitting real API: https://test.etihad.com | Thread: 1
+2026-06-05 15:16:25 [main] INFO  Logger - Test Started: validateLocalization
+2026-06-05 15:16:27 [main] INFO  Logger - Test Passed: validateLocalization
+2026-06-05 15:16:27 [main] INFO  Logger - 
+╔══════════════════════════════════════╗
+║         SUITE EXECUTION SUMMARY      ║
+╠══════════════════════════════════════╣
+║  Total  : 4
+║  Passed : 4
+║  Failed : 0
+║  Skipped: 0
+╚══════════════════════════════════════╝
+2026-06-05 15:16:27 [main] INFO  Logger - Extent report flushed: /Users/rohitsingh/eclipse-workspace/SeleniumTest/ExtentReports/SearchFlightWithFlightNoTest_Jun_05_15_16_18_IST_2026.html
+2026-06-05 15:17:48 [TestNG-tests-1] INFO  Logger - Test Suite Started: Chrome
+2026-06-05 15:17:48 [TestNG-tests-2] INFO  Logger - Test Suite Started: Firefox
+2026-06-05 15:17:48 [TestNG-tests-2] INFO  Logger - Browser from TestNG xml: FIREFOX
+2026-06-05 15:17:48 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-05 15:17:48 [TestNG-tests-2] INFO  Logger - Attempting to start driver for browser: FIREFOX
+2026-06-05 15:17:48 [TestNG-tests-1] INFO  Logger - Attempting to start driver for browser: CHROME
+2026-06-05 15:17:48 [TestNG-tests-1] INFO  Logger - Creating driver manager for: CHROME
+2026-06-05 15:17:48 [TestNG-tests-2] INFO  Logger - Creating driver manager for: FIREFOX
+2026-06-05 15:17:48 [TestNG-tests-2] INFO  Logger - Firefox running in headless mode
+2026-06-05 15:17:48 [TestNG-tests-1] INFO  Logger - Chrome running in headless mode
+2026-06-05 15:17:52 [TestNG-tests-2] INFO  Logger - Firefox local driver created
+2026-06-05 15:17:55 [TestNG-tests-2] INFO  Logger - Driver configured — implicit wait: 10s, page load timeout: 90s, cookies cleared
+2026-06-05 15:17:58 [TestNG-tests-1] INFO  Logger - Chrome local driver created
+2026-06-05 15:18:01 [TestNG-tests-1] INFO  Logger - Driver configured — implicit wait: 10s, page load timeout: 90s, cookies cleared
+2026-06-05 15:18:02 [TestNG-tests-2] INFO  Logger - Driver started successfully — Thread: 16, Driver: FirefoxDriver: firefox on mac (2d97a326-bcf6-4454-82e2-0ee6639fea9f)
+2026-06-05 15:18:03 [TestNG-tests-2] INFO  Logger - Extent report created: /Users/rohitsingh/eclipse-workspace/SeleniumTest/ExtentReports/RegisterUserTest_Jun_05_15_18_03_IST_2026.html
+2026-06-05 15:18:03 [TestNG-tests-2] INFO  Logger - Test Started: registeruserTest
+2026-06-05 15:18:04 [TestNG-tests-1] INFO  Logger - Driver started successfully — Thread: 15, Driver: ChromeDriver: chrome on mac (2e676b847b1e5ea70e2e6fe7ff3f9d11)
+2026-06-05 15:18:04 [TestNG-tests-1] INFO  Logger - Test Started: registeruserTest
+2026-06-05 15:18:06 [TestNG-tests-2] INFO  Logger - Clicked on element: [[FirefoxDriver: firefox on mac (2d97a326-bcf6-4454-82e2-0ee6639fea9f)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-05 15:18:06 [TestNG-tests-2] INFO  Logger - Fetched text: New User Signup!
+2026-06-05 15:18:07 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (2e676b847b1e5ea70e2e6fe7ff3f9d11)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-05 15:18:07 [TestNG-tests-1] INFO  Logger - Fetched text: New User Signup!
+2026-06-05 15:18:26 [TestNG-tests-2] INFO  Logger - Entered text: rohit
+2026-06-05 15:18:27 [TestNG-tests-1] INFO  Logger - Entered text: rohit
+2026-06-05 15:18:46 [TestNG-tests-2] INFO  Logger - Entered text: eyuass@gmail.com
+2026-06-05 15:18:48 [TestNG-tests-1] INFO  Logger - Entered text: fozjap@gmail.com
+2026-06-05 15:18:49 [TestNG-tests-1] ERROR Logger - Failed to click element: element click intercepted: Element <button type="submit" data-qa="signup-button" class="btn btn-default">...</button> is not clickable at point (461, 421). Other element would receive the click: <iframe id="aswift_2" name="aswift_2" style="min-height: auto !important; max-height: none !important; min-width: auto !important; max-width: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20260604/r20190131/zrt_lookup.html#RS-0-&amp;adk=1812271808&amp;client=ca-pub-1677597403311019&amp;fa=8&amp;ifi=3&amp;uci=a!3" data-google-container-id="a!3" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="COW-1fXo75QDFRQPRAgd_Jge6g" data-load-complete="true"></iframe>
+  (Session info: chrome=148.0.7778.216)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.4.1', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2e676b847b1e5ea70e2e6fe7ff3f9d11, clickElement {id=f.ABD80B57C875837F33075A3D1D9FF734.d.4A08C7BF067D8E7A2B0C7D1189868701.e.61}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.216, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/chrome-15-1780652868361}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64751}, goog:processID: 30277, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64751/devtoo..., se:cdpVersion: 148.0.7778.216, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (2e676b847b1e5ea70e2e6fe7ff3f9d11)] -> xpath: //div[@class='signup-form']//button[@type='submit']]
+Session ID: 2e676b847b1e5ea70e2e6fe7ff3f9d11
+2026-06-05 15:18:49 [TestNG-tests-1] ERROR Logger - Test Failed: registeruserTest
+2026-06-05 15:18:49 [TestNG-tests-1] ERROR Logger - Exception: 
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="submit" data-qa="signup-button" class="btn btn-default">...</button> is not clickable at point (461, 421). Other element would receive the click: <iframe id="aswift_2" name="aswift_2" style="min-height: auto !important; max-height: none !important; min-width: auto !important; max-width: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20260604/r20190131/zrt_lookup.html#RS-0-&amp;adk=1812271808&amp;client=ca-pub-1677597403311019&amp;fa=8&amp;ifi=3&amp;uci=a!3" data-google-container-id="a!3" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="COW-1fXo75QDFRQPRAgd_Jge6g" data-load-complete="true"></iframe>
+  (Session info: chrome=148.0.7778.216)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.4.1', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2e676b847b1e5ea70e2e6fe7ff3f9d11, clickElement {id=f.ABD80B57C875837F33075A3D1D9FF734.d.4A08C7BF067D8E7A2B0C7D1189868701.e.61}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.216, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/chrome-15-1780652868361}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64751}, goog:processID: 30277, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64751/devtoo..., se:cdpVersion: 148.0.7778.216, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (2e676b847b1e5ea70e2e6fe7ff3f9d11)] -> xpath: //div[@class='signup-form']//button[@type='submit']]
+Session ID: 2e676b847b1e5ea70e2e6fe7ff3f9d11
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76) ~[selenium-remote-driver-4.29.0.jar:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51) ~[selenium-support-4.29.0.jar:?]
+	at jdk.proxy2/jdk.proxy2.$Proxy35.click(Unknown Source) ~[?:?]
+	at utlity.SeleniumCommonUtils.clickElement(SeleniumCommonUtils.java:38) ~[classes/:?]
+	at pages.NewUserSignUpPage.signupWithNameEmail(NewUserSignUpPage.java:133) ~[classes/:?]
+	at ui.testcases.RegisterUserTest.registeruserTest(RegisterUserTest.java:34) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+2026-06-05 15:18:49 [TestNG-tests-1] INFO  Logger - Screenshot saved at: ./screenshots/registeruserTest_20260605_151849.png
+2026-06-05 15:18:49 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-05 15:18:49 [TestNG-tests-1] ERROR Logger - Thread: 15, Driver: ChromeDriver: chrome on mac (2e676b847b1e5ea70e2e6fe7ff3f9d11)
+2026-06-05 15:18:50 [TestNG-tests-1] INFO  Logger - Screenshot saved at: Screenshots/chrome/RegisterUserTest_registeruserTest.png
+2026-06-05 15:18:50 [TestNG-tests-1] INFO  Logger - 
+╔══════════════════════════════════════╗
+║         SUITE EXECUTION SUMMARY      ║
+╠══════════════════════════════════════╣
+║  Total  : 2
+║  Passed : 0
+║  Failed : 1
+║  Skipped: 0
+╚══════════════════════════════════════╝
+2026-06-05 15:19:00 [TestNG-tests-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='signup-form']//button[@type='submit']'
+2026-06-05 15:19:10 [TestNG-tests-2] INFO  Logger - Fetched attribute [value] with value: rohit
+2026-06-05 15:19:10 [TestNG-tests-2] INFO  Logger - Fetched attribute [value] with value: eyuass@gmail.com
+2026-06-05 15:19:10 [TestNG-tests-2] INFO  Logger - Clicked on element: [[FirefoxDriver: firefox on mac (2d97a326-bcf6-4454-82e2-0ee6639fea9f)] -> css selector: #uniform-id_gender1]
+2026-06-05 15:19:10 [TestNG-tests-2] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-05 15:19:10 [TestNG-tests-2] ERROR Logger - Failed to select from dropdown by value: Element <select id="days" class="form-control" name="days"> is not clickable at point (251,637) because another element <iframe id="aswift_2" name="aswift_2" src="https://googleads.g.doubleclick.net/pagead/html/r20260604/r20190131/zrt_lookup_fy2021.html#RS-1-&adk=1812271801&client=ca-pub-1677597403311019&fa=1&ifi=3&uci=a!3&btvi=1"> obscures it
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.4.1', java.version: '17.0.12'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [2d97a326-bcf6-4454-82e2-0ee6639fea9f, clickElement {id=d36c4384-1908-4e57-9be5-0a6636df2aaf}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0.1, moz:accessibilityChecks: false, moz:buildID: 20260427013024, moz:geckodriverVersion: 0.37.0, moz:headless: true, moz:platformVersion: 25.4.0, moz:processID: 30255, moz:profile: /var/folders/f3/7d9mby7j7yj..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Element: [[[[FirefoxDriver: firefox on mac (2d97a326-bcf6-4454-82e2-0ee6639fea9f)] -> css selector: #days]] -> xpath: .//option[@value = "5"]]
+Session ID: 2d97a326-bcf6-4454-82e2-0ee6639fea9f
+2026-06-05 15:19:10 [TestNG-tests-2] ERROR Logger - Test Failed: registeruserTest
+2026-06-05 15:19:10 [TestNG-tests-2] ERROR Logger - Exception: 
+org.openqa.selenium.ElementClickInterceptedException: Element <select id="days" class="form-control" name="days"> is not clickable at point (251,637) because another element <iframe id="aswift_2" name="aswift_2" src="https://googleads.g.doubleclick.net/pagead/html/r20260604/r20190131/zrt_lookup_fy2021.html#RS-1-&adk=1812271801&client=ca-pub-1677597403311019&fa=1&ifi=3&uci=a!3&btvi=1"> obscures it
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.4.1', java.version: '17.0.12'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [2d97a326-bcf6-4454-82e2-0ee6639fea9f, clickElement {id=d36c4384-1908-4e57-9be5-0a6636df2aaf}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0.1, moz:accessibilityChecks: false, moz:buildID: 20260427013024, moz:geckodriverVersion: 0.37.0, moz:headless: true, moz:platformVersion: 25.4.0, moz:processID: 30255, moz:profile: /var/folders/f3/7d9mby7j7yj..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Element: [[[[FirefoxDriver: firefox on mac (2d97a326-bcf6-4454-82e2-0ee6639fea9f)] -> css selector: #days]] -> xpath: .//option[@value = "5"]]
+Session ID: 2d97a326-bcf6-4454-82e2-0ee6639fea9f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:419) ~[selenium-support-4.29.0.jar:?]
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:278) ~[selenium-support-4.29.0.jar:?]
+	at utlity.SeleniumCommonUtils.selectDropdownByValue(SeleniumCommonUtils.java:133) ~[classes/:?]
+	at pages.NewUserSignUpPage.selectDob(NewUserSignUpPage.java:172) ~[classes/:?]
+	at pages.NewUserSignUpPage.enteruserDetials(NewUserSignUpPage.java:146) ~[classes/:?]
+	at ui.testcases.RegisterUserTest.registeruserTest(RegisterUserTest.java:36) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+2026-06-05 15:19:10 [TestNG-tests-2] INFO  Logger - Screenshot saved at: ./screenshots/registeruserTest_20260605_151910.png
+2026-06-05 15:19:10 [TestNG-tests-2] INFO  Logger - Browser from TestNG xml: FIREFOX
+2026-06-05 15:19:10 [TestNG-tests-2] ERROR Logger - Thread: 16, Driver: FirefoxDriver: firefox on mac (2d97a326-bcf6-4454-82e2-0ee6639fea9f)
+2026-06-05 15:19:10 [TestNG-tests-2] INFO  Logger - Screenshot saved at: Screenshots/firefox/RegisterUserTest_registeruserTest.png
+2026-06-05 15:19:10 [TestNG-tests-2] INFO  Logger - 
+╔══════════════════════════════════════╗
+║         SUITE EXECUTION SUMMARY      ║
+╠══════════════════════════════════════╣
+║  Total  : 2
+║  Passed : 0
+║  Failed : 2
+║  Skipped: 0
+╚══════════════════════════════════════╝
+2026-06-05 15:19:10 [main] INFO  Logger - Extent report flushed: /Users/rohitsingh/eclipse-workspace/SeleniumTest/ExtentReports/RegisterUserTest_Jun_05_15_18_03_IST_2026.html
+2026-06-05 17:58:29 [TestNG-tests-1] INFO  Logger - Test Suite Started: Chrome
+2026-06-05 17:58:29 [TestNG-tests-2] INFO  Logger - Test Suite Started: Firefox
+2026-06-05 17:58:29 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-05 17:58:29 [TestNG-tests-2] INFO  Logger - Browser from TestNG xml: FIREFOX
+2026-06-05 17:58:29 [TestNG-tests-1] INFO  Logger - Attempting to start driver for browser: CHROME
+2026-06-05 17:58:29 [TestNG-tests-2] INFO  Logger - Attempting to start driver for browser: FIREFOX
+2026-06-05 17:58:29 [TestNG-tests-1] INFO  Logger - Creating driver manager for: CHROME
+2026-06-05 17:58:29 [TestNG-tests-2] INFO  Logger - Creating driver manager for: FIREFOX
+2026-06-05 17:58:29 [TestNG-tests-1] INFO  Logger - Chrome running in headless mode
+2026-06-05 17:58:29 [TestNG-tests-2] INFO  Logger - Firefox running in headless mode
+2026-06-05 17:58:32 [TestNG-tests-1] INFO  Logger - Chrome local driver created
+2026-06-05 17:58:32 [TestNG-tests-2] INFO  Logger - Firefox local driver created
+2026-06-05 17:58:36 [TestNG-tests-2] INFO  Logger - Driver configured — implicit wait: 10s, page load timeout: 90s, cookies cleared
+2026-06-05 17:58:36 [TestNG-tests-1] INFO  Logger - Driver configured — implicit wait: 10s, page load timeout: 90s, cookies cleared
+2026-06-05 17:58:42 [TestNG-tests-2] INFO  Logger - Driver started successfully — Thread: 16, Driver: FirefoxDriver: firefox on mac (b92a4c33-2eb7-469f-b259-3768efa1ae12)
+2026-06-05 17:58:42 [TestNG-tests-2] INFO  Logger - Extent report created: /Users/rohitsingh/eclipse-workspace/SeleniumTest/ExtentReports/RegisterUserTest_Jun_05_17_58_42_IST_2026.html
+2026-06-05 17:58:42 [TestNG-tests-2] INFO  Logger - Test Started: registeruserTest
+2026-06-05 17:58:45 [TestNG-tests-2] INFO  Logger - Clicked on element: [[FirefoxDriver: firefox on mac (b92a4c33-2eb7-469f-b259-3768efa1ae12)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-05 17:58:45 [TestNG-tests-2] INFO  Logger - Fetched text: New User Signup!
+2026-06-05 17:58:51 [TestNG-tests-1] INFO  Logger - Driver started successfully — Thread: 15, Driver: ChromeDriver: chrome on mac (b1e65cb0b42379333768b34fac0a67d1)
+2026-06-05 17:58:51 [TestNG-tests-1] INFO  Logger - Test Started: registeruserTest
+2026-06-05 17:58:54 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (b1e65cb0b42379333768b34fac0a67d1)] -> xpath: //a[normalize-space()='Signup / Login']]
+2026-06-05 17:58:54 [TestNG-tests-1] INFO  Logger - Fetched text: New User Signup!
+2026-06-05 17:59:05 [TestNG-tests-2] INFO  Logger - Entered text: rohit
+2026-06-05 17:59:14 [TestNG-tests-1] INFO  Logger - Entered text: rohit
+2026-06-05 17:59:25 [TestNG-tests-2] INFO  Logger - Entered text: obcgkv@gmail.com
+2026-06-05 17:59:34 [TestNG-tests-1] INFO  Logger - Entered text: brxeeo@gmail.com
+2026-06-05 17:59:38 [TestNG-tests-2] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='signup-form']//button[@type='submit']'
+2026-06-05 17:59:46 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='signup-form']//button[@type='submit']'
+2026-06-05 17:59:48 [TestNG-tests-2] INFO  Logger - Fetched attribute [value] with value: rohit
+2026-06-05 17:59:48 [TestNG-tests-2] INFO  Logger - Fetched attribute [value] with value: obcgkv@gmail.com
+2026-06-05 17:59:48 [TestNG-tests-2] INFO  Logger - Clicked on element: [[FirefoxDriver: firefox on mac (b92a4c33-2eb7-469f-b259-3768efa1ae12)] -> css selector: #uniform-id_gender1]
+2026-06-05 17:59:48 [TestNG-tests-2] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-05 17:59:48 [TestNG-tests-2] ERROR Logger - Failed to select from dropdown by value: Element <select id="days" class="form-control" name="days"> is not clickable at point (251,637) because another element <iframe id="aswift_1" name="aswift_1" src="https://googleads.g.doubleclick.net/pagead/html/r20260604/r20190131/zrt_lookup_fy2021.html#RS-1-&adk=1812271801&client=ca-pub-1677597403311019&fa=1&ifi=2&uci=a!2&btvi=1"> obscures it
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.4.1', java.version: '17.0.12'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [b92a4c33-2eb7-469f-b259-3768efa1ae12, clickElement {id=61f258d3-870f-4bbc-a721-45e6f68b6d32}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0.1, moz:accessibilityChecks: false, moz:buildID: 20260427013024, moz:geckodriverVersion: 0.37.0, moz:headless: true, moz:platformVersion: 25.4.0, moz:processID: 31844, moz:profile: /var/folders/f3/7d9mby7j7yj..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Element: [[[[FirefoxDriver: firefox on mac (b92a4c33-2eb7-469f-b259-3768efa1ae12)] -> css selector: #days]] -> xpath: .//option[@value = "5"]]
+Session ID: b92a4c33-2eb7-469f-b259-3768efa1ae12
+2026-06-05 17:59:48 [TestNG-tests-2] ERROR Logger - Test Failed: registeruserTest
+2026-06-05 17:59:48 [TestNG-tests-2] ERROR Logger - Exception: 
+org.openqa.selenium.ElementClickInterceptedException: Element <select id="days" class="form-control" name="days"> is not clickable at point (251,637) because another element <iframe id="aswift_1" name="aswift_1" src="https://googleads.g.doubleclick.net/pagead/html/r20260604/r20190131/zrt_lookup_fy2021.html#RS-1-&adk=1812271801&client=ca-pub-1677597403311019&fa=1&ifi=2&uci=a!2&btvi=1"> obscures it
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.4.1', java.version: '17.0.12'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [b92a4c33-2eb7-469f-b259-3768efa1ae12, clickElement {id=61f258d3-870f-4bbc-a721-45e6f68b6d32}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0.1, moz:accessibilityChecks: false, moz:buildID: 20260427013024, moz:geckodriverVersion: 0.37.0, moz:headless: true, moz:platformVersion: 25.4.0, moz:processID: 31844, moz:profile: /var/folders/f3/7d9mby7j7yj..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Element: [[[[FirefoxDriver: firefox on mac (b92a4c33-2eb7-469f-b259-3768efa1ae12)] -> css selector: #days]] -> xpath: .//option[@value = "5"]]
+Session ID: b92a4c33-2eb7-469f-b259-3768efa1ae12
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:419) ~[selenium-support-4.29.0.jar:?]
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:278) ~[selenium-support-4.29.0.jar:?]
+	at utlity.SeleniumCommonUtils.selectDropdownByValue(SeleniumCommonUtils.java:133) ~[classes/:?]
+	at pages.NewUserSignUpPage.selectDob(NewUserSignUpPage.java:172) ~[classes/:?]
+	at pages.NewUserSignUpPage.enteruserDetials(NewUserSignUpPage.java:146) ~[classes/:?]
+	at ui.testcases.RegisterUserTest.registeruserTest(RegisterUserTest.java:36) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64) ~[org.testng_7.11.0.r202503091654.jar:7.11.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:842) [?:?]
+2026-06-05 17:59:49 [TestNG-tests-2] INFO  Logger - Screenshot saved at: ./screenshots/registeruserTest_20260605_175948.png
+2026-06-05 17:59:49 [TestNG-tests-2] INFO  Logger - Browser from TestNG xml: FIREFOX
+2026-06-05 17:59:49 [TestNG-tests-2] ERROR Logger - Thread: 16, Driver: FirefoxDriver: firefox on mac (b92a4c33-2eb7-469f-b259-3768efa1ae12)
+2026-06-05 17:59:49 [TestNG-tests-2] INFO  Logger - Screenshot saved at: Screenshots/firefox/RegisterUserTest_registeruserTest.png
+2026-06-05 17:59:49 [TestNG-tests-2] INFO  Logger - 
+╔══════════════════════════════════════╗
+║         SUITE EXECUTION SUMMARY      ║
+╠══════════════════════════════════════╣
+║  Total  : 2
+║  Passed : 0
+║  Failed : 1
+║  Skipped: 0
+╚══════════════════════════════════════╝
+2026-06-05 17:59:56 [TestNG-tests-1] INFO  Logger - Fetched attribute [value] with value: rohit
+2026-06-05 17:59:56 [TestNG-tests-1] INFO  Logger - Fetched attribute [value] with value: brxeeo@gmail.com
+2026-06-05 17:59:56 [TestNG-tests-1] INFO  Logger - Clicked on element: [[ChromeDriver: chrome on mac (b1e65cb0b42379333768b34fac0a67d1)] -> css selector: #uniform-id_gender1]
+2026-06-05 17:59:56 [TestNG-tests-1] INFO  Logger - Entered text: Nov@1122!0091
+2026-06-05 17:59:57 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 5
+2026-06-05 17:59:57 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 4
+2026-06-05 17:59:57 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: 2020
+2026-06-05 17:59:57 [TestNG-tests-1] INFO  Logger - Entered text: rohit
+2026-06-05 17:59:57 [TestNG-tests-1] INFO  Logger - Entered text: singh
+2026-06-05 17:59:57 [TestNG-tests-1] INFO  Logger - Entered text: Coforge
+2026-06-05 17:59:57 [TestNG-tests-1] INFO  Logger - Entered text: noida
+2026-06-05 17:59:57 [TestNG-tests-1] INFO  Logger - Selected value from dropdown by value: India
+2026-06-05 17:59:57 [TestNG-tests-1] INFO  Logger - Entered text: UP
+2026-06-05 17:59:57 [TestNG-tests-1] INFO  Logger - Entered text: noida
+2026-06-05 17:59:57 [TestNG-tests-1] INFO  Logger - Entered text: 541234
+2026-06-05 17:59:57 [TestNG-tests-1] INFO  Logger - Entered text: 7643551111
+2026-06-05 18:00:00 [TestNG-tests-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-05 18:00:00 [TestNG-tests-1] INFO  Logger - Fetched text: ACCOUNT CREATED!
+2026-06-05 18:00:00 [TestNG-tests-1] INFO  Logger - Fetched text: Congratulations! Your new account has been successfully created!
+2026-06-05 18:00:02 [TestNG-tests-1] INFO  Logger - Clicked element using JavaScript.
+2026-06-05 18:00:02 [TestNG-tests-1] INFO  Logger - Fetched text: rohit
+2026-06-05 18:00:14 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[normalize-space()='Delete Account']'
+2026-06-05 18:00:24 [TestNG-tests-1] INFO  Logger - Fetched text: ACCOUNT DELETED!
+2026-06-05 18:00:24 [TestNG-tests-1] INFO  Logger - Fetched text: Your account has been permanently deleted!
+2026-06-05 18:00:37 [TestNG-tests-1] INFO  Logger - Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Continue']'
+2026-06-05 18:00:57 [TestNG-tests-1] INFO  Logger - Test Passed: registeruserTest
+2026-06-05 18:00:57 [TestNG-tests-1] INFO  Logger - Browser from TestNG xml: CHROME
+2026-06-05 18:00:57 [TestNG-tests-1] ERROR Logger - Thread: 15, Driver: ChromeDriver: chrome on mac (b1e65cb0b42379333768b34fac0a67d1)
+2026-06-05 18:00:58 [TestNG-tests-1] INFO  Logger - 
+╔══════════════════════════════════════╗
+║         SUITE EXECUTION SUMMARY      ║
+╠══════════════════════════════════════╣
+║  Total  : 2
+║  Passed : 1
+║  Failed : 1
+║  Skipped: 0
+╚══════════════════════════════════════╝
+2026-06-05 18:00:58 [main] INFO  Logger - Extent report flushed: /Users/rohitsingh/eclipse-workspace/SeleniumTest/ExtentReports/RegisterUserTest_Jun_05_17_58_42_IST_2026.html

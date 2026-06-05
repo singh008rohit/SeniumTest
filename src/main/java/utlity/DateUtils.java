@@ -1,30 +1,24 @@
-/**
- * @author Rajat Verma
- * https://www.linkedin.com/in/rajat-v-3b0685128/
- * https://github.com/rajatt95
- * https://rajatt95.github.io/
- *
- * Course: Selenium Java Test Framework & Best Practices - Masterclass (https://www.udemy.com/course/selenium-java-test-framework/)
- * Tutor: Omprakash Chavan (https://www.udemy.com/user/omprakash-chavan/)
- */
-
-/***************************************************/
-
+// DateUtils.java
 package utlity;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
-//final -> We do not want any class to extend this class
 public final class DateUtils {
 
-    //private -> We do not want anyone to create the object of this class
-    // Private constructor to avoid external instantiation
-    private DateUtils() {
-    }
+    private DateUtils() {}
 
+    // Legacy — kept so nothing else breaks
     public static String getCurrentDate() {
-        Date date = new Date();
-        return date.toString().replace(":", "_").replace(" ", "_");
+        return new Date().toString()
+            .replace(":", "_")
+            .replace(" ", "_");
     }
 
+    // NEW — clean format for filenames: Jun_04_18-01-58_IST_2026
+    // Matches your desired format: SearchFlightWithFlightNoTest_Jun_04_18_01_58_IST_2026
+    public static String getReportTimestamp() {
+        return new SimpleDateFormat("MMM_dd_HH_mm_ss_zzz_yyyy")
+            .format(new Date());
+    }
 }

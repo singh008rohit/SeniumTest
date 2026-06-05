@@ -1,6 +1,8 @@
+// ExtentReportManager.java
 package reportManager;
 
 import java.util.Objects;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.testng.ITestResult;
 
@@ -22,132 +24,188 @@ import utlity.IconUtils;
 
 public class ExtentReportManager {
 
-	// ─── SINGLETON ─────────────────────────────────────────────
+    // ── SINGLETON EXTENT INSTANCE ──────────────────────────────
+    // Created eagerly — but reporter is NOT attached yet
+    private static final ExtentReports extent = new ExtentReports();
 
-	private static final ExtentReports extent;
+    // ── LAZY REPORTER STATE ────────────────────────────────────
+    // reporterAttached = false until first test class name is known
+    private static final AtomicBoolean reporterAttached = new AtomicBoolean(false);
 
-	static {
-		ExtentSparkReporter reporter = new ExtentSparkReporter(
-				ExtentReportConstant.getExtentReportFilePath() + DateUtils.getCurrentDate());
-		configureReporter(reporter);
+    // Stores the resolved file path once reporter is attached
+    // volatile — read by any thread after AtomicBoolean cas
+    private static volatile String currentReportFilePath = "";
 
-		extent = new ExtentReports();
-		extent.attachReporter(reporter);
-		extent.setSystemInfo("Tester", "Rohit Singh");
-		extent.setSystemInfo("Environment", "QA");
-		extent.setSystemInfo("Organization", "QATest");
-	    extent.setSystemInfo("Execution Time", new java.util.Date().toString());
-	    extent.setSystemInfo("Framework",      "Selenium + RestAssured + Cucumber + TestNG");
-	    extent.setSystemInfo("Base URL",       ConfigLoader.getInstance().getBaseUrl());
-	    extent.setSystemInfo("API Base URL",   ConfigLoader.getInstance().getAPIBaseUrl());
-	    extent.setSystemInfo("Mock Enabled",   ConfigLoader.getInstance().getUseMock());
-		extent.setSystemInfo("Employee", "<b>Rohit Singh</b> " + ExtentReportConstant.ICON_SOCIAL_LINKEDIN + " "
-				+ ExtentReportConstant.ICON_SOCIAL_GITHUB);
-		extent.setSystemInfo("Domain", "Engineering (IT - Software)  " + ExtentReportConstant.ICON_LAPTOP);
-		extent.setSystemInfo("Skill", "Test Automation Engineer");
-	}
+    private ExtentReportManager() {}
 
-	private ExtentReportManager() {
-	}
+    // ── LAZY REPORTER ATTACHMENT ───────────────────────────────
+    // Called from onTestStart — first call attaches the reporter with the
+    // correct class name in the filename. Subsequent calls are no-ops.
+    // synchronized — only one thread does the attachment, all others skip
+    public static synchronized void attachReporterIfNeeded(String testClassName) {
+        if (reporterAttached.get()) {
+            return; // already attached — nothing to do
+        }
 
-	// ─── REPORTER CONFIG ───────────────────────────────────────
+        // Build filename: ClassName_2026-06-04_18-01-58.html
+        String timestamp = DateUtils.getReportTimestamp();
+        String fileName  = testClassName + "_" + timestamp + ".html";
+        currentReportFilePath = ExtentReportConstant.EXTENT_REPORT_FOLDER_PATH + fileName;
 
-	private static void configureReporter(ExtentSparkReporter reporter) {
-		reporter.config().setTheme(Theme.STANDARD);
-		reporter.config().setTimeStampFormat("yyyy-MM-dd HH:mm:ss");
-		reporter.config().setEncoding("UTF-8");
-		reporter.config().setProtocol(Protocol.HTTPS);
-		reporter.config().setDocumentTitle(ExtentReportConstant.getProjectName() + " - ALL");
-		reporter.config().setReportName(ExtentReportConstant.getProjectName() + " - ALL");
-	}
+        // Create folder if it doesn't exist
+        new java.io.File(ExtentReportConstant.EXTENT_REPORT_FOLDER_PATH).mkdirs();
 
-	// ─── CREATE TEST ───────────────────────────────────────────
+        ExtentSparkReporter reporter = new ExtentSparkReporter(currentReportFilePath);
+        configureReporter(reporter, testClassName);
 
-	// original signature preserved — existing callers need no changes
-	// defaults to UI since original behaviour assumed a browser was running
-	// New overload — called from SeleniumListener with full result context
-	public static synchronized void createTest(ITestResult result, TestType testType) {
-	    String className  = result.getTestClass().getRealClass().getSimpleName();
-	    String methodName = result.getMethod().getMethodName();
-	    String description = result.getMethod().getDescription();
+        extent.attachReporter(reporter);
 
-	    String icon = resolveIcon(testType);
+        // System info — set once after reporter is attached
+        setSystemInfo(testClassName);
 
-	    // "ClassName > methodName" as the node title
-	    String title = icon + " <b>" + className + "</b> › " + methodName;
+        reporterAttached.set(true);
 
-	    ExtentTest test = extent.createTest(title);
+        loggerUtils.LogUtils.info(
+            "Extent report created: " + currentReportFilePath);
+    }
 
-	    // add description as a note under the title if present
-	    if (description != null && !description.isEmpty()) {
-	        test.info("<i>" + description + "</i>");
-	    }
+    // ── REPORTER CONFIG ────────────────────────────────────────
+    private static void configureReporter(ExtentSparkReporter reporter,
+                                          String testClassName) {
+        reporter.config().setTheme(Theme.STANDARD);
+        reporter.config().setTimeStampFormat("yyyy-MM-dd HH:mm:ss");
+        reporter.config().setEncoding("UTF-8");
+        reporter.config().setProtocol(Protocol.HTTPS);
+        reporter.config().setDocumentTitle(
+            ExtentReportConstant.getProjectName() + " — " + testClassName);
+        reporter.config().setReportName(
+            ExtentReportConstant.getProjectName() + " — " + testClassName);
+    }
 
-	    ExtentManager.setExtentTest(test);
-	}
+    // ── SYSTEM INFO ────────────────────────────────────────────
+    private static void setSystemInfo(String testClassName) {
+        extent.setSystemInfo("Test Class",     testClassName);
+        extent.setSystemInfo("Tester",         "Rohit Singh");
+        extent.setSystemInfo("Environment",    System.getProperty("env", "STAGE"));
+        extent.setSystemInfo("Organization",   "QATest");
+        extent.setSystemInfo("Execution Time", DateUtils.getReportTimestamp());
+        extent.setSystemInfo("Framework",
+            "Selenium + RestAssured + Cucumber + TestNG");
+        extent.setSystemInfo("Base URL",
+            ConfigLoader.getInstance().getBaseUrl());
+        extent.setSystemInfo("API Base URL",
+            ConfigLoader.getInstance().getAPIBaseUrl());
+        extent.setSystemInfo("Mock Enabled",
+            ConfigLoader.getInstance().getUseMock());
+        extent.setSystemInfo("Java Version",
+            System.getProperty("java.version"));
+        extent.setSystemInfo("OS",
+            System.getProperty("os.name")
+            + " (" + System.getProperty("os.arch") + ")");
+        extent.setSystemInfo("Headless",
+            ConfigLoader.getInstance().getIsheadless());
+        extent.setSystemInfo("Grid Enabled",
+            ConfigLoader.getInstance().getuseGrid());
+        extent.setSystemInfo("Retry Enabled",
+            ConfigLoader.getInstance().getRetryFailedTests());
+        extent.setSystemInfo("Employee",
+            "<b>Rohit Singh</b> "
+            + ExtentReportConstant.ICON_SOCIAL_LINKEDIN + " "
+            + ExtentReportConstant.ICON_SOCIAL_GITHUB);
+        extent.setSystemInfo("Domain",
+            "Engineering (IT - Software) "
+            + ExtentReportConstant.ICON_LAPTOP);
+        extent.setSystemInfo("Skill", "Test Automation Engineer");
+    }
 
-	// overload used by APITestBase, Hooks, SeleniumListener
-	// no try-catch — each TestType has a deterministic icon, no exception possible
-	public static synchronized void createTest(String testName, TestType testType) {
-		String icon = resolveIcon(testType);
-		ExtentManager.setExtentTest(extent.createTest(icon + " " + testName));
-	}
+    // ── CREATE TEST ────────────────────────────────────────────
+    public static synchronized void createTest(ITestResult result,
+                                               TestType testType) {
+        // Attach reporter on first call — uses this test's class name
+        String className = result.getTestClass()
+                                 .getRealClass()
+                                 .getSimpleName();
+        attachReporterIfNeeded(className);
 
-	// icon resolution is pure logic — no driver access, no exception risk
-	private static String resolveIcon(TestType testType) {
-		switch (testType) {
-		case API:
-			return "<i class='fa fa-plug' style='color:#e67e22'></i> ";
+        String methodName   = result.getMethod().getMethodName();
+        String description  = result.getMethod().getDescription();
+        String icon         = resolveIcon(testType);
+        String title        = icon + " <b>" + className + "</b> › " + methodName;
 
-		case BDD:
-			return "<i class='fa fa-leaf' style='color:#27ae60'></i> ";
+        ExtentTest test = extent.createTest(title);
 
-		case UI:
-			// only UI tests have a live driver — safe to call getBrowserIcon()
-			// if driver is null here it is a genuine bug, not expected flow
-			return IconUtils.getBrowserIcon() + " ";
+        if (description != null && !description.isEmpty()) {
+            test.info("<i>" + description + "</i>");
+        }
 
-		default:
-			throw new IllegalArgumentException("Unknown TestType: " + testType + " — add a case to resolveIcon()");
-		}
-	}
+        ExtentManager.setExtentTest(test);
+    }
 
-	// ─── TEST METADATA ─────────────────────────────────────────
+    // Overload for BDD / string-based creation
+    public static synchronized void createTest(String testName,
+                                               TestType testType) {
+        attachReporterIfNeeded(testName.replaceAll("[^a-zA-Z0-9]", "_"));
+        String icon = resolveIcon(testType);
+        ExtentManager.setExtentTest(extent.createTest(icon + " " + testName));
+    }
 
-	public static synchronized void addAuthors(AuthorType[] authors) {
-		for (AuthorType author : authors) {
-			ExtentManager.getExtentTest().assignAuthor(author.toString());
-		}
-	}
+    // ── ICON RESOLUTION ───────────────────────────────────────
+    private static String resolveIcon(TestType testType) {
+        switch (testType) {
+            case API:
+                return "<i class='fa fa-plug' style='color:#e67e22'></i> ";
+            case BDD:
+                return "<i class='fa fa-leaf' style='color:#27ae60'></i> ";
+            case UI:
+                return IconUtils.getBrowserIcon() + " ";
+            default:
+                throw new IllegalArgumentException(
+                    "Unknown TestType: " + testType);
+        }
+    }
 
-	public static synchronized void addCategories(CategoryType[] categories) {
-		for (CategoryType category : categories) {
-			ExtentManager.getExtentTest().assignCategory(category.toString());
-		}
-	}
+    // ── TEST METADATA ──────────────────────────────────────────
+    public static synchronized void addAuthors(AuthorType[] authors) {
+        for (AuthorType author : authors) {
+            ExtentManager.getExtentTest().assignAuthor(author.toString());
+        }
+    }
 
-	public static  void addDevices() {
-		try {
-			if (DriverManager.getDriver() != null) {
-				ExtentManager.getExtentTest().assignDevice(BrowserInfoUtils.getBrowserInfo());
-			} else {
-				ExtentManager.getExtentTest().assignDevice("API Test - No Browser");
-			}
-		} catch (Exception e) {
-			ExtentManager.getExtentTest().assignDevice("Unknown Device");
-		}
-	}
+    public static synchronized void addCategories(CategoryType[] categories) {
+        for (CategoryType category : categories) {
+            ExtentManager.getExtentTest().assignCategory(category.toString());
+        }
+    }
 
-	// ─── REPORT LIFECYCLE ──────────────────────────────────────
+    public static void addDevices() {
+        try {
+            if (DriverManager.getDriver() != null) {
+                ExtentManager.getExtentTest()
+                    .assignDevice(BrowserInfoUtils.getBrowserInfo());
+            } else {
+                ExtentManager.getExtentTest()
+                    .assignDevice("APITest-NoBrowser");
+            }
+        } catch (Exception e) {
+            ExtentManager.getExtentTest().assignDevice("Unknown Device");
+        }
+    }
 
-	public static ExtentReports getSetup() {
-		return extent;
-	}
+    // ── REPORT LIFECYCLE ───────────────────────────────────────
+    public static ExtentReports getSetup() {
+        return extent;
+    }
 
-	public static void flushReports() {
-		if (Objects.nonNull(extent)) {
-			extent.flush();
-		}
-		//ExtentManager.unload();
-	}
+    public static String getCurrentReportFilePath() {
+        return currentReportFilePath;
+    }
+
+    public static void flushReports() {
+        if (Objects.nonNull(extent) && reporterAttached.get()) {
+            extent.flush();
+            loggerUtils.LogUtils.info(
+                "Extent report flushed: " + currentReportFilePath);
+        }
+        // Do NOT call ExtentManager.unload() here
+    }
 }
