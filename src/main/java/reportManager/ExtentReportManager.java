@@ -42,95 +42,89 @@ public class ExtentReportManager {
     // Called from onTestStart — first call attaches the reporter with the
     // correct class name in the filename. Subsequent calls are no-ops.
     // synchronized — only one thread does the attachment, all others skip
-    public static synchronized void attachReporterIfNeeded(String testClassName) {
-        if (reporterAttached.get()) {
-            return; // already attached — nothing to do
-        }
+ // ExtentReportManager.java — attachReporterIfNeeded is unchanged in signature
+ // but the caller now passes suite name instead of class name
 
-        // Build filename: ClassName_2026-06-04_18-01-58.html
-        String timestamp = DateUtils.getReportTimestamp();
-        String fileName  = testClassName + "_" + timestamp + ".html";
-        currentReportFilePath = ExtentReportConstant.EXTENT_REPORT_FOLDER_PATH + fileName;
+ // ExtentReportManager.java — attachReporterIfNeeded is unchanged in signature
+ // but the caller now passes suite name instead of class name
 
-        // Create folder if it doesn't exist
-        new java.io.File(ExtentReportConstant.EXTENT_REPORT_FOLDER_PATH).mkdirs();
+ public static synchronized void attachReporterIfNeeded(String reportName) {
+     if (reporterAttached.get()) {
+         return; // already attached — all subsequent calls are no-ops
+     }
 
-        ExtentSparkReporter reporter = new ExtentSparkReporter(currentReportFilePath);
-        configureReporter(reporter, testClassName);
+     String timestamp = DateUtils.getReportTimestamp();
 
-        extent.attachReporter(reporter);
+     // Sanitize: replace spaces with underscores, remove chars invalid in filenames
+     String safeName = reportName.replaceAll("[^a-zA-Z0-9_]", "_");
 
-        // System info — set once after reporter is attached
-        setSystemInfo(testClassName);
+     String fileName = safeName + "_" + timestamp + ".html";
+     currentReportFilePath = ExtentReportConstant.EXTENT_REPORT_FOLDER_PATH + fileName;
 
-        reporterAttached.set(true);
+     new java.io.File(ExtentReportConstant.EXTENT_REPORT_FOLDER_PATH).mkdirs();
 
-        loggerUtils.LogUtils.info(
-            "Extent report created: " + currentReportFilePath);
-    }
+     ExtentSparkReporter reporter = new ExtentSparkReporter(currentReportFilePath);
+     configureReporter(reporter, reportName);   // pass original name for display
+     extent.attachReporter(reporter);
+     setSystemInfo(reportName);
+     reporterAttached.set(true);
+
+     loggerUtils.LogUtils.info("Extent report created: " + currentReportFilePath);
+ }
 
     // ── REPORTER CONFIG ────────────────────────────────────────
-    private static void configureReporter(ExtentSparkReporter reporter,
-                                          String testClassName) {
-        reporter.config().setTheme(Theme.STANDARD);
-        reporter.config().setTimeStampFormat("yyyy-MM-dd HH:mm:ss");
-        reporter.config().setEncoding("UTF-8");
-        reporter.config().setProtocol(Protocol.HTTPS);
-        reporter.config().setDocumentTitle(
-            ExtentReportConstant.getProjectName() + " — " + testClassName);
-        reporter.config().setReportName(
-            ExtentReportConstant.getProjectName() + " — " + testClassName);
-    }
+//ExtentReportManager.java
+private static void configureReporter(ExtentSparkReporter reporter, String suiteName) {
+  reporter.config().setTheme(Theme.STANDARD);
+  reporter.config().setTimeStampFormat("yyyy-MM-dd HH:mm:ss");
+  reporter.config().setEncoding("UTF-8");
+  reporter.config().setProtocol(Protocol.HTTPS);
+  reporter.config().setDocumentTitle(
+      ExtentReportConstant.getProjectName() + " — " + suiteName);
+  reporter.config().setReportName(
+      ExtentReportConstant.getProjectName() + " — " + suiteName);
+}
 
     // ── SYSTEM INFO ────────────────────────────────────────────
-    private static void setSystemInfo(String testClassName) {
-        extent.setSystemInfo("Test Class",     testClassName);
+ // ExtentReportManager.java — setSystemInfo — rename parameter
+    private static void setSystemInfo(String suiteName) {
+        extent.setSystemInfo("Suite Name",     suiteName);   // was "Test Class"
         extent.setSystemInfo("Tester",         "Rohit Singh");
         extent.setSystemInfo("Environment",    System.getProperty("env", "STAGE"));
         extent.setSystemInfo("Organization",   "QATest");
         extent.setSystemInfo("Execution Time", DateUtils.getReportTimestamp());
-        extent.setSystemInfo("Framework",
-            "Selenium + RestAssured + Cucumber + TestNG");
-        extent.setSystemInfo("Base URL",
-            ConfigLoader.getInstance().getBaseUrl());
-        extent.setSystemInfo("API Base URL",
-            ConfigLoader.getInstance().getAPIBaseUrl());
-        extent.setSystemInfo("Mock Enabled",
-            ConfigLoader.getInstance().getUseMock());
-        extent.setSystemInfo("Java Version",
-            System.getProperty("java.version"));
-        extent.setSystemInfo("OS",
-            System.getProperty("os.name")
-            + " (" + System.getProperty("os.arch") + ")");
-        extent.setSystemInfo("Headless",
-            ConfigLoader.getInstance().getIsheadless());
-        extent.setSystemInfo("Grid Enabled",
-            ConfigLoader.getInstance().getuseGrid());
-        extent.setSystemInfo("Retry Enabled",
-            ConfigLoader.getInstance().getRetryFailedTests());
+        extent.setSystemInfo("Framework",      "Selenium + RestAssured + Cucumber + TestNG");
+        extent.setSystemInfo("Base URL",       ConfigLoader.getInstance().getBaseUrl());
+        extent.setSystemInfo("API Base URL",   ConfigLoader.getInstance().getAPIBaseUrl());
+        extent.setSystemInfo("Mock Enabled",   ConfigLoader.getInstance().getUseMock());
+        extent.setSystemInfo("Java Version",   System.getProperty("java.version"));
+        extent.setSystemInfo("OS",             System.getProperty("os.name")
+                                               + " (" + System.getProperty("os.arch") + ")");
+        extent.setSystemInfo("Headless",       ConfigLoader.getInstance().getIsheadless());
+        extent.setSystemInfo("Grid Enabled",   ConfigLoader.getInstance().getuseGrid());
+        extent.setSystemInfo("Retry Enabled",  ConfigLoader.getInstance().getRetryFailedTests());
         extent.setSystemInfo("Employee",
             "<b>Rohit Singh</b> "
             + ExtentReportConstant.ICON_SOCIAL_LINKEDIN + " "
             + ExtentReportConstant.ICON_SOCIAL_GITHUB);
-        extent.setSystemInfo("Domain",
-            "Engineering (IT - Software) "
-            + ExtentReportConstant.ICON_LAPTOP);
-        extent.setSystemInfo("Skill", "Test Automation Engineer");
+        extent.setSystemInfo("Domain",  "Engineering (IT - Software) " + ExtentReportConstant.ICON_LAPTOP);
+        extent.setSystemInfo("Skill",   "Test Automation Engineer");
+    
     }
 
-    // ── CREATE TEST ────────────────────────────────────────────
-    public static synchronized void createTest(ITestResult result,
-                                               TestType testType) {
-        // Attach reporter on first call — uses this test's class name
-        String className = result.getTestClass()
-                                 .getRealClass()
-                                 .getSimpleName();
-        attachReporterIfNeeded(className);
+ 
 
-        String methodName   = result.getMethod().getMethodName();
-        String description  = result.getMethod().getDescription();
-        String icon         = resolveIcon(testType);
-        String title        = icon + " <b>" + className + "</b> › " + methodName;
+  
+ // ExtentReportManager.java — createTest — REMOVE attachReporterIfNeeded call
+    public static synchronized void createTest(ITestResult result, TestType testType) {
+        // Reporter is guaranteed to be attached by SeleniumListener.onStart(ISuite)
+        // Do NOT call attachReporterIfNeeded here — class name would overwrite suite name
+
+        String className   = result.getTestClass().getRealClass().getSimpleName();
+        String methodName  = result.getMethod().getMethodName();
+        String description = result.getMethod().getDescription();
+        String icon        = resolveIcon(testType);
+        String title       = icon + " <b>" + className + "</b> › " + methodName;
 
         ExtentTest test = extent.createTest(title);
 
@@ -141,10 +135,8 @@ public class ExtentReportManager {
         ExtentManager.setExtentTest(test);
     }
 
-    // Overload for BDD / string-based creation
-    public static synchronized void createTest(String testName,
-                                               TestType testType) {
-        attachReporterIfNeeded(testName.replaceAll("[^a-zA-Z0-9]", "_"));
+    // BDD overload — same, no attachReporterIfNeeded
+    public static synchronized void createTest(String testName, TestType testType) {
         String icon = resolveIcon(testType);
         ExtentManager.setExtentTest(extent.createTest(icon + " " + testName));
     }

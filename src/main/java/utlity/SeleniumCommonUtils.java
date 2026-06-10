@@ -260,4 +260,27 @@ public class SeleniumCommonUtils {
             + "<td style='padding:6px 8px'>" + (value != null ? value : "N/A") + "</td>"
             + "</tr>";
     }
+    
+ // SeleniumCommonUtils.java — ADD this method
+    public static void selectDropdownByValueJS(WebElement element, String value) {
+        WebDriver driver = DriverManager.getDriver();
+        try {
+            // Scroll to element first to ensure it's in viewport
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+
+            // Use JS to set value directly — bypasses any overlapping iframe/ad
+            js.executeScript(
+                "arguments[0].value = arguments[1];"
+                + "arguments[0].dispatchEvent(new Event('change', {bubbles:true}));",
+                element, value);
+
+            LogUtils.info("Selected dropdown value via JS: " + value);
+            ExtentManager.getExtentTest().log(Status.INFO,
+                "Selected value via JS: " + value);
+        } catch (Exception e) {
+            LogUtils.error("Failed to select dropdown via JS: " + e.getMessage());
+            throw e;
+        }
+    }
 }

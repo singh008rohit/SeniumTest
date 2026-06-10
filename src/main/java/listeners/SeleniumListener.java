@@ -8,6 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.openqa.selenium.NoSuchSessionException;
 import org.testng.IInvokedMethod;
 import org.testng.IInvokedMethodListener;
+import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -43,9 +44,11 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
 
     // ─── SUITE ─────────────────────────────────────────────────
 
-    public void onStart(ITestContext context) {
+    public void onStart(ISuite suite) {
        // ExtentReportManager.getSetup();
-        LogUtils.info("Test Suite Started: " + context.getName());
+        ExtentReportManager.attachReporterIfNeeded(suite.getName());
+
+        LogUtils.info("Test Suite Started: " + suite.getName());
     }
 
     // ─── TEST START ────────────────────────────────────────────
@@ -175,19 +178,23 @@ public class SeleniumListener implements ITestListener, ISuiteListener,
 
     // ─── TEST FINISH ───────────────────────────────────────────
 
-    public void onFinish(ITestContext context) {
+    public void onFinish(ISuite suite) {
       //  ExtentReportManager.flushReports();
-        LogUtils.info(
-                "\n╔══════════════════════════════════════╗\n"
-                + "║         SUITE EXECUTION SUMMARY      ║\n"
-                + "╠══════════════════════════════════════╣\n"
-                + "║  Total  : " + count_totalTCs.get()   + "\n"
-                + "║  Passed : " + count_passedTCs.get()  + "\n"
-                + "║  Failed : " + count_failedTCs.get()  + "\n"
-                + "║  Skipped: " + count_skippedTCs.get() + "\n"
-                + "╚══════════════════════════════════════╝"
-            );
+    	LogUtils.info(
+    	        "\n╔══════════════════════════════════════╗\n"
+    	        + "║         SUITE EXECUTION SUMMARY      ║\n"
+    	        + "╠══════════════════════════════════════╣\n"
+    	        + "║  Suite  : " + suite.getName()        + "\n"
+    	        + "║  Total  : " + count_totalTCs.get()   + "\n"
+    	        + "║  Passed : " + count_passedTCs.get()  + "\n"
+    	        + "║  Failed : " + count_failedTCs.get()  + "\n"
+    	        + "║  Skipped: " + count_skippedTCs.get() + "\n"
+    	        + "╚══════════════════════════════════════╝"
+    	    );
         
+    }
+    public void onStart(ITestContext context) {
+        LogUtils.info("Test block started: " + context.getName());
     }
 
         // summary log — counters are now accurate under parallel execution

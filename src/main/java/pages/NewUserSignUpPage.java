@@ -124,14 +124,18 @@ public class NewUserSignUpPage extends BasePage{
 		
 	}
 
+	// NewUserSignUpPage.java — signupWithNameEmail — dismiss ad overlay before clicking
 	public void signupWithNameEmail(String name, String email) {
-		SeleniumCommonUtils.waitForVisibility(newUserSignUpHeading, 10);
-		soft.assertEquals(SeleniumCommonUtils.getText(newUserSignUpHeading), NewUserSignUp_Text,
-				"Navigate to other page");
-		SeleniumCommonUtils.typeText(userNameInput, name);
-		SeleniumCommonUtils.typeText(emailAddressInput, email);
-		SeleniumCommonUtils.clickElement(signUpButton);
+	    SeleniumCommonUtils.waitForVisibility(newUserSignUpHeading, 10);
+	    soft.assertEquals(SeleniumCommonUtils.getText(newUserSignUpHeading),
+	        NewUserSignUp_Text, "Navigate to other page");
+	    SeleniumCommonUtils.typeText(userNameInput, name);
+	    SeleniumCommonUtils.typeText(emailAddressInput, email);
+	    // Use JS click — bypasses any overlapping iframe/ad element
+	    SeleniumCommonUtils.clickUsingJS(signUpButton);  // was clickElement — blocked by ad
 	}
+
+	
 
 	public void verifyNameEmailVisible(String name, String email) {
 		String usernamevalue = SeleniumCommonUtils.getAttributeValue(userNameInput, "value");
@@ -168,10 +172,11 @@ public class NewUserSignUpPage extends BasePage{
 		soft.assertAll();
 	}
 
+	// NewUserSignUpPage.java — selectDob — use JS select to bypass ad overlay
 	public void selectDob(String date, String month, String year) {
-		SeleniumCommonUtils.selectDropdownByValue(dateDropdown, date);
-		SeleniumCommonUtils.selectDropdownByValue(monthDropdown, month);
-		SeleniumCommonUtils.selectDropdownByValue(yearDropdown, year);
+	    SeleniumCommonUtils.selectDropdownByValueJS(dateDropdown, date);
+	    SeleniumCommonUtils.selectDropdownByValueJS(monthDropdown, month);
+	    SeleniumCommonUtils.selectDropdownByValueJS(yearDropdown, year);
 	}
 	
 	public void logout() {

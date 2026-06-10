@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
 
 //Runner.java — FIXED
 @CucumberOptions(
-features = {"src/main/java/feature"},
+features = {"src/test/resources/feature"},
 glue = {"stepDefination", "hooks"},  // remove "listeners" — StepListener is auto-loaded
                                       // via META-INF/services, not glue
 tags = "${cucumber.filter.tags:not @ignore}", // system property override — 
